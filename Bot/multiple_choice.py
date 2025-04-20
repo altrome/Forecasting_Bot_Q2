@@ -58,12 +58,10 @@ async def get_multiple_choice_forecast(question_details: dict, write=print) -> t
         process_search_queries(current_output, forecaster_id="0", question_details=question_details)
     )
 
-    write("\nHistorical context:")
-    write(historical_output)
-    write(context_historical)
-    write("\nCurrent context:")
-    write(current_output)
-    write(context_current)
+    write("\nHistorical context LLM output:\n" + historical_output)
+    write("\nCurrent context LLM output:\n" + current_output)
+    write("\nHistorical context search results:\n" + context_historical)
+    write("\nCurrent context search results:\n" + context_current)
 
     prompt1 = MULTIPLE_CHOICE_PROMPT_1.format(
         title=title,
@@ -117,9 +115,7 @@ async def get_multiple_choice_forecast(question_details: dict, write=print) -> t
 
     results_prompt2 = await run_prompt2()
 
-    results_mc = [] # ignore Monte Carlo simulations for the time being
-
-    all_outputs = results_prompt2 + results_mc
+    all_outputs = results_prompt2
     all_probs = []
     final_outputs = []
 

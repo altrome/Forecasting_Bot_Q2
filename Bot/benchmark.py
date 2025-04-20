@@ -52,7 +52,7 @@ class CustomQuestion(ForecastableQuestion):
 async def get_custom_questions():
     print("Using manually specified custom questions...")
     from Dataset import ds
-    return ds[15:22] + ds[32:44]
+    return [ds[16]]
 
 def parse_year(published_at):
     for fmt in ("%Y-%m-%dT%H:%M:%S.%fZ", "%Y-%m-%dT%H:%M:%SZ"):

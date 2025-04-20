@@ -248,7 +248,7 @@ ds = [
                 description="U.S. immigration enforcement has fluctuated in recent years. This question asks if ICE deportations (removals) in FY2025 will be at least double the number in FY2024.",
                 resolution_criteria="Resolves YES if the number of deportations conducted by ICE in FY2025 is ≥2× the number in FY2024, based on official ICE/DHS statistics. Otherwise resolves NO.",
                 fine_print="Fiscal Year 2025 runs Oct 1, 2024 – Sep 30, 2025. If FY2025 deportations are at least 200% of FY2024’s, that meets the criterion.",
-                community_prediction=0.58,
+                community_prediction=0.20,
                 url="https://www.metaculus.com/questions/30954/ice-deportations-double-in-fy2025/",
                 type="binary"
         ),

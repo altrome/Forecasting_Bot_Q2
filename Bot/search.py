@@ -54,6 +54,8 @@ Background information:
 Article to summarize:
 {article}
 
+Note: If the web content extraction is incomplete or you believe the quality of the extracted content isn't the best, feel free to add a disclaimer before your summary.
+
 Please summarize only the article given, not injecting your own knowledge or providing a forecast. Aim to achieve a balance between a superficial summary and an overly verbose account. 
 
 """
@@ -220,7 +222,7 @@ async def google_search(query, is_news=False, date_before=None):
                             write(f"[google_search] ✅ Keeping: {item_url}")
                             filtered_items.append(item)
 
-                        if len(filtered_items) >=8:
+                        if len(filtered_items) >=10:
                             break
                     
                     urls = [item['link'] for item in filtered_items]
@@ -257,11 +259,12 @@ async def google_search_and_scrape(query, is_news, question_details, date_before
         write(f"[google_search_and_scrape] ✅ Finished content extraction")
 
     summarize_tasks = []
+    no_results = random.choices([2, 3], weights=[0.62, 0.38], k=1)[0]
     for url, data in results.items():
-        if len(summarize_tasks) >= 3:
+        if len(summarize_tasks) >= no_results:
             break  
         content = (data.get('content') or '').strip()
-        if len(content.split()) < 1000:
+        if len(content.split()) < 100:
             write(f"[google_search_and_scrape] ⚠️ Skipping low-content article: {url}")
             continue
         if content:

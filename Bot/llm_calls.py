@@ -21,7 +21,7 @@ load_dotenv()
 METACULUS_TOKEN = os.getenv("METACULUS_TOKEN")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
-async def call_anthropic_api(prompt, max_tokens=10000, max_retries=7, cached_content=claude_context):
+async def call_anthropic_api(prompt, max_tokens=16000, max_retries=7, cached_content=claude_context):
     url = "https://llm-proxy.metaculus.com/proxy/anthropic/v1/messages/"
     headers = {
         "Authorization": f"Token {METACULUS_TOKEN}",
@@ -38,7 +38,7 @@ async def call_anthropic_api(prompt, max_tokens=10000, max_retries=7, cached_con
         "max_tokens": max_tokens,
         "thinking" : {
             "type": "enabled",
-            "budget_tokens": 7000
+            "budget_tokens": 12000
         },
         "system": [
             {
@@ -227,9 +227,21 @@ async def call_gpt_o3(prompt):
     
 
 
+
+async def call_gpt(prompt):
+    client = OpenAI(api_key=OPENAI_API_KEY)
+    response = client.responses.create(
+        model="o4-mini",
+        input= gpt_context + "\n" + prompt
+    )
+    return response.output_text
+
+
 async def call_gpt_o4_mini(prompt):
     # We are temporarily going to short gpt while my o1 credits are out
     prompt = gpt_context + "\n" + prompt
+    output = await call_gpt(prompt)
+    return output
     try:
         url = "https://llm-proxy.metaculus.com/proxy/openai/v1/chat/completions"
         headers = {

@@ -30,8 +30,8 @@ ASKNEWS_SECRET = os.getenv("ASKNEWS_SECRET")
 EXA_API_KEY = os.getenv("EXA_API_KEY")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY") # You'll also need the OpenAI API Key if you want to use the Exa Smart Searcher
 
-async def numeric_forecast(question_details):
-    return await get_numeric_forecast(question_details)
+async def numeric_forecast(question_details, write=print):
+    return await get_numeric_forecast(question_details, write)
 
 async def binary_forecast(question_details, write=print):
     return await get_binary_forecast(question_details, write)

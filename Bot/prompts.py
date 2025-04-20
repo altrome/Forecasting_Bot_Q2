@@ -200,8 +200,29 @@ Weak evidence (small adjustments):
 Subsequently, calibrate your outside view prediction, considering:
 (a) You aim to predict the true probability of an event occuring, not a hedged or overconfident projection of your beliefs.
 (b) Small differences in probabilities can be significant: 90% is a 9:1 odds and 99% is a 99:1 odds. How would a +-10% shift in probability resonate with your analysis?
-(c) Are there likely to be any blind spots in your analysis/factors that could sway the outcome (if the resolution is unexpected, what would you think the reason would be)? If yes, should you be less confident? If no, should you be more confident?
-(d) The world changes slowly most of the time. Considering the timeframe and volatility of variables involved, might it be advantageous to calibrate slightly toward the status quo? 
+
+You are suggested to use the below checklist to verify the quality of your forecast **while reasoning**. Adjust your forecast if you have made mistakes. You can very briefly add a shortened version to your answer (see the format below).
+
+------------------------ FORECASTING CHECKLIST ------------------------
+1. Paraphrase the title and resolution criteria in <30 words, including relevant time windows. 
+  * Check that your analysis exactly aligns with how variables and resolution criterias are defined. Bait-and-switch errors, while commonplace, are costly.
+
+2. State your outside view base rate distribution previously established
+  * Check that your final prediction distribution genuinely is rooted to this base rate. If not, verify that current circumstances are vastly different from historic reference classes. Outside first, usually.
+
+3. Consistency check (write a single line)
+  * "{{your prediction}} out of 100 times, {{resolution criteria}} happens." Does this make sense and is it aligned with my justification?
+
+4. Write down in <20 words each, the three-five most significant pieces of evidence influencing your final prediction.
+  * Verify the factual validity of each of these pieces of evidence. You do not want your forecast to hinge on a few flimsy, possibly inconsistent, pieces of evidence. Use this to consider shifting confidence up or down.
+
+5. Blind-spot statement
+  * Name the one scenario most likely to make your forecast look silly in hindsight and decide how it might shift the relative probabilities assigned.
+
+6. Status quo outcome
+  * The world changes slowly most of the time. Consider the volatility of the current situation and timeframe to check whether a slight nudge toward the status quo outcome might be advantageous.
+
+------------------------------------------------------------------------
 
 Format your answer as below, it is very important to follow this format exactly, especially for the final probability, as a regex looking for 'Probability:' will be used to extract your answer.
 
@@ -210,6 +231,9 @@ Analysis:
 
 Probability calibration
 {{Insert your calibration of your inside view prediction here.}}
+
+Checklist:
+{{Shortened, brief checklist verification here}}
 
 Probability: ZZ%
 """
@@ -309,7 +333,7 @@ Additional fine-print:
 Today is {today}.
 
 For google/google news:
-Your query for google and google news are processed by classical search engines, so please phrase the queries in a way optimal for keyword optimized search. Avoid writing overly specific queries. Limit to six words.
+Your query for google and google news are processed by classical search engines, so please phrase the queries in a way optimal for keyword optimized search (i.e., the phrase you search is likely to appear on desired web pages). Avoid writing overly specific queries. Limit to six words.
 
 For perplexity:
 Your query will be processed by a reasoning model equipped with capable web crawlers and designed to generate lengthy, detailed responses. As such, you may use a longer query with detailed instructions. It is possible to ask multiple questions. 
@@ -468,13 +492,39 @@ Subsequently, calibrate your outside view prediction, considering:
 (c) Are there likely to be any blind spots in your analysis/factors that could sway the outcome (if the resolution is unexpected, what would you think the reason would be)? If yes, should you be less confident on the highest options? If no, should you be more confident on these options?
 
 Return the final probabilities in the list, in the same order they appear in {options}. Format your answer as below, it is very important to follow this format exactly, especially for the final probability list, as a regex looking for 'Probabilities:' will be used to extract your answer. 
-Please ensure that the probabilities are between **0 and 100, and that they sum to 100, and are not followed by a % sign**. 
+
+
+You are suggested to use the below checklist to verify the quality of your forecast **while reasoning**. Adjust your forecast if you have made mistakes. You can very briefly add a shortened version to your answer (see the format below).
+
+------------------------ FORECASTING CHECKLIST ------------------------
+1. Paraphrase the possible options and resolution criteria in <30 words, including relevant time windows. 
+  * Check that your analysis exactly aligns with how options and resolution criterias are defined. Bait-and-switch errors, while commonplace, are costly.
+
+2. State your outside view base rate distribution previously established
+  * Check that your final prediction distribution genuinely is rooted to this base rate. If not, verify that current circumstances are vastly different from historic reference classes. Outside first, usually.
+
+3. Consistency check (write a single line)
+  * "Most likely category/categories= ____; Least likely category/categories = ____; does this make sense and aligned with my justification?"
+
+4. Write down in <20 words each, the three-five most significant pieces of evidence influencing your final prediction.
+  * Verify the factual validity of each of these pieces of evidence. You do not want your forecast to hinge on a few flimsy, possibly inconsistent, pieces of evidence. Use this to consider shifting confidence up or down.
+
+5. Blind-spot statement
+  * Name the one scenario most likely to make your forecast look silly in hindsight and decide how it might shift the relative probabilities assigned.
+
+6. Technicalities
+  * Please ensure that the probabilities are between **0 and 100, and that they sum to 100, and are not followed by a % sign**. 
+
+------------------------------------------------------------------------
 
 Analysis:
 {{Insert your analysis here, following the above components. You can segment your analysis across multiple categories of options if you find it useful.}}
 
 Probability calibration
 {{Insert your calibration of your inside view prediction here.}}
+
+Checklist:
+{{Shortened, brief checklist verification here}}
 
 Probabilities: [Probability_A, Probability_B, ..., Probability_N]
 """
@@ -587,13 +637,13 @@ Today is {today}.
 Note that this is a numeric question, with expected answer format as a discrete CDF (not required for this answer).
 
 For google/google news:
-Your query for google and google news are processed by classical search engines, so please phrase the queries in a way optimal for keyword optimized search.
+Your query for google and google news are processed by classical search engines, so please phrase the queries in a way optimal for keyword optimized search (i.e., the phrase you search is likely to appear on desired web pages). Avoid writing overly specific queries. Limit to six words.
 
 For perplexity:
 Your query will be processed by a reasoning model equipped with capable web crawlers and designed to generate lengthy, detailed responses. As such, you may use a longer query with detailed instructions. It is possible to ask multiple questions. 
 Nonetheless, you are advised to keep your query to at most three sentences.
 
-You should format your answer as below. Be sure to include two queries for Google/Google News and one for Perplexity.
+You should format your answer exactly as below, always formatting the source in parentheses **on the same line as and after** the query. Do not wrap your query in quotes or brackets. Be sure to include two queries for Google/Google News and one for Perplexity. Be sure to include two queries for Google/Google News and one for Perplexity.
 
 Analysis:
 {{Your initial impression/analysis of the forecasting question followed by reasoning about the most relevant historical context needed to generate an outside view.}}
@@ -627,13 +677,15 @@ Today is {today}.
 {lower_bound_message}
 {upper_bound_message}
 
-Note that this is a numeric question, with expected answer format as a discrete CDF (not required for this answer).
 
-Your task is to analyze the forecasting question and write a series of search queries that will be used by your assistant to find current information/news articles relevant to the question. For each query, indicate whether you wish to utlize google, google news or your assistant directly to retrieve information.
-Your query for google and google news are processed by classical search engines, so please phrase the queries in a way optimal for keyword optimized search.
+For google/google news:
+Your query for google and google news are processed by classical search engines, so please phrase the queries in a way optimal for keyword optimized search (i.e., the phrase you search is likely to appear on desired web pages). Avoid writing overly specific queries. Limit to six words.
+
+For assistant:
 Your query for your assistant will be processed more naturally, so feel free to to write a sentence-long query in natural language. If desired, you can indicate multiple kinds of news articles you're looking for in your query. Keep your query to a maximum of two sentences.
 
-You should format your answer as below. Be sure to include two queries for Google/Google News and one for your assistant.
+You should format your answer exactly as below, always formatting the source in parentheses **on the same line as and after** the query. Do not wrap your query in quotes o brackets. Be sure to include two queries for Google/Google News and one for your assistant.
+
 
 Analysis:
 {{Your initial impression/analysis of the forecasting question followed by reasoning about the most relevant current information/news articles needed to generate an inside view.}}
@@ -677,6 +729,8 @@ Your analysis should have the following components, refering the above historica
 (b) Reference class analysis: Identify a few possible reference classes and evaluate respective suitabilities to the forecasting question. If applicable, choose the most suitable one.
 (c) Timeframe analysis: State the prediction timeframe (e.g., how many days/months from now?) and examine historical patterns over similar periods
 (d) Justification: Integrate the above factors with other points you found relevant to write a justification for your outside view prediction.
+
+You are free to include other components to deepen the analysis, at your discretion.
 
 Subsequently, calibrate your outside view prediction, considering:
 (a) You aim to predict a true probability distribution, not a hedged smooth distribution or an overconfident extremely narrow distribution. In your thinking, always consider ranges over singular values.
@@ -830,8 +884,7 @@ Today is {today}.
 Current Context (outside view + relevant evidence):
 {context}
 
-The information has been sourced from the internet, so it is advisable to exercise healthy skepticism at your discretion.
-
+The information has been sourced from the internet, so it is advisa
 
 Your analysis should have the following components, refering the above historical context and current information:
 (a) Source analysis: Briefly summarize each information source (either web article or Asknews articles), evaluate source quality and date.
@@ -839,6 +892,8 @@ Your analysis should have the following components, refering the above historica
 (b) Evidence analysis: Weight evidence/factors relevant to resolution criteria in the sources based on the below weighing system
 (c) Timeframe analysis: State the prediction timeframe (e.g., how many days/months from now?) and describe how your prediction might change if this was halfed/doubled? 
 (d) Justification: Gather the most compelling factors and justify how they shift your outside view base rates. For large distribution shifts, justify how current factors are sufficiently impactful to render the reference class non-analogous to current circumstances.
+
+You are free to include other components to deepen the analysis, at your discretion. 
 
 Evidence weighing system for (b):
 Strong evidence (can warrant relatively large prediction shifts)
@@ -863,7 +918,6 @@ Subsequently, calibrate your outside view prediction, considering:
 (a) The outcome if the current trend continued.
 (b) You aim to predict a true probability distribution, not a hedged smooth distribution or an overconfident extremely narrow distribution. In your thinking, always consider ranges over singular values.
 (c) Small changes in percentile location values can disproportionately reshape the slope and overall distribution of the extrapolated CDF, esepcially near the tails.
-(d) Are there likely to be any blind spots in your analysis/factors that could sway the outcome (if the resolution is unexpected, what would you think the reason would be)? If yes, should your CDF be less confident. If no, should your CDF be more confident?
 
 It might be a good idea to set a wide 90/10 confidence intervals to account for unknown unknowns.
 
@@ -872,12 +926,36 @@ Regarding the final prediction, please keep in mind the following:
 - Never use scientific notation.
 - Always start with a smaller number (more negative if negative) and then increase from there
 
+You are suggested to use the below checklist to verify the quality of your forecast **while reasoning**. Adjust your forecast if you have made mistakes. You can very briefly add a shortened version to your answer (see the format below).
+
+------------------------ FORECASTING CHECKLIST ------------------------
+1. Paraphrase the target variable/resolution criteria in <20 words, including units and the time window
+  * Check that your analysis exactly aligns with this target variable/resolution criteria. Bait-and-switch errors, while commonplace, are costly.
+
+2. State your outside view base rate previously established
+  * Check that your final prediction genuinely is rooted to this base rate. If not, verify that current circumstances are vastly different from historic reference classes. Outside first, usually.
+
+3. Consistency check (write a single line)
+  * "Implied median = ____; mean = ____; does this make sense and aligned with my justification?"
+
+4. Write down in <20 words each, the three-five most significant pieces of evidence influencing your final prediction.
+  * Verify the factual validity of each of these pieces of evidence. You do not want your forecast to hinge on a few flimsy, possibly inconsistent, pieces of evidence. Use this to consider shifting confidence up or down.
+
+5. Blind-spot statement
+  * Name the one scenario most likely to make your forecast look silly in hindsight and decide whether it would push the outcome up or down.
+
+------------------------------------------------------------------------
+
+
 Format your answer as below. You MUST prefix the final percentiles with Distribution: as a regex will be programmed to read text below 'Distribution:'. 
 Analysis:
 {{Insert your analysis here, following the above components. You can segment your analysis across multiple final answer ranges if you find it useful.}}
 
 Probability calibration
 {{Insert your calibration of your inside view prediction here.}}
+
+Checklist:
+{{Shortened, brief checklist verification here}}
 
 Distribution:
 Percentile 1: XX

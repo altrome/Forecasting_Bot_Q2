@@ -11,10 +11,11 @@ import numpy as np
 import requests
 import forecasting_tools
 from asknews_sdk import AskNewsSDK
+from search import call_gpt
 
-""""
-Main file: I've kept it minimalistic, only keeping metaculus API functions and abstracting the rest.
-"""
+OUTPUT_DIR = "Q2_tournament_forecasts"
+os.makedirs(OUTPUT_DIR, exist_ok=True)
+
 ######################### CONSTANTS #########################
 # Constants
 SUBMIT_PREDICTION = True  # set to True to publish your predictions to Metaculus
@@ -35,17 +36,18 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY") # You'll also need the OpenAI API K
 Q4_2024_AI_BENCHMARKING_ID = 32506
 Q1_2025_AI_BENCHMARKING_ID = 32627
 Q4_2024_QUARTERLY_CUP_ID = 3672 
+Q2_2025_AI_BENCHMARKING_ID = 32721
 Q1_2025_QUARTERLY_CUP_ID = 32630 #open
 AXC_2025_TOURNAMENT_ID = 32564 #open
 GIVEWELL_ID = 3600 #open
 RESPIRATORY_OUTLOOK_ID = 3411 #open
 
-TOURNAMENT_ID = AXC_2025_TOURNAMENT_ID
+TOURNAMENT_ID = Q2_2025_AI_BENCHMARKING_ID
 
 # The example questions can be used for testing your bot. (note that question and post id are not always the same)
 EXAMPLE_QUESTIONS = [  # (question_id, post_id)
    # (35828, 36422),
-    (35734, 36295), 
+    (35775, 36355), 
     #(35826, 36420),  
     #(22427, 22427),  # Number of New Leading AI Labs - Multiple Choice - https://www.metaculus.com/questions/22427/number-of-new-leading-ai-labs/
 ]
@@ -239,6 +241,11 @@ async def forecast_individual_question(
     summary_of_forecast = f"-----------------------------------------------\nQuestion: {title}\n"
     summary_of_forecast += f"URL: https://www.metaculus.com/questions/{post_id}/\n"
 
+    filename = f"{''.join(c if c.isalnum() else '_' for c in title)[:100]}.txt"
+    output_path = os.path.join(OUTPUT_DIR, filename)
+    f = open(output_path, "w", encoding="utf-8")
+    def write_to_file(line): f.write(line + "\n")
+
     if question_type == "multiple_choice":
         options = question_details["options"]
         summary_of_forecast += f"options: {options}\n"
@@ -248,13 +255,13 @@ async def forecast_individual_question(
         return summary_of_forecast
 
     if question_type == "binary":
-        forecast, comment = await binary_forecast(question_details)
+        forecast, comment = await binary_forecast(question_details, write=write_to_file)
         if forecast > 1:
             forecast /= 100
     elif question_type == "numeric":
-        forecast, comment = await numeric_forecast(question_details)
+        forecast, comment = await numeric_forecast(question_details, write=write_to_file)
     elif question_type == "multiple_choice":
-        forecast, comment = await multiple_choice_forecast(question_details)
+        forecast, comment = await multiple_choice_forecast(question_details, write = write_to_file)
     else:
         raise ValueError(f"Unknown question type: {question_type}")
 
@@ -267,15 +274,32 @@ async def forecast_individual_question(
     comment_str = json.dumps(comment, indent=2) if not isinstance(comment, str) else comment
     summary_of_forecast += f"Comment:\n```\n{comment_str}...\n```\n\n"
 
+    summary_prompt = f"""Below is a detailed explanation for a forecast posted on Metaculus, comprising reasoning from a team of five forecasters.
+    Please summarize it into a concise 5-7 sentence paragraph suitable for a forecast comment. 
+    Ensure you preserve the key reasoning, especially if relevant sources, probabilities, or 
+    contextual comparisons are mentioned. Reference key agreements and possible disagreements between forecasters. You may conclude by briefly referencing the five final forecast values. 
+
+    Please begin the summary straightaway by briefly describing the question, DO NOT prefix your answer with something like 'Here is the summarized reasoning:' or 'Forecaster summary:'.
+
+    Forecast Explanation:
+    {comment_str}
+    """
+    try:
+        short_comment = await call_gpt(summary_prompt)
+    except Exception as e:
+        print(f"Summarization failed, using original comment. Error: {e}")
+        short_comment = comment_str
+
     print(f"Forecast was retrieved successfully with value {forecast}")
     print(f"Forecast is of type {type(forecast)}")
 
     if submit_prediction:
         forecast_payload = create_forecast_payload(forecast, question_type)
         post_question_prediction(question_id, forecast_payload)
-        post_question_comment(post_id, comment_str)
+        post_question_comment(post_id, short_comment)
         summary_of_forecast += "Posted: Forecast was posted to Metaculus.\n"
 
+    f.close()
     return summary_of_forecast
 
 
