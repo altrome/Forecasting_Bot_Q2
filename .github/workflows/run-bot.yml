@@ -3,7 +3,7 @@ name: Run Forecasting Bot Every Hour
 on:
   schedule:
     - cron: '0 * * * *'  # Runs every hour on the hour (UTC)
-  workflow_dispatch:      
+  workflow_dispatch:
 
 jobs:
   run-bot:
@@ -24,5 +24,13 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run the bot
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          ASKNEWS_CLIENT_ID: ${{ secrets.ASKNEWS_CLIENT_ID }}
+          ASKNEWS_SECRET: ${{ secrets.ASKNEWS_SECRET }}
+          BRIGHT_DATA_API_KEY: ${{ secrets.BRIGHT_DATA_API_KEY }}
+          METACULUS_TOKEN: ${{ secrets.METACULUS_TOKEN }}
+          PERPLEXITY_API_KEY: ${{ secrets.PERPLEXITY_API_KEY }}
+          SERPER_KEY: ${{ secrets.SERPER_KEY }}
         run: |
           python Bot/main.py

@@ -946,8 +946,12 @@ You are suggested to use the below checklist to verify the quality of your forec
 
 ------------------------------------------------------------------------
 
+**Essential formatting requirements**
+(a) For large numbers, please DO NOT output commas between numbers like 1,000,000. Instead, just write 1000000. If not, this will cause a parsing error. 
+(b) You MUST prefix the final percentiles with Distribution: as a regex will be programmed to read text below 'Distribution:'. 
 
-Format your answer as below. You MUST prefix the final percentiles with Distribution: as a regex will be programmed to read text below 'Distribution:'. 
+Format your answer as below. 
+
 Analysis:
 {{Insert your analysis here, following the above components. You can segment your analysis across multiple final answer ranges if you find it useful.}}
 

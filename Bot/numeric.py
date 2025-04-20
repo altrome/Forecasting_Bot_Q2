@@ -2,7 +2,6 @@ import datetime
 import numpy as np
 import asyncio
 import re
-from scipy.interpolate import PchipInterpolator
 import numpy as np
 from prompts import (
     NUMERIC_PROMPT_historical,
@@ -14,162 +13,196 @@ from prompts import (
 from llm_calls import call_claude, call_gpt, call_gpt_o3, call_gpt_o4_mini, extract_and_run_python_code
 from search import process_search_queries
 
+import re, itertools
+
+BULLET_CHARS = "•▪●‣–*-"                    # extend as needed
+
+VALID_KEYS = {1,5,10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95,99}
+
+NUM_PATTERN = re.compile(
+    r"^(?:percentile\s*)?(\d{1,3})\s*[:\-]\s*([+-]?\d+(?:\.\d+)?(?:e[+-]?\d+)?)\s*$",
+    re.IGNORECASE
+)
+
+def clean(s: str) -> str:
+    return (
+        s.strip()
+         .lstrip(BULLET_CHARS)
+         .replace(",", "")
+         .replace(" ", "")
+         .replace("−", "-")
+         .lower()
+    )
+
 def generate_continuous_cdf(
     percentile_values: dict[float, float],
     open_upper_bound: bool,
     open_lower_bound: bool,
-    upper_bound: float | None,
-    lower_bound: float | None,
-    zero_point = None
+    upper_bound: float,
+    lower_bound: float,
+    zero_point: float | None = None,
+    *,
+    min_step: float = 5.1e-5,
 ) -> list[float]:
     """
-    Build a smooth, strictly‑monotone 201‑point CDF using a shape‑preserving
-    cubic spline (PCHIP).
+    Robust 201‑point CDF generator.
+    Hard‑fails only on truly fatal issues; otherwise degrades gracefully.
     """
-    # ---------- 1. Sanitise & augment inputs ---------------------------------
-    pv = {float(k): float(v) for k, v in percentile_values.items()}
+    from scipy.interpolate import PchipInterpolator
 
-    # attach closed bounds if required
-    if not open_lower_bound:
-        if lower_bound is None:
-            raise ValueError("lower_bound must be provided when open_lower_bound is False")
-        if lower_bound < min(pv.values()) - 1e-12:
-            pv[0.0] = float(lower_bound)
-    if not open_upper_bound:
-        if upper_bound is None:
-            raise ValueError("upper_bound must be provided when open_upper_bound is False")
-        pv[100.0] = float(upper_bound)
+    # ---------- 0. Sanitise input dict ----------
+    pv = {float(k): float(v) for k, v in percentile_values.items() if k is not None}
+    # Drop NaNs or infinite
+    pv = {k: v for k, v in pv.items() if np.isfinite(v)}
 
-    # sort by percentile and check monotone values
+    if len(pv) < 2:          # need at least two distinct points
+        raise ValueError("Need ≥2 percentile anchors")
+
+    # ---------- 1. De‑duplicate & sort ----------
+    # Small jitter for duplicate values (1e‑9 per tie)
+    vals_seen = {}
+    for k in sorted(pv):
+        v = pv[k]
+        if v in vals_seen:
+            v += (len(vals_seen[v]) + 1) * 1e-9
+        vals_seen.setdefault(v, []).append(k)
+        pv[k] = v
+
     percentiles, values = zip(*sorted(pv.items()))
-    percentiles = np.array(percentiles) / 100.0  # convert to 0‒1
+    percentiles = np.array(percentiles) / 100.0
     values      = np.array(values)
 
-    if np.any(np.diff(values) < 0):
-        raise ValueError("percentile values must be non‑decreasing")
+    if np.any(np.diff(values) <= 0):
+        raise ValueError("Percentile values must be strictly increasing after de‑duplication")
 
-    # ---------- 2. Optional log transform for skew‑positive data -------------
-    use_log = np.all(values > 0)  # only apply if everything is strictly positive
-    if use_log:
-        x_vals = np.log(values)
-    else:
-        x_vals = values  # fall back to raw scale
+    # ---------- 2. Attach bounds ----------
+    if not open_lower_bound and lower_bound < values[0] - 1e-9:
+        percentiles = np.insert(percentiles, 0, 0.0)
+        values      = np.insert(values,      0, lower_bound)
 
-    # ---------- 3. Fit a shape‑preserving cubic spline p(x) ------------------
-    # We model CDF p(x) directly (x -> p); PCHIP enforces monotonicity
-    spline = PchipInterpolator(x_vals, percentiles, extrapolate=True)
+    if not open_upper_bound and upper_bound > values[-1] + 1e-9:
+        percentiles = np.append(percentiles, 1.0)
+        values      = np.append(values,      upper_bound)
 
-    # ---------- 4. Create the value grid (201 points) ----------
-    def generate_cdf_locations(rmin, rmax, z0):
-        if z0 is None:                           # linear scale
-            scale = lambda t: rmin + (rmax - rmin) * t
-        else:                                    # power / log‑like scale
-            deriv_ratio = (rmax - z0) / (rmin - z0)
-            scale = lambda t: rmin + (rmax - rmin) * ((deriv_ratio**t - 1) / (deriv_ratio - 1))
-        return [scale(t) for t in np.linspace(0, 1, 201)]
+    # Ensure grid lies within convex hull
+    effective_min = min(lower_bound, values[0])
+    effective_max = max(upper_bound, values[-1])
 
-    cdf_x = np.array(generate_cdf_locations(lower_bound, upper_bound, zero_point))
+    # ---------- 3. Optional log transform ----------
+    use_log = np.all(values > 0)
+    x_vals  = np.log(values) if use_log else values
+
+    # ---------- 4. Fit spline (fallback to linear if PCHIP fails) ----------
+    try:
+        spline = PchipInterpolator(x_vals, percentiles, extrapolate=True)
+    except Exception:
+        # Linear as worst‑case fallback – always monotone
+        spline = lambda x: np.interp(x, x_vals, percentiles)
+
+    # ---------- 5. Build Metaculus grid ----------
+    def grid_locations(rmin, rmax, z0):
+        if z0 is None:
+            s = lambda t: rmin + (rmax - rmin) * t
+        else:
+            if abs(rmin - z0) < 1e-6 or abs(rmax - z0) < 1e-6:
+                raise ValueError(f"zero_point too close to bounds — may cause numerical instability: z0={z0}")
+            ratio = (rmax - z0) / (rmin - z0)
+            s = lambda t: rmin + (rmax - rmin) * ((ratio**t - 1) / (ratio - 1))
+        return np.linspace(0, 1, 201, dtype=float).astype(float).tolist(), [s(t) for t in np.linspace(0, 1, 201)]
+
+    _, cdf_x = grid_locations(lower_bound, upper_bound, zero_point)
+    cdf_x = np.array(cdf_x)
     eval_x = np.log(cdf_x) if use_log else cdf_x
-
-
-    # ---------- 5. Evaluate, clip, and enforce *strict* monotonicity ----------
-    cdf_y = spline(eval_x).clip(0.0, 1.0)
-
-    # 5a. Non‑decreasing
+    eval_x_clamped = np.clip(eval_x, x_vals[0], x_vals[-1])
+    
+    # ---------- 6. Evaluate and enforce strict monotonicity ----------
+    cdf_y = spline(eval_x_clamped).clip(0.0, 1.0)
     cdf_y = np.maximum.accumulate(cdf_y)
 
-    # 5b. Enforce a *strict* step of at least 1e‑6
-    # 5b‑1. Clip open upper tail *before* enforcing min_step
-    if open_upper_bound:
-        cdf_y[-1] = min(cdf_y[-1], 0.999999)
-
-    # 5b‑2. Enforce the strict step
-    min_step = 1e-6
+    # Ensure strict monotonicity once and for all
     for i in range(1, len(cdf_y)):
-        if cdf_y[i] - cdf_y[i - 1] < min_step:
-            cdf_y[i] = cdf_y[i - 1] + min_step
+        if cdf_y[i] <= cdf_y[i - 1]:
+            cdf_y[i] = min(cdf_y[i - 1] + min_step, 0.999999)
 
-    # 5c. Pin closed endpoints exactly
+    cdf_y[0] = 0.0 if not open_lower_bound else max(cdf_y[0], 0.0)
+    cdf_y[-1] = 1.0 if not open_upper_bound else min(cdf_y[-1], 1.0)
+
+    # Final fail-safe
+    if np.any(np.diff(cdf_y) <= 0):
+        raise RuntimeError("Final monotonicity fix failed.")
+
+    # Pin endpoints
     if not open_lower_bound:
         cdf_y[0] = 0.0
     if not open_upper_bound:
         cdf_y[-1] = 1.0
-    else:
-        # open upper: keep < 1
-        cdf_y[-1] = min(cdf_y[-1], 0.999999)
-
-    # 5d. Final sanity check
-    if len(cdf_y) != 201:
-        raise RuntimeError(f"Generated CDF must have 201 values, got {len(cdf_y)}")
+    
+    # Final step: enforce pin + clamp
+    if not open_lower_bound:
+        cdf_y[0] = 0.0
+    if not open_upper_bound:
+        cdf_y[-1] = 1.0
+    cdf_y = np.clip(cdf_y, 0.0, 1.0)
+    # Final assert
     if np.any(np.diff(cdf_y) <= 0):
-        raise RuntimeError("Generated CDF is not strictly monotone after correction")
+        raise RuntimeError("Strict monotonicity enforcement failed (should never happen)")
 
     return cdf_y.tolist()
 
-def extract_percentiles_from_response(forecast_text: str, verbose=True) -> dict:
+def extract_percentiles_from_response(text, verbose=True):
     """
-    Extracts a dict of percentiles from a forecast text block.
-    Starts extraction only after a line containing 'Distribution:'.
+    Works whether `text` is a str or already a list of lines.
+    Accepts 'Percentile1:6400000', thousands separators, scientific notation, bullets.
     """
+    if isinstance(text, list):
+        lines = list(itertools.chain.from_iterable(
+            line.splitlines() if isinstance(line, str) else [str(line)]
+            for line in text
+        ))
+    else:
+        lines = text.splitlines()
+
     percentiles = {}
     collecting = False
 
-    VALID_KEYS = {1, 5, 10, 15, 20, 25, 30, 35, 40, 45,
-                  50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 99}
+    for idx, raw in enumerate(lines, 1):
+        line = clean(str(raw))
 
-    # Match things like "Percentile 10: 12.5%" or "10: 13.0"
-    pattern = re.compile(
-        r"^(?:Percentile\s+)?(\d{1,3})\s*[:\-]\s*(-?\d+(?:\.\d+)?)(?:%?)\s*$",
-        re.IGNORECASE
-    )
-
-    lines = forecast_text.splitlines()
-
-    if verbose:
-        print("\n🔍 Starting extraction after 'Distribution:' anchor...")
-        print("----------- Raw Forecast Text -----------")
-        print(forecast_text[:1000])
-        print("-----------------------------------------\n")
-
-    for i, line in enumerate(lines):
-        stripped = line.strip().replace(",", "")
-
-        if not collecting and "distribution:" in stripped.lower():
+        if not collecting and line.startswith("distribution:"):
             collecting = True
             if verbose:
-                print(f"🚩 Found 'Distribution:' anchor at line {i + 1}")
+                print(f"🚩 Found 'Distribution:' anchor at line {idx}")
             continue
-
         if not collecting:
             if verbose:
-                print(f"⏭️ Skipping pre-distribution line {i + 1}: {stripped}")
+                print(f"⏭️ Skipping pre‑distribution line {idx}: {line}")
             continue
 
         if verbose:
-            print(f"📄 Line {i + 1}: '{stripped}'")
+            print(f"📄 Line {idx}: '{line}'")
 
-        match = pattern.match(stripped)
-        if match:
-            p_raw, val_raw = match.groups()
-            try:
-                p = int(p_raw)
-                val = float(val_raw.replace(",", ""))
-                if p in VALID_KEYS:
-                    percentiles[p] = val
-                    if verbose:
-                        print(f"✅ Matched Percentile {p}: {val}")
-                else:
-                    if verbose:
-                        print(f"⚠️ Ignored unrecognized percentile key: {p}")
-            except Exception as e:
-                if verbose:
-                    print(f"❌ Failed to parse '{p_raw}: {val_raw}' -> {e}")
-        else:
+        m = NUM_PATTERN.match(line)
+        if not m:
             if verbose:
                 print("⛔ No match")
+            continue
+
+        key, val_text = m.groups()
+        try:
+            p = int(key)
+            val = float(val_text)
+            if p in VALID_KEYS:
+                percentiles[p] = val
+                if verbose:
+                    print(f"✅ Matched Percentile {p}: {val}")
+            elif verbose:
+                print(f"⚠️ Ignored key {p} (not in VALID_KEYS)")
+        except Exception as e:
+            if verbose:
+                print(f"❌ Parse fail → {e}")
 
     if not percentiles:
-        raise ValueError(f"❌ No valid percentiles extracted after 'Distribution:' anchor.\n{forecast_text[:500]}")
+        raise ValueError("❌ No valid percentiles extracted.")
 
     if verbose:
         print("\n✅ Final extracted percentiles:", percentiles)
@@ -298,6 +331,9 @@ async def get_numeric_forecast(question_details: dict, write=print) -> tuple[lis
         write("❌ No valid forecasts found")
 
     # Optional: sanity check
+    if not combined_cdf and valid_forecasts:
+        combined_cdf = valid_forecasts[0]    # pick first good member
+
     if len(combined_cdf) != 201:
         raise RuntimeError(f"Final combined CDF has {len(combined_cdf)} values (should be 201)")
 

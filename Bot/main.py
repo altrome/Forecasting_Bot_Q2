@@ -19,10 +19,10 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 ######################### CONSTANTS #########################
 # Constants
 SUBMIT_PREDICTION = True  # set to True to publish your predictions to Metaculus
-USE_EXAMPLE_QUESTIONS = True # set to True to forecast example questions rather than the tournament questions
+USE_EXAMPLE_QUESTIONS = False # set to True to forecast example questions rather than the tournament questions
 NUM_RUNS_PER_QUESTION = 5  # The median forecast is taken between NUM_RUNS_PER_QUESTION runs
-SKIP_PREVIOUSLY_FORECASTED_QUESTIONS = False
-RUN = False
+SKIP_PREVIOUSLY_FORECASTED_QUESTIONS = True
+RUN = True
 
 # Environment variables
 # You only need *either* Exa or Perplexity or AskNews keys for online research
@@ -48,7 +48,7 @@ TOURNAMENT_ID = Q2_2025_AI_BENCHMARKING_ID
 # The example questions can be used for testing your bot. (note that question and post id are not always the same)
 EXAMPLE_QUESTIONS = [  # (question_id, post_id)
    # (35828, 36422),
-    (35775, 36355), 
+    (35839, 36438), 
     #(35826, 36420),  
     #(22427, 22427),  # Number of New Leading AI Labs - Multiple Choice - https://www.metaculus.com/questions/22427/number-of-new-leading-ai-labs/
 ]
@@ -353,7 +353,7 @@ if __name__ == "__main__":
     if USE_EXAMPLE_QUESTIONS:
         open_question_id_post_id = EXAMPLE_QUESTIONS
     else:
-        open_question_id_post_id = [get_open_question_ids_from_tournament()[14]]
+        open_question_id_post_id = get_open_question_ids_from_tournament()
 
     asyncio.run(
         forecast_questions(
