@@ -1,432 +1,391 @@
 
 [Historical LLM Output]
 Analysis:
-To ground an outside‐view baseline for FY2028 net outlays, the first step is to examine the historical FRED series of federal net outlays (nominal USD, fiscal‐year basis), tracing its growth rate and volatility from, say, FY2000 through FY2024. Over that period outlays rose from roughly \$2 trillion to \$6.75 trillion, implying a nominal CAGR around 5–6%, driven largely by Social Security, healthcare, and rising net interest costs. Next, CBO’s 10‑year budget outlook will provide its FY2025–FY2028 projections, reflecting demographic trends, economic assumptions, and current policy. Comparing FRED’s actuals and CBO forecasts establishes our baseline out‐of‐sample projection for FY2028. We can then adjust this baseline for potential policy effects—e.g., savings from DOGE’s efficiency measures (currently negligible at \$130 billion to date) and likely reconciliation‐driven spending caps or tax changes under unified Republican control. Key historical context needed: the nominal trajectory of net outlays, CBO’s recent projections, and the relative size of major spending categories driving aggregate growth.
+The key to an outside view for FY 2028 net outlays is understanding the long‑term nominal growth trend and major drivers (entitlements, defense, net interest, cyclical shocks). Historically, net outlays have grown at roughly 4–6% nominal annually, rising from ~$3.5 trillion in FY 2000 to ~$6.75 trillion in FY 2024, with notable spikes around 2009 (financial crisis) and 2020–21 (COVID relief). Outlays as a share of GDP have hovered between 18% and 25%, driven upward by entitlement growth and higher interest costs when rates rise. To establish a baseline, we need FRED’s FYONET series back to at least 2000 and CBO’s historical outlay tables. This will give us average annual growth, volatility, and sub‐component trends. With that outview in hand, we can later layer in inside‐view adjustments for Trump Administration/DOGE savings targets, anticipated reconciliation cuts, and trajectory of interest rates.
 
 Search queries:
-1. US federal net outlays historical data (Google)
-2. CBO projections FY2028 US outlays (Google News)
-3. List historical annual U.S. federal net outlays FY2000–FY2024 and CBO nominal projections FY2025–FY2028, explaining key drivers behind the trend (Perplexity)
+1. US federal net outlays fiscal year historical data (Google)
+2. CBO historical net outlays by fiscal year report (Google News)
+3. Provide historical data and trend analysis for US federal net outlays from FY2000 through FY2023, including amounts, share of GDP, and key drivers (Perplexity)
 
 [Historical Context]
 
+<Summary source="https://usafacts.org/government-spending/">
+The Presidency.ucsb article “Federal Budget Receipts and Outlays” presents annual U.S. federal budget data from FY 1930 through estimated FY 2026. For each year it lists:
+
+• Receipts (billions of current dollars)  
+• Outlays (billions)  
+• Surplus or deficit (billions)  
+• Nominal GDP (billions)  
+• Receipts and outlays as % of GDP  
+• Surplus/deficit as % of GDP  
+
+Key trends and figures:  
+1. 1930s–1940s: Outlays surged in WWII (e.g. FY 1943 outlays \$78.6 bn (42.6% GDP) vs. receipts \$24.0 bn (13.0%), deficit \$54.6 bn / –29.6% GDP).  
+2. Late 1940s–1950s: Brief postwar surpluses (FY 1947–49; FY 1951, ’56–57), then return to small deficits.  
+3. 1969 onward: Persistent deficits; deficit/GDP around 2–4% through the 1970s–80s, peaking at –5.9% GDP in FY 1983.  
+4. Late 1990s–2001: Three consecutive surpluses (FY 1998 +0.8% GDP, FY 1999 +1.3%, FY 2000 +2.3%).  
+5. Post‑2001: Deficits resume; FY 2009 spike to –9.8% GDP (deficit \$1,412.7 bn) amid the financial crisis.  
+6. COVID‑19 era:  
+   – FY 2020 outlays \$6,550.4 bn (31.2% GDP), receipts \$3,421.2 bn (16.3%), deficit \$3,129.2 bn / –14.9% GDP  
+   – FY 2021 est. outlays \$7,249.5 bn (32.9%), deficit \$3,668.7 bn / –16.7%  
+7. Recovery period:  
+   – FY 2022 outlays \$6,011.1 bn (25.6% GDP), deficit \$1,837.0 bn / –7.8%  
+   – FY 2023 est. deficit –5.6% GDP; FY 2024 est. –5.3%  
+   – FY 2025 est. deficit –5.5%  
+   – FY 2026 est. receipts \$5,332.1 bn (19.4%), outlays \$6,746.3 bn (24.5%), deficit \$1,414.2 bn / –5.1%  
+
+Overall, the table shows how federal outlays and deficits have evolved through Great Depression, WWII, postwar surpluses, 1980s deficits, late‑1990s surpluses, the 2008 crisis, and the COVID‑19 fiscal response, ending with gradually shrinking projected deficits by FY 2026.
+</Summary>
+
 <Summary source="https://fiscaldata.treasury.gov/datasets/monthly-treasury-statement/">
-The article presents a single comprehensive table, “Federal Budget Receipts and Outlays,” covering every U.S. fiscal year from 1930 through estimates for 2026.  For each year it shows:
+Below is a summary of the FRED “Fiscal Year Budget Data” series descriptions:
 
-• Nominal federal receipts, outlays, and the resulting surplus or deficit (all in billions of dollars)  
-• U.S. GDP (also in billions)  
-• Receipts, outlays and surplus/deficit expressed as percentages of GDP  
+1. Federal Net Outlays (FYONET)  
+   - Source: U.S. Office of Management and Budget; retrieved via Federal Reserve Bank of St. Louis (FRED).  
+   - Units: Millions of dollars.  
+   - Frequency: Annual, Fiscal Year (dates = end of FY).  
+   - Updates:  
+     • January/February: official OMB figures,  
+     • October: Treasury Department’s FY‑to‑date (September) figures.  
 
-Key patterns and milestones:  
-• Receipts grew from $4.1 billion in FY 1930 to an estimated $5,332.1 billion in FY 2026.  
-• Outlays rose from $3.3 billion in 1930 to an estimated $6,746.3 billion in 2026.  
-• Deficits dominate the record:  
-  – Peaked in WWII years (e.g. FY 1943: –$54.6 b, or –29.6% of GDP)  
-  – Spiked during the 2009 financial crisis (FY 2009: –$1,412.7 b, –9.8% GDP)  
-  – Reached their largest nominal and relative levels in the COVID era (FY 2020: –$3,129.2 b, –14.9% GDP; FY 2021 estimate: –$3,668.7 b, –16.7% GDP)  
-• Brief surpluses occurred in FY 1947–49 and FY 1998–2001 (e.g. FY 2000: +$236.2 b, 2.3% of GDP).  
-• Receipts as a share of GDP have generally ranged between about 14½% (low in 2010) and roughly 20% (peaks around 2000–01 and in mid‑2020s estimates).  
-• Outlays climbed from roughly 3.3% of GDP in 1930 to around 24–25% by the mid‑2020s estimates.  
+2. Federal Net Outlays as Percent of GDP (FYONGDA188S)  
+   - First constructed by FRED in January 2013.  
+   - Calculation: ((FYONET/1,000) ÷ GDP) × 100 (converts outlays to billions).  
+   - Units: Percent of GDP.  
+   - Frequency: Annual.  
 
-Overall, the table illustrates long‑term growth in federal revenues and spending, the fiscal impact of wars and economic crises, intermittent surplus years in the late 1940s and late 1990s, and the large modern deficits of the 21st century.
+3. Federal Outlays: Interest (FYOINT)  
+   - Source and metadata mirror FYONET (OMB → FRED).  
+   - Units: Millions of dollars.  
+   - Frequency: Annual, Fiscal Year.  
+
+4. Federal Outlays: Interest as Percent of GDP (FYOIGDA188S)  
+   - First constructed by FRED in January 2013.  
+   - Calculation: ((FYOINT/1,000) ÷ GDP) × 100.  
+   - Units: Percent of GDP.  
+   - Frequency: Annual.  
+
+5. Federal Surplus or Deficit (FYFSD)  
+   - Source: U.S. Office of Management and Budget; via FRED.  
+   - Units and frequency follow the same “Fiscal Year Budget Data” conventions.  
+
+General notes:  
+- All series use non‑seasonally adjusted, annual fiscal‑year data.  
+- Data are subject to revision; copyrighted but freely viewable on FRED.
 </Summary>
 
-<Summary source="https://fiscaldata.treasury.gov/americas-finance-guide/federal-spending/">
-Federal Net Outlays as Percent of Gross Domestic Product (FRED series FYONGDA188S)
+<Summary source="https://www.whitehouse.gov/omb/information-resources/budget/historical-tables/">
+Bipartisan Policy Center’s Deficit Tracker (monthly through February 2025)
 
-• Definition: Federal net outlays (FYONET) divided by GDP (GDPA), expressed as a percent  
-  – Formula: FYONGDA188S = ((FYONET / 1,000) / GDPA) × 100  
-    · (Dividing FYONET by 1,000 converts millions of dollars to billions.)
+• Overall FY 2025 deficit:  
+  – $1.1 trillion at end-February (18% above same point in FY 2024)  
+  – Revenues up 2% versus last year (last year’s receipts were boosted by delayed 2023 filings)  
+  – Outlays (major mandatory programs + net interest) continue to outpace revenues  
 
-• Coverage  
-  – Units: Percent of GDP  
-  – Frequency: Annual (Fiscal Year)  
-  – Seasonality: Not seasonally adjusted  
+• February 2025 (CBO estimate):  
+  – $308 billion monthly deficit (includes March payments shifted forward)  
+  – After timing adjustments: deficit up $15 billion (5%) YoY; spending up $41 billion (11%)  
+    • +$15 billion refundable tax credits (higher enrollment in premium‑assistance health plans)  
+    • Increased disaster‑relief outlays via DHS/FEMA  
 
-• Sources & History  
-  – Data compiled by the U.S. Office of Management and Budget; published by Federal Reserve Bank of St. Louis  
-  – First constructed January 2013  
-  – Release group: “Debt to Gross Domestic Product Ratios”  
+• FY 2025 Year‑to‑Date (Oct 1–end‑Feb):  
+  – Outlays $200 billion (7%) above same FY 2024 period (timing‑adjusted)  
+  – Tax receipts $37 billion (2%) above, reflecting shift of some FY 2023 payments  
 
-• Notes  
-  – All data are subject to revision.  
-  – Suggested citation: U.S. Office of Management and Budget and Federal Reserve Bank of St. Louis, Federal Net Outlays as Percent of Gross Domestic Product [FYONGDA188S], FRED, Federal Reserve Bank of St. Louis.
+• January 2025 recap:  
+  – Cumulative deficit $838 billion (24% above Jan 2024)  
+  – Revenues up 1% (again boosted last year by delayed filings)  
+  – Monthly deficit (CBO): $127 billion; adjusted up $20 billion (11%) YoY  
+    • Spending up $55 billion (11%), including +$7 billion for VA benefits  
+    • Receipts up $36 billion (8%)  
+
+• FYTD Oct 1–Jan 31: outlays $157 billion (7%) above prior year; receipts $11 billion (1%) above  
+
+• December 2024: $85 billion deficit (down $44 billion YoY)  
+• November 2024: $365 billion deficit (up $51 billion YoY)  
+
+• Net interest outlays have soared following Fed rate hikes. Recent CPI (Dec +0.4% m/m; +2.9% y/y) and employment gains (256,000 jobs; 4.1% unemployment) prompted a 0.25 pp Fed funds cut in December to 4.25–4.5%. Yet 10‑year Treasury yields rose on signals of cautious further easing.  
+
+• Funding & debt limit: December continuing resolution extends funding to mid‑March 2025 but leaves the $36.1 trillion statutory debt limit unresolved. Treasury is relying on cash reserves and “extraordinary measures”—BPC is tracking the projected “X Date” when these run out.  
+
+• Policy options: In December, the CBO released a compendium of 76 ten‑year deficit‑reduction options (no recommendations). BPC also issued its own fiscally responsible options for the 2025 tax negotiations.
 </Summary>
 
-<Summary source="https://www.presidency.ucsb.edu/statistics/data/federal-budget-receipts-and-outlays">
-Here’s a concise summary of the FRED “Federal Net Outlays” (FYONET) series:
+<Summary source="https://www.pgpf.org/article/national-debt-on-track-to-reach-record-high-in-just-four-years/">
+Below is a concise summary of the Peterson Foundation article “National Debt on Track to Reach Record High in Just Four Years.” All projections and data below come from the Peterson‐commissioned analysis of Congressional Budget Office (CBO) projections.
 
-• Series name: Federal Net Outlays (FYONET)  
-• Source: U.S. Office of Management and Budget; retrieved via FRED (Federal Reserve Bank of St. Louis)  
-• Units: Millions of Dollars  
-• Frequency: Annual, Fiscal Year (not seasonally adjusted)  
-• Release timing:  
-  – Official OMB figures for prior years published in January or February  
-  – Preliminary Treasury Department figures for the most recent fiscal year published in October  
-• Data subject to revision  
+1. Debt and Deficits  
+- Debt held by the public was 98 percent of GDP in 2024.  
+- By 2029, debt is projected to exceed the all‐time high of 106 percent of GDP (WWII level).  
+- Debt rises further to 118.5 percent of GDP by 2035.  
+- Annual budget deficits climb from \$1.7 trillion in 2026 to \$2.5 trillion in 2035.  
+- Deficits remain at or above 6 percent of GDP through most of the next decade.
 
-Key observations (end‑of‑fiscal‑year net outlays, in millions):  
-• FY 2024: 6,751,552  
-• FY 2023: 6,134,526  
-• FY 2022: 6,273,259  
-• FY 2021: 6,822,461  
-• FY 2020: 6,553,620  
+2. Economic Growth  
+- Real GDP growth is forecast to slow from 2.7 percent in 2024 to 2.1 percent in 2025, then average about 1.8 percent annually through 2035—below the often‑cited 3 percent target.
 
-For the full historical series and the FY 2028 figure when released, use the “View All” link on FRED and set Units to “Millions of Dollars” and Frequency to “Annual, Fiscal Year.”
+3. Interest Rates and Interest Costs  
+- Federal funds rate rose from near zero (March 2020) to 5.25–5.5 percent (July 2023), then began edging down starting September 2024.  
+- CBO expects 3‑month T‑bill rates to fall from 4.2 percent in Q1 2025 to 3.0 percent by 2033, then hold steady.  
+- The 10‑year Treasury yield is projected at 4.0 percent in 2025 (down from 4.2 percent in 2024), then easing to 3.9 percent in 2026 and 3.8 percent by 2031–2035.  
+- Interest payments jumped from \$352 billion in 2021 to \$881 billion in 2024 and are projected to reach \$1.8 trillion by 2035.  
+- Over the next decade, total interest costs amount to \$13.8 trillion.  
+- Net interest outlays, which peaked at 3.2 percent of GDP in 1991, are set to exceed that share in the coming year.
+
+4. Mandatory Spending Trends  
+- Medicare outlays rise from 3.2 percent of GDP in 2026 to 4.0 percent by 2035.  
+- Social Security spending grows from 5.3 percent of GDP in 2026 to 6.0 percent in 2035.
+
+5. Revenues  
+- Federal revenues increase from 17.1 percent of GDP in 2025 to 18.2 percent in 2027, partly due to expiring Tax Cuts and Jobs Act provisions.  
+- From 2028 to 2035, revenues stabilize at about 18.1 percent of GDP.  
+- CBO’s projections assume no further tax policy changes beyond those expirations.
+
+6. Conclusion/Outlook  
+- The report warns that without policy changes to address the structural mismatch between spending and revenues—compounded by rising interest costs—the federal fiscal path is unsustainable.  
+- Higher debt levels plus elevated interest rates increase borrowing costs and risk crowding out other priorities if left unaddressed.
 </Summary>
 
-<Summary source="https://www.cbo.gov/publication/52370">
-Below is a concise summary of the Committee for a Responsible Federal Budget’s June 18, 2024 press release on the CBO’s June 2024 baseline update:
+<Summary source="https://cbsaustin.com/news/nation-world/national-debt-to-exceed-50-trillion-within-10-years-report-updated-budget-economic-outlook-finances-money-congressional">
+Here’s a concise summary of the KEYE/National Desk article:
 
-1. Debt‑and‑Deficit Projections  
-   • Debt held by the public rises from 97.3 % of GDP at end‑2023 to  
-     – 106.2 % by end‑FY 2027 (a new post‑WWII record)  
-     – 122.4 % by end‑FY 2034  
-   • Dollar terms: debt grows by ~$23 trillion over 2024–2034 (from >\$27 trillion today to nearly \$51 trillion by 2034)  
-   • Annual budget deficits:  
-     – \$1.9 trillion (6.7 % of GDP) in FY 2024  
-     – \$1.8 trillion (5.5 % of GDP) in FY 2027  
-     – \$2.9 trillion (6.9 % of GDP) in FY 2034  
-     – Total deficits of \$22.1 trillion (6.3 % of GDP) over FY 2025–2034—\$2.1 trillion more than in the February baseline  
-
-2. Spending vs. Revenue (2025–2034)  
-   • Total spending: \$84.9 trillion (24.1 % of GDP)  
-   • Total revenue: \$62.8 trillion (17.8 % of GDP)  
-   • By FY 2034:  
-     – Spending: \$10.3 trillion (24.9 % of GDP)  
-     – Revenue: \$7.5 trillion (18.0 % of GDP)  
-   • 50‑year historic averages: spending 21.0 % of GDP, revenue 17.3 %
-
-3. Interest Costs  
-   • Projected to more than double from \$345 billion in FY 2020 to \$892 billion (3.1 % of GDP) in FY 2024, exceeding defense and Medicare outlays  
-   • Exceed their record share of GDP in FY 2025 and top \$1 trillion that year  
-   • Reach \$1.7 trillion (4.1 % of GDP) by FY 2034  
-
-4. Changes Since February Baseline  
-   • FY 2034 debt is \$2.4 trillion (6.4 % of GDP) higher than previously projected  
-   • Of the \$2.5 trillion increase in projected deficits over 2024–2034:  
-     – \$1.6 trillion stems from legislative changes  
-     – \$1.5 trillion from technical factors (including executive actions)  
-     – Partially offset by \$638 billion of deficit reduction from updated economic projections  
-   • The \$408 billion upward revision to the FY 2024 deficit largely reflects proposed student‑debt cancellation outlays and other technical adjustments  
-
-5. Trust‑Fund Insolvency Projections  
-   • Highway Trust Fund insolvency projected in FY 2028  
-   • Social Security Old‑Age and Survivors Insurance Trust Fund insolvency projected in 2033  
-   • Upon insolvency, benefits would be cut across the board to match incoming revenues  
-
-Source: CBO’s June 2024 Budget and Economic Outlook (as summarized in the Committee for a Responsible Federal Budget press release).
-</Summary>
-
-<Summary source="https://www.crfb.org/blogs/cbo-releases-june-2024-baseline-update">
-Below is a summary of the Committee for a Responsible Federal Budget’s write‑up of the Congressional Budget Office’s February 2024 Budget and Economic Outlook. All data and projections come from CBO unless otherwise noted.
-
-1. Debt Projections  
-   • Debt held by the public rises from \$27 trillion today to \$48 trillion by end of FY 2034 (+\$21 trillion).  
-   • As a share of GDP, debt grows from 97 percent in FY 2023 (vs. 50‑year average of 48 percent) to:  
-     – 106 percent by FY 2028 (a new record)  
-     – 116 percent by FY 2034  
-   • Alternative “extended policy” scenario (e.g. extend expiring tax cuts, discretionary growth with GDP): debt could hit 131 percent of GDP by FY 2034.
-
-2. Deficit Projections  
-   Baseline (assuming expirations as scheduled):  
-   • Total deficits of \$20.0 trillion over FY 2025–2034 (5.7 percent of GDP)  
-   • Yearly deficits:  
-     – FY 2022: \$1.4 trillion  
-     – FY 2023: \$1.7 trillion  
-     – FY 2024: \$1.5 trillion  
-     – FY 2025: \$1.8 trillion  
-     – FY 2031: >\$2.0 trillion  
-     – FY 2034: \$2.6 trillion  
-   • Deficit as % of GDP falls from 6.3 percent in FY 2023 to 5.3 percent in FY 2024, then back up to 6.2 percent by FY 2034 (a level ~70 percent above the 50‑year average of 3.7 percent).  
-   Alternative “extended policy” scenario:  
-   • Total deficits of \$26 trillion over next decade (7.4 percent of GDP)  
-   • FY 2034 deficit ~\$3.5 trillion (8.5 percent of GDP)
-
-3. Spending vs. Revenue over FY 2025–2034  
-   • Spending: \$82.7 trillion (23.5 percent of GDP)  
-   • Revenue: \$62.6 trillion (17.8 percent of GDP)  
-   – Implies revenue covers ~75 percent of outlays (spending exceeds revenue by ~33 percent).  
-   Historical averages (50 years): spending 21.0 percent of GDP; revenue 17.3 percent.
-
-4. Drivers of Rising Spending  
-   • Social Security & health care outlays nearly double between FY 2023 and 2034:  
-     – Social Security: \$2.9 trillion → \$5.3 trillion (10.8 → 12.7 percent of GDP)  
-   • Interest costs:  
-     – \$659 billion in 2023; projected to double by 2031 and reach \$1.6 trillion (3.9 percent of GDP) by 2034  
-     – Will exceed defense and Medicare spending within the decade.  
-   • Trust fund solvency:  
-     – Highway Trust Fund insolvent in FY 2028 ⇒ automatic ~50 percent cut in surface‑transport spending  
-     – Social Security OASI insolvent by 2033 ⇒ immediate ~25 percent benefit cut unless law changes  
-     – Medicare HI (Part A) likely insolvent by 2035; baseline assumes programs continue spending past insolvency, leading to combined cash deficits of \$4.4 trillion through 2034 (1.2 percent of GDP).
-
-5. Impact of Recent Legislation & Technical Changes  
-   • Fiscal Responsibility Act (FRA) caps: reduced projected deficits by \$2.6 trillion through FY 2033 (including extrapolated discretionary and emergency spending cuts).  
-   • Technical/assumption changes (e.g. student‑debt regulations, IRA credits) add \$1.1 trillion to deficits.
-
-Key takeaway: Under CBO’s updated baseline, the federal government faces rapidly rising debt, deficits, and interest costs over the coming decade—driven by growth in mandatory health and retirement spending and record interest outlays—requiring significant policy changes to avert historically large imbalances.
+• Source: New report from the Congressional Budget Office (CBO), Congress’s nonpartisan scorekeeper  
+• Fiscal Year 2024 deficit: projected at \$1.9 trillion  
+• Debt projection: overall federal debt to reach \$50.7 trillion by 2034  
+• Cumulative deficits 2024–2034: \$24 trillion, about 70 percent above the 50‑year historical average when measured relative to GDP  
+• CBO notes that both net outlays for interest and primary deficits (excluding interest outlays) are “large by historical standards.”  
+• This is a breaking‐news update; the article says more details will be added as they become available.
 </Summary>
 
 <Perplexity_report>
-Query: List historical annual U.S. federal net outlays FY2000–FY2024 and CBO nominal projections FY2025–FY2028, explaining key drivers behind the trend
-# Historical and Projected U.S. Federal Net Outlays: FY2000–FY2028  
+Query: Provide historical data and trend analysis for US federal net outlays from FY2000 through FY2023, including amounts, share of GDP, and key drivers
+# Historical Analysis of US Federal Net Outlays from FY2000 to FY2023  
 
-Federal net outlays—the total expenditures minus offsetting receipts—have undergone substantial growth over the past quarter-century, driven by structural increases in mandatory programs, demographic shifts, and fiscal policy decisions. This report analyzes historical net outlays from FY2000 to FY2024 and the Congressional Budget Office’s (CBO) nominal projections for FY2025–FY2028, identifying key drivers behind these trends.  
-
----
-
-## Historical Net Outlays (FY2000–FY2024)  
-
-### FY2000–FY2009: Moderate Growth and Fiscal Shocks  
-In FY2000, net outlays totaled **$1.79 trillion** (17.6% of GDP), reflecting a budget surplus driven by strong economic growth and constrained discretionary spending post-Cold War[1][15]. By FY2009, outlays surged to **$3.52 trillion** (24.4% of GDP) due to the Global Financial Crisis, which precipitated emergency measures like the Troubled Asset Relief Program (TARP) and the American Recovery and Reinvestment Act (ARRA)[16][17].  
-
-### FY2010–FY2019: Post-Crisis Stabilization and Entitlement Expansion  
-Net outlays grew at an annualized rate of 3.4% during this period, reaching **$4.45 trillion** (20.3% of GDP) by FY2019[16]. Key drivers included:  
-- **Affordable Care Act (ACA) implementation**: Expanded Medicaid eligibility and healthcare subsidies added $1.1 trillion in cumulative outlays[17].  
-- **Defense spending**: Base budgets rose from $526 billion (FY2010) to $686 billion (FY2019) due to prolonged engagements in Afghanistan and Iraq[12][17].  
-- **Aging population**: Social Security and Medicare outlays increased by 42% and 62%, respectively, from FY2010 to FY2019[16].  
-
-### FY2020–FY2024: Pandemic Response and Inflationary Pressures  
-The COVID-19 pandemic caused unprecedented fiscal interventions:  
-- **FY2020**: Outlays spiked to **$6.55 trillion** (31.3% of GDP) with programs like the CARES Act ($2.2 trillion)[3][17].  
-- **FY2024**: Outlays reached **$6.8 trillion** (23.4% of GDP), moderated by post-pandemic contraction but elevated by interest costs and student debt relief[3][6]. Notably, net interest payments doubled from $325 billion (FY2020) to $663 billion (FY2024) due to Federal Reserve rate hikes[6][16].  
+Federal net outlays in the United States experienced profound growth between fiscal years 2000 and 2023, escalating from $1.79 trillion to $6.13 trillion—a 242% nominal increase[2][7]. This expansion significantly outpaced economic growth, with federal spending rising from 17.45% of GDP in 2000 to 22.13% in 2023[3][7]. Key drivers included mandatory spending programs such as Social Security, Medicare, and Medicaid, which expanded due to demographic shifts and policy changes, alongside rising interest payments fueled by mounting debt and higher rates[4][8]. Discretionary spending, particularly defense and pandemic-related initiatives, further accelerated outlays, while tax policies like the 2017 Tax Cuts and Jobs Act exacerbated deficits[4][11]. The COVID-19 pandemic marked a pivotal moment, with emergency spending driving temporary spikes, though structural deficits persisted post-crisis[5][10].  
 
 ---
 
-## CBO Projections (FY2025–FY2028)  
+## Historical Trends in Federal Net Outlays  
 
-### Baseline Trajectory  
-The CBO projects nominal net outlays to rise steadily:  
-- **FY2025**: $7.0 trillion (23.3% of GDP)[2][4]  
-- **FY2026**: $7.3 trillion (23.6% of GDP)[4]  
-- **FY2028**: $7.9 trillion (24.4% of GDP)[2][4]  
+### Absolute Spending Growth  
+Federal net outlays surged from $1.79 trillion in FY2000 to $6.13 trillion in FY2023, reflecting a compound annual growth rate (CAGR) of approximately 6%[2][7]. This growth was nonlinear, with notable accelerations during economic crises. For instance, the 2008 Global Financial Crisis saw outlays rise from $2.98 trillion in 2008 to $3.52 trillion in 2009—an 18% single-year increase—as stimulus measures and automatic stabilizers activated[3][9]. Similarly, the COVID-19 pandemic triggered a $2.1 trillion escalation between FY2019 ($4.45 trillion) and FY2021 ($6.82 trillion), driven by relief packages like the CARES Act[3][11]. Post-pandemic, spending remained elevated at $6.13 trillion in FY2023, 40% above pre-2019 levels despite economic recovery[11].  
 
-### Structural Drivers  
-1. **Mandatory Programs**:  
-   - Social Security outlays will grow from $1.2 trillion (FY2024) to $1.6 trillion (FY2028) as Baby Boomers retire[2][16].  
-   - Medicare spending will increase by 5.3% annually due to healthcare inflation and utilization[4][17].  
-
-2. **Interest Costs**:  
-   Net interest will surpass defense spending by FY2027, reaching $1.1 trillion (3.4% of GDP) in FY2028 as debt servicing compounds[2][16].  
-
-3. **Discretionary Pressures**:  
-   - Defense budgets are projected to grow 2–3% annually amid strategic competition with China and Russia[11][12].  
-   - Nondefense discretionary spending faces constraints, with FY2028 levels still 4% below FY2010 inflation-adjusted totals[16].  
-
-4. **Legislative Changes**:  
-   - The 2025 repeal of Social Security’s windfall elimination provision added $0.2 trillion to outlays over a decade[2].  
-   - The American Relief Act (2025) temporarily reduced IRS funding, lowering revenue collections by $20 billion[6].  
+### Per Capita Spending  
+Population-adjusted outlays reveal intensified fiscal commitments. Per capita federal spending grew from $6,350 in 2000 to $18,300 in 2023 (adjusted for inflation to 2024 dollars), a 188% increase[1][2]. This trend underscores the federal government’s expanding role in areas such as healthcare, income support, and debt servicing, even as population growth averaged 0.7% annually[1][9].  
 
 ---
 
-## Key Trend Analysis  
+## Federal Outlays as a Percentage of GDP  
 
-### Acceleration of Debt Service Costs  
-Interest payments have shifted from 1.9% of GDP (FY2022) to a projected 3.4% by FY2028, reflecting both higher rates (5.2% on 10-year Treasuries in 2025) and debt accumulation (118% of GDP by 2035)[4][16]. This creates a feedback loop: higher deficits necessitate more borrowing, further increasing interest burdens[2][4].  
+### Long-Term Trends  
+The federal spending-to-GDP ratio climbed from 17.45% in 2000 to 22.13% in 2023, eclipsing the 20th-century average of 18.48%[3][7]. This ratio peaked at 30.69% in FY2020 during pandemic-driven spending, highlighting the elasticity of federal outlays during crises[3]. Despite post-2020 moderation, structural factors like aging demographics and healthcare inflation kept the ratio above 22%—a level last seen during World War II[3][9].  
 
-### Entitlement Program Unsustainability  
-Mandatory spending (Social Security, Medicare, Medicaid) consumed 62% of FY2024 outlays, up from 53% in FY2000[1][17]. Without reform, these programs will drive 78% of outlay growth through FY2035[2][16].  
-
-### Fiscal Transparency Gaps  
-Offsetting collections (e.g., Medicare premiums, lease revenues) masked 12% of gross outlays annually since 2000, obscuring true expenditure levels[1]. The CBO’s adjusted baseline—excluding timing shifts—shows deficits rising to 6.1% of GDP by 2035[4].  
+### Post-2008 and Pandemic Surges  
+The 2008 crisis precipitated a sustained shift, with the spending-to-GDP ratio averaging 23.1% from 2009–2023, compared to 19.5% from 2000–2008[3][9]. Pandemic-era measures pushed this ratio to 30.69% in FY2020, as outlays reached $6.82 trillion against a contracting GDP[3][11]. Mandatory programs and interest payments accounted for 70% of FY2023 spending, perpetuating elevated post-crisis baselines[4][8].  
 
 ---
 
-## Conclusion  
+## Key Drivers of Spending Growth  
 
-U.S. federal net outlays have transitioned from surplus-driven restraint in FY2000 to structural deficits exceeding 5% of GDP. While pandemic spending temporarily distorted trends, the core drivers—entitlements, interest costs, and defense needs—reflect systemic fiscal challenges. The CBO’s projections underscore the urgency of reforms to mandatory programs and deficit reduction strategies to avert long-term economic risks.  
+### Mandatory Spending Programs  
+**Social Security, Medicare, and Medicaid** collectively represented 45% of FY2023 outlays, up from 38% in 2000[4][9]. Social Security spending alone grew from $406 billion in 2000 to $1.24 trillion in 2023, driven by a 33% increase in beneficiaries and inflation-adjusted benefit hikes[4][8]. Medicare expenditures tripled to $1.02 trillion over the same period, fueled by rising enrollment (from 40 million to 67 million) and per-capita healthcare costs[4][9]. Medicaid expansion under the Affordable Care Act (ACA) and pandemic-related eligibility adjustments added $592 billion in FY2023, double 2000 levels[8][9].  
+
+### Discretionary Spending  
+Defense and non-defense discretionary spending fluctuated with policy priorities. Defense outlays rose from $295 billion in 2000 to $767 billion in 2023, reflecting post-9/11 engagements and modernization initiatives[8][11]. Non-defense discretionary programs, including education and infrastructure, expanded from $350 billion to $1.2 trillion, with pandemic-era supplements like the American Rescue Plan ($1.9 trillion) contributing to transient spikes[5][11].  
+
+### Interest on the Debt  
+Net interest payments surged from $222 billion (1.3% of GDP) in 2000 to $659 billion (2.5% of GDP) in 2023, driven by cumulative deficits and rising rates[4][8]. The Federal Reserve’s rate hikes, aimed at curbing post-pandemic inflation, pushed the effective interest rate on public debt from 1.6% in 2021 to 3.1% in 2023[4][8]. Interest costs are projected to exceed $1 trillion annually by 2030, rivaling defense spending[4].  
 
 ---
 
-### Sources  
-1. National Taxpayers Union Foundation, *Revealing Hidden Spending in Federal Budget Reports* (June 24, 2024).  
-2. Congressional Budget Office, *The Budget and Economic Outlook: 2025 to 2035* (January 17, 2025).  
-3. USAFacts, *How Much Does the US Federal Government Spend?* (April 11, 2025).  
-4. Congressional Budget Office, *The Budget and Economic Outlook: 2025 to 2035* (January 17, 2025).  
-6. U.S. Treasury and Office of Management and Budget, *Joint Statement on Budget Results for FY2024* (October 18, 2024).  
-11. U.S. Department of Defense, *National Defense Budget Estimates for FY2025* (April 9, 2024).  
-12. U.S. Department of Defense, *National Defense Budget Estimates for FY2024*.  
-15. Wikipedia, *2000 United States Federal Budget*.  
-16. Manhattan Institute, *Spending, Taxes, and Deficits: A Book of Charts* (November 1, 2024).  
-17. Wikipedia, *United States Federal Budget*.</Perplexity_report>
+## Policy and Economic Factors Influencing Outlays  
+
+### Tax Policies  
+The 2017 Tax Cuts and Jobs Act reduced corporate tax rates from 35% to 21%, contributing to a $1.8 trillion revenue shortfall over a decade[4][11]. While proponents argued growth effects would offset losses, real GDP growth averaged 2.3% post-2017—below the 3% target—exacerbating deficits[4][10]. Individual income tax revenues, however, rose from $1.1 trillion in 2017 to $2.2 trillion in 2023 due to wage growth and bracket creep[6][10].  
+
+### Economic Crises  
+The 2008 and 2020 recessions prompted countercyclical spending, expanding automatic stabilizers like unemployment insurance and discretionary measures like the Troubled Asset Relief Program ($700 billion) and Paycheck Protection Program ($800 billion)[9][11]. These interventions stabilized GDP but entrenched higher spending baselines; for example, non-defense discretionary outlays remained 25% above pre-pandemic projections by FY2023[10][11].  
+
+---
+
+## Contemporary Challenges and Future Projections  
+
+### Post-2023 Outlook  
+The Congressional Budget Office (CBO) projects net outlays to reach $7.3 trillion by 2025, with the spending-to-GDP ratio stabilizing near 23%[2][8]. Mandatory programs will dominate growth, as Social Security and Medicare face a 75% enrollment increase by 2040[4][9]. Interest costs are expected to surpass $1.6 trillion annually by 2033, consuming 25% of federal revenues[4][8].  
+
+### Sustainability Concerns  
+With federal debt held by the public at $26.3 trillion (97% of GDP) in 2023, policymakers face pressure to curb deficits through entitlement reform, revenue increases, or spending caps[6][8]. However, structural political barriers and aging demographics suggest continued fiscal expansion, risking macroeconomic instability through crowding-out effects and inflationary pressures[4][9].  
+
+---
+
+By synthesizing expenditure trends, economic drivers, and policy impacts, this analysis underscores the structural challenges in balancing fiscal responsibility with evolving public demands. Historical data reveals a federal budget increasingly shaped by mandatory commitments and compounding interest, necessitating bipartisan reforms to ensure long-term sustainability.</Perplexity_report>
 
 
 [Current LLM Output]
 Analysis:
-The key to forecasting FY2028 net outlays is establishing a solid base‐rate from the CBO’s multi‐year baseline, then adjusting for policy actions (DOGE’s savings claims, 2025 reconciliation cuts/tax changes) and macro drivers (rising interest costs, entitlement growth, GDP). We need: (1) the latest CBO baseline projection for FY2028 outlays; (2) updates on 2025 budget reconciliation negotiations (likely spending caps or revenue changes); and (3) recent statements or progress reports from DOGE on actual savings and targets through 2026. 
+To forecast FY2028 net outlays, I need (1) baseline projections from the Congressional Budget Office or OMB’s long‑term budget outlook to see expected outlay growth from \$6.75 trillion in 2024 to 2028; (2) updates on the Department of Governmental Efficiency’s (DOGE) actual savings to date, implementation details, and likelihood of reaching Musk’s \$2 trillion goal by 2026; and (3) the status of Republican reconciliation negotiations in Congress—spending caps, tax proposals, and offsets that will materially affect FY2028 outlays. These data will let me adjust my base‑rate projection for the inside view.
 
 Search queries:
-1. CBO federal net outlays projection FY2028 (Google)
-2. FY2025 budget reconciliation spending cuts update (Google News)
-3. What are the latest news and analysis on the Department of Government Efficiency’s spending cuts progress and updated CBO or congressional forecasts for FY2028 net outlays? (Assistant)
+1. CBO budget outlook FY2028 federal outlays (Google)
+2. Elon Musk DOGE government savings progress 2025 (Google News)
+3. Please find recent articles detailing the Department of Governmental Efficiency’s cost‑cutting accomplishments and the current status of FY2028 budget reconciliation negotiations. (Assistant)
 
 [Current Context]
 
-<Summary source="https://www.cbo.gov/publication/61270">
-Below are the key takeaways from the Peterson Foundation’s summary of the Congressional Budget Office’s (CBO) May 2024 report on the federal fiscal outlook:
+<Summary source="https://www.cbo.gov/topics/budget/outlook-budget-and-economy">
+Here is a concise summary of the Committee for a Responsible Federal Budget’s “Analysis of CBO’s March 2025 Long‑Term Budget Outlook” (March 27, 2025), which reports on the Congressional Budget Office’s latest long‑term projections under current law and on the impact of extending the 2017 Tax Cuts and Jobs Act (TCJA).
 
-1. Debt‑to‑GDP  
-   • FY 2023: debt held by the public = 97 percent of GDP  
-   • By 2027: debt > 106.1 percent (all‑time high, post‑WWII)  
-   • By 2034: debt projected at 122 percent of GDP  
+• Reported Source  
+  – Congressional Budget Office (CBO), March 2025 Long‑Term Budget Outlook, via CRFB.
 
-2. Annual Deficits  
-   • 2024: \$1.9 trillion (6.7 percent of GDP)  
-   • 2027: deficit falls to 5.5 percent of GDP  
-   • 2034: \$2.9 trillion (6.9 percent of GDP)  
+• Debt‑to‑GDP Projections (Current‑Law Baseline)  
+  – 100 percent of GDP at end of FY 2025  
+  – 107 percent by FY 2029  
+  – 156 percent by FY 2055  
+  – Nominal federal debt held by the public rises from \$30 trillion now to \$138 trillion by 2055 (Δ +\$108 trillion).
 
-3. Interest Rates  
-   • 3‑month Treasury bills: 5.2 percent in CY 2024; projected 2.8 percent in 2028, then stable  
-   • 10‑year Treasury: 4.5 percent in CY 2024; projected fall to 3.6 percent in 2027, then rise to 4.1 percent by 2032  
+• Impact of Extending TCJA  
+  – Adds roughly \$40 trillion to debt over 30 years  
+  – Would push debt above 200 percent of GDP by 2055.
 
-4. Net Interest Costs  
-   • 2021: \$352 billion  
-   • 2024: \$892 billion  
-   • 2034: \$1.7 trillion  
-   • Net interest as share of GDP will exceed its 1991 peak (3.2 percent) as soon as 2025  
+• Deficit Trends and Projections  
+  – FY 2001: balanced;  
+    2001–2008: averaged 2.4 percent of GDP;  
+    2016: over 3 percent;  
+    2025 (projected): 6.2 percent.  
+  – Projected to rise to 7.3 percent of GDP by 2055.  
+  – Nominal deficits: \$442 billion in 2015 → \$1.9 trillion in 2025 → \$2.5 trillion by 2035 → \$6.4 trillion by 2055.  
+  – With TCJA extension: deficits could reach ~11 percent of GDP by 2055.
 
-5. Mandatory Program Spending  
-   • Major health programs (Medicare, Medicaid, CHIP, premium tax credits): 5.6 percent of GDP in 2024 → 6.8 percent in 2034  
-   • Social Security: 5.1 percent of GDP in 2024 → 6.0 percent in 2034  
+• Interest‑Cost Dynamics  
+  – Interest paid on debt:  
+    1.6 percent of GDP in 2020 → 3.2 percent in 2025 (record) → 4.1 percent by 2035 → 4.6 percent by 2045 → 5.4 percent by 2055.  
+  – By 2055, interest would consume 28 percent of total federal revenue.  
+  – Under TCJA extension, interest costs could approach 8 percent of GDP by 2055.  
+  – CBO projects the average interest rate on debt will exceed nominal GDP growth (R > G) by 2045.
 
-6. Trust‑Fund Solvency  
-   • Social Security OASI Trust Fund: projected depletion in 2033  
-   • Medicare Hospital Insurance (HI) Trust Fund: depletion shortly after the 10‑year window  
-   • Highway Trust Fund: depletion in 2028  
-   – Once depleted, these programs cannot pay full scheduled benefits without changes  
+• Spending vs. Revenue Shares of GDP  
+  – Total spending: 20.7 percent in 2016 → 23.3 percent in 2025 → 24.4 percent by 2035 → 26.6 percent by 2055 (50‑year average: 21.1 percent).  
+  – Revenues: 17.1 percent in 2025 → 18.2 percent by 2027 → 18.9 percent by 2045 → 19.3 percent by 2055 (50‑year average: 17.3 percent).  
+  – Growing gap driven mainly by:  
+    • Health care spending: 5.8 → 8.1 percent of GDP (2025→2055)  
+    • Social Security: 5.2 → 6.1 percent  
+    • Net interest: 3.2 → 5.4 percent  
 
-7. Revenues vs. Outlays  
-   • Revenues: 17.2 percent of GDP in 2024 → dip to 17.0 percent in 2025 → roughly 18 percent from 2026–2034  
-   • CBO assumes 2017 individual tax provisions expire end‑2025; extending them without offsets would worsen deficits  
+• Trust‑Fund Solvency Risks  
+  – Social Security OASI trust fund insolvent by FY 2033 → 24 percent cut in benefits on day one, rising to 28 percent by 2055.  
+  – SSDI fund solvent through at least 2055; using its surpluses to shore up OASI extends solvency only to 2034 (then 21 percent cut, rising to 26 percent).  
+  – Highway Trust Fund projected insolvent by 2028.  
+  – Medicare Hospital Insurance trust fund insolvent by 2052 (outlook improved vs. prior year but remains sensitive).
 
-8. Worsening Outlook vs. February 2024  
-   • 2025–2034 cumulative deficits now projected at \$22.1 trillion (10 percent higher than the \$20 trillion projected four months earlier)  
-   • Main drivers: supplemental appropriations (e.g., aid to Ukraine/Israel), technical revisions lowering corporate‐tax receipts and raising healthcare‑program spending  
-   • Partially offset by upward revisions to projected revenues from economic changes  
+• Comparison to CBO’s March 2024 Outlook  
+  – Debt projection for 2054 revised down from 166 percent to 154 percent of GDP.  
+  – Deficit projection for 2054 revised down from 8.5 percent to 7.2 percent of GDP.  
+  – Largely driven by higher projected revenues (e.g., asset values) and lower assumed long‑term interest rates (10‑year Treasury yield projected at 3.8 percent vs. 4.4 percent previously).
 
-Bottom line: CBO projects a growing structural mismatch between spending and revenues, rising debt and interest costs, and impending trust‐fund insolvencies, painting an increasingly unsustainable fiscal trajectory.
+• Key Takeaway  
+  – Under current law, the federal budget is on an unsustainable path: rapidly rising debt and interest costs, growing mismatch between spending and revenue, and multiple trust‑fund insolvencies loom without policy changes. Extending expiring tax cuts without offsets would worsen these trends dramatically.
+
+No additional content was added beyond what CRFB reported from CBO’s March 2025 Long‑Term Budget Outlook.
 </Summary>
 
-<Summary source="https://www.cbo.gov/system/files/2024-12/60884-NIPA.pdf">
-Below is a concise summary of key data, projections, and findings from Bipartisan Policy Center’s “Visualizing CBO’s Budget and Economic Outlook: 2025.” All figures and forecasts are drawn from the Congressional Budget Office’s January 2025 baseline.
+<Summary source="https://budget.house.gov/press-release/chairman-arrington-statement-on-cbo-long-term-budget-outlook">
+Disclaimer: The extracted content appears incomplete. Summary is based solely on the provided text.
 
-1. Overall Fiscal Outlook  
-   • Debt held by the public:  
-     – End of FY 2024: \$30.1 trillion (100% of GDP)  
-     – Projected end of FY 2035: \$52.1 trillion (118% of GDP), the highest share ever and surpassing WWII levels before decade’s end  
-   • Spending vs. revenues (FY 2026–2035 average):  
-     – Federal spending: ~24% of GDP  
-     – Federal revenues: ~18% of GDP  
-     – Implies every dollar of discretionary spending is borrowed in 2025  
+Key Facts and Statistics  
+• The U.S. federal budget reflects government priorities in spending and revenue, with primary expenditures on healthcare, retirement (Social Security), and defense.  
+• In FY 2022, total outlays were $6.3 trillion, equal to 25.1% of GDP. Major categories:  
+  – Medicare & Medicaid: $1.339 T (5.4% of GDP)  
+  – Social Security: $1.2 T (4.8%)  
+  – Non‑defense discretionary: $910 B (3.6%)  
+  – Defense Department: $751 B (3.0%)  
+  – Net interest: $475 B (1.9%)  
+• CBO projections (Feb 2024): federal debt held by the public rises from 99% of GDP in 2024 to 116% in 2034 and 172% in 2054 if current law holds.  
+• CBO projects a budget deficit of $1.6 T (5.6% of GDP) in 2024, rising to 6.1% of GDP in 2025, dipping slightly in 2026–27, then rising back to 6.1% by 2034 with a $2.6 T shortfall.
 
-2. Deficits  
-   • FY 2025 deficit: \$1.9 trillion (6.2% of GDP), up slightly from \$1.8 trillion in FY 2024 (6.4% of GDP)  
-   • FY 2026–2035 annual deficits: rise to \$2.5 trillion but remain ~6% of GDP  
-   • Compared to CBO’s June 2024 outlook: cumulative deficits FY 2025–2034 are \$1 trillion lower  
-     – Driven by \$2.5 trillion of stronger tax receipts (higher growth)  
-     – Partially offset by \$1.3 trillion of technical baseline adjustments and \$271 billion from new legislation (e.g., Social Security Fairness Act)  
+Budget Process and Governance  
+• The President submits a budget proposal each February; Congress must pass appropriations bills by September 30 or enact stop‑gap (“continuing”) resolutions or omnibus bills.  
+• Key oversight and analysis bodies: Government Accountability Office (GAO), Congressional Budget Office (CBO), Office of Management and Budget (OMB), Treasury Department.  
+• Authorization vs. Appropriations: Separate committees handle authorization (permission to create programs) and appropriations (funding those programs). There are 12 appropriations subcommittees in each house.  
+• “Emergency” or supplemental appropriations can bypass certain budget enforcement rules (e.g., disaster relief, wars in Iraq/Afghanistan).  
 
-3. Spending Drivers  
-   • Net interest payments:  
-     – Will exceed \$1 trillion in FY 2026  
-     – Grow 6.5% annually FY 2025–2035  
-     – Already the second‑largest outlay after Social Security  
-   • Mandatory programs (FY 2025–2035):  
-     – Social Security and net Medicare account for ~50% of spending growth and 65% of non‑interest growth  
-     – Social Security spending up due to repeal of Windfall Elimination and Government Pension Offset (Social Security Fairness Act, Dec 2024)  
-     – Social Security Old‑Age and Survivors Insurance trust fund projected exhausted in FY 2033 (CBO baseline assumes full benefits continue absent reform)  
-     – Medicare projections modestly reduced by slower enrollee growth and payment updates  
-   • Discretionary spending:  
-     – Defense and nondefense grow with inflation but decline as a share of GDP  
-     – Changes in disaster relief and Fiscal Responsibility Act caps shift relative shares (higher nondefense, lower defense vs. prior baseline)  
+Accounting Basis and Definitions  
+• Federal budgets use cash accounting: revenues and outlays are recorded when cash changes hands. This underreports long‑term obligations of programs like Medicare and Social Security compared to accrual accounting.  
+• Outlays = actual disbursements to liquidate obligations; budget authority = legal authority to incur obligations. Differences arise because multi‑year obligations may draw on prior-year budget authority.
 
-4. Revenues  
-   • FY 2025: \$5.2 trillion (17.1% of GDP)  
-   • FY 2035: \$8.0 trillion (18.3% of GDP) under current‑law expiration of Tax Cuts and Jobs Act (TCJA) provisions at end‑of‑2025  
-   • Caveat: actual receipts hinge on if/which TCJA cuts are extended and what offsets Congress adopts  
-   • Adjustments since June 2024:  
-     – \$20 billion IRS funding rescission lowers receipts by \$66 billion over 10 years  
-     – Higher GDP, taxable income, and technical tweaks raise projected revenues by \$812 billion  
+Opinions and Projections  
+• Non‑partisan CBO warns that rising interest costs and mandatory spending (healthcare, retirement) outpace revenue growth, driving up debt under current law (CBO, Feb 2024).  
 
-5. Economic Projections  
-   • Real GDP growth: slowing in 2025–2026, then averaging 1.8% annual (2026–2035) on productivity and labor‑force gains  
-   • Federal Reserve: assumed to continue easing rates through 2026 to support growth  
-   • Unemployment rate: on average 0.25 percentage points higher in 2025–2026 vs. CBO’s June 2024 baseline  
-
-Source: Congressional Budget Office, “The Budget and Economic Outlook: 2025 to 2035,” as visualized by Bipartisan Policy Center.
+Potential Gaps  
+• Some statements (e.g., use of “special” appropriations for non‑emergency items) lack citation and may be less reliable.
 </Summary>
 
-<Summary source="https://bipartisanpolicy.org/explainer/whats-in-the-fy2025-senate-budget-resolution/">
-The Senate passed its amended FY 2025 budget resolution on April 5 (the House followed on April 10), formally unlocking the reconciliation process that lets major tax‑and‑spending bills clear the Senate with a simple majority. Key points of the FY 2025 Senate budget resolution:
+<Summary source="https://wjno.iheart.com/featured/brian-mudd/content/2025-04-17-how-much-doge-has-saved-you-april-17th-2025/">
+Source: “How Much DOGE Has Saved You,” The Brian Mudd Show (1290 WJNO), April 17 2025  
+Author: Brian Mudd
 
-1. Objectives  
-   • Extend and expand expiring tax cuts, boost border security and defense spending, reform energy policy, and cut federal spending in select areas.  
-   • Establish top‑line targets for revenues, spending, deficits, debt, and spending across 20 major functional categories (e.g., defense, health, transportation).
+Disclaimer: Content drawn from a radio‑show website; figures are self‑reported by DOGE and not independently verified.
 
-2. Reconciliation Instructions  
-   • Senate topline: allows up to $2 trillion in additional deficits over 10 years.  
-   • Because of overlapping committee instructions (notably on immigration) and a “current policy” baseline that assumes 2017 Tax Cuts and Jobs Act provisions continue indefinitely, the practical deficit ceiling rises to $5.7 trillion.  
-   • For example, the Finance Committee is instructed to permit no more than a $1.5 trillion deficit increase—but under the baseline’s tacit $4 trillion cost of extending TCJA cuts, its true fiscal impact approaches $5.3 trillion.  
-   • A parallel set of House instructions (Table 2 in the resolution) limit deficits to $3.3 trillion, though that figure could shift with legislative changes.
+Key Points  
+1. Establishment of DOGE  
+   • On January 20 2025, President Trump signed a day‑one executive order creating the Department of Government Efficiency (DOGE), a quasi‑governmental agency led by Elon Musk.  
+   • According to the article, this is the first new federal agency that has “shrunk the federal government and the size of the bureaucracy.”  
 
-3. Budget Baseline  
-   • Uses a “current policy” baseline that treats expiring tax‑cut provisions as permanent, thereby understating the real cost of extensions (over $4 trillion across 10 years).
+2. DOGE’s Activities  
+   • DOGE staff “expose waste, fraud, and abuse” and flag them directly to the President with the aim of eliminating programs and reducing spending.  
 
-4. Reserve Funds  
-   • Standard reconciliation “unlock” reserve fund.  
-   • Deficit‑neutral reserve fund for deregulation.  
-   • Reserve fund supporting $2 trillion in mandatory spending cuts.  
-   • Reserve fund endorsing the current policy baseline.  
-   These funds are largely policy statements, subject to amendment (e.g., in a “vote‑a‑rama”), and give committee chairs flexibility to revise targets.
+3. Reported Savings  
+   • As of April 17 2025, DOGE has averaged $1.8 billion in savings per day since January 20.  
 
-5. Enforcement (Title IV)  
-   • Standard budget resolution enforcement provisions to bind reconciliation.  
-   • Amended language making the $2 trillion mandatory‑cuts goal enforceable by adjusting the Ways and Means Committee’s instruction downward if other committees under‑deliver (or upward if they exceed cuts).  
-   • Includes policy statements endorsing economic growth, further mandatory spending reductions, and government deregulation.
-
-No external analysis or forecasts are included—this summary reflects only the content of the Bipartisan Policy Center’s “What’s in the FY 2025 Senate Budget Resolution.”
+Source Reliability  
+– Information originates from a radio-show host’s website (Brian Mudd), reflecting DOGE’s own reported figures. No external audit or independent verification is cited.
 </Summary>
 
-<Summary source="https://www.cbiz.com/insights/article/house-approves-fy-2025-budget-resolution-reconciliation-unlocked-for-tax-and-spending-legislation">
-Here are the key points from the CBIZ article “House Approves FY 2025 Budget Resolution: Reconciliation Unlocked for Tax and Spending Legislation” (April 11, 2025):
+<Summary source="https://www.npr.org/2025/02/19/nx-s1-5302705/doge-overstates-savings-federal-contracts">
+Here’s a concise summary of the NPR article “DOGE released data about federal contract savings. It doesn’t add up” by Stephen Fowler (Feb. 19, 2025):
 
-Facts & Statistics  
-1. On April 10, 2025, the House approved the FY 2025 budget resolution (as amended by the Senate on April 5) by a party‑line vote of 216–214.  
-2. Approval of this joint budget framework “unlocks” the budget reconciliation process, permitting the GOP‑controlled Senate to pass spending, tax, and debt‑limit bills by simple majority (i.e., bypassing the 60‑vote filibuster threshold).  
-3. Many provisions of the 2017 Tax Cuts and Jobs Act (TCJA) were made temporary to comply with reconciliation rules.  
-4. Congressional Budget Office (CBO) estimate: extending all TCJA provisions would increase the federal deficit by $6 trillion over 10 years.  
-5. Joint Committee on Taxation (JCT) estimate: the 10‑year cost of extending TCJA is $4.6 trillion.  
-6. The newly adopted FY 2025 resolution establishes a minimum floor of $4 billion in spending cuts; the House budget resolution passed in February had directed $1.5 trillion in cuts.  
+Facts & findings  
+• DOGE’s online “savings tracker” claims $55 billion in total federal spending cuts, including $8.5 billion from contract and lease cancellations (down from an initial $16 billion claim).  
+• NPR reviewed the roughly 1,100 “cancelled” contracts DOGE listed and finds:  
+  – Roughly half of the original $16 billion claim traced to an ICE contract entry that was a typo ($8 billion should have been $8 million). DOGE says it used the $8 million figure in its calculations, but its site repeatedly linked to the outdated $8 billion entry.  
+  – Over $6.5 billion in alleged savings come from contracts that haven’t actually been terminated or closed out.  
+  – Some listings (e.g., a billion‑dollar SSA IT support contract) actually added obligations rather than cut them.  
+  – NPR’s tally of truly cancelled contracts and realistic savings is closer to $2 billion, with about half of that from cuts at Education, CFPB, and USAID.  
+• DOGE provides no breakdown or source for the other $46.5 billion in claimed savings. White House and DOGE officials did not respond to queries.
 
-Named Opinions & Positions  
-• Republican leadership (House GOP) argues that “scoring” the extension of TCJA against the status quo (i.e., treating current temporary provisions as baseline) should yield zero additional deficit impact. Historically, scorekeeping assumes expiration then measures cost of reinstatement.  
-• House Speaker Mike Johnson (R‑LA) publicly committed (Apr. 10) to include at least $1.5 trillion in spending cuts in ensuing legislation.  
-• Senate Majority Leader John Thune (R‑SD) promptly signaled alignment with the House’s target for budget savings.  
+Expert opinions  
+• Christopher Byrne (retired senior contracting officer): DOGE’s tech‑savvy team lacks contracting expertise, omits key details (contract IDs, type, scope of cancellation), and misunderstands procurement processes.  
+• Six anonymous current/former contracting officers: DOGE overemphasizes maximum contract values and omits how much has already been spent or is legally owed under “termination for convenience” clauses.  
+• Jessica Riedl (Manhattan Institute): True contracting reform requires upfront investment in audits, systems, and controls, not “chainsaw” cuts.  
+• Jessica Tillipman (GWU Law): Termination for convenience often obligates the government to pay for completed work, so “savings” may trigger additional costs.
 
-Process & Next Steps  
-– Following a two‑week spring recess, relevant House and Senate committees (including tax writers) will draft bills consistent with the budget resolution’s instructions.  
-– Both chambers must reconcile and approve identical legislation, with leadership aiming to send the final package to President Trump before Memorial Day.  
-
-Less‑Formal/Background Notes  
-– The article reminds readers that many TCJA provisions were intentionally sunset under existing rules to satisfy the 10‑year deficit constraint in reconciliation.  
-– CBIZ states it will continue monitoring and reporting on legislative developments.
+Context & comparison  
+• Official procurement databases (FPDS, USAspending.gov, SAM) provide more complete, validated data: current and historical award amounts, spending to date, and contract start/end dates.  
+• NPR’s analysis suggests DOGE’s public portrayal is misleading and that its methodology overstates savings by billions.
 </Summary>
 
 <Asknews_articles>
-Query: What are the latest news and analysis on the Department of Government Efficiency’s spending cuts progress and updated CBO or congressional forecasts for FY2028 net outlays?
+Query: Please find recent articles detailing the Department of Governmental Efficiency’s cost‑cutting accomplishments and the current status of FY2028 budget reconciliation negotiations.
 Here are the relevant news articles:
 
-**Farage accused of peddling 'nonsense and lies' - as he predicts 'the new Brexit'**
-Ed Miliband has accused Nigel Farage of spreading 'nonsense and lies' about the government's commitment to net zero, as Farage predicts the issue could become 'the new Brexit'. Farage also vowed to cut excess council spending if his party wins the local elections, comparing himself to Elon Musk's Department of Government Efficiency (DOGE). However, the National Audit Office has warned councils are facing a major funding crisis, with social care putting huge strain on their budgets. Miliband warned that an anti-net zero agenda would risk 'climate breakdown' and 'forfeit the clean energy jobs of the future' in Britain.
-Original language: en
-Publish date: April 19, 2025 10:43 PM
-Source:[Sky News](https://news.sky.com/story/farage-accused-of-peddling-nonsense-and-lies-as-he-predicts-the-new-brexit-13352236)
+**US Government Cancels Over 400 Diversity and Equality Programs Worth Over $200 Million**
+The US government has canceled over 400 diversity and equality programs (DEI) worth more than $200 million, according to the US Government Efficiency Department (DOGE). The department announced that the National Science Foundation had successfully executed a project to cancel 402 DEI grants, saving the government $233 million. The DOGE, established by President Donald Trump, aims to reduce government waste by cutting unnecessary expenses and restructuring federal agencies and institutions. In a previous statement, US House of Representatives Speaker Mike Johnson said that the department had uncovered shocking government waste without congressional approval. In February, the DOGE announced that it had saved $55 billion through cost-cutting measures, including streamlining government spending in various sectors. According to the department's report, this savings was achieved through a variety of activities and measures, including reducing federal workforce, renegotiating lease and contract agreements, selling underutilized assets, canceling unnecessary grants, and taking steps to find administrative efficiencies and modify some government programs to align with current priorities.
+Original language: ar
+Publish date: April 19, 2025 05:46 AM
+Source:[بوابة فيتو](https://www.vetogate.com/5392453)
 
-**Donald Trump's proposed social security overhaul could spell trouble for retirees; here's why these changes may not be good news for older Americans**
-President Trump's proposed tax breaks, including eliminating taxes on Social Security benefits, overtime, and tips, could drain the program's funding sooner than expected, forcing benefit cuts as early as 2032. Experts warn that the Trust Fund could run dry by 2032, not 2035, with benefits slashed by 33% instead of 23%. This change might force Congress to act faster, possibly leading to tough future choices like tax hikes or retirement age increases. According to the Congressional Budget Office (CBO), the Social Security Trust Funds are projected to run dry by 2035, but Trump's plan could fast-track the depletion, making it essential for retirees to understand the impact of these changes now. 'The more revenue is stripped away now, the harder it becomes to save Social Security later,' says the Committee for a Responsible Federal Budget (CRFB). 'If the funding gap gets bigger, the eventual fix could be more painful,' adding that retirees could face a 33% reduction in benefits by 2035, compared to 23% under current law.
+**US Department of Efficiency Cancels Over 400 DEI Grants Worth $233 Million**
+The US Department of Efficiency has canceled over 400 DEI grants worth more than $233 million, according to a statement by the department. The National Science Foundation 'executed an excellent operation that resulted in the cancellation of 402 DEI grants, saving $233 million in taxpayer dollars.' The department's activities aim to 'reduce waste by reducing unnecessary expenses and reorganizing the work of federal agencies and institutions.' Earlier, US House of Representatives Speaker Mike Johnson stated that the department has uncovered shocking instances of US government waste without congressional approval. In February, the department announced that it had saved $55 billion through cost-cutting measures, including streamlining government spending in various sectors. The department's report states that this savings was achieved through a variety of activities and measures, including reducing the federal workforce, renegotiating lease and contract agreements, selling underutilized assets, canceling unnecessary grants, and taking steps to find administrative efficiencies and modify some government programs to align with current priorities.
+Original language: ar
+Publish date: April 19, 2025 04:22 AM
+Source:[RT Arabic](https://arabic.rt.com/world/1665874-%D8%A7%D9%84%D8%B3%D9%84%D8%B7%D8%A7%D8%AA-%D8%A7%D9%84%D8%A3%D9%85%D8%B1%D9%8A%D9%83%D9%8A%D8%A9-%D8%AA%D9%84%D8%BA%D9%8A-%D8%A3%D9%83%D8%AB%D8%B1-%D9%85%D9%86-400-%D9%85%D9%86%D8%AD-%D9%84%D8%A8%D8%B1%D8%A7%D9%85%D8%AC-dei-%D8%A8%D8%A3%D9%83%D8%AB%D8%B1-%D9%85%D9%86-200-%D9%85%D9%84%D9%8A%D9%88%D9%86-%D8%AF%D9%88%D9%84%D8%A7%D8%B1/)
+
+**Maryland's government efficiency initiative faces scrutiny as progress seems stalled**
+Maryland's government modernization initiative, led by Governor Wes Moore, aims to cut costs and improve efficiency in the state government. Critics, including David Williams of the Taxpayers Protection Alliance, question the progress of the plan, which was announced in January 2025. Williams said, 'This is about efficiency and it's also about saving money.' Despite the initiative's promise to save Marylanders $50 million, no tangible results have been shown three months after its announcement. Williams emphasized the potential benefits for taxpayers, saying, 'This was a real opportunity for the taxpayers of Maryland...to make the government more efficient.' The governor's office has not provided answers to questions regarding the progress of the waste-cutting efforts. 'People want a more efficient government and this could be accomplished if the governor follows through on the DOGE,' Williams said.
 Original language: en
-Publish date: April 19, 2025 04:07 PM
-Source:[Economic Times](https://economictimes.indiatimes.com/news/international/us/donald-trumps-proposed-social-security-overhaul-could-spell-trouble-for-retirees-heres-why-these-changes-may-not-be-good-news-for-older-americans/articleshow/120433846.cms)
+Publish date: April 19, 2025 03:45 AM
+Source:[WBFF](https://foxbaltimore.com/news/local/marylands-government-efficiency-initiative-faces-scrutiny-as-progress-seems-stalled)
 
 **DOGE Tells HHS Not to Pay Its Bills**
 The Department of Government Efficiency (DOGE), led by Elon Musk, has implemented a new policy called 'Defend the Spend' at the Department of Health and Human Services (HHS), which is causing delays in payments to tens of thousands of organizations. According to 12 people familiar with the new arrangements, the policy requires manual review and approval of previously routine payments, resulting in a backlog of payments, including funding for doctors' and nurses' salaries at federal health centers for the poor. As one employee noted, 'It's a fine way to slow down or stop legally obligatory spending while unknown bureaucrats take their time reviewing 'justifications,' then tout anything not spent as 'savings.' This approach is seen as a prototype for a broader effort to disrupt disfavored agencies and deny them the use of congressionally authorized and appropriated funds.
@@ -434,23 +393,17 @@ Original language: en
 Publish date: April 18, 2025 08:24 PM
 Source:[NYMag](https://nymag.com/intelligencer/article/doge-tells-hhs-not-to-pay-its-bills.html)
 
-**Poll shows how Utahns feel about DOGE, Trump spending cuts**
-A recent poll conducted by HarrisX for the Deseret News shows that Utah voters are split on their views of the Department of Government Efficiency (DOGE) and its head, Elon Musk. About 46% of voters approve of Musk's job, while 43% disapprove. The sentiments are largely split along party lines, with 72% of Republicans approving and 82% of Democrats disapproving. The poll also shows that Utah voters are divided on the Trump administration's efforts to eliminate wasteful spending, with 28% saying it has done an 'excellent' job and 29% saying it has done a 'poor' job. Again, the sentiments are split along party lines, with 75% of Democrats saying the administration is doing a poor job and 46% of Republicans saying it is doing an 'excellent' job.
+**Elon Musk's DOGE shaves off nearly $1 billion in 'savings' overnight, internet left chasing receipts**
+Elon Musk's Department of Government Efficiency (DOGE) has removed nearly $1 billion in claimed savings from its website, sparking controversy and raising concerns about accountability and transparency. The sudden deletion of the figures, which were previously touted as a fiscal revolution, has led to skepticism and criticism over unverifiable numbers and opaque accounting. Despite the White House standing by the agency, watchdogs and skeptics are questioning the true impact of Musk's cost-cutting crusade, with some calling it the 'most expensive magic trick in government history.' As the DOGE story continues to unfold, the question remains: are these savings real, or is this just a PR stunt?
 Original language: en
-Publish date: April 18, 2025 02:08 PM
-Source:[KSL.com](https://www.ksl.com/article/51297140/poll-shows-how-utahns-feel-about-doge-trump-spending-cuts-)
+Publish date: April 18, 2025 02:34 PM
+Source:[Economic Times](https://economictimes.indiatimes.com/magazines/panache/elon-musks-doge-shaves-off-nearly-1-billion-in-savings-overnight-internet-left-chasing-receipts/articleshow/120409881.cms)
 
-**US Suspends Automatic Grant Payments, Causing Delays**
-The US Department of Efficiency of Government (DOGE) has temporarily suspended automatic federal grant payments, introducing a mandatory manual review of each payment. This has led to delays in the distribution of funds to tens of thousands of organizations, including centers for the poor. According to Washington Post, 'DOGE is introducing new restrictions on grant payments, requiring manual review of previously routine transactions, which has paralyzed the distribution of funds.' The Defend the Spend program aims to increase transparency, but has caused delays in payments, including those for doctors' salaries in clinics for uninsured patients. 'Some organizations are waiting for payments that were supposed to arrive last week,' the newspaper notes. This move comes after The Wall Street Journal reported that US government spending has increased by $154 billion since Donald Trump took office, compared to the same period in 2024 under Joe Biden's presidency, despite DOGE's efforts. Additionally, the US State Department has canceled foreign grants worth $215 million.
+**US Government Halts Automatic Grant Payments, Causing Delays**
+The US Department of Efficiency of Government (DOGE) has temporarily stopped automatic federal grant payments, introducing a mandatory manual review of each payment. This has led to delays in disbursing funds to tens of thousands of organizations, including centers for the poor. 'DOGE is introducing new restrictions on grant payments, requiring manual review of previously routine transactions, which has paralyzed the distribution of funds,' The Washington Post reports. The Defend the Spend program aims to increase transparency, but has caused delays in payments, including those for doctors' salaries in clinics for uninsured patients. 'Some organizations are waiting for payments that were supposed to arrive last week,' the newspaper notes. This move comes after The Wall Street Journal reported that US government spending has increased by $154 billion since Donald Trump took office, compared to the same period in 2024 under Joe Biden's presidency, despite DOGE's efforts. Additionally, the US State Department has canceled foreign grants worth $215 million.
 Original language: ru
 Publish date: April 18, 2025 12:08 PM
 Source:[������.Ru](https://www.gazeta.ru/politics/news/2025/04/18/25588028.shtml)
-
-**Trump Administration Considers 40 Billion Dollar Cut to US Department of Health and Human Services**
-The Trump administration is considering a 40 billion dollar cut from the US Department of Health and Human Services' budget, according to a Washington Post report. The proposed cuts are part of a broader plan to reduce federal spending, which has been entrusted to Elon Musk. The cuts would target the department's budget for the 2026 fiscal year, which has not yet been approved by Congress. The proposed cuts would amount to one-third of the department's budget, which was 121 billion dollars in the 2024 fiscal year. The total budget for the department is approximately 1.8 trillion dollars, with the majority being mandatory spending related to the Medicare and Medicaid programs. In March, the Trump administration launched a wide-ranging restructuring of the department, which included the layoff of nearly a quarter of its employees. The proposed cuts go further, aiming to 'deeply reform and reorganize health and human services agencies'. The plan, according to the Post, includes the merger of multiple branches of the National Institutes of Health and the elimination of programs designed to improve healthcare access in rural areas. As the Washington Post reported, 'The cuts are part of a broader effort to reduce federal spending, which has been entrusted to Elon Musk.' 
-Original language: ar
-Publish date: April 18, 2025 09:31 AM
-Source:[al-lahtha.com](https://al-lahtha.com/News/GetDetails/116997)
 
 **DOGE begins to freeze health-care payments for extra review**
 The U.S. Department of Government Efficiency (DOGE) has implemented a new initiative called 'Defend the Spend' to manually review and approve federal health-care grants, which has caused a backlog of payments to tens of thousands of organizations. The effort, which aims to create transparency and justify spending, has left thousands of payments backed up, including funding for doctors' and nurses' salaries at federal health centers for the poor. According to 12 people familiar with the new arrangements, the process has been abruptly instituted at the National Institutes for Health, the Administration for Children and Families, and other parts of the Department of Health and Human Services. 'The era of rubber stamping is over,' said an HHS statement. However, current and former federal officials said the process would create bottlenecks and 'strangle grantees with red tape.' Robert Gordon, who served as the HHS assistant secretary of financial resources during the Biden administration, said, 'Instead of cutting red tape, they are strangling grantees with it.' It is unclear whether all the federal health-care grants will be approved and when. 'All funding is on hold,' an NIH official told colleagues at a meeting on Thursday, according to audio obtained by The Post. 'The bottom line is no one is getting any money right now. But they don't know they're not getting any money because it just says that it's 'in transit.'' 
@@ -458,29 +411,35 @@ Original language: en
 Publish date: April 17, 2025 11:31 PM
 Source:[Yahoo](https://www.yahoo.com/news/doge-begins-freeze-health-care-233115501.html)
 
-**America is headed for a grim fiscal reckoning**
-The Congressional Budget Office's (CBO) updated long-term projections indicate that the U.S. is on course for a fiscal breakdown. The federal government is currently spending $7 trillion and collecting only $5 trillion in taxes annually, resulting in a deficit of over 6% of GDP. The CBO expects public borrowing to remain at this elevated level or higher for decades, with public debt rising to 100% of GDP this year and 118% by 2035. Republicans are discussing ways to borrow more, including new tax cuts and extending provisions of the 2017 Tax Cuts and Jobs Act, which would increase the national debt by $5 trillion over the next decade and $40 trillion over 30 years. The article argues that a responsible Congress would make deficit reduction its overriding priority and suggests combining moderate tax increases and judicious cuts in spending to restore fiscal control.
+**Some regional food banks struggle with federal program cuts**
+The recent federal program cuts have impacted larger regional food banks, but smaller operations like the Victoria Church of the Nazarene's food pantry have not been affected. The Local Food Purchase Assistance Cooperative Agreement Program, which provided $500 million annually to food banks, was eliminated as part of the federal Department of Government Efficiency's (DOGE) cost-cutting measures. FACES, a regional food bank, has been severely impacted, serving 2,455 people in 2024 and distributing 400,000 pounds of fresh fruits and vegetables. The group's co-presidents, Paul and Joanna Baker, stated that the cuts have made it difficult to provide fresh produce to those in need, particularly for those with chronic diseases such as diabetes and heart disease. FACES is now asking local governments, businesses, and residents for help to avoid making cuts of their own. The group has also been part of the national Healthy Pantry Initiative, which aims to provide healthier food to address chronic diseases. Paul Baker said, 'The fresh produce we received from the Southside Virginia Fruit and Vegetable Growers Association as a result of the USDA grant was a major boon in our efforts to achieve the goals of the healthy pantry initiative.' Virginia senators Mark Warner and Tim Kaine have written a letter to the U.S. Department of Agriculture Secretary Brooke Rollins, urging her to reverse the decision to cancel the program. Anyone wanting to help FACES can donate or volunteer through their website.
 Original language: en
-Publish date: April 06, 2025 07:00 PM
-Source:[The Seattle Times](https://www.seattletimes.com/opinion/america-is-headed-for-a-grim-fiscal-reckoning/)
+Publish date: March 27, 2025 04:31 AM
+Source:[kenbridgevictoriadispatch.com](https://kenbridgevictoriadispatch.com/2025/03/27/some-regional-food-banks-struggle-with-federal-program-cuts/)
 
-**Congress and DOGE can find spending cuts at the Department of Defense**
-The growing distance between the US and its NATO allies presents an opportunity for the US to cut costs on military expenditures. The Department of Government Efficiency (DOGE) and Congress are exploring ways to reduce waste and redundancies in the Department of Defense. A leaked memo revealed that Defense Secretary Pete Hegseth has ordered senior leaders to develop plans for cutting 8 percent from the defense budget in each of the next five years. Experts, including the Cato Institute's Alex Nowrasteh and Ryan Bourne, recommend reducing the military's global mission and relying on allies to do their share of the work in their own neighborhoods. They suggest trimming the civilian workforce, reducing Army end-strength by 25 percent, and dissolving costly combatant commands. The Congressional Budget Office agrees that the military could be shrunk, proposing a 17 percent reduction in active-component military personnel for a savings of about $1 trillion over 10 years.
+**April 10, 2025: DOGE Highlights * WorldNetDaily * by WND Staff**
+Elon Musk announced that the Department of Government Efficiency (DOGE) has identified $150 billion in potential federal budget savings for FY2026, a significant reduction from his earlier $1 trillion projection. The DOGE has found major cuts in the Departments of Health and Human Services, Education, and the General Services Administration. However, the National Institutes of Health (NIH) has instructed employees to disregard weekly productivity emails mandated by DOGE, signaling resistance to Musk's directives. The Federal Deposit Insurance Corporation (FDIC) is collaborating with DOGE staff to review agency contracts and workforce structures. 'This move reflects growing pushback from federal agencies against DOGE's aggressive efficiency measures,' according to the article.
 Original language: en
-Publish date: March 12, 2025 11:12 AM
-Source:[Reason](https://reason.com/2025/03/12/congress-and-doge-can-find-spending-cuts-at-the-department-of-defense/)
+Publish date: April 11, 2025 03:00 AM
+Source:[WND](https://www.wnd.com/2025/04/april-10-2025-doge-highlights/)
 
-**Can America overcome its $30 trillion debt dilemma with tax cuts?**
-The US is facing a $30 trillion debt dilemma, which requires $10 trillion in deficit reduction over the next decade. Tax cuts since 2000, coupled with increased spending, have been major debt drivers. To stabilize fiscal health, lawmakers should aim to raise revenue, considering more efficient means like a value-added tax, while maintaining progressive tax system elements. The Congressional Budget Office (CBO) projected in 2000 that debt would decline and be zero on net within 10 years, but this didn't happen due to three recessions and higher discretionary spending. Tax cuts have eroded the revenue base, and actual revenue has been lower than CBO's 2000 projections almost every subsequent year. To right the fiscal ship, lawmakers should shift toward more efficient means of raising revenue, like a value-added tax, and preserve the progressivity of the overall tax system.
+**Negotiations to avert a shutdown sputter as disputes persist over DOGE cuts**
+Congress is on the brink of a government shutdown as negotiations over funding talks stall, with no clear path to reaching a deal. The government is set to run out of money at the end of next Friday, March 14. Republicans and Democrats are at odds over funding, with Democrats pushing for constraints on President Trump and billionaire adviser Elon Musk's attempts to close down or slash agencies without congressional approval. Republicans, however, support the Department of Government Efficiency-led budget cuts, which they say is about rooting out waste. House Speaker Mike Johnson said Democrats have to help negotiate this, but they've shown no interest in finding a reasonable solution. The White House has requested add-ons to the bill, including $32 billion in transfer authority for the Pentagon and a $20 billion cut to Internal Revenue Service enforcement. Democrats are opposed to these requests, with Sen. Patty Murray saying they are 'completely inadequate.' Sen. Susan Collins is working on a two-track approach, including a full-year continuing resolution and a short-term bill to give more time for a detailed agreement.
 Original language: en
-Publish date: March 10, 2025 11:38 AM
-Source:[Economic Times](https://economictimes.indiatimes.com/news/international/global-trends/us-news-can-america-overcome-its-30-trillion-debt-dilemma-with-tax-cuts-accomplice-in-americas-fiscal-mess-tax-cuts/articleshow/118844486.cms)
+Publish date: March 03, 2025 11:41 PM
+Source:[NBC News](https://www.nbcnews.com/politics/congress/negotiations-avert-shutdown-sputter-disputes-persist-doge-cuts-rcna194498)
 
-**Federal Health Spending**
-The federal budget problem is a health care problem, with spending on health care subsidies exceeding spending on Social Security and national defense. The Department of Government Efficiency effort aims to make both government and health care more efficient by advocating for dramatic cuts in federal health care subsidies. A mountain of evidence shows that Congress can cut federal health care subsidies dramatically while improving health care and without harming overall health. The longer Congress waits, the worse the dislocation will be. The Cato Institute invites you to join them on February 27 at 12:30 p.m. in the Rayburn House Office Building, Room 2045, to discuss this issue further.
+**DOGE's BPA Contracts: A Misunderstood Effort to Improve Efficiency**
+The US Department of Efficiency (DOGE) has been criticized for its handling of 'procurement agreements' (BPA), which were mistakenly labeled as 'contracts' and led to a 650 billion dollar savings claim being questioned. According to an investigation by NBC, the Department of Agriculture spent 25 million dollars on diversity training in 4 contracts, while the Consumer Financial Protection Bureau spent 6 billion dollars on management consultants. However, these numbers may not be as they seem. Steve Kelman, who managed and budgeted federal procurement policies in the 1990s, explained that 'this doesn't mean the government will actually buy these services, it's just a convenience for future procurement.' The investigation also found that DOGE did not actually save any money by canceling these BPA contracts. BPA agreements are the result of years of negotiation between the government and contractors, aimed at streamlining the procurement process and reducing transaction costs. Canceling BPA agreements may not lead to immediate cost savings, but could instead delay government procurement and even increase future costs. The NBC report also pointed out that DOGE's website listed over 60 BPA contracts worth over 1 billion dollars, which were mistakenly labeled as government expenditures. This misinterpretation may have exaggerated the actual amount spent by the government and given the impression of wasteful spending. The New York Times reported that DOGE recently quietly removed some of the savings projects from its website, further raising questions about the agency's transparency. The investigation also found that DOGE's claim of saving 650 billion dollars only accounts for 0.9% of the 2024 federal budget. DOGE is also facing lawsuits questioning its legitimacy and the way it operates. Despite this, government agencies will continue to use BPA to quickly obtain the services they need. As a senior employee of the federal procurement department pointed out, the process of establishing these contracts takes months, but canceling or modifying them can have a severe impact on government work. White House spokesperson Harrison Fields responded to the criticism, saying that it reflects opposition to the government's efforts to improve efficiency, rather than a mistake by DOGE. He emphasized that the government's reform efforts are in line with President Trump's mission and will not be swayed by misinformation from traditional media.
+Original language: zh
+Publish date: February 27, 2025 07:21 AM
+Source:[Yahoo News (Taiwan)](https://tw.news.yahoo.com/doge%E5%87%BA%E5%8C%85%E4%BA%86-%E8%AA%A4%E6%8A%8A-%E6%8E%A1%E8%B3%BC%E5%8D%94%E8%AD%B0-%E7%95%B6%E5%90%88%E7%B4%84%E6%83%B9%E8%AD%B0-%E9%82%84%E7%A8%B1%E7%9C%81%E4%B8%8B650%E5%84%84%E7%BE%8E%E5%85%83%E5%8F%97%E8%B3%AA%E7%96%91-065213298.html)
+
+**Dozens of DOGE ‘receipts' saved no money and killed contracts meant to boost efficiency**
+The Department of Government Efficiency (DOGE) has been accused of exaggerating its claims of cutting government waste. An investigation by NBC News found that many of the 'receipts' listed on DOGE's 'wall of savings' are actually negotiated agreements with government contractors, known as blanket purchase agreements (BPAs), which do not necessarily result in immediate savings. In fact, canceling BPAs does not prevent future spending, and agencies could still spend money on the services or goods listed in the agreements. The findings add to a growing list of issues with DOGE's claims, including misinterpreted data and misstated savings. As of Wednesday, DOGE's website claimed $65 billion in savings, but an Associated Press analysis found that 40% of contracts cut by DOGE are not expected to save the government any money. The agency is also embroiled in lawsuits questioning its legality and is facing questions about its operation and leadership. 'This is a way to make it easier for the government to order, if it does order, and to set up good prices that they can order. It doesn’t mean they buy it,' said Steve Kelman, who ran the Office of Federal Procurement Policy in the 1990s. 'The continued attempts to sow doubt in the massive accomplishments of this never-before-seen effort to make government more efficient speaks more about the illegitimacy of those peddling these falsehoods than good work of DOGE,' said Harrison Fields, a White House spokesman. 'It took a long time to build all that stuff up and mere minutes or hours for all of that to come burning to the ground,' said a current senior employee working in procurement for the federal government. 'The agency used one of the BPAs in 2023 to order — or “call” on the BPA in government jargon — and approve $414,892 in diversity trainings. Much of the money has already been spent, but DOGE’s cancellation prevents $121,770 from being spent,' according to federal records.
 Original language: en
-Publish date: February 25, 2025 10:55 PM
-Source:[Cato Institute](https://www.cato.org/events/federal-health-spending)
+Publish date: February 26, 2025 07:59 PM
+Source:[nbcwashington.com](https://www.nbcwashington.com/news/national-international/doge-receipts-saved-no-money-killed-contracts-meant-to-boost-efficiency/3853571/)
 
 **Trump Praises Musk's Efforts to Reduce Government Spending**
 US President Donald Trump expressed his desire for Elon Musk to continue his efforts to reduce government spending, saying 'Elon is doing a great job, but I want him to be bolder... We have a country to save.' Trump appointed Musk as the head of the Department of Government Efficiency to reduce government spending. The Department of Government Efficiency announced that $55 billion has been saved through cost-cutting measures. The department has been auditing federal agencies since Trump's second term began last month, and Musk was tasked with eliminating waste in a unprecedented government reform that includes a comprehensive section of thousands of employees. The department praised the current estimate, which was launched on the department's website on Monday, saying it represents a mix of fraud detection, deletion, contract cancellation, lease cancellation, contract renegotiation, asset sales, grant cancellation, workforce reduction, software changes, and organizational savings. This step is part of the government reform efforts launched by the administration since the beginning of Trump's second term last month. Elon Musk was also appointed as the head of the Department of Government Efficiency to eliminate government waste and improve government performance. This government reform is characterized by tough measures that include firing thousands of government employees. The Department of Government Efficiency announced that the public-facing website will be updated twice a week, allowing for real-time reports on progress made in reducing costs and improving government efficiency, according to the New York Post. The revamped website features a 'dashboard' that displays hundreds of government contracts and other expenses in detail, as well as the savings achieved by the Department of Energy and Natural Resources. These savings include reductions in government subscriptions to news platforms. The basis of the Department of Government Efficiency's estimate of $55 billion has not been clarified. In the 2024 fiscal year, which ended on September 30 last year, the total federal budget was approximately $6.75 trillion, with a budget deficit of around $1.8 trillion. Mathematicians at the Department of Government Efficiency claim to have saved taxpayers around $55 billion through a series of cost-cutting measures since Trump took office last month. Wide-ranging cuts in federal agencies to eliminate waste and abuse. These measures include wide-ranging cuts in federal agencies to eliminate waste and abuse. Elon Musk points out that these cuts have resulted in a savings of $55 billion. The Department of Government Efficiency praised the estimate, which reaches $55 billion, when launching its public-facing website. This number represents a mix of several factors, including fraud detection, deletion, contract cancellation, lease cancellation, contract renegotiation, asset sales, grant cancellation, workforce reduction, software changes, and organizational savings.' 
@@ -488,321 +447,23 @@ Original language: ar
 Publish date: February 22, 2025 10:44 PM
 Source:[Almaghribtoday](https://www.almaghribtoday.net/314/224323-%D8%AA%D8%B1%D8%A7%D9%85%D8%A8-%D9%8A%D8%BA%D8%AF%D9%82-%D8%A8%D8%A7%D9%84%D8%AB%D9%86%D8%A7%D8%A1-%D8%B9%D9%84%D9%89-%D9%85%D8%A7%D8%B3%D9%83-%D9%88-%D9%8A%D8%B7%D9%84%D8%A8-%D9%85%D9%86%D9%87-%D8%A7%D9%84%D9%85%D8%B6%D9%8A-%D8%A8%D9%82%D9%88%D8%A9-%D8%A3%D9%83%D8%A8%D8%B1-%D9%81%D9%8A)
 
-**Federal Spending Cuts: The Math To Lower Deficits Doesn't Add Up**
-The federal budget deficit has swelled to 6% of GDP in 2024, roughly twice the average since the 1980s, despite the economy operating at full employment. The Congressional Budget Office (CBO) predicts that future deficits will remain abnormally high without policy changes. Republicans aim to lower the deficit through spending cuts, but the biggest challenge is that mandatory programs account for 60% of total outlays. President Trump has endorsed scaling back Medicaid, which totals $550 billion, or 8% of total spending. The Department of Government Efficiency (DOGE) led by Elon Musk aims to reduce the national debt by $2 trillion per year, but its actions have been disputed and criticized for targeting agencies that disagree with. Professor John J. Dilulio, Jr. suggests that the real problem is the contractor state, which accounts for more than three times the federal payroll. He recommends requiring contractors and their executives to disclose donations and contributions to address abuse. Improved government efficiency will not be enough to put the federal budget on sound footing, and the House Republicans' plan would add $2.8 trillion or more to public debt over the next 10 years. The last president to achieve a budgetary surplus was Bill Clinton, who reduced federal government spending and raised taxes to boost revenues.
+**WHO LET THE D.O.G.E. OUT**
+The Department of Governmental Efficiency (D.O.G.E.) has made significant accomplishments in its first three weeks, saving the US government over $350 billion, according to the Epoch Times. This success has been met with opposition from D.C. bureaucrats, Democrats, and Republicans, who are 'weeping and gnashing of teeth' according to the article. The author praises D.O.G.E.'s achievements, comparing them to President Trump and Elon Musk's goals, and hopes that the department will continue to 'remove the scourge of the Washington D.C. venality and corruption.' The article concludes with a quote from Ronald Reagan, 'that shining city on a hill' should regain its former glory for the sake of future generations. 
 Original language: en
-Publish date: February 21, 2025 02:32 PM
-Source:[Forbes](https://www.forbes.com/sites/nicksargen/2025/02/21/federal-spending-cuts-the-math-to-lower-deficits-doesnt-add-up/)
+Publish date: February 20, 2025 12:14 AM
+Source:[Granite Grok](https://granitegrok.com/national/2025/02/who-let-the-d-o-g-e-out)
 
-**The Best Way for DOGE to Cut Government Waste**
-Elon Musk's proposed Department of Government Efficiency (DOGE) aims to trim $1 trillion in deficit spending from the budget by slashing $4 billion in government spending per day. However, existing government watchdogs, such as the Government Accountability Office (GAO) and Inspectors General (IGs), have already identified thousands of government reform recommendations that could achieve significant savings. If these recommendations were acted on in a timely manner, the federal government could save between $106 billion and $208 billion. Additionally, the GAO has warned that the federal government loses between $233 billion and $521 billion annually to fraud, and implementing good government reforms could save up to half a trillion dollars. Former CBO director Keith Hall suggests that the Congressional Budget Office could play a role in estimating the fiscal effects of reducing government waste by producing annual reports on the open sets of GAO and IG recommendations.
+**What We Know About Pentagon Cuts -- As Hegseth Directs Sweeping Reductions**
+The Department of Government Efficiency, led by Elon Musk's cost-saving efforts, has begun working with the Department of Defense, sparking questions about the Pentagon's budget. According to a memo obtained by The Washington Post, Pentagon chief Kashyap ' Kash' Hegseth plans to reduce unnecessary defense spending and drive reform, including progress on the audit. The memo outlines 17 categories exempt from budget cuts, including operations at the southern U.S. border and modernizing nuclear weapons. If the proposed 8% annual cuts happen, it would be the largest effort to reduce spending in the department in more than a decade. Hegseth has welcomed Musk and DOGE to the Pentagon to improve efficiency, saying 'there are waste, redundancies and head counts in headquarters that need to be addressed.' The Defense Department's budget for fiscal year 2025 is around $850 billion, with one-sixth of federal spending going towards national defense. Musk's agency has saved the government $55 billion through cost-cutting measures, but DOGE's actions are facing criticism and legal challenges.
 Original language: en
-Publish date: February 20, 2025 09:20 PM
-Source:[City Journal](https://www.city-journal.org/article/doge-elon-musk-government-spending-gao-cbo/)
+Publish date: February 19, 2025 11:13 PM
+Source:[Forbes](https://www.forbes.com/sites/mollybohannon/2025/02/19/what-we-know-about-pentagon-cuts-as-hegseth-directs-sweeping-reductions/)
+
+**Doge's Cost-Cutting Claims Under Scrutiny**
+The US government's efforts to cut costs with the newly created Department of Government Efficiency (Doge) claim to have saved $55 billion in federal spending so far, but the agency's website only details $16.6 billion of that total. The figure does not account for an error in the data published on the website that incorrectly classified a contract as being worth $8 billion, when in fact, as later corrected in the government's database, the value was only $8 million. This reduces the total savings cited by the Doge, including contracts and rentals, to around $8.6 billion, nearly half of the initial claim.
+Original language: pt
+Publish date: February 19, 2025 07:06 PM
+Source:[Valor Econômico](https://valor.globo.com/mundo/noticia/2025/02/19/doge-diz-que-economizou-us-55-bilhoes-mas-dados-mostram-economia-menor.ghtml)
 
 </Asknews_articles>
 
-
-Forecaster_1 Step 1 Output:
-# Analysis:
-
-## (a) Source Analysis
-
-1. **Treasury.gov Federal Budget Data**: Official historical federal budget data from 1930-2026 (estimates). Highly reliable primary source showing federal outlays growing from $3.3 billion in 1930 to estimated $6.75 trillion in 2026. Contains factual data rather than opinions.
-
-2. **Treasury.gov FRED Series Description**: Technical documentation explaining how federal net outlays as percent of GDP is calculated. Purely methodological with no opinions.
-
-3. **UCSB Presidency Statistics**: Contains factual data from the Federal Reserve Economic Database (FRED) showing recent historical federal net outlays:
-   - FY 2024: 6,751,552 million
-   - FY 2023: 6,134,526 million
-   - FY 2022: 6,273,259 million
-   - FY 2021: 6,822,461 million
-   - FY 2020: 6,553,620 million
-
-4. **Committee for a Responsible Federal Budget (CRFB) on CBO's June 2024 Update**: Summarizes CBO's June 2024 projections. CRFB is a fiscally conservative organization, but the summary focuses on factual CBO data rather than opinions. Shows projections through 2034, including debt rising to 122.4% of GDP by then, and annual deficits reaching $2.9 trillion (6.9% of GDP) by FY 2034.
-
-5. **CRFB on February 2024 CBO Baseline**: Similar to above but uses February 2024 CBO data. Projects FY 2028 outlays at approximately $7.9 trillion (24.4% of GDP).
-
-6. **Perplexity Report**: Compilation of historical data (FY2000-2024) and CBO projections (FY2025-2028). Generally factual though some analysis may introduce bias. Confirms FY 2028 projection of $7.9 trillion (24.4% of GDP) and identifies key drivers: Social Security growth, Medicare spending increase of 5.3% annually, and interest costs reaching $1.1 trillion by FY 2028.
-
-## (b) Reference Class Analysis
-
-Several potential reference classes:
-
-1. **Historical growth rate**: Federal outlays have grown at varying rates historically, with significant spikes during crises (2008-2009, 2020-2021) followed by relative stabilization.
-
-2. **Outlays as percentage of GDP**: Since 1980, federal outlays have averaged about 21% of GDP, but are currently higher (23-24%) and projected to increase.
-
-3. **CBO projections**: Most suitable reference class as they incorporate economic forecasts, demographic trends, interest rate projections, and existing legislation.
-
-4. **Post-crisis spending patterns**: Less relevant since we're several years past COVID crisis spending.
-
-The CBO projection framework is the most appropriate reference class as it specifically models the variable we're forecasting with comprehensive inputs.
-
-## (c) Timeframe Analysis
-
-The forecast target is FY 2028 (October 1, 2027 - September 30, 2028), approximately 3 years from today. Recent historical patterns show:
-
-- FY 2020-2021: Significant pandemic-related spending spike
-- FY 2022-2023: Post-pandemic reduction in outlays
-- FY 2024: Increase to $6.75 trillion (partly due to rising interest costs)
-
-CBO projections show relatively steady growth from FY 2024 through FY 2028:
-- FY 2025: ~$7.0 trillion
-- FY 2026: ~$7.3 trillion 
-- FY 2028: ~$7.9 trillion
-
-This implies roughly 4-5% annual growth in outlays, driven by demographic factors, rising interest costs, and baseline spending increases.
-
-## (d) Justification
-
-Based on the reference class and timeframe analysis, I can establish the following key drivers for my forecast:
-
-1. **Demographic drivers**: The aging U.S. population will increase Social Security and Medicare spending predictably through 2028.
-
-2. **Interest costs**: Projected to rise significantly, reaching $1.1 trillion annually by FY 2028 (from $663 billion in FY 2024) due to elevated federal debt and interest rates.
-
-3. **Mandatory program growth**: Social Security expenditures projected to grow from $1.2 trillion to $1.6 trillion by FY 2028; Medicare expected to grow at 5.3% annually.
-
-4. **Economic cycles**: Any recession between now and FY 2028 could trigger increased countercyclical spending.
-
-5. **Policy uncertainty**: New legislation could either increase or decrease outlays.
-
-6. **Trust fund insolvency**: Highway Trust Fund insolvency projected in FY 2028, potentially requiring general fund transfers.
-
-The CBO's projection of $7.9 trillion for FY 2028 provides a strong central estimate, incorporating these factors based on current law. Historical accuracy of CBO projections suggests actual outcomes typically fall within ±10% of projections at this time horizon, but outliers are possible with major policy changes or economic shocks.
-
-## Outside view calibration:
-
-For my calibration, I'm using the CBO projection of $7.9 trillion (7,900,000 million) as my median estimate, with appropriate ranges to account for uncertainty:
-
-**Lower percentiles** (10th-40th): These capture scenarios where outlays are lower than CBO projects due to:
-- Stronger economic growth reducing safety net spending
-- Legislative efforts to constrain spending
-- Lower-than-projected interest rates
-- Entitlement reforms
-- Reduced military engagements
-
-**Higher percentiles** (60th-90th): These capture scenarios where outlays exceed CBO projections due to:
-- Economic downturn triggering automatic stabilizers or stimulus
-- New military conflicts or security threats
-- Natural disasters or health emergencies
-- Additional social spending legislation
-- Higher interest rates increasing debt service costs
-- Accelerated demographic pressures on entitlements
-
-Historical forecasting accuracy suggests a wider range is appropriate. CBO's own retrospective analyses show forecasts 3-5 years out often have mean absolute errors of several percentage points of GDP, particularly when policy changes or economic conditions differ from baseline assumptions.
-
-## Outside View Prediction:
-Percentile 10: 7,110,000
-Percentile 20: 7,426,000
-Percentile 40: 7,742,000
-Percentile 60: 8,058,000
-Percentile 80: 8,532,000
-Percentile 90: 9,085,000
-
-Forecaster_2 Step 1 Output:
-# Analysis:
-
-## Source Analysis:
-
-1. **Fiscal Data Treasury dataset (Federal Budget Receipts and Outlays)**: Official U.S. Treasury data from 1930 through 2026 estimates, showing the long-term growth of federal spending from $3.3 billion in 1930 to projected $6,746.3 billion in 2026. High-quality primary source with factual historical data, though projections only extend to 2026.
-
-2. **Fiscal Data Treasury guide on federal spending**: Technical explanation of the FRED series FYONGDA188S (Federal Net Outlays as Percent of GDP). Purely factual reference material with no projections or opinions.
-
-3. **Presidency UCSB statistics on federal budget**: Provides recent historical values for Federal Net Outlays (FYONET) through FY 2024 ($6,751,552 million). High-quality factual data, but no forward projections.
-
-4. **CBO publication 52370**: Summary of the Committee for a Responsible Federal Budget's June 2024 press release on the CBO's June 2024 baseline. Contains factual projections from the nonpartisan CBO, with projected spending of $84.9 trillion (24.1% of GDP) over 2025-2034. Projects annual spending to reach $10.3 trillion (24.9% of GDP) by FY 2034.
-
-5. **CRFB blog on CBO's February 2024 baseline**: Similar to above but based on February data. Reports annual outlays projected at $7.0 trillion (23.3% of GDP) in FY 2025, $7.3 trillion (23.6% of GDP) in FY 2026, and cites key drivers including interest costs, demographic shifts, and healthcare inflation.
-
-6. **Perplexity report**: Compiled data showing historical outlays and CBO projections, including specifically for FY 2028: $7.9 trillion (24.4% of GDP). While sourced from reputable data, this is an AI-generated compilation rather than a primary source.
-
-## Reference Class Analysis:
-
-Several potential reference classes exist:
-
-1. **Historical growth trend (FY 2000-2024)**: Long-term growth pattern shows federal outlays increasing from $1.79 trillion in FY 2000 to $6.75 trillion in FY 2024, though with significant volatility during crises.
-
-2. **Recent post-pandemic normalization (FY 2022-2024)**: After the COVID spending spike, outlays dropped to $6.27 trillion in FY 2022, then rose to $6.13 trillion in FY 2023 and $6.75 trillion in FY 2024, showing a return to growth trend.
-
-3. **CBO projections (FY 2025-2028)**: The most relevant reference class, as these incorporate economic forecasts, policy assumptions, demographic trends, and interest rate projections. CBO projects spending growth to approximately $7.9 trillion by FY 2028.
-
-The CBO projection reference class is most suitable because it incorporates forward-looking analysis of structural factors driving federal spending.
-
-## Timeframe Analysis:
-
-The forecast targets FY 2028, approximately 3.5 years from now (April 2025 to September 2028). Key factors during this timeframe:
-
-- **Demographic pressures**: Social Security outlays projected to grow from $1.2 trillion (FY 2024) to $1.6 trillion (FY 2028) as more Baby Boomers retire
-- **Interest costs**: Projected to reach $1.1 trillion (3.4% of GDP) by FY 2028, exceeding defense spending
-- **Healthcare inflation**: Medicare spending expected to grow 5.3% annually
-- **Highway Trust Fund insolvency**: Projected in FY 2028, potentially requiring federal intervention
-
-Historical growth patterns over similar timeframes show annual growth rates of:
-- Pre-pandemic (FY 2016-2020): ~5.9% average annual growth
-- Including pandemic (FY 2020-2024): ~3.0% average annual growth with high volatility
-- CBO projected growth (FY 2024-2028): ~3.7-4.0% average annual growth
-
-## Justification:
-
-Starting from the most recent actual figure of $6,751,552 million in FY 2024, and applying the CBO-projected growth rate of approximately 3.7-4.0% annually, we arrive at an expected value around $7.8-7.9 trillion for FY 2028.
-
-Several factors could push outlays higher:
-- Economic downturn requiring fiscal stimulus
-- Higher-than-expected interest rates (significant impact given record debt levels)
-- New military conflicts or security challenges
-- Natural disasters or other emergency spending
-- Healthcare cost growth exceeding projections
-
-Factors that could reduce outlays:
-- Fiscal austerity measures following a change in administration or Congress
-- Lower-than-expected interest rates
-- Stronger economic growth reducing safety net spending needs
-- Structural reforms to entitlement programs
-
-The upside risks appear more numerous and likely than downside risks, given the structural pressures from demographics, interest costs, and the historical difficulty in reducing federal spending once established.
-
-## Outside view calibration:
-
-Given that federal outlays are driven by relatively predictable factors (demographics, interest rates, economic growth) but also subject to political decisions and unexpected events, I'll calibrate a distribution that:
-
-1. Centers around the CBO's projected ~$7.9 trillion figure for FY 2028
-2. Accounts for historical volatility in federal spending
-3. Acknowledges that spending can increase rapidly during crises but tends to decline more slowly
-4. Incorporates the 3.5-year forecast horizon, which increases uncertainty
-
-For the 10th percentile, I'll consider a scenario with significant fiscal restraint, lower interest rates than expected, and no major emergencies. This would limit annual growth to around 1.5-2.0%.
-
-For the 90th percentile, I'll consider a scenario with a recession requiring fiscal stimulus, higher interest rates, and potential new spending initiatives. This could push annual growth to 6.5-7.0%.
-
-The middle percentiles will represent more moderate deviations from the CBO baseline.
-
-## Outside View Prediction:
-Percentile 10: 7,117,000
-Percentile 20: 7,392,000
-Percentile 40: 7,640,000
-Percentile 60: 8,015,000
-Percentile 80: 8,382,000
-Percentile 90: 8,699,000
-
-Forecaster_3 Step 1 Output:
-Analysis:
-
-1. Source analysis  
-   a. Treasury “Monthly Treasury Statement” table (through FY 2026 est)  
-     – What it is: Official U.S. Treasury data on nominal federal receipts, outlays, and deficits, 1930–2026.  
-     – Date/quality: High-quality primary data; most recent estimates for FY 2026 published October 2024.  
-     – Facts vs. opinions: Purely factual historical and forecast figures; no opinions.  
-   b. FRED description of FYONET and FYONGDA188S  
-     – What it is: Metadata on the “Federal Net Outlays” series and net‑outlays‑as‑%‑of‑GDP series.  
-     – Date/quality: High reliability; maintained by the Federal Reserve Bank of St. Louis; updated with each OMB release.  
-     – Facts vs. opinions: Factual definitions and release procedures.  
-   c. UCSB Presidency Project federal budget summary  
-     – What it is: Concise FRED‑sourced series of net outlays in millions for FY 2020–2024.  
-     – Date/quality: High; draws on OMB data via FRED; last full data FY 2024.  
-     – Facts vs. opinions: Factual time series; no editorialization.  
-   d. CBO June 2024 baseline update (via CRFB summary)  
-     – What it is: CBO’s official budget and economic outlook, June 2024 baseline through FY 2034.  
-     – Date/quality: High-quality expert forecast; updates prior (February) outlook.  
-     – Facts vs. opinions: Factual projections; CBO’s analytical judgments are expert opinion but clearly labeled as baseline scenario.  
-   e. Perplexity report (FY2000–FY2028 review)  
-     – What it is: AI‑aggregated synthesis of various primary and secondary sources (CBO, OMB, press reports).  
-     – Date/quality: Mixed; draws on authoritative sources but risk of mis‑attribution and synthesis errors.  
-     – Facts vs. opinions: Separates nominal numbers (fact) from narrative “key drivers” (opinion/interpretation).
-
-2. Reference‑class analysis  
-   Potential classes:  
-     1. Historical nominal net outlays series (FY 2000–FY 2024)  
-     2. CBO baseline projections for net outlays (FY 2025–FY 2028)  
-     3. Net outlays growth in 3–4‑year windows historically  
-   Evaluation:  
-     – Class 1 gives raw baseline but omits future policy shocks.  
-     – Class 2 embodies CBO’s expert view, but may understate upside if interest costs or legislation change.  
-     – Class 3 captures realized volatility over similar horizons; suitable for setting distribution width.  
-   Chosen reference: blend of Class 1 for central tendency and Class 3 for volatility calibration, anchored to CBO baseline (Class 2).
-
-3. Timeframe analysis  
-   – Forecast horizon: ~3.5 years (April 2025 → FY 2028 close, data published ~Oct/Nov 2028).  
-   – Historical analogs: net‑outlay windows from FY 2020→FY 2023 (3 years) saw +\$377 b (2020:6.554→2023:6.134 lower due to receipts surge), and FY 2021→FY 2024 (3 years) saw –\$71 b (6.822→6.752). Longer windows vary ±\$400 b.  
-   – Multi‑year CAGR has averaged roughly 3–6% in decades prior to COVID; pandemic period spiked to ~10% then reversed.
-
-4. Justification for outside‑view baseline  
-   – Starting point: FY 2024 net outlays of 6,751,552 million (FRED).  
-   – CBO June 2024 baseline implies gradual rise in outlays driven by mandatory spending and interest: net outlays roughly flat in nominal terms near \$6.7 trillion through FY 2026, then rising toward \$7.9 trillion by FY 2028 (Perplexity synthesis).  
-   – Treasury’s FY 2026 outlay estimate of \$6,746 b suggests outlays plateau near current levels absent new legislation or recessions.  
-   – Mandatory programs + interest costs suggest upward pressure; discretionary caps (FRA) moderate growth; political fights may introduce ephemeral spending increases or cut threats.  
-   – Historical 3–4 year windows (pre‑COVID) saw nominal increases of \$400–600 b (3–5% CAGR). Applying a mid‑range 4% CAGR to \$6.75 trillion yields \$8.0 trillion in FY 2028.  
-   – Risks: recession could reduce receipts and increase outlays (higher net outlays), pushing FY 2028 above \$8.2 trillion; policy reforms or spending caps could limit growth to \$7.5 trillion or lower.
-
-Outside view calibration:
-
-We aim for a wide 90–10 interval reflecting known‑unknowns:  
-– Lower tail (P10) anchors minimal growth scenario: plateau then minor rise to \$7.0 trillion.  
-– Upper tail (P90) covers recession‑plus‑interest shock, pushing net outlays toward \$8.8 trillion.  
-– Central 50% around CBO‑informed 4% CAGR projection (~\$8.0 trillion).
-
-Distribution points (in millions of dollars):
-
-Outside View Prediction:
-Percentile 10: 7,000,000  
-Percentile 20: 7,300,000  
-Percentile 40: 7,700,000  
-Percentile 60: 8,100,000  
-Percentile 80: 8,500,000  
-Percentile 90: 8,800,000
-
-Forecaster_4 Step 1 Output:
-Analysis:
-
-1. Source Analysis  
-- FiscalData Treasury “Federal Budget Receipts and Outlays” (data through estimates for FY 2026)  
-  • Factual table covering FY 1930–FY 2026 (billion \$). High reliability: official Treasury statements. Last updated October 2024 (preliminary FY 2024, estimates FY 2025–26).  
-- FRED series FYONGDA188S (Net Outlays as % of GDP) via America’s Finance Guide  
-  • Derived from OMB and BEA data. Measures net outlays/GDP annually. Reliable for understanding fiscal ratios. First published January 2013; subject to revisions.  
-- FRED series FYONET (Federal Net Outlays in millions) via UCSB Presidency site  
-  • Official OMB figures. Annual, fiscal‑year. Reliable; prior years published Jan/Feb, most recent preliminary in October. FY 2024: 6,751,552.  
-- CBO June 2024 Baseline (via Committee for a Responsible Federal Budget)  
-  • Projects deficits, debt‑to‑GDP, spending vs. revenues over FY 2024–34. Authoritative expert forecasts; last updated June 2024. Contains judgments on interest rates, demographic pressures.  
-- CRFB summary of CBO February 2024 Outlook  
-  • Similar to above but earlier. Highlights drivers (trust‐fund insolvencies, mandatory spending growth). Reliable secondary source of CBO analysis.  
-- Perplexity‐generated report on outlays FY2000–FY2028  
-  • Mixed reliability. Includes some Wikipedia references and expert reports but may conflate gross spending and net outlays. Use with caution; extract only broadly consistent historical figures.
-
-2. Reference Class Analysis  
-Possible reference classes:  
-- Historical net outlays FY2000–FY2024 (absolute growth patterns).  
-- CBO baseline projections for FY 2025–FY 2028 (spending % of GDP and deficits).  
-- Net outlays as % of GDP over time, mapped to GDP projections.  
-Suitability: CBO baseline % of GDP mapped to nominal GDP best captures expected structural drivers (interest, entitlements) over 4‑year horizon. Historical absolute growth shows high volatility around crises. We tether our baseline to CBO’s FY 2028 spending rate (24.4% of GDP) and current nominal GDP trajectory.
-
-3. Timeframe Analysis  
-• Horizon: ~4.5 years (from Q2 2025 to October 2028 data release).  
-• Historical analog: FY 2024→FY 2028  
-  – FY 2022–FY 2026 estimated net outlays rose from \$6.273 T to \$6.746 T (+7.6% over 4 years).  
-  – Crises (2008–09, 2020–21) produced 25–50% swings in 2–3 years; absent crises, growth has averaged 3–5% annually.  
-• GDP growth: CBO projects ~4–5% nominal GDP growth p.a. through FY 2028.
-
-4. Justification for Outside View Baseline  
-• CBO projects net outlays to stabilize at ~24.4% of GDP in FY 2028.  
-• Assume nominal GDP FY 2028 ≈ \$30.4 trillion (projecting \$27.7 T in FY 2025 growing 4.5% p.a. over 3 years).  
-• 0.244 × \$30.4 T = \$7.42 T.  
-• Receipts + deficits approach: receipts ~17.8% of GDP ⇒ \$5.4 T; projected deficit ~\$1.8 T ⇒ outlays ≈ \$7.2 T.  
-• Average these two CBO‐based methods ⇒ \$7.31 T.  
-• Historical forecasting error vs. CBO baseline (~3–4%) suggests slight upside risk if interest costs or entitlements accelerate.  
-• Policy uncertainties (debt‑ceiling standoffs, trust‐fund insolvency adjustments) could skew by ±5%.
-
-Outside View Calibration  
-• Base distribution anchored at \$7.31 T (7,310,000 million).  
-• Allow 90/10 interval wide enough to cover:  
-   – Lower tail: mild fiscal consolidation, higher receipts, slower interest growth.  
-   – Upper tail: additional stimulus, faster entitlement/inflation pressures, higher interest costs.  
-• Tether to historical forecast error: CBO 5‑year out‐year outlay projections have ~±7% error (one‑sided). We adopt ±10% around baseline for 10th–90th percentiles.
-
-Outside View Prediction (Millions of Dollars)  
-Percentile 10: 6,950,000  
-Percentile 20: 7,100,000  
-Percentile 40: 7,310,000  
-Percentile 60: 7,530,000  
-Percentile 80: 7,760,000  
-Percentile 90: 8,040,000

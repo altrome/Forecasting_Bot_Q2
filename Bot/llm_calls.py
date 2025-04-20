@@ -190,7 +190,7 @@ async def call_gpt_o1(prompt):
         return f"Error generating response: {str(e)}"
 
 
-async def call_gpt_o3(prompt):
+async def call_gpt_o3_METAC(prompt):
     # We are temporarily going to short gpt while my o1 credits are out
     prompt = gpt_context + "\n" + prompt
     try:
@@ -226,12 +226,20 @@ async def call_gpt_o3(prompt):
         return f"Error generating response: {str(e)}"
     
 
-
-
 async def call_gpt(prompt):
     client = OpenAI(api_key=OPENAI_API_KEY)
     response = client.responses.create(
         model="o4-mini",
+        input= gpt_context + "\n" + prompt
+    )
+    return response.output_text
+
+
+async def call_gpt_o3(prompt):
+    prompt = gpt_context + "/n" + prompt
+    client = OpenAI(api_key=OPENAI_API_KEY)
+    response = client.responses.create(
+        model="o3",
         input= gpt_context + "\n" + prompt
     )
     return response.output_text
