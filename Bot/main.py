@@ -73,7 +73,7 @@ def post_question_comment(post_id: int, comment_text: str) -> None:
             "text": comment_text,
             "parent": None,
             "included_forecast": True,
-            "is_private": True,
+            "is_private": False,
             "on_post": post_id,
         },
         **AUTH_HEADERS,  # type: ignore
