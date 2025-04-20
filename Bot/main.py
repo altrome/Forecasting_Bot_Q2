@@ -9,7 +9,6 @@ from forecaster import binary_forecast, numeric_forecast, multiple_choice_foreca
 
 import numpy as np
 import requests
-import forecasting_tools
 from asknews_sdk import AskNewsSDK
 from search import call_gpt
 
