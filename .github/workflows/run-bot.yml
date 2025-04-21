@@ -41,8 +41,7 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git pull --rebase origin main
-
           git add Q2_tournament_forecasts/*.txt
+          git pull --rebase origin main
           git commit -m "Add forecast outputs [skip ci]" || echo "No changes to commit"
           git push
