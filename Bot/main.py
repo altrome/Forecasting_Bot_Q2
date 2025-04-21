@@ -12,7 +12,7 @@ import requests
 from asknews_sdk import AskNewsSDK
 from search import call_gpt
 
-OUTPUT_DIR = "Q2_tournament_forecasts"
+OUTPUT_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "Q2_tournament_forecasts")
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 ######################### CONSTANTS #########################
