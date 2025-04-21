@@ -21,7 +21,7 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 SUBMIT_PREDICTION = True  # set to True to publish your predictions to Metaculus
 USE_EXAMPLE_QUESTIONS = True # set to True to forecast example questions rather than the tournament questions
 NUM_RUNS_PER_QUESTION = 5  # The median forecast is taken between NUM_RUNS_PER_QUESTION runs
-SKIP_PREVIOUSLY_FORECASTED_QUESTIONS = True
+SKIP_PREVIOUSLY_FORECASTED_QUESTIONS = False
 RUN = True
 
 # Environment variables
