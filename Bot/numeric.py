@@ -84,9 +84,6 @@ def generate_continuous_cdf(
         percentiles = np.append(percentiles, 1.0)
         values      = np.append(values,      upper_bound)
 
-    # Ensure grid lies within convex hull
-    effective_min = min(lower_bound, values[0])
-    effective_max = max(upper_bound, values[-1])
 
     # ---------- 3. Optional log transform ----------
     use_log = np.all(values > 0)
@@ -124,9 +121,6 @@ def generate_continuous_cdf(
         if cdf_y[i] <= cdf_y[i - 1]:
             cdf_y[i] = min(cdf_y[i - 1] + min_step, 0.999999)
 
-    cdf_y[0] = 0.0 if not open_lower_bound else max(cdf_y[0], 0.0)
-    cdf_y[-1] = 1.0 if not open_upper_bound else min(cdf_y[-1], 1.0)
-
     # Final fail-safe
     if np.any(np.diff(cdf_y) <= 0):
         raise RuntimeError("Final monotonicity fix failed.")
@@ -143,9 +137,15 @@ def generate_continuous_cdf(
     if not open_upper_bound:
         cdf_y[-1] = 1.0
     cdf_y = np.clip(cdf_y, 0.0, 1.0)
-    # Final assert
-    if np.any(np.diff(cdf_y) <= 0):
-        raise RuntimeError("Strict monotonicity enforcement failed (should never happen)")
+    # Final hard enforcement for Metaculus
+    for i in range(1, len(cdf_y)):
+        if cdf_y[i] < cdf_y[i - 1] + min_step:
+            cdf_y[i] = min(cdf_y[i - 1] + min_step, 1.0)
+
+    # Final clipping and assertion
+    cdf_y = np.clip(cdf_y, 0.0, 1.0)
+    if np.any(np.diff(cdf_y) < min_step):
+        raise RuntimeError("Final CDF violates minimum step requirement for Metaculus.")
 
     return cdf_y.tolist()
 
