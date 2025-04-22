@@ -353,6 +353,10 @@ async def get_numeric_forecast(question_details: dict, write=print):
         call_gpt_o3(prompt1)
     )
 
+    for i, out in enumerate(base_forecasts):
+        write(f"\nForecaster_{i+1} step 1 output:\n{out}")
+
+
     context_map = {
         str(i+1): f"Current context: {curr_context}\nPrior: {base_forecasts[i]}"
         for i in range(5)

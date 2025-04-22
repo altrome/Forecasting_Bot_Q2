@@ -1,6 +1,7 @@
 import asyncio
 import datetime
 import re
+import json
 import numpy as np
 from prompts import (
     MULTIPLE_CHOICE_PROMPT_historical,
@@ -139,5 +140,11 @@ async def get_multiple_choice_forecast(question_details: dict, write=print) -> t
         f"Average Probability Yes Per Category: `{probability_yes_per_category}`\n\n"
         + "\n\n".join(final_outputs)
     )
+
+
+    write("\nFinal averaged probabilities per category:")
+    write(json.dumps(probability_yes_per_category, indent=2))
+    write("\nForecast comment:")
+    write(comment)
 
     return probability_yes_per_category, comment

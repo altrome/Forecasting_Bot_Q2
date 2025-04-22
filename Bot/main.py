@@ -244,63 +244,71 @@ async def forecast_individual_question(
 
     filename = f"{''.join(c if c.isalnum() else '_' for c in title)[:100]}.txt"
     output_path = os.path.join(OUTPUT_DIR, filename)
-    f = open(output_path, "w", encoding="utf-8")
-    def write_to_file(line): f.write(line + "\n")
 
-    if question_type == "multiple_choice":
-        options = question_details["options"]
-        summary_of_forecast += f"options: {options}\n"
+    # Use safe context manager for writing
+    with open(output_path, "w", encoding="utf-8") as f:
+        def write_to_file(line: str):
+            print(f"[WRITE] {line}")
+            f.write(line + "\n")
 
-    if forecast_is_already_made(question_details) and skip_previously_forecasted_questions:
-        summary_of_forecast += "Skipped: Forecast already made\n"
-        return summary_of_forecast
+        if question_type == "multiple_choice":
+            options = question_details["options"]
+            summary_of_forecast += f"Options: {options}\n"
 
-    if question_type == "binary":
-        forecast, comment = await binary_forecast(question_details, write=write_to_file)
-        if forecast > 1:
-            forecast /= 100
-    elif question_type == "numeric":
-        forecast, comment = await numeric_forecast(question_details, write=write_to_file)
-    elif question_type == "multiple_choice":
-        forecast, comment = await multiple_choice_forecast(question_details, write = write_to_file)
-    else:
-        raise ValueError(f"Unknown question type: {question_type}")
+        if forecast_is_already_made(question_details) and skip_previously_forecasted_questions:
+            summary_of_forecast += "Skipped: Forecast already made\n"
+            write_to_file(summary_of_forecast)
+            return summary_of_forecast
 
-    print(f"-----------------------------------------------\nPost {post_id} Question {question_id}:\n")
-    print(f"Forecast for post {post_id} (question {question_id}):\n{forecast}")
-    print(f"Comment for post {post_id} (question {question_id}):\n{comment}")
+        # Forecasting per type
+        if question_type == "binary":
+            forecast, comment = await binary_forecast(question_details, write=write_to_file)
+            if forecast > 1:
+                forecast /= 100
+        elif question_type == "numeric":
+            forecast, comment = await numeric_forecast(question_details, write=write_to_file)
+        elif question_type == "multiple_choice":
+            forecast, comment = await multiple_choice_forecast(question_details, write=write_to_file)
+        else:
+            raise ValueError(f"Unknown question type: {question_type}")
 
-    summary_of_forecast += f"Forecast: {forecast}\n"
+        print(f"-----------------------------------------------\nPost {post_id} Question {question_id}:\n")
+        print(f"Forecast for post {post_id} (question {question_id}):\n{forecast}")
+        print(f"Comment for post {post_id} (question {question_id}):\n{comment}")
 
-    comment_str = json.dumps(comment, indent=2) if not isinstance(comment, str) else comment
-    summary_of_forecast += f"Comment:\n```\n{comment_str}...\n```\n\n"
+        summary_of_forecast += f"Forecast: {forecast}\n"
 
-    summary_prompt = f"""Below is a detailed explanation for a forecast posted on Metaculus, comprising reasoning from a team of five forecasters.
-    Please summarize it into a concise 5-7 sentence paragraph suitable for a forecast comment. 
-    Ensure you preserve the key reasoning, especially if relevant sources, probabilities, or 
-    contextual comparisons are mentioned. Reference key agreements and possible disagreements between forecasters. You may conclude by briefly referencing the five final forecast values. 
+        comment_str = json.dumps(comment, indent=2) if not isinstance(comment, str) else comment
+        summary_of_forecast += f"Comment:\n```\n{comment_str}...\n```\n\n"
 
-    Please begin the summary straightaway by briefly describing the question, DO NOT prefix your answer with something like 'Here is the summarized reasoning:' or 'Forecaster summary:'.
+        summary_prompt = f"""Below is a detailed explanation for a forecast posted on Metaculus, comprising reasoning from a team of five forecasters.
+Please summarize it into a concise 5-7 sentence paragraph suitable for a forecast comment. 
+Ensure you preserve the key reasoning, especially if relevant sources, probabilities, or 
+contextual comparisons are mentioned. Reference key agreements and possible disagreements between forecasters. You may conclude by briefly referencing the five final forecast values. 
 
-    Forecast Explanation:
-    {comment_str}
-    """
-    try:
-        short_comment = await call_gpt(summary_prompt)
-    except Exception as e:
-        print(f"Summarization failed, using original comment. Error: {e}")
-        short_comment = comment_str
+Please begin the summary straightaway by briefly describing the question, DO NOT prefix your answer with something like 'Here is the summarized reasoning:' or 'Forecaster summary:'.
 
-    print(f"Forecast was retrieved successfully with value {forecast}")
-    print(f"Forecast is of type {type(forecast)}")
+Forecast Explanation:
+{comment_str}
+"""
 
-    if submit_prediction:
-        forecast_payload = create_forecast_payload(forecast, question_type)
-        post_question_prediction(question_id, forecast_payload)
-        post_question_comment(post_id, short_comment)
-        summary_of_forecast += "Posted: Forecast was posted to Metaculus.\n"
+        try:
+            short_comment = await call_gpt(summary_prompt)
+        except Exception as e:
+            print(f"Summarization failed, using original comment. Error: {e}")
+            short_comment = comment_str
 
-    f.close()
+        print(f"Forecast was retrieved successfully with value {forecast}")
+        print(f"Forecast is of type {type(forecast)}")
+
+        if submit_prediction:
+            forecast_payload = create_forecast_payload(forecast, question_type)
+            post_question_prediction(question_id, forecast_payload)
+            post_question_comment(post_id, short_comment)
+            summary_of_forecast += "Posted: Forecast was posted to Metaculus.\n"
+
+        write_to_file(summary_of_forecast)
+
     return summary_of_forecast
 
 
