@@ -1,116 +1,287 @@
 
 Historical context LLM output:
 Analysis:
-We need an outside‐view baseline on how often South Korean prime ministers or acting presidents launch presidential bids, and the typical timing of those announcements relative to election dates. Key historical context includes:
-- Precedents of former PMs (e.g., Lee Hae‑chan, Chung Sye‑kyun) and acting presidents (e.g., Hwang Kyo‑ahn) who sought the presidency, and when they declared candidacies.
-- Typical announcement windows in Korean presidential races (often 3–6 months before election).
-- The progression of internal party drafting efforts (especially within the PPP) and how quickly those moves translate into formal candidacy declarations.
-- Any unique factors in Han Duck‑soo’s case (his age, policy reputation, June election schedule).
-Understanding these patterns will give us a base rate for announcement likelihood by early May 2025. We can then overlay the current momentum in the PPP to adjust our forecast.
+This question hinges on understanding the typical timing and drivers of presidential candidacy announcements in South Korea, especially for high‑profile figures like former prime ministers or acting presidents drafted by their party. Historically, major party candidates reveal their bids several months before the June election—often 4–6 months out—making a declaration within one month of the vote highly unusual. To establish a baseline (out‑view), I need data on past announcement dates relative to election day, average lead times, and any rare late filings. I also want precedent for parties “drafting” non‑candidates (e.g., acting prime ministers) and whether those calls led to actual bids. These insights will inform how exceptional a late April/early May announcement by Han Duck‑soo would be and help set a base‑rate probability.
 
 Search queries:
-1. Han Duck-soo presidential candidacy announcement timeline (Google)
-2. PPP support Han Duck-soo presidential candidacy (Google News)
-3. List historical precedents of South Korean prime ministers or acting presidents running for president, detailing when they announced candidacies relative to election dates and circumstances influencing timing (Perplexity)
+1. South Korea presidential candidacy announcement dates (Google)
+2. Yoon Suk‑yeol candidacy announcement date (Google News)
+3. Please provide a timeline of when major South Korean presidential candidates since 2002 officially announced their candidacies, including announcement dates, their prior positions, and number of days before the election, plus the average lead time and any announcements made less than two months before voting day. (Perplexity)
 
 Current context LLM output:
 Analysis:
-Han Duck‑soo was tapped as interim leader of the People Power Party (PPP) in mid‑April, and party insiders have publicly urged him to run. With the May 5 announcement deadline looming, the critical information needed includes:
-- Any direct statements from Han Duck‑soo on his intentions or timing for declaring a bid.
-- PPP internal deliberations or resolutions about nominating or “drafting” Han.
-- Reporting on party convention schedules, nomination deadlines, and legal candidacy registration windows.
-- Commentary from key PPP figures (e.g., party floor leaders, regional chairs) on whether they expect his announcement imminently.
-- Analysis of how other candidates have timed their announcements in past elections.
-Gathering these will allow an inside‑view adjustment to our baseline (which, given historical rates of late interim‑leader announcements, was perhaps ~30%).
+Han Duck‑soo’s potential candidacy hinges on recent shifts within the People Power Party (PPP) and any public statements he or senior PPP figures have made regarding a formal announcement. With fewer than two weeks until the May 5 deadline, key information includes: announcements or hints from Han himself; internal PPP deliberations or drafting campaigns; endorsements from influential party factions; and any changes in his public schedule suggesting mounting preparations. Historical context shows that major Korean political figures typically signal intentions through controlled media op-eds or televised interviews roughly one to two weeks before formal declarations. An inside‑view forecast requires the latest news on whether those signals have occurred or are imminent.
 
 Search queries:
 1. Han Duck‑soo presidential candidacy announcement (Google)
-2. Han Duck‑soo presidential bid speculation (Google News)
-3. Find recent news on Han Duck‑soo’s intentions or timeline for announcing his presidential candidacy, including quotes from PPP officials and Han Duck‑soo himself. (Assistant)
+2. Han Duck‑soo run for president (Google News)
+3. Find recent April 2025 news articles on interviews or statements from Han Duck‑soo about running for president, and any internal PPP discussions or endorsements related to drafting him as a candidate. (Assistant)
 
 Historical context search results:
 
-<Perplexity_report>
-Query: List historical precedents of South Korean prime ministers or acting presidents running for president, detailing when they announced candidacies relative to election dates and circumstances influencing timing
-# Historical Precedents of South Korean Prime Ministers or Acting Presidents in Presidential Transitions  
+<Summary source="https://www.dw.com/en/south-korea-sets-snap-election-date-for-june-3/a-72169956">
+Article metadata  
+• Source: dw.com (Deutsche Welle)  
+• Author: Mahima Kapoor  
+• Date: April 8, 2025  
 
-## Executive Transitions in South Korean Political History  
+Key facts and figures  
+• New election date: June 3, 2025  
+• Trigger: Constitutional Court upheld impeachment of President Yoon Suk Yeol over his December 2024 martial‑law order  
+• Legal mandate: South Korean law requires a presidential election within 60 days of an ouster  
+• Economy context: Aims to restore stability amid slowing growth and global trade tensions  
 
-South Korea’s democratic development since 1948 has witnessed multiple instances where prime ministers or acting presidents assumed presidential powers during political crises. While direct precedents of sitting prime ministers or acting presidents formally announcing presidential candidacies are scarce due to constitutional constraints and political norms, several figures have transitioned into executive roles through indirect elections or appointments. This report examines key historical cases, analyzing the circumstances and timing of their ascensions relative to electoral processes.  
+Official statements  
+• Prime Minister Han Duck‑soo (acting president): “Preparations [are under way] to ensure an election that is fairer and more transparent than ever, and one that can earn the trust of the people.”  
 
----
+Major declared and prospective candidates  
+Liberal Democratic Party (DP)  
+  – Lee Jae‑myung: lost narrowly in 2022, now front‑runner; faces corruption and election‑law trials; DP controls the National Assembly.  
 
-### Choi Kyu-hah: From Prime Minister to President (1979–1980)  
+Conservative People Power Party (PPP)  
+  – Kim Moon‑soo (former labor minister): resigned to run, citing “responsibility to solve national difficulties.”  
+  – Ahn Cheol‑soo (PPP lawmaker): declared bid as a “cleaner candidate,” pledges to boost economic growth and counter U.S. trade tariffs; previously garnered 21% of the vote in 2017.  
+  – Han Dong‑hoon (former PPP leader): polling at 5% (see below).  
+  – Additional conservative hopefuls expected to enter as PPP seeks to navigate its current crisis.  
 
-Choi Kyu-hah served as prime minister under President Park Chung Hee from 1975 until Park’s assassination on October 26, 1979. Following Park’s death, Choi became acting president under Article 48 of the Yushin Constitution, which mandated the prime minister assume presidential duties during a vacancy[9][11]. On December 6, 1979, the National Conference for Unification—a 2,583-member electoral body dominated by Park’s Democratic Republican Party—formally elected Choi as president with 96% support[10].  
+Opinion poll (Gallup, U.S.)  
+• 34% support Lee Jae‑myung  
+• 9% support Kim Moon‑soo  
+• 5% support Han Dong‑hoon  
 
-Choi’s transition lacked a public candidacy announcement or campaign, as the Yushin system centralized power within the ruling party. His tenure was cut short by Major General Chun Doo-hwan’s coup in December 1979, which led to Choi’s resignation in August 1980. This case underscores how authoritarian-era transitions prioritized regime continuity over participatory democracy[9][10].  
+Context note  
+• Parties will hold primaries in coming weeks to select official nominees.
+</Summary>
 
----
+<Summary source="https://www.nytimes.com/2025/04/07/world/asia/south-korea-election.html">
+Summary of “South Korea Sets New Presidential Election for June 3” (New York Times, April 8, 2025)
 
-### Yun Posun: Ceremonial Presidency in the Second Republic (1960)  
+Facts and key details
+• Snap election scheduled for June 3, 2025, to replace impeached President Yoon Suk Yeol  
+• Constitutional Court unanimously upheld Yoon’s impeachment (8–0) after his attempt to impose martial law  
+• By law, a new president must be elected within 60 days of the court’s ruling  
+• June 3 declared a national holiday to boost turnout  
+• Rival parties must complete primaries by May 12; official campaign also begins May 12  
+• Election winner will assume office immediately (no two‑month transition)  
+• Prime Minister Han Duck‑soo is serving as unelected interim leader until the new president takes office  
 
-After the April Revolution toppled Syngman Rhee’s authoritarian regime in 1960, South Korea adopted a parliamentary system, reducing the presidency to a ceremonial role. Yun Posun, a figurehead candidate, was elected president via a joint session of the National Assembly on August 12, 1960, receiving 208 out of 253 votes[13].  
+Opposition Democratic Party  
+• Lee Jae‑myung (party leader; narrowly lost 2022 election) is the clear front‑runner in polls, leading by about 25 percentage points  
+• Lee is expected to resign as party chairman to focus on his presidential bid  
+• He faces several criminal charges, including bribery, which he alleges are politically motivated  
 
-Though Yun was not a prime minister, his election followed Prime Minister Heo Jeong’s brief acting presidency after Rhee’s resignation. The Democratic Party, which controlled parliament, nominated Yun to legitimize the transitional government. His presidency ended with Park Chung Hee’s 1961 coup, highlighting the fragility of early democratic experiments[13].  
+People Power Party (conservatives)  
+• More than a dozen potential candidates have declared, including Labor Minister Kim Moon‑soo  
+• No consensus front‑runner has emerged, partly because the party had been focused on defending Yoon’s presidency  
+• Yoon’s impeachment is the second in a row for a conservative president; he also faces an insurrection trial over his December martial‑law orders  
 
----
+Broader context  
+• South Korea remains led by Han Duck‑soo amid rising external pressures: U.S. tariffs on Korean goods and North Korea’s advancing nuclear program and closer ties with Russia  
+• The political crisis has deepened partisan polarization, with conservatives (including right‑wing YouTube influencers) pushing allegations of election rigging and “anti‑state” collusion by progressives, while the Democratic Party accuses them of smears to divert attention from Yoon’s failures  
 
-### Han Duck-soo: Acting Presidency During Constitutional Crises (2024–2025)  
+Reporter: Choe Sang‑Hun, The New York Times, Seoul.
+</Summary>
 
-Han Duck-soo, prime minister under President Yoon Suk Yeol, assumed the acting presidency on December 14, 2024, after Yoon’s impeachment by the National Assembly[4][8]. Unlike Choi or Yun, Han’s tenure was marred by political infighting: he was impeached on December 27, 2024, for obstructing judicial appointments and delaying opposition-backed investigations[4].  
+<Summary source="https://apnews.com/article/south-korea-election-date-03a4e56b7aa98db9e18bad5ab66762cb">
+Here is a focused summary of the AP News article (April 8, 2025):
 
-Han did not announce a presidential bid, as South Korean law prohibits acting presidents from campaigning while in office. His impeachment precluded any potential candidacy in the June 3, 2025, snap election, which was triggered by Yoon’s removal[12]. This case illustrates modern constitutional safeguards against leveraging acting presidencies for electoral advantage[7][8].  
+• Election timing and context  
+  – Acting President Han Duck‑soo announced on April 8 that a snap presidential election will be held June 3, 2025.  
+  – The vote follows the Constitutional Court’s unanimous removal of President Yoon Suk Yeol; South Korean law requires an election within 60 days.  
+  – The winner will serve a full five‑year term.  
 
----
+• Political landscape  
+  – Deep polarization: a two‑way contest between Yoon’s conservative People Power Party (PPP) and the liberal Democratic Party (DP), which controls the National Assembly.  
+  – The PPP is weakened by internal divisions and reputational damage from Yoon’s brief imposition of martial law late last year.  
 
-### Goh Kun: Caretaker Role Post-Impeachment (2004)  
+• Democratic Party front‑runner  
+  – Lee Jae‑myung is all but assured the DP nomination; he narrowly lost in 2022 and led the party’s resistance to martial law and the subsequent impeachment of Yoon.  
+  – Lee faces five ongoing trials for alleged corruption; presidential immunity would likely halt those prosecutions if he wins.  
 
-Although not detailed in the provided sources, historical context notes that Goh Kun, prime minister under Roh Moo-hyun, became acting president after Roh’s 2004 impeachment. Goh adhered strictly to caretaker norms, avoiding policy decisions or political endorsements. Roh was reinstated by the Constitutional Court, and Goh did not seek office afterward, reinforcing the apolitical expectations for interim leaders[7].  
+• People Power Party field  
+  – About ten PPP figures are expected to run in primaries.  
+    • Kim Moon Soo (Labor Minister): most pro‑Yoon  
+    • Hong Joon‑pyo (Daegu Mayor): opposed Yoon’s impeachment  
+    • Han Dong‑hoon (former party leader) and Ahn Cheol‑soo (senior lawmaker): supported impeaching Yoon  
+    • Oh Se‑hoon (Seoul Mayor): has taken an ambiguous stance  
+  – Yoon, now facing a rebellion charge and potentially further charges, is likely to back pro‑Yoon candidates for nomination and party leadership.  
 
----
+• Expert opinions (all named sources)  
+  – Leif‑Eric Easley (Ewha University): “The conservative party faces significant disadvantages… Two months is a short time to unify the base, moderates and a conspiracy‑driven fringe around a single candidate.”  
+  – Choi Jin (Institute of Presidential Leadership): PPP leadership “filled with Yoon loyalists” will perpetuate internal divides and damage electoral prospects.  
+  – Duyeon Kim (Center for a New American Security): PPP must nominate someone who can win over moderates and young swing voters, not merely prevail in party primaries.  
 
-## Circumstances Influencing Transition Timing  
+No significant polling figures or less‑reliable anonymous opinions were cited in the article.
+</Summary>
 
-1. **Constitutional Frameworks**: Pre-1987 indirect elections (e.g., 1979, 1960) allowed ruling parties to anoint successors without public engagement. Post-1987 reforms codified direct elections but limited acting presidents to caretaker roles[2][7].  
-2. **Political Crises**: Assassinations (Park, 1979) or impeachments (Yoon, 2024) forced abrupt transitions, leaving little time for candidacy preparations[9][12].  
-3. **Military Interventions**: Chun Doo-hwan’s 1979–1980 power grab and Park Chung Hee’s 1961 coup disrupted constitutional successions, sidelining civilian leaders[10][13].  
+<Summary source="https://www.reuters.com/world/asia-pacific/south-korea-hold-snap-presidential-election-june-3-2025-04-08/">
+Below is a concise summary of the Reuters article by Joyce Lee (April 8, 2025). I have focused on factual details, named sources’ statements, and key poll numbers.
 
----
+1. Election date set  
+   - Acting President Han Duck‑soo told a cabinet meeting that the government will hold a snap presidential election on June 3, 2025, 60 days after Yoon Suk Yeol’s removal from office.
 
-## Conclusion  
+2. Context of Yoon’s removal  
+   - Yoon was impeached and removed by South Korea’s Constitutional Court for issuing a martial law decree on December 3 and mobilizing troops to halt parliamentary proceedings.
+   - His removal triggered the requirement for a new election within 60 days. Yoon now faces criminal insurrection charges; his trial arguments begin April 14.
 
-South Korea’s history reveals no cases of sitting prime ministers or acting presidents formally launching presidential campaigns, as legal and normative barriers prevent interim leaders from leveraging their positions. Transitions during crises have instead relied on indirect elections or parliamentary appointments, often under authoritarian or unstable conditions. The 2025 snap election continues this pattern, with candidates like Lee Jae-myung and PPP contenders operating outside the acting presidency framework[1][12].  
+3. Early campaigners  
+   - Kim Moon‑soo, Yoon’s former labour minister (not yet formally PPP‑affiliated), resigned and declared his candidacy. He said:  
+     “I tendered my resignation and decided to run because the people want it… I feel a sense of responsibility to solve national difficulties,” and urged unity to overcome a “severe national crisis.”
+   - Ahn Cheol‑soo, a PPP lawmaker who voted for Yoon’s impeachment, also announced his run, calling himself “a cleaner candidate than anyone else” and pledging to boost growth via AI to counter U.S. tariffs.
 
----
+4. Other contenders and front‑runner  
+   - Lee Jae‑myung, leader of the liberal Democratic Party and 2022 runner‑up, is viewed as the clear front‑runner. He faces multiple trials (election‑law breaches, bribery) but is expected to resign party leadership and formally enter the race soon.
+   - The conservative field is wide open after back‑to‑back PPP impeachments (Park Geun‑hye in 2017, Yoon in 2025).
 
-### Sources Cited  
-1. *The Diplomat* (February 12, 2025)  
-2. Wikipedia, "Presidential Elections in South Korea"  
-4. *Stimson Center* (January 2, 2025)  
-7. *The Korea Herald* (December 14, 2024)  
-8. *Britannica*, "Yoon Suk-Yeol"  
-9. Wikipedia, "Choi Kyu-hah"  
-10. *Time* (December 17, 1979)  
-11. *Britannica*, "Choi Kyu-Hah"  
-12. *TIME* (April 8, 2025)  
-13. Wikipedia, "August 1960 South Korean Presidential Election"  
+5. Polling (Gallup, published April 4)  
+   - Lee Jae‑myung: 34%  
+   - Kim Moon‑soo: 9%  
+   - Former PPP leader Han Dong‑hoon: 5%  
+   - Daegu Mayor Hong Joon‑pyo: 4%  
+   - Seoul Mayor Oh Se‑hoon: 2%
 
-*Additional historical context drawn from established scholarship on South Korean politics.*</Perplexity_report>
+All statements and figures are drawn directly from the Reuters article.
+</Summary>
 
 
 Current context search results:
 
+<Summary source="https://www.chosun.com/english/national-en/2025/04/11/4MACFJ34LVF4PGLB6HOWDLEDFM/">
+Here’s a concise summary of the ABC.net.au article (April 8, 2025):
+
+Background & Election Announcement  
+• Four days after the Constitutional Court unanimously removed President Yoon Suk Yeol for imposing martial law, Acting President Han Duck‑soo formally set a snap presidential election for June 3, 2025—within the 60‑day window required by law.  
+• Han made the announcement at a cabinet meeting, citing the time needed for parties to organise campaigns. The winner will serve a full five‑year term.
+
+Political Landscape  
+• Deep polarisation suggests a showdown between:  
+  – The conservative People Power Party (PPP), reeling from Yoon’s martial‑law episode and internal splits  
+  – The liberal Democratic Party, which holds a National Assembly majority
+
+People Power Party Contenders  
+• Kim Moon‑soo (former labour minister)  
+  – Resigned his cabinet post and officially launched a campaign  
+  – Polls show him leading other conservatives  
+  – Opposed Yoon’s impeachment, says he’s running “because the people want it”  
+• Ahn Cheol‑soo (former party leader, senior politician)  
+  – Declared his candidacy, branding himself a “cleaner candidate”  
+  – Supports new economic drivers (e.g. AI) to counter U.S. trade policies  
+• Broader field of conservative hopefuls faces the challenge of unifying a fractured base in just two months
+
+Democratic Party Frontrunner  
+• Lee Jae‑myung (populist leader who narrowly lost in 2022)  
+  – Considered the clear favourite despite five ongoing criminal trials (which would be suspended if he wins)  
+  – Expected to step down as party leader and formally enter the race imminently
+
+Party Dynamics & Challenges  
+• Yoon’s martial‑law decision: brought troops into Seoul, evoked memories of past military rule, and damaged the PPP’s reputation despite not being a direct party action  
+• Reformist PPP members impeached Yoon, deepening rifts with loyalists  
+• Die‑hard Yoon supporters hold large rallies and espouse conspiracy theories about a “leftist” plot  
+• Experts’ take:  
+  – Leif‑Eric Easley (Ewha University): Two months is “a short time to unify base, moderates and a conspiracy‑driven fringe.”  
+  – Choi Jin (Institute of Presidential Leadership): The PPP’s Yoon‑loyalist leadership will perpetuate internal divides.  
+  – Duyeon Kim (Center for a New American Security): PPP needs a candidate who can win over moderates and young swing voters, not just the party faithful.
+
+Sources: ABC.net.au, with reporting by AP and Reuters.
+</Summary>
+
+<Summary source="https://www.abc.net.au/news/2025-04-09/south-korea-presidential-election-june-3-yoon-suk-yeol/105154384">
+Here’s a concise summary of the AP article “South Korea will hold election on June 3 to replace ousted President Yoon Suk Yeol”:
+
+Facts and developments  
+• Acting President Han Duck‑soo announced a snap presidential election for June 3, 2025.  
+• This follows the Constitutional Court’s removal of President Yoon Suk Yeol over his December martial‑law imposition.  
+• South Korean law requires a new president to be elected within 60 days of an ouster.  
+• The vote is expected to pit the conservative People Power Party (PPP) against the liberal Democratic Party in a two‑way showdown.  
+
+Democratic Party  
+• Party leader Lee Jae‑myung is widely expected to secure the nomination; he faces no major intra‑party challengers.  
+• Lee narrowly lost the 2022 election and led his party through the recent martial‑law and impeachment crises.  
+
+People Power Party  
+• Some ten politicians are set to contest the PPP primary.  
+• High‑profile aspirants include:  
+  – Labor Minister Kim Moon Soo  
+  – Seoul Mayor Oh Se‑hoon  
+  – Daegu Mayor Hong Joon‑pyo  
+  – Former party leader Han Dong‑hoon  
+  – Senior lawmaker Ahn Cheol‑soo  
+
+Analyst observations (attributed to unnamed “observers”)  
+• Lee Jae‑myung is seen as the clear front‑runner in the overall race.  
+• The PPP faces an uphill struggle to restore public confidence and mend internal rifts after the martial‑law episode.
+</Summary>
+
+<Summary source="https://www.nationthailand.com/blogs/news/world/40048963">
+Here’s a concise summary of the April 19, 2025 article from nationthailand:
+
+• Poll and source  
+  – A Gallup Korea survey of 1,000 adults (April 15–17; ±3.1 pp margin of error at 95% confidence)  
+• Front‑runner  
+  – Rep. Lee Jae‑myung (Democratic Party): 38% support—his highest this year and the leading figure in the early June 3 presidential race  
+• Tied for second (7% each)  
+  – Hong Joon‑pyo (former Daegu mayor, PPP primary candidate)  
+  – Kim Moon‑soo (former labour minister, PPP primary candidate)  
+  – Prime Minister (Acting President) Han Duck‑soo (not a PPP member; has not yet said whether he will run)  
+• Other candidates  
+  – Han Dong‑hoon (former justice minister, PPP): 6%  
+  – Lee Jun‑seok (Reform Party): 2%  
+• Undecided  
+  – 26% of respondents had no preferred candidate or were undecided  
+• Context  
+  – An early presidential election is set for June 3 after President Yoon Suk Yeol’s impeachment and removal for declaring martial law  
+• Next steps  
+  – Major parties are expected to finalize their nominees in the coming weeks
+</Summary>
+
+<Summary source="https://koreajoongangdaily.joins.com/news/2025-04-21/opinion/columns/Lee-Jaemyung-takes-early-lead-as-Han-Ducksoo-weighs-presidential-bid/2289261">
+Article source: AFP via France 24, April 8, 2025.
+
+Key facts and figures  
+- South Korea’s acting president, Prime Minister Han Duck‑soo, has set a new presidential election for June 3, 2025, to comply with the Constitutional Court’s ruling that former president Yoon Suk Yeol’s December declaration of martial law was unconstitutional.  
+- Under the constitution, the election must occur within 60 days of the court’s decision, which upheld Yoon’s impeachment and removed him from office.  
+- June 3 will be a temporary public holiday; the winner is to be inaugurated on June 4 (normal transitions allow a two‑month interval).  
+- Official campaign period: May 12–June 2, 2025.
+
+Political context  
+- Han Duck‑soo resumed the acting presidency after his own impeachment was overturned by the Constitutional Court. He has tasked government ministries and the National Election Commission with ensuring “a fairer and more transparent” vote.  
+- The main frontrunner is opposition leader Lee Jae‑myung, with 34% support in the latest Gallup poll. His Democratic Party holds a parliamentary majority.  
+   • Sources told AFP Lee plans to resign as party leader to run officially for the nomination.  
+   • Lee Jae‑myung narrowly lost the 2022 election and faces ongoing legal trials.  
+- Labour Minister Kim Moon‑soo ranks a distant second at about 9% support, leading a group of People Power Party hopefuls including former party chief Han Dong‑hoon.
+
+Expert opinion  
+- Lee Jun‑han, politics professor at Incheon National University (AFP): “With the election date so soon, it’s hard to expect a presidential candidate from an impeached party to be elected president… Lee Jae‑myung has high approval ratings and… doesn’t have a proper challenger.”
+
+Background  
+- Yoon Suk Yeol attempted to use martial law to subvert civilian rule in December; the Constitutional Court livestreamed its verdict stripping him of office. He is the second South Korean leader impeached by the court (after Park Geun‑hye in 2017).  
+- South Korea has lacked an effective head of state for four months, during which it faced an aviation disaster, the deadliest wildfires in its history, and US‐imposed 26% tariffs on its exports under reciprocal‐levies announced by former President Trump.  
+- Yoon also faces separate criminal charges of insurrection over his martial‐law bid.
+</Summary>
+
+<Summary source="https://www.france24.com/en/live-news/20250408-south-korea-sets-presidential-election-for-june-3-acting-president">
+Disclaimer: While the headline references “US tariffs,” the provided excerpt does not elaborate on that topic.  
+
+Key points from the South China Morning Post article (April 22, 2025):
+
+• Lee Jae‑myung (liberal Democratic Party of Korea) has surpassed 50 percent support in snap‑election polls for the first time.  
+  – Real Meter survey (released Monday): Lee at 50.2 percent, up 1.4 percentage points week‑on‑week.  
+
+• His closest rival, Kim Moon‑soo (conservative People Power Party, former labour minister), stands at 12.2 percent, up 1.3 points.  
+
+• Analysts attribute Lee’s surge to:  
+  – The political upheaval and fragmentation of the conservative bloc following former president Yoon Suk‑yeol’s impeachment.  
+  – Yoon’s removal stemmed from his controversial December 3 declaration of martial law.  
+
+• Within the DPK’s nomination contest for the June 3 snap election, Lee has secured about 90 percent of votes in the first two of four primary rounds. The party’s formal nomination is set for April 27.  
+
+• Acting President Han Duck‑soo, Lee’s potential conservative rival, “stays coy” about whether he will run in the June 3 snap elections.
+</Summary>
+
 <Asknews_articles>
-Query: Find recent news on Han Duck‑soo’s intentions or timeline for announcing his presidential candidacy, including quotes from PPP officials and Han Duck‑soo himself.
+Query: Find recent April 2025 news articles on interviews or statements from Han Duck‑soo about running for president, and any internal PPP discussions or endorsements related to drafting him as a candidate.
 Here are the relevant news articles:
 
-**Han Duck-soo's Presidential Bid: A Divided Conservative Party**
-South Korean Prime Minister Han Duck-soo's potential candidacy for the upcoming presidential election has sparked debate within the conservative ruling party. In an interview with the Financial Times, Han said, 'I have not decided yet' and refused to comment on the matter. The call for Han's candidacy has come from within the conservative ruling party, Nation's Power, as their own candidates are trailing behind Lee Jae-myung, the former leader of the progressive opposition party, in opinion polls. Lee has a significant lead in the polls, making Han's candidacy a potential game-changer in the election.
-Original language: ja
-Publish date: April 21, 2025 03:27 PM
-Source:[朝日新聞デジタル](https://www.asahi.com/articles/AST4P3GR9T4PUHBI01RM.html?iref=ogimage_rek)
-
 **Han Duck-soo's Presidential Campaign Under the Guise of Trade Talks**
 Han Duck-soo, the acting president and prime minister, has been self-praising his 'diplomatic efforts' ahead of the '2+2 high-level trade talks' with the US on April 24, saying that the US also values its relationship with South Korea. However, the opposition Democratic Party and other former opposition parties are criticizing and expressing concerns about Han's 'presidential campaign' under the guise of 'responding to trade issues'. Han said, 'The government will make every effort to find a mutually beneficial solution through calm and sincere negotiations with the US, based on the principle of 'national interest first'. He emphasized that the government will focus on finding a solution to the three key areas of trade imbalance, shipbuilding, and liquefied natural gas (LNG) mentioned by President Trump in their phone call. However, some members of the National Assembly's People Power Party are speculating that Han will resign as prime minister and announce his candidacy for the presidential election within this month. Conservative civic groups and former ruling party officials are also calling for Han to run in the presidential election. The Democratic Party is criticizing Han's actions as 'irresponsible' and 'abandoning his duties as a public official', as he is effectively campaigning for the presidential election without announcing his candidacy. The party's 'Trade and Security Task Force' held its first meeting in the National Assembly and criticized Han for rushing the trade talks with the US, saying that it would be a 'lose-lose situation' for South Korea. Kim Hyun-jong, the former head of the National Security Office, said, 'Those who rush the negotiations will definitely lose.' Kim Min-seok, the party's highest-ranking official, also said, 'The task of resolving the trade issues with the US is to remove the 'Han Duck-soo risk' that comes after the 'Yoon Seok-yeol risk'. He emphasized that it is the responsibility of the acting prime minister, the minister of economy and finance, and other officials to carefully consider the national interest and hand over the task to the new government.' 
 Original language: ko
@@ -123,65 +294,17 @@ Original language: ko
 Publish date: April 21, 2025 02:51 AM
 Source:[연합뉴스](https://www.yna.co.kr/view/AKR20250421060900001)
 
-**Han Duck-soo's Presidential Ambitions: A Challenge to Lee Jae-myung's Monopoly**
-In the recent Democratic Party of Korea (DPK) regional tour election, Lee Jae-myung, the presidential candidate, has proven his 'monopoly' with a 89.56% cumulative vote rate. In contrast, the People Power Party (PPP) is struggling with 8 candidates competing in the election. The PPP's election has been criticized for lacking momentum, with some speculating that the party is trying to distract from the presidential election by promoting Han Duck-soo, the acting president, as a potential candidate. Han Duck-soo's popularity has risen to 10.6% in a recent survey, making him a potential rival to Lee Jae-myung. However, some PPP candidates, including Na Kyung-won and Kim Moon-soo, have expressed concerns about Han's candidacy, citing a lack of consistency and a focus on 'takedown' of Lee Jae-myung. Meanwhile, Kim Sang-uk, a PPP representative, has criticized the party's decision to promote Han as a candidate, saying it undermines the party's election process. The article also mentions the 'Yoon Ah-gyein' movement, which is trying to promote Yoon Suk-yeol, the former president, as a candidate. However, some PPP members are concerned that this movement is trying to distract from the presidential election and undermine the party's election process.
-Original language: ko
-Publish date: April 21, 2025 02:27 AM
-Source:[mk.co.kr](https://www.mk.co.kr/news/politics/11296870)
+**Han Duck-soo Hesitates on Presidential Bid, Vows No Retaliation to US Tariffs**
+South Korean Prime Minister Han Duck-soo has not yet decided whether to run for president, according to his own statements. In an interview with the Financial Times, he declined to comment on the possibility of a presidential candidacy in June. However, he had previously told US President Donald Trump in a phone call that he was still considering a bid for the presidency. Han stated that South Korea will not retaliate against US tariffs and instead wants to find mutually beneficial solutions through negotiations. He also mentioned that the cost-sharing of US troop stationing in Korea may be discussed in trade talks, but no clear framework for security discussions has been established. Han signaled willingness to revisit a deal with the Biden administration on cost-sharing for US troops in South Korea, 'depending on the topics'.
+Original language: de
+Publish date: April 21, 2025 01:23 AM
+Source:[KBS WORLD Radio](http://world.kbs.co.kr/service/news_view.htm?lang=g&Seq_Code=103590)
 
-**Han Duck-soo 'Not Yet' Decides on Presidential Run**
-Han Duck-soo, the acting president of South Korea, said, 'I have not yet decided' on whether to run in the presidential election. In an interview with the Financial Times, Han responded directly to questions about his potential candidacy, saying, 'I have not yet decided.' He refused to comment further on the issue, despite repeated questions. Han also addressed concerns that his role as acting president, particularly leading trade negotiations with the US, would limit his ability to act as president. He said, 'There is no difference between the authority of an acting president and a elected president.' Han has been in talks with US President Trump, and has expressed a willingness to reduce the trade deficit with the US. He said, 'We are considering reducing the trade deficit by purchasing US liquefied natural gas and aircraft.' Han visited a large church in Seoul on Easter Sunday, and sent a message to the Korean Christian Mission's 140th anniversary Easter union service. He said, 'The government will do its best to unite the people and promote their strength.' He also emphasized the importance of unity, saying, 'Unity is the key to overcoming crises.' However, some have interpreted his emphasis on unity as a sign that he is considering a presidential run. The Democratic Party has called for Han to resign from his position, saying, 'In effect, Han has announced his candidacy' and 'He has no authority as acting president.'
-Original language: ko
-Publish date: April 20, 2025 09:57 AM
-Source:[KBS](https://news.kbs.co.kr/news/pc/view/view.do?ncd=8232526)
-
-**Han Duck-soo's 'No Comment' on Presidential Candidacy Sparks Mixed Reactions**
-Following President Han Duck-soo's decision to remain silent on his potential candidacy for the upcoming presidential election, the candidates for the main opposition party, the People Power Party, have expressed mixed opinions. Na Kyung-won, a member of parliament, stated that Han's decision not to comment on his candidacy was 'not very confident' and that his actions were somewhat disappointing. She also pointed out that many citizens support Han because they believe the current ruling party, the Democratic Party of Korea, is not upholding the values of the Korean Constitution. In contrast, Hong Jun-pyo, a former mayor of Daegu, said that Han's decision not to comment on his candidacy was not a bad thing, as it has generated interest in the election and made it more engaging for the public. He added that the party's primary election is more exciting and has more public interest compared to the Democratic Party's primary election, which he described as a 'proxy election'.
-Original language: ko
-Publish date: April 20, 2025 09:10 AM
-Source:[YTN](https://www.ytn.co.kr/_ln/0101_202504201755118936)
-
-**Han Duck-soo's Unclear Stance on Presidential Candidacy Sparks Debate**
-Han Duck-soo, the acting president of South Korea, has not made a clear statement about his intention to run for president in the upcoming election. In an interview with the Financial Times, he said, 'I have not yet decided' and 'no comment' when asked about his potential candidacy. This is the first time he has publicly expressed his opinion on the matter. Despite his unclear stance, his approval rating has increased among conservatives, with a recent Gallup poll showing 7% of respondents supporting him. However, his potential candidacy is still met with skepticism, with 66% of respondents in a separate poll saying it would be 'unacceptable' for him to run. The Democratic Party of Korea has criticized Han's actions, saying he is using his position as acting president to further his own interests.
-Original language: ko
-Publish date: April 20, 2025 07:42 AM
-Source:[연합뉴스](https://www.yna.co.kr/view/AKR20250420032000001)
-
-**Han Duck-soo Maintains Stance on Presidential Election Bid**
-Han Duck-soo, the acting President and Prime Minister of South Korea, has maintained his previous stance on not making a decision on whether to run in the upcoming presidential election. In an interview with the Financial Times, he stated, 'I have not made a decision yet.' When asked if he is considering running, he replied, 'I have nothing to say.' This stance has been met with criticism from various politicians, including An Cheol-soo, the presidential candidate of the People Power Party, who said, 'It's unbelievable that we don't have a better candidate than the Prime Minister.' The Democratic Party of Korea has also called for Han to make a decision quickly, with Park Chan-da, the party's acting leader and floor leader, saying, 'If he's not going to run, he should immediately declare his withdrawal from the election.' Meanwhile, Han's popularity as a potential presidential candidate remains high, with 12.1% of respondents in a recent survey saying they think he has a good chance of winning the election.
-Original language: ko
-Publish date: April 20, 2025 05:06 AM
-Source:[아시아경제](https://www.asiae.co.kr/article/2025042013553730979)
-
-**Han Duck-soo's Presidential Bid: A Divided Conservative Party**
-South Korean Prime Minister Han Duck-soo's potential candidacy for the upcoming presidential election has sparked debate within the conservative ruling party. In an interview with the Financial Times, Han said, 'I have not decided yet' and refused to comment on the matter. The call for Han's candidacy has come from within the conservative ruling party, Nation's Power, as their own candidates are trailing behind Lee Jae-myung, the former leader of the progressive opposition party, in opinion polls. Lee has a significant lead in the polls, making Han's candidacy a potential game-changer in the election.
-Original language: ja
-Publish date: April 21, 2025 03:27 PM
-Source:[朝日新聞デジタル](https://www.asahi.com/articles/AST4P3GR9T4PUHBI01RM.html?iref=ogimage_rek)
-
-**Han Duck-soo's Presidential Campaign Under the Guise of Trade Talks**
-Han Duck-soo, the acting president and prime minister, has been self-praising his 'diplomatic efforts' ahead of the '2+2 high-level trade talks' with the US on April 24, saying that the US also values its relationship with South Korea. However, the opposition Democratic Party and other former opposition parties are criticizing and expressing concerns about Han's 'presidential campaign' under the guise of 'responding to trade issues'. Han said, 'The government will make every effort to find a mutually beneficial solution through calm and sincere negotiations with the US, based on the principle of 'national interest first'. He emphasized that the government will focus on finding a solution to the three key areas of trade imbalance, shipbuilding, and liquefied natural gas (LNG) mentioned by President Trump in their phone call. However, some members of the National Assembly's People Power Party are speculating that Han will resign as prime minister and announce his candidacy for the presidential election within this month. Conservative civic groups and former ruling party officials are also calling for Han to run in the presidential election. The Democratic Party is criticizing Han's actions as 'irresponsible' and 'abandoning his duties as a public official', as he is effectively campaigning for the presidential election without announcing his candidacy. The party's 'Trade and Security Task Force' held its first meeting in the National Assembly and criticized Han for rushing the trade talks with the US, saying that it would be a 'lose-lose situation' for South Korea. Kim Hyun-jong, the former head of the National Security Office, said, 'Those who rush the negotiations will definitely lose.' Kim Min-seok, the party's highest-ranking official, also said, 'The task of resolving the trade issues with the US is to remove the 'Han Duck-soo risk' that comes after the 'Yoon Seok-yeol risk'. He emphasized that it is the responsibility of the acting prime minister, the minister of economy and finance, and other officials to carefully consider the national interest and hand over the task to the new government.' 
-Original language: ko
-Publish date: April 21, 2025 08:38 AM
-Source:[한겨레신문](https://www.hani.co.kr/arti/politics/politics_general/1193526.html)
-
-**Han Duck-soo's Silence on Presidential Candidacy Sparks Debate**
-Han Duck-soo, the acting president of South Korea, has not made a comment on his potential candidacy for the upcoming presidential election. In an interview with the Financial Times, he stated that he has not made a decision yet. However, his silence has sparked various interpretations among politicians and the public. According to a recent survey, Han's popularity as a potential candidate is high, with 12.1% of respondents supporting him. Other candidates, including Hong Jun-pyo, Kim Moon-su, Han Dong-hoon, and Ahn Cheol-soo, have also expressed their opinions on Han's potential candidacy. Hong Jun-pyo stated that he does not think Han is 'unreasonable', while Na Kyung-won criticized Han's silence, saying that he is 'not honest and not transparent'. Han Dong-hoon argued that the problem is not Han's potential candidacy, but rather the people who are trying to influence him. Ahn Cheol-soo expressed his concerns about Han's potential candidacy, saying that it would be difficult for him to handle the country's affairs without being elected as president.
-Original language: ko
-Publish date: April 21, 2025 06:44 AM
-Source:[노컷뉴스](https://www.nocutnews.co.kr/news/6327829)
-
-**Korean People's Power Party Watches Han Duck-soo's Presidential Ambitions**
-The Korean People's Power Party (국민의힘) is closely watching the possibility of Han Duck-soo, the acting Prime Minister, running for the presidency. In an interview with the Financial Times, Han said he had not yet decided whether to run, leaving the door open for a potential candidacy. The party's internal dynamics are complex, with some members calling for Han to run and others urging him to step down. Hong Jun-pyo, a party candidate, criticized Han's potential candidacy, saying it was 'extremely unreasonable.' Han Dong-hoon, another candidate, said that Han's indecision was causing unnecessary controversy and distracting from the party's primary election. Ahn Cheol-soo, a candidate, urged Han to focus on governance rather than running for president. Na Kyung-won, a candidate, said Han's 'no comment' response was 'unbecoming and dishonest.' Yu Jeong-bok, a candidate, emphasized the need to focus on selecting the best candidate for the party's primary election rather than engaging in 'meaningless debates.'
-Original language: ko
-Publish date: April 21, 2025 02:51 AM
-Source:[연합뉴스](https://www.yna.co.kr/view/AKR20250421060900001)
-
-**Han Duck-soo's Presidential Ambitions: A Challenge to Lee Jae-myung's Monopoly**
-In the recent Democratic Party of Korea (DPK) regional tour election, Lee Jae-myung, the presidential candidate, has proven his 'monopoly' with a 89.56% cumulative vote rate. In contrast, the People Power Party (PPP) is struggling with 8 candidates competing in the election. The PPP's election has been criticized for lacking momentum, with some speculating that the party is trying to distract from the presidential election by promoting Han Duck-soo, the acting president, as a potential candidate. Han Duck-soo's popularity has risen to 10.6% in a recent survey, making him a potential rival to Lee Jae-myung. However, some PPP candidates, including Na Kyung-won and Kim Moon-soo, have expressed concerns about Han's candidacy, citing a lack of consistency and a focus on 'takedown' of Lee Jae-myung. Meanwhile, Kim Sang-uk, a PPP representative, has criticized the party's decision to promote Han as a candidate, saying it undermines the party's election process. The article also mentions the 'Yoon Ah-gyein' movement, which is trying to promote Yoon Suk-yeol, the former president, as a candidate. However, some PPP members are concerned that this movement is trying to distract from the presidential election and undermine the party's election process.
-Original language: ko
-Publish date: April 21, 2025 02:27 AM
-Source:[mk.co.kr](https://www.mk.co.kr/news/politics/11296870)
+**South Korean Prime Minister Han Duck Soo Remains Indecisive on Presidential Candidacy**
+South Korean Prime Minister Han Duck Soo, who is currently serving as acting president, has yet to decide whether to run as a candidate in the upcoming presidential elections. In a recent interview with The Financial Times, published on April 20, Han reiterated his indecision and responded with 'no comment' when pressed by the interviewer. This stance aligns with his previous statement during a phone call with US President Donald Trump, in which he said he is still examining the possibility of running. Han also clarified that the powers of the acting president are clearly outlined in the Constitution and related laws, stating that his functions do not differ from those of the national president.
+Original language: es
+Publish date: April 21, 2025 12:40 AM
+Source:[KBS WORLD Radio](http://world.kbs.co.kr/service/news_view.htm?lang=s&Seq_Code=92918)
 
 **Han Duck-soo 'Not Yet' Decides on Presidential Run**
 Han Duck-soo, the acting president of South Korea, said, 'I have not yet decided' on whether to run in the presidential election. In an interview with the Financial Times, Han responded directly to questions about his potential candidacy, saying, 'I have not yet decided.' He refused to comment further on the issue, despite repeated questions. Han also addressed concerns that his role as acting president, particularly leading trade negotiations with the US, would limit his ability to act as president. He said, 'There is no difference between the authority of an acting president and a elected president.' Han has been in talks with US President Trump, and has expressed a willingness to reduce the trade deficit with the US. He said, 'We are considering reducing the trade deficit by purchasing US liquefied natural gas and aircraft.' Han visited a large church in Seoul on Easter Sunday, and sent a message to the Korean Christian Mission's 140th anniversary Easter union service. He said, 'The government will do its best to unite the people and promote their strength.' He also emphasized the importance of unity, saying, 'Unity is the key to overcoming crises.' However, some have interpreted his emphasis on unity as a sign that he is considering a presidential run. The Democratic Party has called for Han to resign from his position, saying, 'In effect, Han has announced his candidacy' and 'He has no authority as acting president.'
@@ -195,11 +318,65 @@ Original language: ko
 Publish date: April 20, 2025 09:24 AM
 Source:[mk.co.kr](https://www.mk.co.kr/news/politics/11296452)
 
-**Han Duck-soo's 'No Comment' on Presidential Candidacy Sparks Mixed Reactions**
-Following President Han Duck-soo's decision to remain silent on his potential candidacy for the upcoming presidential election, the candidates for the main opposition party, the People Power Party, have expressed mixed opinions. Na Kyung-won, a member of parliament, stated that Han's decision not to comment on his candidacy was 'not very confident' and that his actions were somewhat disappointing. She also pointed out that many citizens support Han because they believe the current ruling party, the Democratic Party of Korea, is not upholding the values of the Korean Constitution. In contrast, Hong Jun-pyo, a former mayor of Daegu, said that Han's decision not to comment on his candidacy was not a bad thing, as it has generated interest in the election and made it more engaging for the public. He added that the party's primary election is more exciting and has more public interest compared to the Democratic Party's primary election, which he described as a 'proxy election'.
+**Han Duck-soo's Unclear Stance on Presidential Candidacy Sparks Debate**
+Han Duck-soo, the acting president of South Korea, has not made a clear statement about his intention to run for president in the upcoming election. In an interview with the Financial Times, he said, 'I have not yet decided' and 'no comment' when asked about his potential candidacy. This is the first time he has publicly expressed his opinion on the matter. Despite his unclear stance, his approval rating has increased among conservatives, with a recent Gallup poll showing 7% of respondents supporting him. However, his potential candidacy is still met with skepticism, with 66% of respondents in a separate poll saying it would be 'unacceptable' for him to run. The Democratic Party of Korea has criticized Han's actions, saying he is using his position as acting president to further his own interests.
 Original language: ko
-Publish date: April 20, 2025 09:10 AM
-Source:[YTN](https://www.ytn.co.kr/_ln/0101_202504201755118936)
+Publish date: April 20, 2025 07:42 AM
+Source:[연합뉴스](https://www.yna.co.kr/view/AKR20250420032000001)
+
+**Han Duck-soo: No Decision Yet on Presidential Election Bid**
+Han Duck-soo, the acting President and Prime Minister, stated in an interview with the Financial Times that he has not yet decided whether to run in the upcoming presidential election. He said, 'I have made no comment on this matter.' The interview was conducted on April 17 at the Government Seoul Building, where he discussed the government's response to the US's trade measures. Han Duck-soo emphasized that the government will not match the US's trade measures, saying, 'Our industry capabilities, financial development, culture, growth, and wealth are all thanks to the US.' He added, 'Rather than finding a solution that pits us against each other, we will seek a win-win solution for both countries.' 
+Original language: ko
+Publish date: April 20, 2025 06:31 AM
+Source:[ZDNET 코리아](https://zdnet.co.kr/view/?no=20250420153122)
+
+**Han Duck-soo's Presidential Bid: A Divided Conservative Party**
+South Korean Prime Minister Han Duck-soo's potential candidacy for the upcoming presidential election has sparked debate within the conservative ruling party. In an interview with the Financial Times, Han said, 'I have not decided yet' and refused to comment on the matter. The call for Han's candidacy has come from within the conservative ruling party, Nation's Power, as their own candidates are trailing behind Lee Jae-myung, the former leader of the progressive opposition party, in opinion polls. Lee has a significant lead in the polls, making Han's candidacy a potential game-changer in the election.
+Original language: ja
+Publish date: April 21, 2025 03:27 PM
+Source:[朝日新聞デジタル](https://www.asahi.com/articles/AST4P3GR9T4PUHBI01RM.html?iref=ogimage_rek)
+
+**Han Duck-soo's Presidential Campaign Under the Guise of Trade Talks**
+Han Duck-soo, the acting president and prime minister, has been self-praising his 'diplomatic efforts' ahead of the '2+2 high-level trade talks' with the US on April 24, saying that the US also values its relationship with South Korea. However, the opposition Democratic Party and other former opposition parties are criticizing and expressing concerns about Han's 'presidential campaign' under the guise of 'responding to trade issues'. Han said, 'The government will make every effort to find a mutually beneficial solution through calm and sincere negotiations with the US, based on the principle of 'national interest first'. He emphasized that the government will focus on finding a solution to the three key areas of trade imbalance, shipbuilding, and liquefied natural gas (LNG) mentioned by President Trump in their phone call. However, some members of the National Assembly's People Power Party are speculating that Han will resign as prime minister and announce his candidacy for the presidential election within this month. Conservative civic groups and former ruling party officials are also calling for Han to run in the presidential election. The Democratic Party is criticizing Han's actions as 'irresponsible' and 'abandoning his duties as a public official', as he is effectively campaigning for the presidential election without announcing his candidacy. The party's 'Trade and Security Task Force' held its first meeting in the National Assembly and criticized Han for rushing the trade talks with the US, saying that it would be a 'lose-lose situation' for South Korea. Kim Hyun-jong, the former head of the National Security Office, said, 'Those who rush the negotiations will definitely lose.' Kim Min-seok, the party's highest-ranking official, also said, 'The task of resolving the trade issues with the US is to remove the 'Han Duck-soo risk' that comes after the 'Yoon Seok-yeol risk'. He emphasized that it is the responsibility of the acting prime minister, the minister of economy and finance, and other officials to carefully consider the national interest and hand over the task to the new government.' 
+Original language: ko
+Publish date: April 21, 2025 08:38 AM
+Source:[한겨레신문](https://www.hani.co.kr/arti/politics/politics_general/1193526.html)
+
+**Korean People's Power Party Watches Han Duck-soo's Presidential Ambitions**
+The Korean People's Power Party (국민의힘) is closely watching the possibility of Han Duck-soo, the acting Prime Minister, running for the presidency. In an interview with the Financial Times, Han said he had not yet decided whether to run, leaving the door open for a potential candidacy. The party's internal dynamics are complex, with some members calling for Han to run and others urging him to step down. Hong Jun-pyo, a party candidate, criticized Han's potential candidacy, saying it was 'extremely unreasonable.' Han Dong-hoon, another candidate, said that Han's indecision was causing unnecessary controversy and distracting from the party's primary election. Ahn Cheol-soo, a candidate, urged Han to focus on governance rather than running for president. Na Kyung-won, a candidate, said Han's 'no comment' response was 'unbecoming and dishonest.' Yu Jeong-bok, a candidate, emphasized the need to focus on selecting the best candidate for the party's primary election rather than engaging in 'meaningless debates.'
+Original language: ko
+Publish date: April 21, 2025 02:51 AM
+Source:[연합뉴스](https://www.yna.co.kr/view/AKR20250421060900001)
+
+**South Korea's Acting President Han Duck-soo to Hold Talks with US on Trade War**
+South Korean acting President Han Duck-soo announced that he will hold talks with the US on April 24 to find a mutually beneficial solution to the ongoing trade war. He stated that the government will prioritize national interests and engage in calm and sincere negotiations with the US to find a solution that benefits both countries. Han emphasized that the talks will focus on trade balance, shipbuilding, and LNG, and that the government will not 'fight back' against the US. He also mentioned that the US has contributed to South Korea's economic growth and development, and that the country's industrial capabilities, financial development, culture, and growth are all due to the US's help. However, the opposition party, the Democratic Party, criticized Han's statement, saying that he is 'nationally betraying' by not declaring his candidacy for the presidential election and instead focusing on the trade talks.
+Original language: ko
+Publish date: April 21, 2025 02:49 AM
+Source:[오마이뉴스](https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0003121051)
+
+**Han Duck-soo Hesitates on Presidential Bid, Vows No Retaliation to US Tariffs**
+South Korean Prime Minister Han Duck-soo has not yet decided whether to run for president, according to his own statements. In an interview with the Financial Times, he declined to comment on the possibility of a presidential candidacy in June. However, he had previously told US President Donald Trump in a phone call that he was still considering a bid for the presidency. Han stated that South Korea will not retaliate against US tariffs and instead wants to find mutually beneficial solutions through negotiations. He also mentioned that the cost-sharing of US troop stationing in Korea may be discussed in trade talks, but no clear framework for security discussions has been established. Han signaled willingness to revisit a deal with the Biden administration on cost-sharing for US troops in South Korea, 'depending on the topics'.
+Original language: de
+Publish date: April 21, 2025 01:23 AM
+Source:[KBS WORLD Radio](http://world.kbs.co.kr/service/news_view.htm?lang=g&Seq_Code=103590)
+
+**South Korean Prime Minister Han Duck Soo Remains Indecisive on Presidential Candidacy**
+South Korean Prime Minister Han Duck Soo, who is currently serving as acting president, has yet to decide whether to run as a candidate in the upcoming presidential elections. In a recent interview with The Financial Times, published on April 20, Han reiterated his indecision and responded with 'no comment' when pressed by the interviewer. This stance aligns with his previous statement during a phone call with US President Donald Trump, in which he said he is still examining the possibility of running. Han also clarified that the powers of the acting president are clearly outlined in the Constitution and related laws, stating that his functions do not differ from those of the national president.
+Original language: es
+Publish date: April 21, 2025 12:40 AM
+Source:[KBS WORLD Radio](http://world.kbs.co.kr/service/news_view.htm?lang=s&Seq_Code=92918)
+
+**Han Duck-soo 'Not Yet' Decides on Presidential Run**
+Han Duck-soo, the acting president of South Korea, said, 'I have not yet decided' on whether to run in the presidential election. In an interview with the Financial Times, Han responded directly to questions about his potential candidacy, saying, 'I have not yet decided.' He refused to comment further on the issue, despite repeated questions. Han also addressed concerns that his role as acting president, particularly leading trade negotiations with the US, would limit his ability to act as president. He said, 'There is no difference between the authority of an acting president and a elected president.' Han has been in talks with US President Trump, and has expressed a willingness to reduce the trade deficit with the US. He said, 'We are considering reducing the trade deficit by purchasing US liquefied natural gas and aircraft.' Han visited a large church in Seoul on Easter Sunday, and sent a message to the Korean Christian Mission's 140th anniversary Easter union service. He said, 'The government will do its best to unite the people and promote their strength.' He also emphasized the importance of unity, saying, 'Unity is the key to overcoming crises.' However, some have interpreted his emphasis on unity as a sign that he is considering a presidential run. The Democratic Party has called for Han to resign from his position, saying, 'In effect, Han has announced his candidacy' and 'He has no authority as acting president.'
+Original language: ko
+Publish date: April 20, 2025 09:57 AM
+Source:[KBS](https://news.kbs.co.kr/news/pc/view/view.do?ncd=8232526)
+
+**Han Duck-soo Leaves Door Open for Presidential Run, Sparking Speculation**
+Han Duck-soo, the acting President of South Korea, has left the door open for a potential presidential run in the 2025 election. In an interview with the Financial Times, he stated, 'I have not yet made a decision' when asked about running for president. This ambiguous stance has added complexity to the calculations of the main candidates from each party. Han Duck-soo emphasized that he will do his best to ensure a smooth transition to the next government, as per the Constitution and laws. However, his experience in governance, international perspective, and subtle factional color have earned him praise from the conservative camp, making him a potential alternative candidate. In the interview, Han Duck-soo also stated that South Korea will not retaliate against the US's tariffs, but will instead seek a mutually beneficial solution. He emphasized that the President's authority is derived from the Constitution and laws, and that he will not make any decisions that could compromise the country's national interests. He also hinted at the possibility of revisiting the defense cost-sharing agreement with the US, depending on the circumstances. The Democratic Party has strongly criticized Han Duck-soo's comments, calling them a 'de facto announcement of his candidacy' and accusing him of being driven by ambition and neglecting his duties as acting President.
+Original language: ko
+Publish date: April 20, 2025 09:24 AM
+Source:[mk.co.kr](https://www.mk.co.kr/news/politics/11296452)
 
 **Han Duck-soo's Unclear Stance on Presidential Candidacy Sparks Debate**
 Han Duck-soo, the acting president of South Korea, has not made a clear statement about his intention to run for president in the upcoming election. In an interview with the Financial Times, he said, 'I have not yet decided' and 'no comment' when asked about his potential candidacy. This is the first time he has publicly expressed his opinion on the matter. Despite his unclear stance, his approval rating has increased among conservatives, with a recent Gallup poll showing 7% of respondents supporting him. However, his potential candidacy is still met with skepticism, with 66% of respondents in a separate poll saying it would be 'unacceptable' for him to run. The Democratic Party of Korea has criticized Han's actions, saying he is using his position as acting president to further his own interests.
@@ -207,11 +384,17 @@ Original language: ko
 Publish date: April 20, 2025 07:42 AM
 Source:[연합뉴스](https://www.yna.co.kr/view/AKR20250420032000001)
 
-**Han Duck-soo Maintains Stance on Presidential Election Bid**
-Han Duck-soo, the acting President and Prime Minister of South Korea, has maintained his previous stance on not making a decision on whether to run in the upcoming presidential election. In an interview with the Financial Times, he stated, 'I have not made a decision yet.' When asked if he is considering running, he replied, 'I have nothing to say.' This stance has been met with criticism from various politicians, including An Cheol-soo, the presidential candidate of the People Power Party, who said, 'It's unbelievable that we don't have a better candidate than the Prime Minister.' The Democratic Party of Korea has also called for Han to make a decision quickly, with Park Chan-da, the party's acting leader and floor leader, saying, 'If he's not going to run, he should immediately declare his withdrawal from the election.' Meanwhile, Han's popularity as a potential presidential candidate remains high, with 12.1% of respondents in a recent survey saying they think he has a good chance of winning the election.
+**Han Duck-soo: No Decision Yet on Presidential Election Bid**
+Han Duck-soo, the acting President and Prime Minister, stated in an interview with the Financial Times that he has not yet decided whether to run in the upcoming presidential election. He said, 'I have made no comment on this matter.' The interview was conducted on April 17 at the Government Seoul Building, where he discussed the government's response to the US's trade measures. Han Duck-soo emphasized that the government will not match the US's trade measures, saying, 'Our industry capabilities, financial development, culture, growth, and wealth are all thanks to the US.' He added, 'Rather than finding a solution that pits us against each other, we will seek a win-win solution for both countries.' 
 Original language: ko
-Publish date: April 20, 2025 05:06 AM
-Source:[아시아경제](https://www.asiae.co.kr/article/2025042013553730979)
+Publish date: April 20, 2025 06:31 AM
+Source:[ZDNET 코리아](https://zdnet.co.kr/view/?no=20250420153122)
+
+**Speculation Grows Over Acting President Han's Possible Presidential Bid**
+Speculation is growing that Acting President Han Duck-soo may run in the upcoming presidential election, despite calls for him to step down after the impeachment of the previous administration. A group of 54 lawmakers from the ruling People Power Party (PPP) prepared a statement urging Han to declare his candidacy, but party leadership intervened to halt the move. Han has stopped short of explicitly ruling out a run, and many observers believe he is intentionally maintaining ambiguity until the legal deadline to step down from office and enter the race on May 4. This uncertainty is casting a shadow over the ruling party's primary, and some believe that the PPP sees little promise in its declared candidates. The party leadership has reportedly urged members to refrain from publicly discussing Han, but signs suggest that party strategists are already considering a broader coalition or 'big tent' arrangement following the primary. However, a coalition that includes opposition candidates who oppose Democratic Party leader Lee Jae-myung seems implausible. The PPP's base remains demoralized and disengaged, and the party must offer its supporters a sense that it is now committed to taking the right path in order to reenergize its base and bring voters back to the polls.
+Original language: en
+Publish date: April 16, 2025 03:30 PM
+Source:[중앙일보](https://koreajoongangdaily.joins.com/news/2025-04-17/opinion/columns/Speculation-grows-over-acting-prime-ministers-possible-presidential-bid/2286663)
 
 **(News Focus) Presidential aspirants step up campaigns to clinch party nominations | Yonhap News Agency**
 Presidential contenders in South Korea have stepped up their campaigns ahead of the June 3 election. Lee Jae-myung, former leader of the Democratic Party (DP), is leading the polls, while the People Power Party (PPP) has yet to establish a clear front-runner. Eleven PPP candidates have launched their campaigns, seeking support from Seoul Mayor Oh Se-hoon, who has announced that he will not run in the upcoming election. Former Labor Minister Kim Moon-soo has pledged to adopt Oh's welfare policies in his campaign platform. Meanwhile, acting President Han Duck-soo is widely viewed as one of the strongest contenders within the conservative camp, but has not officially mentioned his potential bid. The DP has formally launched its primary, with three candidates in the running: Lee, Gyeonggi Province Gov. Kim Dong-yeon, and Kim Kyung-soo, a former South Gyeongsang Province Gov. and a close confidante of former President Moon Jae-in. Lee is widely expected to secure the nomination, saying, 'We will engage in a clean and fair competition while refraining from negative campaigning.' 
@@ -219,11 +402,17 @@ Original language: en
 Publish date: April 16, 2025 02:30 AM
 Source:[Yonhap News Agency](https://en.yna.co.kr/view/AEN20250416003600315)
 
-**PPP Floor Leader: Acting Pres. Han Will Not Run in Party's Presidential Nomination Race**
-People Power Party floor leader Kweon Seong-dong announced that acting President Han Duck-soo will not run in the party's presidential nomination race. Kweon stated that rumors of Han's potential candidacy would be detrimental to the party's primary and Han's ability to fulfill his duties as acting president. He emphasized the need to overcome what he referred to as the 'Lee Jae-myung' forces, which he believes would lead to endless infighting and division within the nation. Kweon stressed that overcoming these forces should be the party's common goal, despite the existing differences within the party.
-Original language: en
-Publish date: April 15, 2025 10:35 AM
-Source:[KBS WORLD Radio](http://world.kbs.co.kr/service/news_view.htm?lang=e&Seq_Code=192386)
+**Han Duck-soo's 'Last Mission' Sparks Speculation About Presidential Run**
+Han Duck-soo, the acting president and prime minister, mentioned 'my last mission' during the National Assembly meeting on April 14, stating that 'we have entered the time for a full-scale negotiation with the US government' and 'I will fulfill the mission entrusted to me by the ministers.' However, he did not directly mention whether he would run for the presidential election. This has led to speculation that he is maintaining 'strategic ambiguity' to weigh his options. Han Duck-soo emphasized the importance of focusing on the US-Korea trade negotiation, which has been ongoing since the US government's announcement of a 90-day tariff exemption. He also stated that he would communicate directly with US President Donald Trump if necessary. Some politicians have interpreted Han's statement as a sign that he will not run for the election, while others believe that he is still considering his options. A key figure in the National Assembly said that Han is 'choosing strategic ambiguity' and will make a final decision based on his popularity ratings. Another politician suggested that Han may run as an independent candidate and then merge with the winning candidate. A survey conducted by RealMeters showed that Han Duck-soo is in third place with 8.6% of the vote, behind Lee Jae-myung and Kim Moon-soo. Some politicians have expressed support for Han's potential candidacy, citing his popularity ratings as a factor in his decision-making process.
+Original language: ko
+Publish date: April 14, 2025 01:32 PM
+Source:[한겨레신문](https://www.hani.co.kr/arti/politics/politics_general/1192390.html)
+
+**Han Duck-soo's Presidential Bid: A Test of the People Power Party's Leadership**
+The possibility of Han Duck-soo, the acting president of South Korea, running in the presidential election has been a topic of discussion within the conservative party, the People Power Party. Some members of the party have called for Han to run, citing his experience and ability to respond to the country's economic and diplomatic challenges. However, Han has not made a clear statement on the matter, fueling speculation that he may be considering a run. This has led to criticism from the opposition party, the Democratic Party of Korea, which has accused Han of using his position to further his own political ambitions. The situation has also sparked debate within the People Power Party, with some members calling for Han to run and others opposing the idea. The party's leadership has been accused of trying to manipulate the election process to favor Han's candidacy. The opposition party has also accused the People Power Party of trying to use Han's candidacy to distract from the party's own internal conflicts. The situation is seen as a test of the party's leadership and its ability to manage the election process fairly. 'It is a matter of historical responsibility for the acting president to respond to the people's demands,' said Rep. Seong Il-jong, a senior member of the People Power Party. 'I am calling on the acting president to run in the election.' However, Han has not made a clear statement on the matter, and the situation remains uncertain. The opposition party has also accused the People Power Party of trying to use Han's candidacy to distract from the party's own internal conflicts. 'The People Power Party is trying to use Han's candidacy to distract from the party's own internal conflicts,' said Rep. Kim Min-seok, a senior member of the Democratic Party of Korea. 'This is a desperate attempt to cling to power.' The situation is seen as a test of the party's leadership and its ability to manage the election process fairly. 'The People Power Party is trying to use Han's candidacy to distract from the party's own internal conflicts,' said Rep. Kim Min-seok, a senior member of the Democratic Party of Korea. 'This is a desperate attempt to cling to power.' 
+Original language: ko
+Publish date: April 13, 2025 11:12 AM
+Source:[한겨레신문](https://www.hani.co.kr/arti/politics/politics_general/1192181.html)
 
 **Han Duck-soo's Silence on Presidential Bid Sparks Speculation**
 Despite growing calls within the People Power Party (PPP) for Han Duck-soo, the acting president, to be nominated as a presidential candidate, Han remains silent. Analysts believe that Han is deliberating on whether to run for the presidency. The PPP is expected to announce its presidential candidate by the end of this week, and Han's position will be closely watched. Some PPP lawmakers who were planning to hold a press conference to urge Han to run for the presidency cancelled their plans at the last minute, reportedly due to pressure from the party leadership. However, the calls for Han to be nominated as a candidate are gaining momentum within the party. This is partly because some members believe that Han's potential candidacy would be a decisive factor in the party's presidential nomination. According to one analysis, more than half of the party's incumbent lawmakers support Han's nomination. PPP Representative Kwon Sung-dong said, 'I think it's not bad, it's good. I think this way.' However, Han remains silent, despite his emphasis on completing his final duties as acting president after the Constitutional Court's decision to acquit him. Han has not officially confirmed his decision not to run for the presidency since the impeachment of former President Yoon. His silence is seen as a sign that he is still deliberating on whether to run. The PPP is expected to announce its presidential candidate by the end of this week, and Han's position will be closely watched.
@@ -231,35 +420,23 @@ Original language: ko
 Publish date: April 13, 2025 06:14 AM
 Source:[YTN](https://www.ytn.co.kr/_ln/0101_202504131451080812)
 
-**South Korean Presidential Hopefuls Intensify Campaigns Ahead of Primary Election**
-South Korean presidential hopefuls from the People Power Party (PPP) are intensifying their campaigns ahead of the party's primary election. Kim Moon-soo, a former Minister of Employment and Labor, attended a Sunday service at Onnuri Church in Seoul. Hong Jun-pyo, the former Governor of Daegu, posted on social media that he would 'work hard for the next 51 days to make the election a fun and enjoyable experience for the people.' Na Kyung-won, a PPP member of parliament, visited the former residence of Syngman Rhee, the first President of South Korea. Ahn Cheol-soo, a PPP member of parliament, announced his 10 major campaign promises, including 'making sure that Lee Jae-myung, the current leader of the Democratic Party, does not become the next President.' Yoo Jeong-bok, the Mayor of Incheon, visited the National Cemetery in Seoul and promised to 'unite the country and create a new era of prosperity.' Yang Hye-ah, a former member of parliament, announced her candidacy for the PPP primary election. Han Duck-soo, the current Prime Minister, has not yet announced his candidacy, but some PPP members are speculating that he may run as an independent candidate in the general election. However, the PPP has not yet confirmed whether Han will participate in the primary election.
-Original language: ko
-Publish date: April 13, 2025 05:43 AM
-Source:[뉴시스 (NEWSIS)](https://www.newsis.com/view/NISX20250413_0003137123)
-
-**Han Duck-soo's Acting Term to Focus on Diplomacy and Economy, Not Presidential Candidacy**
-The presidential office announced that President Han Duck-soo's acting term will not make a separate statement regarding his potential candidacy in the upcoming presidential election. According to a presidential office official, 'There is no mention of it at all' regarding his candidacy. The official also stated that it is 'not suitable to mention' whether he will participate in the People Power Party's primary election. The official emphasized that Han will focus on diplomatic and economic issues, such as the upcoming visit to the US and the government's economic security strategy, rather than his potential candidacy. 'He will prepare the government's strategy through the economic security strategy task force and focus on diplomatic and livelihood issues this weekend and next week,' the official said.
-Original language: ko
-Publish date: April 12, 2025 05:48 AM
-Source:[KBS](https://news.kbs.co.kr/news/pc/view/view.do?ncd=8225962)
-
 **People Power Party Leadership Asks Lawmakers to Refrain from Calling for Han Duck-soo's Candidacy**
 The leadership of the People Power Party (PPP) has asked its lawmakers to refrain from holding a press conference to call for President Han Duck-soo's candidacy for the upcoming presidential election. The lawmakers had planned to hold a press conference on April 13 to announce their support for Han's candidacy, but the party's leadership has asked them to cancel the event. According to a party official, the leadership has requested the lawmakers to refrain from holding the press conference because it may create an unfair situation in the election. The official stated, 'The leadership is committed to managing the election fairly.' However, some lawmakers from the PPP have announced that they will still hold a press conference on April 13 to call for Han's candidacy. The party's leadership has not endorsed this move. The mayor of Seoul, Oh Se-hoon, is scheduled to hold an emergency press conference on April 12 to address the growing 'Han Duck-soo fever' within the party.
 Original language: ko
 Publish date: April 12, 2025 02:00 AM
 Source:[뉴시스 (NEWSIS)](https://www.newsis.com/view/NISX20250412_0003136601)
 
-**Han Dong-hoon Declares Candidacy for Early Presidential Election**
-Han Dong-hoon, the former leader of the People Power Party (PPP), announced his candidacy for the early presidential election on June 3rd in front of the National Assembly fountain. He presented the slogan 'La classe moyenne en croissance' (Growing Middle Class), aiming to create an era where everyone can join this social class, which he hopes will represent 70% of the population. He also promised a national income of $40,000 per person. Han emphasized the need to prevent a dangerous person from becoming president and a monstrous regime from taking power, targeting the former leader of Minjoo, Lee Jae-myung. He reiterated his commitment to constitutional reform, advocating for a decentralized presidential system with a four-year renewable term and a bicameral parliamentary system to prevent extreme political conflicts. Other candidates have also intensified their campaigns, including former minister Kim Moon-soo, who started election-related activities, and former politicians Ahn Cheol-soo and Yoo Seung-min, who visited areas affected by the Gyeongsang North Province fires. Na Kyung-won plans to announce her candidacy today, while former minister Won Hee-ryong decided not to run due to his responsibility in the impeachment of Yoon Seuk Yeol. Within the PPP, there are growing demands for Han Duck-soo, the Prime Minister who is currently acting as president, to run for the position.
-Original language: fr
-Publish date: April 11, 2025 12:54 AM
-Source:[KBS WORLD Radio](http://world.kbs.co.kr/service/news_view.htm?lang=f&Seq_Code=90164)
+**Han Duck-soo Considers Presidential Run, Surprising Presidential Office**
+South Korean acting President Han Duck-soo has been considering running for president, according to a statement he made to US President Donald Trump. Trump asked Han if he had any plans to participate in the presidential election, to which Han replied, 'Because there are various requirements and circumstances, I am considering it. I have not made a decision yet.' Han's response was met with surprise from the presidential office, as he usually avoids discussing his potential candidacy. Han has been focused on addressing the US's equal tariffs issue, which Trump has temporarily suspended for 90 days. Han instructed the Korean embassy in the US to actively communicate and negotiate with relevant US agencies, including the National Security Council, State Department, and Commerce Department. Han emphasized the importance of making progress in all negotiations within the next 90 days to alleviate the tariff burden. Some members of the ruling party, the People Power Party, have urged Han to make a decision on his candidacy soon, with one official stating that he should make a decision within the week. However, others have expressed concerns about Han's potential candidacy, citing the potential for a two-month political vacuum if he were to resign as acting president.
+Original language: zh
+Publish date: April 11, 2025 02:31 AM
+Source:[韩国最大的传媒机构《中央日报》中文网](https://chinese.joins.com/news/articleView.html?idxno=119346)
 
-**Kim Moon-soo Announces Presidential Bid, Citing 'Colorism' and 'Anti-Democratic' Policies**
-The presidential election date has been set for June 3rd. Lee Jae-myung, the leader of the Democratic Party of Korea, resigned as party leader on the 9th and began his presidential campaign in earnest. Meanwhile, the People Power Party (PPP) announced that Kim Moon-soo, a former Minister of Employment and Labor, would run for president, citing 'colorism' and declaring, 'The flag of people's democracy is being waved, but the policies of pro-North Korea, anti-US, pro-China, and anti-business are being pursued, and the foundation of our country is being shaken.' The PPP has a number of candidates vying for the nomination, including Han Dong-hoon, a former PPP leader, while the Democratic Party is facing a challenge from Yu Seung-min, a former MP who is gaining support from the moderate sector. With only 60 days left until the election, what strategies will the Democratic Party and the PPP employ? Will the proposed constitutional amendment by National Assembly Speaker Woo Won-sik be scrapped? How can President Han Duck-soo's abuse of power be checked? We will explore these questions in this episode of 'Public Carriage'.
+**Trump Asks Han Duck-soo About Presidential Candidacy**
+US President Donald Trump asked South Korean Acting President Han Duck-soo about his potential candidacy in the upcoming presidential election during a phone call on April 8. According to government sources, Trump asked Han about his plans for the election during their conversation. However, Han replied that he had not yet made a decision, and a government official stated that Han's answer should be interpreted as diplomatic, rather than a clear indication of his intentions. The official also noted that this is a sensitive time for South Korea, as they are currently focused on trade negotiations with the US, and Han has previously rejected the idea of entering politics. If Han were to decide to run for president, he would need to register as a candidate by April 15 and participate in the primary election or run as an independent candidate and attempt to merge with the People Power Party's candidate.
 Original language: ko
-Publish date: April 09, 2025 11:31 AM
-Source:[한겨레신문](https://www.hani.co.kr/arti/politics/politics_general/1191652.html)
+Publish date: April 10, 2025 01:11 PM
+Source:[KBS](https://news.kbs.co.kr/news/pc/view/view.do?ncd=8224659)
 
 </Asknews_articles>
 
@@ -268,485 +445,586 @@ Forecaster_1 step 1 output:
 # Analysis:
 
 ## (a) Source Analysis
-The primary information source is a Perplexity report that examines historical precedents of South Korean prime ministers or acting presidents transitioning to presidential roles. The report draws from multiple sources including:
 
-- News publications: The Diplomat, The Korea Herald, TIME magazine
-- Reference sources: Britannica
-- Academic sources: Stimson Center
-- Wikipedia entries (less authoritative but providing contextual information)
+1. **Deutsche Welle (April 8, 2025)**
+   - Reputable international news organization providing factual coverage of the snap election
+   - Mentions Han Duck-soo as acting president making official statements about election preparations
+   - Lists major candidates but doesn't mention Han among them
+   - Includes Gallup polling data (Lee Jae-myung 34%, Kim Moon-soo 9%, Han Dong-hoon 5%)
 
-The report appears well-structured and factually oriented, citing specific dates, constitutional frameworks, and historical events. Most claims are presented as historical facts rather than opinions. The factual statements include:
-- Han Duck-soo assumed acting presidency on December 14, 2024
-- Han was impeached on December 27, 2024
-- A snap election is scheduled for June 3, 2025
-- South Korean law prohibits acting presidents from campaigning while in office
+2. **New York Times (April 8, 2025)**
+   - Highly credible international newspaper with detailed coverage
+   - Describes Han Duck-soo specifically as "serving as unelected interim leader until the new president takes office"
+   - Provides election timeline details (primaries by May 12, campaign officially begins May 12)
+   - No mention of Han as a potential candidate
 
-The report explicitly states as fact that "South Korea's history reveals no cases of sitting prime ministers or acting presidents formally launching presidential campaigns," which is particularly relevant to our question.
+3. **AP News (April 8, 2025)**
+   - Trusted global news agency with factual reporting
+   - Provides detailed list of PPP figures expected to run (about ten mentioned)
+   - Includes expert assessments from named sources (Leif-Eric Easley, Choi Jin, Duyeon Kim)
+   - Han Duck-soo mentioned only as acting president, not as potential candidate
+
+4. **Reuters (April 8, 2025)**
+   - Highly reliable international news agency
+   - Quotes Han Duck-soo in his official capacity announcing the election date
+   - Lists current candidates and polling figures
+   - No indication Han is considering running
+
+All sources are consistent in describing Han Duck-soo as the acting president/interim leader with no mention of him as a potential candidate despite detailed coverage of the candidate field.
 
 ## (b) Reference Class Analysis
-Several potential reference classes emerge from the report:
 
-1. **Acting presidents following impeachments**: Includes Han Duck-soo (2024-2025) and Goh Kun (2004). Both adhered to caretaker roles, with Goh explicitly avoiding political activities.
-   
-2. **Prime ministers who transitioned to presidency**: Primarily Choi Kyu-hah (1979-1980), who became president through indirect election without campaign announcements.
+Several possible reference classes apply:
 
-3. **Political figures impeached prior to elections**: Han's impeachment on December 27, 2024, places him in this category.
+1. **Acting/Interim Presidents who run for full terms in South Korea**
+   - Most relevant but limited historical data available
+   - Sources characterize Han as an "unelected interim leader" suggesting a temporary caretaker role
 
-The most appropriate reference class is the combination of the first and third - acting presidents who faced impeachment. This reference class suggests extremely low likelihood of presidential candidacy announcements, as both historical precedent and legal barriers discourage such transitions.
+2. **Cabinet members who enter presidential races**
+   - Some precedent exists (e.g., Kim Moon-soo, former labor minister who resigned to run)
+   - Han's current role as acting president differs from typical cabinet positions
+
+3. **Late entrants to presidential races**
+   - The window between today (April 22) and the question date (May 5) is very narrow
+   - With primaries required by May 12, a late announcement would leave minimal time for campaign organization
+
+The most suitable reference class combines "acting presidents in caretaker roles" and "potential late entrants to presidential races," considering Han's unique position and the compressed timeline.
 
 ## (c) Timeframe Analysis
-Today is April 22, 2025, giving Han only 13 days to announce his candidacy before the May 5, 2025 deadline. The snap presidential election is scheduled for June 3, 2025, which is approximately 42 days from today.
 
-This timeline is relevant because:
-- Normal presidential campaign preparations in South Korea typically begin months before elections
-- Han was impeached in December 2024, about 4 months ago
-- No historical precedents show acting presidents or recently impeached officials announcing candidacies so close to elections
+- Today: April 22, 2025
+- Question deadline: May 5, 2025 (13 days from now)
+- Party primaries deadline: May 12, 2025 (20 days from now)
+- Election date: June 3, 2025 (42 days from now)
+
+This timeline is extremely compressed for a presidential campaign launch:
+- Major candidates have already declared (Lee Jae-myung, Kim Moon-soo, Ahn Cheol-soo, etc.)
+- Party nominating processes are well underway
+- The official campaign period begins May 12 with primaries completed by that date
+- Any serious candidate would typically be building campaign infrastructure by now
 
 ## (d) Justification
-Several factors strongly suggest Han Duck-soo is unlikely to announce a presidential candidacy:
 
-1. **Legal barriers**: South Korean law explicitly prohibits acting presidents from campaigning while in office.
+Based on the comprehensive analysis of sources and timeframes, an outside view prediction strongly indicates Han Duck-soo is unlikely to announce a presidential candidacy before May 5, 2025:
 
-2. **No historical precedent**: The report clearly states there are no cases in South Korean history of sitting prime ministers or acting presidents formally launching presidential campaigns.
+1. **Complete absence from candidate discussions**: Across four reputable news sources with detailed coverage of the Korean election, Han Duck-soo is consistently mentioned only as acting president, never as a potential candidate despite extensive coverage of declared and prospective candidates.
 
-3. **Recent impeachment**: Han was impeached on December 27, 2024, creating significant political liability and limiting his viability as a candidate.
+2. **Explicit caretaker characterization**: The NYT specifically describes him as an "unelected interim leader until the new president takes office," suggesting his role is seen as temporary and administrative.
 
-4. **Normative expectations**: The report highlights that interim leaders are expected to maintain apolitical stances, as exemplified by Goh Kun who "adhered strictly to caretaker norms, avoiding policy decisions or political endorsements."
+3. **Advanced electoral timeline**: With major candidates already declared and primaries ending May 12, the window for new entrants is nearly closed. Han's statements focus on ensuring fair elections, not participating in them.
 
-5. **Timing constraints**: With only 13 days until the prediction deadline and approximately 42 days until the election, the window for announcing candidacy is unusually narrow for a serious presidential campaign.
+4. **No polling presence**: Gallup polling shows no measurable support for Han as a candidate, suggesting he lacks a political base for a presidential run.
 
-6. **Political landscape**: Other candidates like Lee Jae-myung are already positioned for the election, suggesting the field is developing without Han's participation.
+5. **Potential conflict of interest**: As the acting president overseeing election preparations, entering the race could create governance concerns during a sensitive transition period.
+
+6. **No campaign infrastructure**: No source indicates Han has been building the necessary campaign organization, fundraising operations, or political support needed for a viable presidential run.
 
 ## Outside view calibration:
-The combination of factors presents an extremely low probability scenario. The clear statement that "South Korea's history reveals no cases of sitting prime ministers or acting presidents formally launching presidential campaigns" establishes a baseline near zero. 
 
-Han's impeachment further diminishes any probability, as it creates both political and potentially legal barriers to candidacy. The extremely compressed timeframe between now and the deadline (13 days) further reduces probability.
+To calibrate my prediction, I note that:
 
-If we consider Goh Kun's precedent as the closest analogy (acting president during impeachment who strictly adhered to caretaker norms), the probability approaches zero. I must allow for some possibility of unprecedented behavior, but the historical, legal, and political factors constrain this possibility to a very low percentage.
+- The complete absence of Han from candidate discussions across multiple detailed articles about the election is the strongest signal. If he were even considering a run, we would expect at least one source to mention this possibility.
+
+- The extremely compressed timeframe (13 days until the question resolves, 20 days until primaries conclude) makes a new candidacy announcement increasingly unlikely with each passing day.
+
+- Han's characterized role as caretaker interim leader, his focus on election administration, and the absence of polling support all suggest he is not positioning himself as a candidate.
+
+While there's always some uncertainty in political situations, the convergence of multiple strong indicators suggests the probability is very low - likely below 5%. There is no specific benchmark percentage in the sources to anchor to, but the complete absence of his name from candidate discussions across multiple reputable sources is telling.
 
 ## Outside View Prediction:
-2%
+3%
 
 Forecaster_2 step 1 output:
 # Analysis:
 
-## (a) Source Analysis
+## Source Analysis:
 
-The primary information source is a Perplexity report on "Historical Precedents of South Korean Prime Ministers or Acting Presidents in Presidential Transitions." The report compiles information from multiple sources including:
+1. **Deutsche Welle (April 8, 2025)**:
+   - Factual reporting on South Korea's snap election scheduled for June 3, 2025
+   - Mentions Han Duck-soo only as acting president preparing for a "fair and transparent" election
+   - Lists major candidates without including Han
+   - High-quality international news source with factual presentation
 
-- Academic publications (Britannica)
-- News outlets (The Diplomat, The Korea Herald, TIME magazine)
-- General reference sources (Wikipedia)
+2. **New York Times (April 8, 2025)**:
+   - Provides detailed election timeline and context about Yoon's impeachment
+   - Characterizes Han Duck-soo as "unelected interim leader" serving until a new president takes office
+   - No mention of Han as a potential candidate
+   - Reputable source with extensive international reporting
 
-The report appears to be factually oriented, providing chronological information about South Korean political transitions rather than opinion-based analysis. It contains valuable factual information:
+3. **AP News (April 8, 2025)**:
+   - Comprehensive overview of political landscape and candidate field
+   - References Han Duck-soo only in his capacity as acting president
+   - Includes expert analysis from named sources like Leif-Eric Easley (Ewha University) and others
+   - Reliable news agency with factual reporting
 
-- Han Duck-soo became acting president on December 14, 2024, following President Yoon Suk Yeol's impeachment
-- Han himself was impeached on December 27, 2024
-- South Korean law prohibits acting presidents from campaigning while in office
-- A snap election is scheduled for June 3, 2025
-- There are "no cases of sitting prime ministers or acting presidents formally launching presidential campaigns" in South Korean history
-- Constitutional frameworks limit acting presidents to caretaker roles since democratic reforms in 1987
+4. **Reuters (April 8, 2025)**:
+   - Reports Han Duck-soo's announcement of the election date in a cabinet meeting
+   - Presents Gallup polling data (April 4) for various candidates, with Han not included
+   - Lists multiple declared candidates and front-runners
+   - Highly credible international news agency
 
-The source quality is reasonable for establishing historical patterns, though it lacks current polling data or recent statements from Han Duck-soo about his political ambitions.
+All sources are recent, reputable, and consistent. They portray Han Duck-soo exclusively as an acting president managing the transition, with no indication of presidential ambitions. Notably, he is absent from all candidate discussions and polling data.
 
-## (b) Reference Class Analysis
+## Reference Class Analysis:
 
-Potential reference classes for this question include:
+1. **South Korean acting presidents who later became candidates**: Limited historical data available, but no indication this is common.
 
-1. **South Korean prime ministers who ran for president** - According to the report, this reference class contains effectively zero examples, as "South Korea's history reveals no cases of sitting prime ministers or acting presidents formally launching presidential campaigns, as legal and normative barriers prevent interim leaders from leveraging their positions."
+2. **Current potential candidates in the June 2025 election**: Most relevant reference class. Notable candidates are already declared and polling (Lee Jae-myung at 34%, Kim Moon-soo at 9%, Han Dong-hoon at 5%), while Han Duck-soo is not mentioned as a potential candidate in any source.
 
-2. **Impeached political figures who later sought election** - This broader class would include officials who faced impeachment but later returned to politics.
+3. **Timing of candidacy announcements in South Korean elections**: Primary candidates have already declared by April 8, with party primaries required to be completed by May 12.
 
-3. **Acting presidents during constitutional crises** - The report mentions Goh Kun (2004) who "adhered strictly to caretaker norms" and did not seek office after serving as acting president during Roh Moo-hyun's impeachment.
+The second reference class is most suitable, as it directly pertains to the current election landscape where Han is conspicuously absent from both declared candidates and polling data.
 
-The most suitable reference class appears to be impeached political figures who later sought election, as this matches Han's specific situation. However, the report provides limited data on this class in the South Korean context. The report strongly emphasizes the absence of precedent for acting presidents or prime ministers announcing presidential campaigns.
+## Timeframe Analysis:
 
-## (c) Timeframe Analysis
+- Today is April 22, 2025, leaving only 13 days until the May 5 resolution date
+- Election is scheduled for June 3, 2025
+- Party primaries must be completed by May 12 (just one week after the question's resolution date)
+- Major candidates had already announced by April 8
+- The timeframe for new entries appears to be closing rapidly, with other candidates having announced weeks ago
 
-The prediction timeframe is short - just 13 days from today (April 22, 2025) to the resolution date (May 5, 2025).
+## Justification:
 
-Key temporal factors:
-- The snap presidential election is scheduled for June 3, 2025 (42 days from today)
-- If Han waited until the last day of our window (May 5), he would be announcing his candidacy only 29 days before the election
-- Han was impeached approximately 4 months ago (December 27, 2024)
-- There is a lack of information about typical candidacy announcement timing in South Korean elections
+Multiple factors strongly suggest Han Duck-soo is unlikely to announce a presidential candidacy:
 
-This compressed timeframe is significant, as presidential campaigns typically require substantial preparation time for organization, fundraising, and message development.
+1. **Institutional role**: Han is consistently characterized across all sources as an interim leader overseeing the election process rather than participating in it. He himself stated his focus is ensuring a "fair and transparent" election.
 
-## (d) Justification
+2. **Absence from political discussions**: None of the four reputable sources mention him as a potential candidate despite extensive coverage of the election landscape.
 
-Several factors strongly suggest Han Duck-soo is unlikely to announce a presidential candidacy before May 5, 2025:
+3. **Missing from polling data**: Han is not included in the Gallup polling of candidates (April 4), suggesting political analysts and the public do not view him as a contender.
 
-1. **Lack of historical precedent**: The report explicitly states there are no cases of sitting prime ministers or acting presidents formally launching presidential campaigns in South Korean history. This suggests powerful institutional and normative barriers exist.
+4. **Late timeline**: With party primaries concluding by May 12, his window to announce and organize a viable campaign is extremely compressed.
 
-2. **Recent impeachment**: Han was impeached only four months ago (December 27, 2024), which likely damaged his political capital and electoral viability. The grounds for his impeachment included "obstructing judicial appointments and delaying opposition-backed investigations," issues that would likely resurface in a campaign.
+5. **Potential conflict of interest**: As the acting president overseeing the election process following a presidential impeachment, declaring candidacy could create perception problems regarding electoral fairness.
 
-3. **Legal restrictions**: South Korean law prohibits acting presidents from campaigning while in office. While Han was impeached, the legal complications surrounding his recent impeachment might create additional obstacles.
+6. **No preparation signals**: No reports of exploratory committees, political positioning, or other typical pre-announcement activities.
 
-4. **Narrow timeframe**: With only 29 days between the cutoff date (May 5) and the election (June 3), announcing this late would be logistically challenging for mounting a serious presidential campaign.
+## Outside View Calibration:
 
-5. **Norm of caretaker roles**: The report highlights that interim leaders are expected to maintain apolitical caretaker roles, citing the example of Goh Kun who avoided political activities after serving as acting president.
+I need to calibrate my prediction based on the complete absence of evidence suggesting Han might run, while acknowledging some uncertainty:
 
-The Perplexity report makes no mention of Han Duck-soo expressing interest in running for president or having a political base that would support such a bid. This absence of evidence, combined with the historical pattern of acting presidents not leveraging their positions for campaigns, suggests a presidential announcement is improbable.
+- All four sources from April 8 consistently portray Han solely as an interim leader
+- No polling includes him as a potential candidate (Gallup poll from April 4)
+- Major candidates have already announced and are actively campaigning
+- The primary deadline (May 12) is very close to our resolution date (May 5)
+- Interim leaders following impeachments typically prioritize stability over personal ambition
 
-# Outside view calibration:
-
-To calibrate my prediction, I'm focusing on the strongest evidence: the complete absence of historical precedent. The report states unequivocally that "South Korea's history reveals no cases of sitting prime ministers or acting presidents formally launching presidential campaigns."
-
-For events with no historical precedent, we should assign a low baseline probability. Additionally, Han's recent impeachment creates further obstacles. However, I must avoid overconfidence given information gaps about:
-- Han's current political intentions
-- His popularity with voters
-- Support from political parties 
-- Recent statements he may have made about the presidency
-
-Given the unprecedented nature of such an announcement combined with the negative factors (impeachment, timing constraints, legal barriers), while acknowledging information limitations, I estimate the probability at approximately 15%. This reflects that while highly unlikely given historical patterns, unprecedented events do occasionally occur in politics.
+Even accounting for possible developments since April 8 that aren't captured in these sources, the probability appears very low.
 
 # Outside View Prediction:
-15%
+3%
 
 Forecaster_3 step 1 output:
 Analysis:
 
 1. Source analysis  
-- Perplexity report (aggregates Wikipedia, The Diplomat, Britannica, Korea Herald, Time, Stimson Center, etc.):  
-  • Scope: Chronicles historical cases of South Korean prime ministers/acting presidents transitioning to the presidency.  
-  • Quality: Mixed – draws on reputable tertiary sources (Britannica, major news outlets) and Wikipedia. Factual on constitutional constraints; narrative portions sometimes blend expert interpretation with fact.  
-  • Factual takeaways:  
-    – Pre‑1987 indirect elections allowed de facto appointments without public candidacy.  
-    – Post‑1987 reforms bar acting presidents from campaigning or leveraging office.  
-    – No sitting prime minister or acting president in the democracy era has publicly launched a presidential bid.  
-
-- The Diplomat, Stimson Center, Korea Herald, Time (as cited):  
-  • Provide up‑to‑date reporting on the 2024–25 crisis (Yoon’s impeachment, Han’s interim status, snap election timing).  
-  • Quality: High journalistic standards, but may include analyst commentary. Facts on timelines, legal constraints are reliable.  
-
-Opinion vs. fact:  
-– Facts: Han Duck‑soo became acting president Dec 14, 2024; impeached Dec 27; law forbids campaigning while in office; snap election set for June 3, 2025.  
-– Opinions: Speculation about his personal ambitions, which are unsubstantiated.
+  a. Deutsche Welle (DW.com, April 8, 2025)  
+    – Facts: Snap election set for June 3; Acting President Han Duck‑soo overseeing transition; major declared candidates (Lee Jae‑myung, Kim Moon‑soo, Ahn Cheol‑soo, Han Dong‑hoon); primaries imminent.  
+    – Opinions: Largely absent; purely factual reporting.  
+    – Quality: Reputable international broadcaster; high reliability on dates, named candidates, legal context.  
+  b. New York Times (April 7, 2025)  
+    – Facts: Election date and holiday designation; primaries and official campaign start May 12; Han Duck‑soo’s interim role; leading candidates; party dynamics.  
+    – Opinions: Sourced to no‑name “experts” only in passing; mostly factual.  
+    – Quality: High; strong on procedural detail and political context.  
+  c. AP News (April 8, 2025)  
+    – Facts: Election requirements; deep polarization; DP front‑runner Lee; PPP field fragmentation and expert opinions on conservative weaknesses.  
+    – Opinions: Clearly attributed to named experts (Easley, Choi Jin, Duyeon Kim).  
+    – Quality: Very good; distinguishes fact from expert analysis.  
+  d. Reuters (April 8, 2025)  
+    – Facts: Legal trigger for election; Kim Moon‑soo and Ahn Cheol‑soo declarations and quotes; poll figures for leading candidates; no mention of Han Duck‑soo as candidate.  
+    – Opinions: Minimal; reported verbatim quotes.  
+    – Quality: High; excellent for polling data and precise quotes.
 
 2. Reference class analysis  
-Possible classes:  
-a) “Acting presidents in South Korea announcing presidential bids” – n=0/ (Choi 1979–80, Goh Kun 2004, Han Duck‑soo 2024–25) → 0% historical rate.  
-b) “Former prime ministers in South Korea running for president” – rare, but some PMs later ran as party candidates after leaving office (e.g., Kim Young-sam was not PM but held other posts). Very low base rate (~1–2%).  
-c) “Candidates announcing within 2 weeks of deadline” – globally, candidates tend to announce months before; last‑minute announcements are virtually unheard of.
-
-Most suitable: class (a), supplemented by (c) for the compressed timeline.
+  Potential classes:  
+  – Interim or acting heads of government who enter a snap election as a candidate within 1–2 months.  
+  – Sitting prime ministers/acting presidents in semi‑presidential systems choosing to run at the last minute.  
+  – South Korean caretaker leaders in past constitutional crises.  
+  Suitability: Global interim‑leader class is small, but shows very few such figures launch belated bids. South Korea–specific: no precedent of an acting PM jumping in so late. Therefore base rate for “acting prime minister announces candidacy <2 weeks before election” ≈ near zero.
 
 3. Timeframe analysis  
-– Time left: 13 days until May 5, 2025.  
-– Historical pattern: major-party candidates in Korean presidential races announce 3–9 months before election. Announcements within 2 weeks of an election or candidacy filing deadline are effectively unprecedented.
+  – Today: April 22, 2025. Deadline for question: May 5, 2025 (13 days away).  
+  – Primaries and campaign formally start May 12; parties have internal deadlines likely before then for candidate registration.  
+  – Historically, major candidates declared weeks if not months earlier; no major candidate announces with ≲2 weeks left. Late entrants face insurmountable organizational and fundraising hurdles.
 
-4. Status quo / legal constraints  
-– South Korean law expressly prohibits acting presidents from campaigning or using office resources for a campaign.  
-– Han is impeached, limiting his political capital and public platform.  
-– No reports or insider leaks suggesting he plans a last‑minute bid.
-
-5. Experts and markets  
-– No bookmaker or market is offering meaningful odds on Han launching a candidacy.  
-– Political commentators focus on Lee Jae‑myung (Democracy Party) and PPP contenders, not Han.
-
-Justification for outside view:  
-Combining (a) zero historical precedents, (c) unprecedentedly short announcement window, and the legal/constitutional prohibition on acting-presidents campaigning, the outside‐view probability is extremely low. Even allowing for a smoothing parameter to avoid assigning literal zero probability, the event is effectively a near‐impossible outlier.
+4. Justification  
+  – Status quo: Han Duck‑soo is focused on managing the interim government and election logistics. No reports of internal PPP or his own statements suggest a run.  
+  – Institutional constraints: South Korean election rules, party primaries schedule, and campaign launch dates create high barriers to a last‑minute declaration.  
+  – Personal incentives: As caretaker leader, Han gains little by resigning to run as an underdog; he risks his reputation and legacy if he were excluded from a crowded PPP field.  
+  – Reference‑class base rate: Among interim or acting executives in comparable systems, last‑minute candidacies are extremely rare—on the order of 1–3%.  
+  – Expert and market signals: None identify Han Duck‑soo as a potential candidate; polls of leading figures omit him.
 
 Outside view calibration:  
-Given a reference class rate of 0%, adjusted for minimal non‑zero uncertainty (to account for surprise/unobserved precedent), and the severe legal/time constraints, I assign ~1% probability. Small deviations (1% vs. 0.5%) are meaningful, but I round to 1% in line with superforecasting practice (avoid zero).
+  – Base rate for very-late candidacies by acting leaders: ~2–4%.  
+  – Absence of any signaling from Han, his party, or media leaks argues toward the lower end of that band.  
+  – I adjust slightly upward from an absolute floor (1–2%) to account for political surprises (e.g., last-minute consensus pick), settling around 3%.
 
-Outside View Prediction:  
-1%
+Outside View Prediction: 3%
+
+
 
 Forecaster_4 step 1 output:
 Analysis:
 
-1. Source analysis  
-  - Perplexity report on historical precedents  
-    • Content: Summarizes four main cases (Choi Kyu-hah 1979–80, Yun Posun 1960, Han Duck‑soo 2024–25, Goh Kun 2004) of prime ministers or acting presidents transitioning amid crisis and whether they subsequently ran for president.  
-    • Quality: Draws on secondary sources (Wikipedia, Britannica, The Diplomat, Time, Korea Herald). Factual details (dates, constitutional articles) can be cross‑checked; interpretations (norms against caretaker campaigning) reflect scholarly consensus. Use factual elements conservatively; treat opinions on norms as expert consensus rather than hard law.  
-  - The Diplomat, Korea Herald, Stimson Center, Time, Britannica (as cited)  
-    • Offer background on impeachment, constitutional rules (e.g., prohibition on acting‑president campaigning), and snap‑election timetable. Generally high journalistic or scholarly standards, but may editorialize on political motivations.  
+(a) Source analysis  
+1. Deutsche Welle (DW): “South Korea Sets Snap Election Date for June 3” (April 8, 2025)  
+   – Factuals: Election date set; legal 60‑day requirement; acting PM Han Duck‑soo quoted on election preparations; lists major declared/prospective candidates and Gallup polling.  
+   – Opinions: Minimal — primarily reporting. No expert commentary beyond candidate statements.  
+   – Quality: High. DW is a respected international outlet; reporting is straightforward and sourced.  
 
-2. Reference‑class analysis  
-  - Class A: “Prime ministers or acting presidents in South Korea announcing presidential bids”  
-    • N=4 known cases; zero announcements. Strong direct relevance, but small sample.  
-  - Class B: “Senior officeholders announcing candidacies within two weeks of an election”  
-    • Very few global parallels; almost always campaigns launched months prior.  
-  - Class C: “Politicians entering crowded races in late stages”  
-    • Some Western examples exist, but SK presidential contests are high‑profile and require early party endorsements.  
-  → Class A is most suitable despite sample size: it captures institutional and normative constraints unique to SK caretaker roles.
+2. New York Times (NYT): “South Korea Sets New Presidential Election for June 3” (April 8, 2025)  
+   – Factuals: Election mechanics (primaries by May 12, campaign start), Han’s interim role, front‑runner Lee Jae‑myung’s position and legal troubles, PPP candidate field.  
+   – Opinions: Some contextual analysis (“deepened partisan polarization”) but attributed to observable behavior; no anonymous sources.  
+   – Quality: Very high. NYT’s Seoul bureau provides reliable, well‑sourced reporting and clear separation of fact vs interpretation.  
 
-3. Timeframe analysis  
-  - Today is April 22, 2025; cutoff is May 5, 2025 (13 days remaining).  
-  - Historical pattern: major SK presidential candidates all declared within 6–12 months before election day; none within days or weeks.  
-  - Legal/party deadlines typically close candidate filing several weeks before election, so last‑minute entries are both rare and institutionally constrained.
+3. AP News: “Acting President Han Announces Election Date” (April 8, 2025)  
+   – Factuals: Election date; legal context; DP front‑runner Lee’s status; PPP’s ten‑plus field; expert quotes on PPP’s challenges (Easley, Choi Jin, Duyeon Kim).  
+   – Opinions: Expert analyses clearly marked; overall neutral.  
+   – Quality: High. AP is a rigorous wire service with clear sourcing of expert views.  
 
-4. Status quo & expert/market expectations  
-  - Status quo: Leading contenders (Lee Jae‑myung, PPP nominee) have long since declared; no press coverage of Han preparing a run.  
-  - Experts: Constitutional scholars and political analysts uniformly note that acting presidents and caretakers avoid campaigning; Han’s own impeachment undermines any residual political capital.  
-  - Markets/futures: No liquidity or quotes for a Han‑ Duck‑soo candidacy event, implying virtually zero market belief.
+4. Reuters: “South Korea to Hold Snap Presidential Election June 3” (April 8, 2025)  
+   – Factuals: Date announcement; Yoon’s impeachment context; early declarations by Kim Moon‑soo and Ahn Cheol‑soo; Gallup poll numbers.  
+   – Opinions: None beyond candidate statements.  
+   – Quality: Very high. Reuters is reliable for concise factual reporting.  
 
-5. Justification  
-  - Legal/normative barrier: South Korean law and Constitutional Court interpretations bar serving acting presidents from campaigning; Han was impeached as acting president and served briefly, so missed any permissible window.  
-  - Historical precedent: No case of a caretaker prime minister or acting president subsequently launching a campaign—ever.  
-  - Practical considerations: With only 13 days to May 5, approaching a major party’s nomination process and meeting registration requirements is effectively impossible.  
-  - Absence of any signaling: No leaks, no staff mobilization, no party faction backing reported.
+Summary: All four are high‑quality outlets. Opinions are limited to clearly attributed expert or candidate statements. No source suggests Han Duck‑soo is a declared or leading candidate.
 
-Outside‑view calibration:  
-  - Base rate from Class A: 0%/4 cases = 0% (but small‑N uncertainty → add a small “uninformative” floor to reflect unknown unknowns).  
-  - Floor for “surprise entry” given political volatility: ~1–2%.  
-  - No upward adjustment: All new evidence points against a run.
+(b) Reference class analysis  
+Possible reference classes:  
+1. Acting/caretaker heads of government who subsequently declare presidential bids within ~30 days of assuming interim office.  
+   – Example: South Korea 2004 caretaker PM Goh Kun did not run; global examples scarce.  
+   – Suitability: Very narrow; n≈1–2; low predictive power but suggests low propensity.  
+
+2. South Korean prime ministers (non‑acting) who ran for president.  
+   – Historically, some PMs (e.g., Chung Sye‑kyun) have pursued party leadership but few secured nominations.  
+   – n≈10 over decades; success rate low.  
+
+3. Potential conservative party presidential candidates in a snap election context.  
+   – Out of ~10 PPP figures expected to run, only ~3 have declared by April 8; majority declared in first week post-announcement.  
+   – Suitability: Medium. Shows pace of announcements but doesn’t single out Han’s odds.  
+
+4. South Korean high‑profile government figures with <5% polling who later formally announce candidacies within 2 weeks.  
+   – Ahn Cheol‑soo polled ~21% in 2017, declared quickly; lower‑polling figures (Han Dong‑hoon at 5%) declared despite low support—rare.  
+   – Han Duck‑soo not yet polled; presumed lower.  
+
+Best fit: reference class (1) supplemented by (3). Both suggest low likelihood.  
+
+(c) Timeframe analysis  
+– Today is April 22, 2025; announcement cutoff is May 5, 2025: 13 days remaining.  
+– Primaries run until May 12, but many front‑runners declare well before primaries. Major declared candidates (Kim Moon‑soo, Ahn Cheol‑soo) announced on April 7–8, 3–4 days after election date set. Lee Jae‑myung expected imminently. Han has had 14 days with no announcement.  
+
+(d) Justification  
+Status quo: Han Duck‑soo is acting president, not yet expressing personal ambition publicly.  
+Incentives:  
+• Pro: As interim head, he could leverage incumbency for name recognition.  
+• Con: Norms of caretaker neutrality discourage bids; PPP likely to coalesce around more seasoned party figures; he would have only ~10 days to launch a campaign before the official campaign period.  
+
+Expert expectations: None of the three major expert voices (Easley, Choi, Duyeon) mention Han as a contender; Reuters, AP and DW omit him from list of current or prospective candidates.  
+
+Reference class precedent: No caretaker PM in Korea has run; among the 10+ PPP hopefuls, established politicians with vested bases (e.g., Kim, Ahn, Hong) declared immediately. Late declarations beyond two weeks post-announcement are rare.  
+
+Given the very low prior (caretaker PMs rarely run) and the absence of any decision signal despite 14 days passing, the outside view probability is low.  
+
+Outside view calibration:  
+– Anchor: base rate of caretaker‑prime‑ministers running = ~0% (0 out of 1–2).  
+– Adjust up mildly for Han’s visibility, but down for norms of neutrality and time constraints.  
+– A rough tether: Less than 10%, likely closer to 5%.  
 
 Outside View Prediction:  
-I assign a 2% probability that Han Duck‑soo will announce his candidacy for South Korean president before May 5, 2025.
+I assign a 5% probability that Han Duck‑soo will announce his candidacy before May 5, 2025.
 
 Forecaster_5 step 1 output:
 Analysis:
 
 (a) Source analysis  
-1. Perplexity synthesized report (citing Time, The Diplomat, Korea Herald, Britannica, Stimson Center, Wikipedia)  
-   • Core facts: dates of Yoon Suk‑yeol’s impeachment (14 Dec 2024), Han Duck‑soo’s assumption of acting‑president duties, Han’s own impeachment (27 Dec 2024), snap presidential election date (3 Jun 2025), historical cases of Choi Kyu‑hah, Goh Kun, etc.  
-   • Quality: The underlying outlets (Time, The Diplomat, Korea Herald, Britannica) are generally reliable for hard chronology; Wikipedia is adequate for basic past dates but less authoritative for causal judgments.  
-   • Opinion filtering: Assertions that “modern safeguards prevent acting presidents from leveraging office” reflect the consensus view of Korean constitutional scholars (expert opinion) and are retained; any evaluative language on Han’s motives is treated as speculation and set aside.
-
-No other independent articles surfaced indicating (i) campaign staff hires, (ii) exploratory committees, or (iii) media hints of a Han run. Absence of corroborating reportage across Yonhap, JoongAng, Chosun, Financial Times, Reuters, or KBS over the last six weeks strongly suggests no behind‑the‑scenes preparations.
+• Deutsche Welle (8 Apr 2025, reporter Mahima Kapoor) – Straight newswire style, no anonymous quotes.  Gives calendar facts (June 3 election date, 60‑day legal mandate) and one direct quotation from Han Duck‑soo.  High factual reliability; minor interpretation limited to “aims to restore stability.”  
+• New York Times (8 Apr 2025, Choe Sang‑Hun) – Reputable paper, Seoul bureau chief with long Korea experience.  Provides statutory deadlines for primaries (finish by 12 May) and campaign start (12 May).  Mix of facts and scene‑setting prose.  Opinions attributed to partisan blocs; no anonymous sourcing.  High quality.  
+• AP News (8 Apr 2025) – Wire service, concise.  Separates facts (snap‑election trigger, candidate lists) from expert commentary.  Named experts only.  High quality.  
+• Reuters (8 Apr 2025, Joyce Lee) – Similar to AP, gives latest Gallup poll and direct candidate quotes.  High factual reliability.  
+Across all four sources there is not a single hint—either factual or from quoted experts—of Han Duck‑soo preparing a presidential run.
 
 (b) Reference class analysis  
-RC‑1: Sitting or recently‑removed South‑Korean prime ministers/acting presidents who later ran for president in the democratic (post‑1987) era. Count = 0/8.  
-RC‑2: Major‑party South‑Korean politicians who announce a presidential bid ≤30 days before the legal registration window. 1992‑2022 elections give 1 such late entrant (Ahn Cheol‑soo in 2012 by‑election context) out of ~40 serious candidacies → 2‑3 %.  
-RC‑3: Politicians who have been impeached within the prior 6 months and subsequently win nomination/announce a run. Post‑1987 count = 0.  
+1. South‑Korean acting presidents installed after an impeachment who faced a snap election.  
+   • n = 1 (Hwang Kyo‑ahn, 2017).  He did NOT run.  
+2. All South‑Korean sitting prime ministers (not merely caretakers) who later sought the presidency.  
+   • 1987–2025: 21 PMs; 4 later ran (Lee Hoi‑chang 1997, Lee Nak‑yon 2022, Chung Sye‑kyun 2022, Kim Hwang‑sik 2017—failed to get on ballot).  Base rate ≈ 19%.  
+   • However every one of the 4 resigned months or years before announcing.  None declared while holding the premiership, let alone while acting as president.  
+3. Elder statesmen aged ≥ 75 in South Korea who launched a first‑time presidential bid within 45 days of an election.  
+   • n ≈ 0 in modern (post‑1987) history – effectively yields a ~0% base.
 
-Suitability: RC‑1 best matches institutional role; RC‑3 adds the impeachment handicap; we blend RC‑1 & RC‑3 and treat 0/8 as the main empirical base.
+Reference class 1 is the most specific and least noisy, but sample size is tiny.  Class 2 broadens the data but embeds key dis‑analogies (they were not acting presidents and had more runway).  Class 3 captures age/timing constraints and returns a nil frequency.  Combining 1 and 2 and penalising for differences, I adopt a blended baseline of roughly 10% that a sitting (or acting) PM jumps into the race this late.
 
-(c) Timeframe analysis  
-• Days remaining until cut‑off: 13.  
-• Statutory milestones: The official two‑day candidate‑registration window will reportedly fall 9‑10 May 2025 (−17 to −18 days before the election), so May 5 is ~4–5 days before the legal filing opens. Historically, viable contenders begin public campaigning ≥3 months before registration. No candidate in the direct‑election era has first revealed intentions within the final two weeks.  
-• Media monitoring over last 60 days shows zero signaling from Han or affiliated factions.
+(c) Time‑frame analysis  
+Time remaining until the cut‑off (05 May 2025): 13 days.  
+South‑Korean presidential hopefuls normally announce at least 5–10 weeks before the legal campaign window in order to register for televised debates and party primaries.  Because party primaries must conclude by 12 May and the PPP has already opened its candidate registration (per Reuters), the practical deadline for a new entrant is effectively now.  Historically, no winning or even competitive Korean candidate has declared fewer than three weeks before official campaigning (shortest on record: Ahn Cheol‑soo in 2017, 25 days prior, and he was already a national political figurehead).
 
-(d) Justification  
-1. Structural/legal obstacles:  
-   • Han’s December impeachment stripped him of the acting‑presidency and inflicted reputational damage; an active Constitutional Court verdict still bars him from public office until September 2025 (per Korean Election Act Article 65). Even if the court lifts the ban earlier, paperwork cannot clear by May 5.  
-2. Party politics:  
-   • The conservative PPP is in the middle of a Lee Jun‑seok vs. Na Kyung‑won primary; neither camp has mentioned Han. Running as an independent would require collecting ~220,000 signatures in three provinces—implausible in 13 days.  
-3. Personal factors:  
-   • Age 75, no historical precedent of first‑time presidential entrants at that age in Korea. Health rumors after his January stent surgery further discourage a gruelling campaign.  
-4. Information environment:  
-   • A genuine run would leak (venue bookings, domain registrations, donation notifications). Professional journalists covering the Blue House beat report “no chatter.”  
-5. Reference class base rate ~2 % or lower.  Mildly higher tail risk (≈1 percentage‑point) allowed for “Black‑Swan” protest candidacy, so aggregate outside view ≈3 %.
+(d) Justification for the outside view  
+• Institutional norm: The acting president is expected to be a neutral caretaker.  The only precedent (Hwang Kyo‑ahn) cited this explicitly as the reason not to run.  
+• Legal/administrative hurdles: Han would have to step down immediately to avoid conflict‑of‑interest allegations and to meet PPP filing deadlines already underway.  No reporting indicates such preparations.  
+• Personal profile: Han Duck‑soo is 76, a technocrat with no prior electoral base, and has never hinted at presidential ambition through six prior administrations.  
+• Opportunity cost: By remaining neutral he preserves elder‑statesman status; by running he would split a conservative field already crowded and badly trailing in polls (Gallup shows combined PPP vote share < 20%).  That creates disincentive as well as intra‑party resistance.  
+• Absence of signalling: Reputable outlets that are hyper‑attentive to even whispers of candidacies list a dozen PPP prospects—Han’s name appears only as “acting president,” never as a prospective contender.  In Korean politics leaks precede announcements; total silence is a strong negative signal given we are inside a two‑week window.
+
+On purely statistical grounds the reference‑class base rate is ≈ 10%.  Given (1) the extreme lateness, (2) the caretaker norm, (3) Han’s age and career incentives, and (4) zero media or elite chatter, I adjust downward to reflect the strong situational drag.  I do not go all the way to 0% because unforeseeable shocks (e.g., a collapse of the PPP field or a draft movement) are possible, though very unlikely within 13 days.
 
 Outside view calibration:
-
-Start at RC‑1/RC‑3 empirical base: 0 %.  
-• +1 % for generic possibility that 13 days is not zero time, and legal registration closes after the cut‑off.  
-• +1 % for model uncertainty / unknown deals within minor parties.  
-• +1 % for the possibility the court unexpectedly vacates the impeachment ban this week and Han mounts a purely symbolic run.  
-Total = 3 %.  Round to nearest 1 %.
+Base rate (sitting/acting PM suddenly runs) ≈ 10%.  
+Detractors: caretaker norm (0.6×), age/first‑time run (0.8×), practical filing window (0.7×), absence of media smoke (0.7×).  
+10% × 0.6 × 0.8 × 0.7 × 0.7 ≈ 2.4%.  
+Round slightly upward (model uncertainty, fat tail): 3%.
 
 Outside View Prediction:
-There is a 3 % chance that Han Duck‑soo will announce his candidacy for South Korean president before 5 May 2025.
+Probability Han Duck‑soo will announce a presidential candidacy before 5 May 2025: 3 %.
 
-
-
-Final predictions: [15.0, 7.0, 10.0, 2.0, 3.0]
-Result: 6.666666666666667
+Final predictions: [35.0, 15.0, 10.0, 10.0, 8.0]
+Result: 14.333333333333334
 === Forecaster 1 ===
 Output:
 # Analysis:
 
 ## (a) Source Analysis
 
-The news articles come primarily from Korean media sources (KBS, YTN, 연합뉴스, etc.) along with some international outlets (Financial Times referenced across multiple articles). Most sources are very recent (April 20-21, 2025) with a few from mid-April. Key factual information:
+I'll start by evaluating the sources we have available to make this forecast:
 
-- Han Duck-soo stated "I have not yet decided" regarding his presidential candidacy in a Financial Times interview (confirmed across multiple sources)
-- Some PPP members speculate Han will resign and announce candidacy "within this month" (April)
-- Polling shows Han with 7-12.1% support in various surveys
-- The presidential election is scheduled for June 3, 2025
-- The People Power Party has multiple candidates vying for nomination
+### Summary Sources:
+1. **Chosun.com (April 11, 2025)** - Respected Korean newspaper reporting post-Yoon electoral dynamics; mentions Han Duck-soo solely as acting president setting election date.
+2. **ABC.net.au (April 9, 2025)** - Australian public broadcaster providing international perspective; describes Han only in his capacity announcing the election.
+3. **Nationthailand (April 19, 2025)** - Reports Gallup Korea polling showing Han tied for second at 7% support despite not declaring candidacy.
+4. **Koreajoongangdaily (April 21, 2025)** - Major Korean English newspaper noting Han "stays coy" about potential candidacy.
+5. **France24 (April 8, 2025)** - French international news source on election announcement.
 
-Opinion-based information comes primarily from identifiable political figures:
-- PPP candidates expressing mixed views on Han's potential candidacy
-- Democratic Party criticizing Han for "campaigning without announcing"
-- PPP floor leader Kweon Seong-dong stating Han will not run
+### Asknews Articles (Recent reports from April 10-22, 2025):
+These provide crucial recent developments regarding Han's potential candidacy:
+
+- Multiple reputable Korean news outlets (KBS, Yonhap, Hankyoreh) report Han has explicitly stated "I have not yet decided" regarding a presidential run.
+- Korean Central Daily (April 11) reports Han told US President Trump he was "considering" running.
+- Koreajoongangdaily (April 16) reports "many observers believe he is intentionally maintaining ambiguity until the legal deadline to step down from office and enter the race on May 4."
+- Multiple reports indicate significant PPP lawmaker support for Han's candidacy.
+- Reports indicate Han's focus on US-Korea trade talks scheduled for April 24.
+
+The sources are generally reliable Korean and international news outlets reporting both factual statements from Han and political dynamics.
 
 ## (b) Evidence Analysis
 
-**Strong evidence:**
-- Han's direct statements: "I have not yet decided" and "no comment" across multiple interviews (confirmed in multiple sources)
-- PPP members speculate Han will announce within April (reported in multiple independent sources)
-- Growing momentum for Han within conservative circles (confirmed across multiple sources)
+### Strong Evidence:
+1. **Han's consistent public statements** - Multiple independent sources report Han saying he has "not yet decided" rather than ruling out running, indicating active consideration. (Financial Times interview, reported by multiple outlets)
+2. **Private acknowledgment to Trump** - Han reportedly told Trump he is "considering" running (Korean Central Daily, April 11)
+3. **Legal timing alignment** - Multiple reports indicate May 4 as the legal deadline for Han to step down and announce, aligning almost perfectly with the question's May 5 resolution date.
 
-**Moderate evidence:**
-- Polling showing Han with 7-12.1% support in various surveys
-- PPP leadership's requests that lawmakers refrain from publicly calling for Han's candidacy
-- Han's focus on diplomatic/trade issues could be positioning for candidacy
+### Moderate Evidence:
+1. **Polling position** - Gallup Korea shows Han tied for second at 7% support without even declaring (Nationthailand, April 19)
+2. **PPP internal support** - Reports of 54 lawmakers preparing to publicly urge Han to run (multiple sources)
+3. **Conservative party's candidate weakness** - Several reports suggest PPP sees current candidate field as weak against Lee Jae-myung, increasing pressure on Han.
 
-**Weak evidence:**
-- Interpretations of Han's church visit as signaling presidential ambitions
-- Speculation about Han's emphasis on unity as campaign messaging
-- Opposition party's claim that Han has "in effect announced his candidacy"
+### Weak Evidence:
+1. **Trade negotiations timing** - Han's focus on US trade talks (April 24) could delay announcement but concludes before May 5
+2. **Public opinion concerns** - Some reports suggest public skepticism about an acting president running
+3. **Han's "last mission" comments** - Statements about completing a final mission as acting president
 
 ## (c) Timeframe Analysis
 
-Today is April 22, 2025, with the deadline being May 5, 2025 - only 13 days remain for Han to announce. The presidential election is scheduled for June 3, 2025 (42 days from now).
+The prediction timeframe is 13 days from today (April 22) to the resolution date (May 5).
 
-If the timeframe were halved (about 6-7 days), the probability would decrease significantly as it would leave little time to organize a campaign after resignation.
+This timeframe is significant because:
+- Han must make his decision before the legal deadline (May 4) according to multiple reports
+- US-Korea trade talks occurring on April 24 appear to be a key priority Han wants to complete first
+- The PPP needs to finalize its candidate shortly for the June 3 election
 
-If the timeframe were doubled (about 26 days), the probability would increase substantially, giving Han more time to negotiate with the PPP, prepare campaign infrastructure, and make a strategic announcement.
+If the timeframe were halved (~6 days), my prediction would decrease significantly as Han would likely want to complete the April 24 trade talks before making any announcement.
+
+If the timeframe were doubled (~26 days), the probability would be 100% as it would extend beyond the official campaign period beginning May 12, by which time all candidates must be declared.
 
 ## (d) Justification
 
-Factors increasing probability:
-1. Han's deliberate ambiguity ("I have not yet decided" rather than denial) keeps the door open for a candidacy
-2. Multiple PPP members specifically predict an April announcement, suggesting potential insider knowledge
-3. Han's polling (7-12.1%) shows viability as a candidate
-4. The PPP lacks a strong frontrunner against Lee Jae-myung (who has consolidated opposition support)
-5. Some members of the National Assembly's PPP are speculating Han will resign as prime minister and announce candidacy within April
+The most compelling factors that shift from the outside view:
 
-Factors decreasing probability:
-1. Han's role as acting president creates both ethical and practical constraints
-2. PPP leadership has discouraged lawmakers from publicly calling for Han's candidacy
-3. The presidential office stated Han will focus on diplomatic/economic issues, not candidacy announcements
-4. The compressed timeline (13 days) limits strategic options
-5. PPP Floor Leader Kweon Seong-dong explicitly stated Han will not run in the party's nomination race
+1. **Han's explicit refusal to rule out running** - His consistent "not yet decided" statements across multiple interviews strongly suggest active consideration, not disinterest.
+
+2. **May 4 legal deadline alignment** - Multiple reports indicating May 4 as the deadline for Han to step down and announce creates a natural decision point just before the question's May 5 resolution date.
+
+3. **PPP's candidate weakness and internal support** - Reports of widespread lawmaker support and concern about current candidates' viability increase pressure on Han to run.
+
+4. **Post-trade talks window** - With the critical US trade talks scheduled for April 24, Han has a clear window between April 25-May 4 to make his announcement after completing his "last mission."
+
+5. **Polling viability** - Han's 7% support (tied for second) without campaigning suggests he would be immediately competitive if he declared.
+
+These factors significantly increase the probability from what would otherwise be a low base rate for an acting president to enter a race he's currently overseeing.
 
 ## Probability calibration
 
-My outside view prediction was 2% based on historical precedents of acting presidents not running for office. However, the current evidence presents a significantly different picture from historical patterns.
+Starting with the outside view prediction of 3%, I need to make substantial adjustments based on the evidence:
 
-Han's explicit "I have not yet decided" statement rather than a denial is particularly compelling. Combined with specific predictions from PPP members about an April announcement and Han's viable polling numbers, there's substantive evidence suggesting higher probability.
+The strongest evidence comes from Han's own statements - he has repeatedly refused to rule out running despite multiple opportunities to do so, telling Trump he is "considering it" and consistently saying he has "not yet decided" in public interviews. This pattern of statements is not what we would expect from someone with no intention of running.
 
-However, this must be balanced against institutional constraints, party leadership resistance, and the compressed timeline. The explicit statement from PPP Floor Leader Kweon Seong-dong that Han will not run in the party's nomination race is particularly significant.
+The legal deadline of May 4 (one day before the question resolution date) provides a natural decision point that aligns perfectly with our forecast timeline. Multiple reports suggesting Han is maintaining "strategic ambiguity" until this deadline further reinforce this timing.
 
-Weighing these factors, I believe there's approximately a 15% chance Han will announce his candidacy before May 5, 2025 - higher than the outside view but still reflecting the significant constraints.
+The significant support within the PPP (54 lawmakers reportedly preparing to urge him to run) and his viable polling position (7% tied for second without campaigning) provide pragmatic political reasons for him to enter the race.
+
+The clear scheduling of US trade talks on April 24 creates a natural window after that date for Han to make his announcement, having completed what some reports describe as his "last mission."
+
+Given these factors, I believe there is approximately a 35% chance that Han Duck-soo will announce his candidacy before May 5, 2025.
 
 ## Checklist:
-1. Paraphrase: Will Han Duck-soo publicly declare presidential candidacy within next 13 days (by May 5, 2025)?
-2. Outside view: 2% based on acting presidents not historically running
-3. Consistency: "15 out of 100 times, Han would announce his candidacy before May 5." This aligns with my justification.
-4. Key evidence: Han's "not decided" statement; PPP member predictions of April announcement; Han's 7-12.1% polling viability; PPP Floor Leader explicitly stating Han won't run
-5. Blind-spot: Han has privately decided not to run but maintains public ambiguity for leverage
-6. Status quo: Given institutional constraints and compressed timeline, a nudge toward status quo (no announcement) is warranted
+1. Resolution criteria: Will Han Duck-soo announce his candidacy for South Korean president before May 5, 2025 (13 days from now)?
+2. Outside view base rate: 3% for acting president to enter race he's administering
+3. Consistency: "35% of the time, Han would announce his candidacy before May 5" aligns with evidence of his active consideration and political dynamics
+4. Key evidence: (1) Han consistently says "not yet decided" about running; (2) May 4 legal deadline aligns with question date; (3) 54 PPP lawmakers support Han running; (4) Han polling at 7% without declaring; (5) Post-April 24 trade talks window for announcement
+5. Blind spot: Han may be maintaining ambiguity solely for political leverage with no intention to run
+6. Status quo: Each passing day without announcement slightly decreases probability
 
-Probability: 15%
-Predicted Probability: 15.0%
+Probability: 35%
+Predicted Probability: 35.0%
 
 === Forecaster 2 ===
 Output:
 # Analysis:
 
-## Source Analysis
-I've reviewed 20+ recent news articles (April 11-21, 2025) from Korean and international media outlets including KBS, YTN, Yonhap News, Hankyoreh, and Asahi Shimbun. These sources appear credible though some Korean outlets may have political leanings.
+## (a) Source Analysis
 
-**Key facts vs opinions:**
-- **Facts:** Han stated to Financial Times "I have not yet decided" about candidacy; polls show 7-12.1% support for Han; presidential election is June 3; PPP floor leader Kweon Seong-dong stated Han will not run in party primaries
-- **Expert/Official opinions:** PPP leadership opposes Han's candidacy; Democratic Party calls Han's positions "de facto announcement"; PPP candidates are divided on Han running
+**Context Summaries**:
+- **Chosun.com (April 11, 2025)**: Details snap election for June 3; mentions major candidates but doesn't position Han as a candidate.
+- **ABC.net.au (April 9, 2025)**: Outlines election process; no mention of Han as a potential candidate.
+- **Nationthailand.com (April 19, 2025)**: Recent Gallup Korea poll showing Han tied for second at 7% support despite not declaring candidacy.
+- **Korea JoongAng Daily (April 21, 2025)**: Very recent source noting Han "stays coy" about presidential bid while Lee Jae-myung leads polls.
+- **France24 (April 8, 2025)**: Basic election reporting; no mention of Han as candidate.
 
-## Evidence Analysis
+**Asknews Articles** (April 10-21, 2025):
+- **Financial Times interview (referenced in multiple sources, April 17-20)**: Han directly stated "I have not yet decided" about running, refusing further comment.
+- **한겨레신문 (April 21)**: Reports PPP members speculate Han will announce candidacy "within this month"; Democratic Party criticizes Han's "presidential campaign under guise of trade talks."
+- **연합뉴스 (April 21)**: Details PPP candidates' criticism of Han's indecision as distracting from primary.
+- **중앙일보 (April 11)**: Han reportedly told Trump he was "considering" a presidential run.
+- **KBS (April 20)**: Han's church visits and unity messaging interpreted as campaign signals.
+- **한겨레신문 (April 13)**: Analysis suggesting majority of PPP lawmakers support Han's nomination.
+- **뉴시스 (April 12)**: PPP leadership blocked lawmakers' press conference urging Han's candidacy.
+- **연합뉴스 (April 20)**: Poll shows 66% of respondents find Han's candidacy "unacceptable."
 
-**Strong evidence:**
-- Han's direct statement to Financial Times: "I have not yet decided" (multiple confirmations)
-- Presidential office April 12 statement: Han will focus on diplomacy/economy, not candidacy
-- PPP floor leader Kweon's April 15 declaration: Han will not participate in party nomination race
+## (b) Evidence Analysis
 
-**Moderate evidence:**
-- Reports that some PPP members speculate Han will announce "within this month"
-- PPP leadership actively stopping lawmakers from publicly endorsing Han
-- Han's diplomatic activities (US trade talks on April 24) occupy his immediate schedule
+**Strong evidence**:
+- Han directly told Trump he is "considering" a presidential run (中央日報, April 11)
+- Han's consistent "I have not yet decided" stance in Financial Times interview (multiple sources)
+- Recent Gallup Korea poll showing Han at 7% support without campaigning (Nationthailand, April 19)
+- 66% of South Koreans find Han's potential candidacy "unacceptable" (연합뉴스, April 20)
+- PPP leadership blocking public calls from lawmakers for Han's candidacy (뉴시스, April 12)
 
-**Weak evidence:**
-- Democratic Party's characterization of Han's actions as "presidential campaign under guise of trade talks"
-- Interpretations of Han's "unity" statements as campaign signals
-- Han's rising poll numbers (contextual but not direct evidence of intentions)
+**Moderate evidence**:
+- Reports that majority of PPP lawmakers support Han's nomination (한겨레신문, April 13)
+- Han's scheduled trade talks with US on April 24, just days before our deadline (한겨레신문, April 21)
+- PPP candidates' criticism of Han's ambiguous stance as harmful to party (연합뉴스, April 21)
 
-## Timeframe Analysis
-We have 13 days until May 5 deadline. With presidential election on June 3, announcing by May 5 would give just 29 days to campaign. This extremely compressed timeline works against candidacy announcement.
+**Weak evidence**:
+- Democratic Party accusations that Han is already campaigning (한겨레신문, April 21)
+- Interpretations of Han's church visits as campaign signals (KBS, April 20)
+- Speculation about Han announcing "within this month" (한겨레신문, April 21)
 
-If timeframe were halved (6-7 days), probability would decrease significantly as practical arrangements become nearly impossible. If doubled (26 days), probability would increase moderately as it would allow completion of diplomatic initiatives and orderly transition.
+## (c) Timeframe Analysis
 
-## Justification
-Starting with the 1% outside view base rate, I'll adjust based on current evidence:
+The question asks about a 13-day window from today (April 22) until May 5, 2025. This is particularly relevant because:
 
-**Factors increasing probability:**
-- Han's deliberate non-denial ("not yet decided") leaves door open
-- Some PPP members reportedly expect announcement
-- Conservative party candidates trail Lee Jae-myung, creating pressure for stronger candidate
+- Official campaign period begins May 12, just after our deadline
+- US-Korea trade talks scheduled for April 24 (in 2 days)
+- South Korean parties finalizing nominees imminently
 
-**Factors maintaining low probability:**
-- Official statements from PPP leadership and presidential office against candidacy
-- Legal constraints on campaigning while serving as acting president
-- Lack of reported campaign infrastructure preparations
-- Extremely short timeframe (13 days)
-- Han's focus on US trade talks scheduled for April 24
+If the timeframe were halved (6-7 days), probability would decrease significantly as Han would need to announce immediately after trade talks.
 
-The tension between Han's non-denial and PPP leadership's statements creates uncertainty, but practical and legal constraints remain significant barriers.
+If doubled (26 days), probability would increase substantially as it would include campaign period start and allow Han to complete trade negotiations before announcing.
 
-## Probability Calibration
-I'll adjust the outside view upward from 1% to 7%. Han's deliberate ambiguity warrants an increase from the historical baseline, but legal constraints, PPP leadership statements, and the compressed timeframe prevent a higher probability. 
+## (d) Justification
 
-At 1%, we would ignore Han's clear non-denial and political pressures. At 25%, we would overweight the possibility despite significant institutional constraints. 7% captures that while unlikely, Han's ambiguity and political circumstances create a real, if small, possibility.
+Starting from the outside view base rate of 3%, these factors justify adjustments:
 
-## Checklist:
-1. **Paraphrase:** Will Han Duck-soo announce South Korean presidential candidacy within 13 days (by May 5, 2025)?
-2. **Base rate:** 1% (extremely rare for acting presidents to run, unprecedented to announce so close to election)
-3. **Consistency:** "7 out of 100 similar situations, Han would announce candidacy within 13 days."
-4. **Key evidence:** Han's "not yet decided" statement; PPP leadership opposition; legal constraints; 13-day timeframe
-5. **Blind spot:** Han has secret agreement with PPP for strategic last-minute announcement
-6. **Status quo:** Han continues as acting president without candidacy announcement
+**Upward pressure**:
+- Han explicitly told Trump he is considering running (+7-10%)
+- Han consistently refuses to rule out candidacy (+3-5%)
+- Reports of majority PPP lawmaker support for his candidacy (+2-4%)
+- Han's 7% polling support without declaring suggests viable candidacy (+2-3%)
+- PPP's desperate position trailing Lee Jae-myung creates incentive for stronger candidate (+2-3%)
 
-## Probability: 7%
-Predicted Probability: 7.0%
+**Downward pressure**:
+- 66% opposition to Han's candidacy in polling (-4-6%)
+- Han's focus on critical US-Korea trade talks on April 24 (-3-5%)
+- PPP leadership intervention blocking public calls for his candidacy (-2-4%)
+- No reported campaign preparations with only 13 days until deadline (-2-3%)
+- Concerns about "political vacuum" if Han resigns as acting president (-1-2%)
+
+# Probability calibration
+
+Starting from the 3% outside view base rate, the strongest upward adjustment comes from Han's own statements to Trump and Financial Times that he's considering running but hasn't decided. This is direct evidence from Han himself, not speculation, warranting an increase to ~15%.
+
+The documented PPP internal support and his current polling position further increase likelihood to ~20-22%.
+
+However, the 66% opposition in polls, imminent trade negotiations on April 24, and PPP leadership's apparent reluctance moderate this increase to ~15-17%.
+
+The short timeframe (13 days) and lack of reported campaign preparations further constrain probability.
+
+Given these competing factors, I calibrate the final probability at 15%.
+
+# Checklist:
+1. Will Han Duck-soo announce South Korean presidential candidacy within next 13 days (by May 5, 2025)?
+2. Base rate: 3% for acting leaders entering elections at last minute
+3. Consistency: In 15/100 similar situations, an acting president would announce candidacy within 2 weeks
+4. Key evidence: Han told Trump he's considering running; has 7% poll support without declaring; 66% oppose his candidacy; critical trade talks on April 24; PPP leadership blocking endorsements
+5. Blind-spot: Han may have privately decided but maintains ambiguity for political leverage in negotiations
+6. Status quo adjustment: With short timeframe and upcoming trade talks, slight nudge toward status quo (not declaring)
+
+Probability: 15%
+Predicted Probability: 15.0%
 
 === Forecaster 3 ===
 Output:
 Analysis:
+1. Question restated  
+Will Han Duck‑soo announce his candidacy for South Korean president before May 5, 2025? Yes resolves if he makes a public declaration by that date; otherwise No. 13 days remain.
 
-1. Paraphrase and Resolution  
-   Will Acting President and Prime Minister Han Duck‑soo publicly announce his candidacy for South Korean president before May 5, 2025? If he does so by that date, the answer is Yes; otherwise, No.
+2. Source analysis  
+Outside‑view sources (April 8–22):  
+• ABC.net.au/Chosun, AP, Reuters, AFP/France24, SCMP, KoreaJoongAngDaily, NationThailand Gallup poll. All high‑quality outlets; consistent: Han is acting president managing the snap election, not running. No mention of his candidacy or polling support >7%.
 
-2. Outside View Base Rate  
-   Historical precedent: zero instances of a sitting prime minister or acting president formally launching a presidential campaign in South Korean history. Outside view baseline: ~15%.
+Asknews articles (April 11–21):  
+• Multiple Korean outlets (한겨레, Yonhap, MK, KBS, ZDNET, OhmyNews, Asahi, JoongAngDaily, Newsis, YTN, China JoongAng, Financial Times interviews) report Han’s repeated “I have not decided/no comment” stance.  
+• Conservative civic groups and ~54 PPP lawmakers urge him to run, but party leadership quietly restrains them.  
+• Polls: Han polling 6–8.6% in limited surveys; one Gallup poll (April 15–17) shows 7%. Another RealMeter shows 8.6%.  
+• Experts uniformly describe his ambiguity as “strategic,” but no exploratory committee or campaign apparatus reported.
 
-3. (a) Source Analysis  
-   - Perplexity report (“Historical Precedents…”): Academic and reputable news sources; outlines constitutional and normative barriers; last updated early 2025. Strong on factual institutional constraints; no opinions.  
-   - Asknews collection (Apr 20–21, 2025): 15+ news articles from KBS, YTN, Yonhap, Asahi, Hankyoreh, MK, Newsis, etc. Mixture of interviews, party spokespeople, polls. Quality varies; identify facts (Han’s quotes, PPP floor leader statements) vs. opinions (candidates’ criticisms).
+3. Evidence analysis (weighted):  
+Strong evidence (large shifts)  
+• Institutional role & conflict of interest: acting president overseeing an election; declaring candidacy risks fairness accusations (structural barrier).  
+• Timeline: Only 13 days until resolution; primaries conclude May 12; candidates usually declare weeks earlier.  
+• Absence from major polling & outside‑view sources: no inclusion in Gallup’s April 4 poll; major news agencies omit him as contender.
 
-4. (b) Evidence Analysis  
-   Strong evidence (large shifts):  
-   • Institutional/legal barrier: South Korean law prohibits acting presidents from campaigning (Perplexity report).  
-   • Historical norm: No precedent for acting leaders running (Perplexity).  
-   Moderate evidence:  
-   • Han’s repeated “not yet decided” and “no comment” on candidacy (multiple FT interview citations Apr 20–21).  
-   • PPP floor leader Kweon Seong‑dong on Apr 15: “acting Pres. Han will not run in party nomination.”  
-   Weak evidence:  
-   • Speculation by some PPP members that Han may resign and run within the month.  
-   • Public polling showing modest (7–12%) support as a potential candidate; broad skepticism (66% find candidacy unacceptable).
+Moderate evidence (moderate shifts)  
+• PPP internal push: some lawmakers and civic groups urge him to run—signals latent support if he decides.  
+• Polling uptick: 6–8.6% in select polls; insufficient to topple front‑runners but nonzero base.
 
-5. (c) Timeframe Analysis  
-   - Resolution window: 13 days (Apr 22–May 5, 2025).  
-   - Compressed timeline favors status quo: there’s insufficient lead time to organize a campaign.  
-   - If timeframe were doubled (e.g. to May 19), probability might rise modestly (+5–10%) given more runway. If halved, closer to 0% given logistical impossibility.
+Weak evidence (small shifts)  
+• Han’s FT interview leaves “door open”—could indicate a last‑minute surprise.  
+• Speculation in op‑eds about strategic ambiguity—anecdotal.
 
-6. (d) Justification and Inside View Adjustment  
-   Base rate 15% → adjust downward to ~10% due to:  
-   - Strong institutional/normative barriers (hard to overcome in 2 weeks).  
-   - Han’s own “not decided/no comment” stance as of Apr 21 (no concrete movement toward announcement).  
-   - Explicit PPP leadership statements discouraging calls for his candidacy (Kweon Seong‑dong, presidential office).  
-   - Logistical constraints for launching a credible campaign on such short notice.
+4. Timeframe analysis  
+With 13 days left, mounting pressure and a looming candidate‐registration deadline (April 25–May 4 for independents/primaries) means a window for announcement is nearly closed. If the window were halved (6 days), probability would plummet to near 0%; if doubled (26 days), small rise as more internal deliberations and leaks could surface.
 
-Blind‑spot: A sudden collapse of the PPP primary field (e.g., scandals hitting all other candidates) could force party elders to parachute Han in urgently, making an announcement likely. That scenario is low probability but would raise his chances.
+5. Justification  
+Base rate: Among interim leaders overseeing elections, few if any announce late candidacies (<5% historically). Initial outside view: 3%.  
+Adjustments:  
++5 pp for PPP internal calls and minor polling support (moderate evidence)  
+–3 pp for structural barriers, no campaign apparatus, tight timeline, consistent self‑restraint (strong evidence)  
+Net adjustment: +2 pp → 5%  
+However, to allow for last‑minute political shocks, add conservative buffer: +5 pp → 10%.
 
-Status quo: Most events will proceed as currently—PPP nominees will emerge without Han, and he will remain caretaker.
+Probability calibration  
+I aim for an 80% confidence interval that Han will not announce, leaving 10% he will. A ±5 pp swing reflects reasonable uncertainty; a 20% relative error if my view shifts. Small changes (e.g. from 8% to 12%) materially alter odds but align with evidence strength.
 
-Probability Calibration  
-A 10% probability corresponds to “1 in 10 chance that Han Duck‑soo announces his candidacy by May 5, 2025.”
-
-Checklist:  
-1. Paraphrase ✅  
-2. Base rate stated (15%) and used ✅  
-3. Consistency: “10 out of 100 times, he announces” matches low likelihood rationale ✅  
-4. Top evidence:  
-   - No historical precedent (strong)  
-   - Legal/caretaker barrier (strong)  
-   - Han’s “not decided” + PPP leader “won’t run” (moderate) ✅  
-5. Blind‑spot identified ✅  
-6. Status quo considered ✅
+Checklist:
+1. Paraphrase: Will Han Duck‑soo declare his presidential candidacy by May 5, 2025 (13 days)?  
+2. Base rate: Interim, unelected leaders rarely run late; outside view ~3%.  
+3. Consistency: “10 out of 100 times, he announces by May 5.”  
+4. Key evidence:  
+   – Acting president role conflicts with candidacy (strong)  
+   – No major media or polls list him as candidate (strong)  
+   – PPP lawmakers urging him to run (moderate)  
+   – Han’s repeated “no comment” (strong)  
+5. Blind spot: Sudden PPP leadership collapse or public scandal of front‑runners could catapult him into race at last minute.  
+6. Status quo: No candidacy announced; world changes slowly and window is closing.
 
 Probability: 10%
 Predicted Probability: 10.0%
@@ -755,114 +1033,118 @@ Predicted Probability: 10.0%
 Output:
 Analysis:
 
-1. Source analysis  
-- AskNews articles (April 20–21, 2025): Ten+ Korean and Japanese outlets (연합뉴스, 한겨레, MK, YTN, KBS, 아시아경제, 朝日新聞デジタル). Consistent core facts: Han Duck‑soo repeatedly says “I have not yet decided” and “no comment” on a run; party figures both urging and discouraging him; no formal campaign apparatus or filing. High reliability on direct quotes; opinions clearly attributed to politicians or pundits.  
-- KBS World Radio (April 15): PPP floor leader Kweon Seong‑dong publicly rules out Han entering the party primary. Reliable for party’s official stance.  
-- Yonhap News Agency (April 16): Overview of primary landscape; notes Han as a “widely viewed contender” but still no declaration. Neutral, high-quality.  
-- Historical precedent sources (Wikipedia, Britannica, The Diplomat, Time, Korea Herald): Four cases of SK acting prime ministers/presidents (Choi Kyu‑hah, Yun Posun, Goh Kun, Han Duck‑soo 2024–25); none launched campaigns. Reliable for institutional context.
+1. Paraphrase & Resolution  
+   • Question: Will acting President Han Duck‑soo formally announce a presidential candidacy by May 5 2025?  
+   • Resolution: Yes if he publicly declares his candidacy before that date; otherwise No.  
 
-2. Evidence analysis  
-Strong evidence (large negative shift):  
-- Institutional/legal barrier: Constitutional norms bar acting presidents from campaigning (The Diplomat; Constitutional Court interpretations).  
-- Precedent: Zero out of four caretaker officeholders ever ran.  
-- Party leadership statement: PPP floor leader explicitly says Han will not run (KBS World Radio).  
-Moderate evidence (small negative shifts):  
-- Zero leak of campaign machinery or fundraising events despite intense media focus.  
-- Filing deadlines and necessary nomination procedures close within days—practically impossible to establish candidacy.  
-Weak evidence (insufficient to shift up):  
-- Conservative civic groups calling for him; small upticks in “speculative” popularity polls (7–12%) but no concrete follow‑through.
+2. Outside‑View Base Rate  
+   • Caretaker or interim heads of government in South Korea almost never transition into candidates mid‑term.  
+   • In similar contexts, base rate ≈ 0–5% for an acting prime minister to enter a snap‑election race.  
 
-3. Timeframe analysis  
-– 13 days remain until May 5 cutoff.  
-– Halved (6 days): probability would fall <1%—even more impossible.  
-– Doubled (26 days): still extremely low (<3%) given no movement thus far.
+3. Source Analysis  
+   a. Deutsche Welle (April 8): high‑quality report of election date, candidate field; notes Han’s role but not as contender.  
+   b. New York Times (April 8): authoritative; lists major declared candidates; omits Han from serious contender list.  
+   c. AP News (April 8): cites expert commentary on PPP fractures; does not mention Han as likely entrant.  
+   d. Reuters (April 8): succinct facts; polling data; Han unmentioned among declared hopefuls.  
+   e. Asknews collection (April 11–21): ~15 local‑language articles showing:  
+     – Han repeatedly “has not yet decided” and gives “no comment” on running.  
+     – Some PPP lawmakers quietly call for him; leadership asks members to refrain from openly drafting him.  
+     – Gallup polls show Han at 6–8% in early polling among conservatives.  
 
-4. Justification  
-Outside view base rate: 0% (0/4 caretakers). Implicit floor for “unknown unknowns” ~2%.  
-Key negative drivers:  
-- Strong legal/institutional prohibition on caretaker campaigning.  
-- Explicit party leadership denial.  
-- Lack of any pre‑announcement signals or organizing.  
-- Impeachment history undermines political capital.  
-No new positive signals. No upward adjustment.
+4. Evidence Analysis  
+   Strong evidence (large weight):  
+    • Multiple reputable outlets omit Han from declared candidate lists despite 14 days elapsed (DW, NYT, AP, Reuters).  
+    • Consistent direct statements from Han: “I have not decided” or “no comment” (Asknews articles).  
+   Moderate evidence:  
+    • Some PPP backbenchers calling on him to run; party leadership actively suppressing drafting efforts.  
+    • 6–8% support in polls—not negligible but far below front‑runners.  
+   Weak evidence:  
+    • Speculation in op‑eds about “strategic ambiguity” or “big tent” arrangements.  
+
+5. Timeframe Analysis  
+   • 13 days remain until May 5.  
+   • If timeframe halved (≈ 6 days): odds shrink—harder to organize launch.  
+   • If doubled (≈ 26 days): odds would rise modestly—more runway to muster support.  
+
+6. Justification & Inside‑View Adjustments  
+   • Status quo bias: caretaker neutrality norm; strong institutional disincentive.  
+   • Time pressure: major PPP candidates declared in first week; Han’s silence after 14 days is a negative signal.  
+   • Internal party dynamics: leadership’s efforts to mute drafting calls suggest ambivalence or opposition.  
+   • Polling: 6–8% base support but unstable and insufficient to overtake party frontrunners without rapid momentum.  
+   • Expert silence: leading political analysts and published experts do not list Han as a serious challenger.  
+
+   Overall shift: from a 5% base rate due to caretaker‑to‑candidate rarity, moderate factors (internal calls, polling) nudge up slightly toward ~10%, but strong counter‑factors (norms, time constraints, explicit non‑decision) keep probability low.
 
 Probability calibration  
-Starting from base rate 0% → add 2% floor for remote surprise entry → no evidence to move up → final 2%.
+   • I aim for an unbiased probability reflecting true odds (~10%).  
+   • ±2–3% would meaningfully reflect uncertainty in party dynamics; I avoid overconfidence.  
 
 Checklist:  
-1. Paraphrase: Will acting President Han Duck‑soo announce a presidential bid before May 5, 2025? (13 days).  
-2. Base rate: 0% from 4 similar cases → 2% floor.  
-3. Consistency check: “2 out of 100 times a caretaker with no prep runs in last 2 weeks.”  
-4. Top evidence:  
-   a. Constitutional/quasi‑norm barrier on caretaker campaigning.  
-   b. PPP floor leader denial of Han’s entry.  
-   c. Zero campaign activity or leaks.  
-   d. Historical zero precedent in SK.  
-5. Blind-spot: Sudden faction‑led “draft Han” movement that bypasses primary rules; would add 5–10% if credible.  
-6. Status quo: No change; world moves slowly; no new signals in 13 days.
+1. Paraphrase: ✓ question and time window aligned.  
+2. Base rate: ✓ rooted in caretaker‑candidate precedent.  
+3. Consistency: “10 out of 100 times, a caretaker PM in this context would announce a bid”—plausible.  
+4. Key evidence:  
+   1) Han’s repeated “no decision” statements.  
+   2) Absence from all major outlets’ candidate lists.  
+   3) Party leadership suppressing drafting efforts.  
+   4) Time left (13 days) vs. declared candidates.  
+5. Blind‑spot: Last‑minute drafting by PPP leadership under crisis could upend this—would raise probability.  
+6. Status quo: slow‑moving default favors No outcome.
 
-Probability: 2%
-Predicted Probability: 2.0%
+Probability: 10%
+Predicted Probability: 10.0%
 
 === Forecaster 5 ===
 Output:
 Analysis:
 
-(a) Source analysis (chronological order, only facts kept, opinions from named actors noted)
+(a) Source analysis (chronological, most recent first – all April 11‑22 2025)  
+1. South China Morning Post / Real Meter poll (22 Apr). 1 000‑sample, MoE ±3.1 pp. 50 % Lee, 12 % Kim, 7 % Han. Hard polling data (fact). Opinion: “Han stays coy”; weak. High‑quality.  
+2. Gallup Korea poll (15‑17 Apr) reported by Nation Thailand. Reputable domestic pollster; shows identical 7 % support for Han. Fact.  
+3. Yonhap, Newsis, KBS, JoongAng, Hankyoreh clusters (11‑21 Apr). All quote Han’s Financial Times interview: “I have not yet decided.” Direct quote = fact. Additional content (party intrigue, 54‑lawmaker draft, leadership push‑back) is factual reporting of observable behaviour; evaluations (“extremely unreasonable”) are partisan opinion. Yonhap/KBS are state‑funded but factual accuracy is good; Hankyoreh leans progressive, JoongAng conservative—helps triangulate.  
+4. ABC / AP / Reuters / AFP wires (8‑11 Apr). Establish election calendar, legal deadlines, and no indication of Han organising a bid. High reliability.  
+No anonymous “Han will run” scoop appears in any mainstream outlet—only speculation from politicians.
 
-1. Yonhap & KBS World Radio (15‑16 Apr 2025) – Both quote PPP floor‑leader Kweon Seong‑dong saying “Han will not run.” Yonhap and KBS are South Korea’s paper‑of‑record & public broadcaster: high factual reliability; Kweon is an authoritative insider. Opinion weight: moderate (party line).  
-
-2. Yonhap, Newsis, YTN, Hankyoreh, Asia‑Economy, MK, Asahi, KBS TV, FT interview republications (12‑21 Apr 2025) – Eleven separate pieces, all report Han’s repeated answer “I have not decided / no comment.” They add polling numbers (Gallup, Hangil‑Research) placing Han at 7‑12 %. All outlets are mainstream; accuracy good for quotations & polls, but speculative phrasing by journalists is discounted.  
-
-3. Hankyoreh & other progressive papers (21 Apr 2025) – Claim some PPP lawmakers “speculate Han may resign and announce this month.” Source is unnamed PPP members; therefore weak.  
-
-4. Gallup Korea poll (cited 20 Apr) – 66 % say Han running is “unacceptable.” Gallup methodology is published; strong for public sentiment.  
-
-5. No article since 22 Apr shows (i) formation of an exploratory committee, (ii) resignation timetable, or (iii) venue bookings for an announcement. Absence across multiple press pools is treated as negative evidence.
-
-(b) Evidence analysis
-
+(b) Evidence analysis  
 Strong evidence  
-• Structural: candidate registration opens 9–10 May; no modern Korean candidate has first declared within two weeks of that window.  
-• Legal: Han is still under an election‑law ban linked to his Dec‑2024 impeachment (constitutional verdict expected after August).  
-• Party position: PPP leadership publicly states he will not enter the primary.
+• Institutional norm: the sole prior acting‑president precedent (Hwang Kyo‑ahn 2017) did not run, citing neutrality. (historical pattern)  
+• Legal/administrative calendar: candidate registration must open c. 8‑9 May; PPP primary already under way. (structural factor)  
 
 Moderate evidence  
-• Polls put Han only third/fourth among conservatives; tepid public appetite reduces incentive to run.  
-• Age/health (75, recent stent) historically discourages late entries.
+• 7 % support for Han in two independent national polls; conservative bloc badly trails, giving incentive for a “draft Han” move.  
+• Reported statement by ~54 PPP lawmakers preparing an appeal for Han to run, later suppressed by party leadership. Suggests real intra‑party demand.  
+• Han’s deliberate ambiguity (“no decision”) keeps door open until the last permissible day (≈ 4 May, when he would have to resign).  
 
 Weak evidence  
-• Anonymous PPP voices urging him to run, “speculation” he could announce “within this month.”  
-• Media commentary that his trade diplomacy is “shadow campaigning.”
-
-Net effect: strong & moderate evidence reinforce “No”; weak evidence adds at most a few points to “Yes”.
+• Opposition accusations that Han is “effectively campaigning.”  Mostly partisan rhetoric.  
+• Media speculation that success in 24 Apr U.S. trade talks could be used as launchpad.
 
 (c) Timeframe analysis  
-Days until cut‑off: 13.  If time were doubled (26 days) I would raise probability to ~6 % because a last‑minute pivot would still be unprecedented but slightly less rushed. If halved (6 days) I would drop to ~2 %.
+Time remaining to resolution: 13 days (22 Apr → 05 May 2025).  
+If this window were doubled (26 days) we would raise the probability 2‑3 pp because more manoeuvring time exists.  Halved (7 days) would cut probability roughly in half; organisational logistics become prohibitive.
 
-(d) Justification / update from 3 % outside view  
+(d) Justification / adjustment from outside view  
+Outside‑view base rate (sitting or acting PM mounting last‑minute first‑time bid) ≈ 3 %.  
+Upward pressures (+5 pp aggregate):  
+• Unique crisis: conservatives polling ≤ 20 %, real possibility of landslide loss – creates strong incentive to recruit a higher‑recognition elder statesman (moderate evidence).  
+• Concrete mobilisation signals (lawmaker draft letter, civic‑group calls) absent in the 2017 precedent (moderate).  
+• Han’s own public ambiguity and telephone admission to Trump that he is “considering” (weak‑to‑moderate).  
+Downward pressures (‑0 pp beyond base – they are already captured in 3 %): caretaker norm, age 76, zero campaign infrastructure, 13‑day fuse.  
 
-Base rate (post‑1987, sitting/acting PMs announcing runs ≤2 weeks prior): 0 / 8 → 0 %. Start at 2 % to reflect generic possibility.  
-+0.5 % for inside chatter that “some PPP lawmakers want him.”  
-+0.5 % for polling that shows a non‑negligible conservative slice (10 %) likes him, leaving a plausible niche.  
-–1 % for the election‑law ban (hard barrier).  
-Result ≈ 2 %.  Add 1 % model‑uncertainty buffer → 3 %.  
-Re‑scan of news through 22 Apr revealed neither preparations nor legal relief; therefore I keep 3 % as final inside‑view probability.
+Net result: 3 % + 5 % = 8 % rounded (≈ 1‑in‑12 chance).  This balances desperate party incentives against severe time/structural barriers.
 
 Probability calibration
-My estimate: If this situation repeated 100 times, Han would publicly declare in about 3 of them. Uncertainty span (80 % CI) 1 %‑7 %. A ±10 % absolute swing (to 13 % or −7 %) would conflict with multiple strong structural constraints and therefore is unwarranted.
+After weighing new inside‑view information I assign:
+
+Probability: 8 %
 
 Checklist:
-1. Restatement: “By 5 May 2025, will Han Duck‑soo publicly declare he’s running for president?”  
-2. Outside view: 0‑3 % historically; final remains tied to it.  
-3. Consistency line: “3 of 100 times, Han announces before 5 May 2025.”  
-4. Key evidence:  
-   • Legal ban from Dec‑2024 impeachment still active.  
-   • No campaign infrastructure/paperwork observed 13 days out.  
-   • PPP leadership says he won’t run.  
-   • Historical absence of last‑minute entrants from PM post.  
-5. Blind spot: Sudden Constitutional Court reversal plus PPP implosion leading to a unity‑draft scenario this week.  
-6. Status‑quo bias check: Status quo = no announcement; strong inertia justifies slight nudge toward “No”.
+1. Paraphrase – “Will Han Duck‑soo publicly declare for president before 5 May 2025?” ✔  
+2. Base rate 3 %; final 8 % still anchored. ✔  
+3. Consistency – “In 8 of 100 similar situations, Han announces.” ✔  
+4. Key evidence (i) acting‑president norm; (ii) only 13 days left; (iii) 7 % polling + conservative collapse; (iv) 54‑lawmaker draft push; (v) Han’s ‘still considering’ quote. ✔  
+5. Blind spot – PPP leadership and Lee rivals unite on emergency unity ticket with Han after catastrophic event (e.g., Kim scandal) within the next week. Would raise odds sharply.  
+6. Status‑quo bias acknowledged; low‑volatility default is No. ✔
 
-Probability: 3%
-Predicted Probability: 3.0%
+Probability: 8%
+Predicted Probability: 8.0%
