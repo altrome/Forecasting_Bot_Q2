@@ -238,6 +238,12 @@ async def forecast_individual_question(
 
     title = question_details["title"]
     question_type = question_details["type"]
+    
+    if forecast_is_already_made(question_details) and skip_previously_forecasted_questions:
+        summary_of_forecast = f"-----------------------------------------------\nQuestion: {title}\n"
+        summary_of_forecast += f"URL: https://www.metaculus.com/questions/{post_id}/\n"
+        summary_of_forecast += "Skipped: Forecast already made\n"
+        return summary_of_forecast
 
     summary_of_forecast = f"-----------------------------------------------\nQuestion: {title}\n"
     summary_of_forecast += f"URL: https://www.metaculus.com/questions/{post_id}/\n"
@@ -254,11 +260,6 @@ async def forecast_individual_question(
         if question_type == "multiple_choice":
             options = question_details["options"]
             summary_of_forecast += f"Options: {options}\n"
-
-        if forecast_is_already_made(question_details) and skip_previously_forecasted_questions:
-            summary_of_forecast += "Skipped: Forecast already made\n"
-            write_to_file(summary_of_forecast)
-            return summary_of_forecast
 
         # Forecasting per type
         if question_type == "binary":
