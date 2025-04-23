@@ -1,0 +1,1723 @@
+Historical output: Analysis:
+This question requires constructing an outside‐view baseline for 10‑year U.S. Treasury yields before developing an inside‐view adjustment. The first step is to assemble long‑run daily yield data (e.g., from FRED) to compute key statistics—mean, median, volatility, and percentile thresholds—over multiple regimes (pre‑2000, 2000–2010, 2010–2020, post‑2020). Next, identify major structural drivers—Fed policy cycles, inflation shocks, growth/recession episodes, quantitative easing/tightening phases, and supply/demand dynamics—and map their historical yield impacts. By decomposing these into simpler sub‑questions (What was the 10‑year yield’s distribution? How did yields respond to 100 bps Fed hikes? What happened during inflation surprise events?), we form a base‐rate curve. With that outside view in hand, we can later layer on current conditions (Fed’s 2025 policy path, inflation trajectory, fiscal/supply outlook) to generate the forecasted distribution for May 30, 2025. For now, we need precise historical data and thematic narrative to ground our base‐rate analysis.
+
+Search queries:
+1. historical daily 10-year Treasury yield FRED (Google)
+2. US 10-year Treasury yield history (Google News)
+3. Provide a detailed historical overview of daily US 10-year Treasury yields since 1970, including their long-term average, major peaks and troughs, and the economic factors that drove these changes. (Perplexity)
+Context: 
+<Summary source="https://fred.stlouisfed.org/tags/series?t=10-year%3Btreasury">
+Disclaimer: The following summary is based on an incomplete TradingView user post (anonymous author) and reflects that author’s personal analysis and opinions, which may be less reliable than institutional research.
+
+1. “Stagflation is coming”  
+   - The author argues that true (real) interest rates—calculated as the 10‑year Treasury yield (FRED:DGS10) minus 10‑year inflation expectations (FRED:T10YIE)—will soon decline due to an onset of stagflation.  
+   - They anticipate that Treasury yields will fall in tandem with a rise in unemployment, as proxied by initial jobless claims (FRED series).
+
+2. “THE top is coming, but $ to be made”  
+   - The author speculates the S&P 500 ETF (SPY) could cap out somewhere between 4,800 and 5,250, labeling the market as in its “later stages.”  
+   - Risk management advice: keep position sizes small, employ stop‑losses and options, and avoid greed, given expected high volatility.
+
+3. “10‑Year Treasury Hiding Strength”  
+   - On a long‑term chart of the 10‑year yield (FRED:DGS10), the Laguerre RSI indicator shows relatively little weakening compared to price declines.  
+   - The author sees this as a bullish divergence that could presage a renewed rally in yields, potentially making higher highs.
+
+4. “Synchronized markets”  
+   - Observes a tight correlation between long‑term Treasury yields (5, 10 and 30 years) and cyclical equity sectors—airlines, oil, autos, cruises—despite divergent fundamentals.  
+   - Posits that if inflation remains elevated, yields across the curve are likely to keep rising in step with those sectors.
+
+No hard numerical forecasts for the 10‑year yield were provided—only references to FRED data series and technical indicators.
+</Summary>
+
+<Summary source="https://www.tradingview.com/symbols/FRED-DGS10/">
+Here are the key details from the FRED series “Market Yield on U.S. Treasury Securities at 10‑Year Constant Maturity, Quoted on an Investment Basis” (GS10):
+
+• Title & Definition  
+  – Market yield on U.S. Treasury securities with 10‑year constant maturities, quoted on an investment basis.  
+
+• Source & Release  
+  – Published by the Board of Governors of the Federal Reserve System (U.S.) in its H.15 “Selected Interest Rates” release.  
+
+• Units & Seasonality  
+  – Measured in percent.  
+  – Data are not seasonally adjusted.  
+
+• Frequency & Calculation  
+  – Frequency: Monthly.  
+  – Values represent averages of business‑day yields during each calendar month.  
+
+• Documentation & Methodology  
+  – For full methodology, see the H.15 Statistical Release notes and the Treasury Yield Curve Methodology.  
+  – All data are subject to revision.  
+
+• Access & Citation  
+  – Series ID: GS10  
+  – Available via FRED (Federal Reserve Bank of St. Louis) at https://fred.stlouisfed.org/series/GS10  
+  – Suggested citation:  
+    Board of Governors of the Federal Reserve System (US), Market Yield on U.S. Treasury Securities at 10‑Year Constant Maturity, Quoted on an Investment Basis [GS10], retrieved from FRED, Federal Reserve Bank of St. Louis.  
+
+• Support  
+  – Questions on the data: contact the Board of Governors (source).  
+  – Questions on FRED functionality: contact the Federal Reserve Bank of St. Louis.
+</Summary>
+
+<Summary source="https://journal.firsttuesday.us/current-market-rates/3832/">
+Source: Journal.firsttuesday.us (ft Editorial Staff), “Trending mortgage rates,” June 1, 2023. Key points:
+
+Facts and statistics  
+• 30‑year fixed‑rate mortgage (FRM) averaged 6.83% in the week ending April 18, 2025.  
+• 15‑year FRM averaged 6.03% over the same week.  
+• 10‑year U.S. Treasury note yield was 4.33% on April 18, 2025.  
+• Average 5/1 adjustable‑rate mortgage (ARM) was 6.19% on April 18, 2025, after briefly peaking at 6.88% in December 2024.  
+
+Analysis and opinions (ft Editorial Staff)  
+• Fed outlook: As the Fed finishes stabilizing inflation and jobs, FRM rates may dip in 2025, but then follow a multi‑decade rising trend that began in 2013.  
+• Political and policy drivers:  
+  – Ongoing political interference (“government administrative trade disruptions”) is weighing on real estate in 2025.  
+  – Income‑tax cuts boost government cash demand, pushing long‑term—and mortgage—rates up.  
+  – Privatizing quasi‑government mortgage agencies raises lenders’ risk of loss while altering profit‑sharing, keeping mortgage rates elevated.  
+• Housing market impact:  
+  – High FRM rates depress property prices by limiting buyers’ borrowing power, leading sellers to cut prices or withdraw listings; the traditional spring price “bounce” has weakened since 2021.  
+  – A downturn in employment will further pressure prices.  
+  – Many buyers are sidelined by the combination of high home prices and high financing costs; however, a window for buyers may open by 2028, with more inventory, price cuts, and lower rates.  
+• Rate dynamics:  
+  – Long‑term mortgage rates track the 10‑year Treasury yield plus a risk premium (historically ~1.5%; currently 2.5%, based on the 4.33% T‑Note yield vs. 6.83% FRM).  
+  – Lenders are reluctant to shrink their risk premium despite recent yield declines.  
+• ARM vs. FRM spreads: The 5/1 ARM trades above the 15‑year FRM and 64 basis points below the 30‑year FRM, offering higher initial borrowing capacity in exchange for interest‑rate risk.
+</Summary>
+
+<Summary source="https://www.reit.com/news/blog/market-commentary/changing-relationship-between-reit-performance-and-us-10-year-treasury">
+• Study Period and Data  
+  – Rolling 180‑day correlations between REIT total returns (FTSE Nareit All Equity REITs Index) and daily changes in the U.S. 10‑year Treasury yield, January 2000–January 2025  
+  – Term spread: daily 10‑year minus 3‑month Treasury yields; recession probabilities: monthly U.S. 12‑month recession likelihood from the Federal Reserve Bank of New York  
+
+• Overall Correlation Findings  
+  – 53.3% of days exhibited positive correlations between REIT returns and 10‑year yield changes  
+  – 46.7% of days exhibited negative correlations  
+  – During the 2007–2009 Global Financial Crisis, correlations were predominantly positive; more recently they’ve tended negative  
+
+• Relationship with the Yield Curve (Term Spread)  
+  – Positive term spread (>0): upward‑sloping (“normal”) yield curve, typically signals economic optimism  
+    • These periods generally coincide with positive REIT–yield correlations  
+  – Flat curve (term spread ≈ 0): transition between expansion and contraction  
+  – Negative term spread (<0): inverted curve, often precedes recession, signals pessimism  
+    • These periods generally coincide with negative REIT–yield correlations  
+
+• Relationship with Recession Probabilities  
+  – Term spread and 12‑month recession odds move inversely (higher spreads → lower odds, and vice versa)  
+  – Periods of rising or elevated recession probabilities have tended to align with negative REIT–yield correlations  
+  – Periods of falling or low recession probabilities have tended to align with positive correlations  
+
+• Recent Monetary Policy Context  
+  – Over the past 36 months, the FOMC raised short‑term rates, flattening and inverting the curve, and raised recession odds  
+  – As the term spread recently turned positive, a steepening curve and declining recession probabilities could herald a shift back toward positive REIT–yield correlations  
+
+• Definitions and Sources  
+  – REITs: real estate investment trusts owning or financing income‑producing property, traded on major exchanges, offer dividends and diversification benefits  
+  – Data sources: FTSE Nareit All Equity REITs Index; U.S. Treasury daily rates (10‑year and 3‑month); New York Fed recession probability model
+</Summary>
+
+<Perplexity_report>
+Query: Provide a detailed historical overview of daily US 10-year Treasury yields since 1970, including their long-term average, major peaks and troughs, and the economic factors that drove these changes.
+# Historical Overview of US 10-Year Treasury Yields Since 1970: Trends, Peaks, Troughs, and Economic Drivers  
+
+The 10-year US Treasury yield, a benchmark for global interest rates and economic sentiment, has undergone significant fluctuations since 1970, reflecting broader macroeconomic shifts, monetary policy decisions, and geopolitical events. From its peak of 15.84% in 1981 during the Volcker-era inflation crackdown to its historic low of 0.55% in 2020 amid pandemic-induced uncertainty, the yield has served as a barometer of investor confidence and inflationary expectations[1][6]. As of April 2025, the yield stands at 4.41%, slightly above its long-term average of 4.25%[1]. This report examines the yield’s historical trajectory, major turning points, and the economic forces that shaped its movements, drawing on data from Treasury publications, macroeconomic analyses, and historical market records.  
+
+---
+
+## Historical Trends and Long-Term Averages  
+
+### The 1970s: Stagflation and the Volcker Shock  
+The 1970s marked a period of economic turmoil characterized by stagnant growth and high inflation (“stagflation”). The 10-year yield rose steadily from 6.39% in December 1970 to a peak of 15.84% in September 1981, driven by expansive fiscal policies, oil price shocks, and loose monetary oversight[1][6][10]. The Federal Reserve, under Chairman Paul Volcker, adopted aggressive rate hikes to combat inflation, pushing the federal funds rate to 20.06% in January 1981[6][8]. This tightening cycle, while successful in curbing inflation, precipitated a severe recession and elevated unemployment, with the 10-year yield reflecting heightened risk premiums and inflationary expectations[6][10].  
+
+### The 1980s–1990s: Moderation and Globalization  
+Following the Volcker shock, yields entered a prolonged decline, falling to 7.23% by December 1986 as inflation stabilized and globalization dampened price pressures[3][6]. The 1990s saw further moderation, with yields averaging 6.44% amid technological advancements, fiscal discipline, and the “Great Moderation” in macroeconomic volatility[3][10]. Notably, the yield curve inverted ahead of the 1990–1991 recession, signaling investor skepticism about long-term growth[10].  
+
+### The 21st Century: Financial Crises and Unconventional Policy  
+The 2008 global financial crisis and the 2020 pandemic reshaped the yield’s trajectory. In 2008, yields plummeted from 4.24% in January to 2.25% by December as investors fled to safe-haven assets[3][6]. The Fed’s zero-interest-rate policy and quantitative easing (QE) pushed yields to historic lows, with the 10-year bottoming at 0.55% in August 2020 during COVID-19 lockdowns[6][8]. These interventions underscored the yield’s sensitivity to central bank balance sheet operations and crisis-driven demand for liquidity.  
+
+---
+
+## Major Peaks and Troughs  
+
+### The 1981 Peak: Combating Inflation  
+The September 1981 high of 15.84% remains the 10-year yield’s apex, reflecting the Fed’s resolve to break inflationary expectations through drastic rate hikes[1][6][10]. Double-digit inflation, exacerbated by oil supply shocks and wage-price spirals, necessitated a punitive policy response, even at the cost of a deep recession. The yield’s persistence above 10% until 1985 highlighted the enduring impact of inflationary psychology on long-term rates[3][10].  
+
+### The 2020 Trough: Pandemic-Era Flight to Safety  
+The August 2020 low of 0.55% exemplified the yield’s role as a safe-haven asset during systemic crises[6][8]. With the Fed cutting rates to near-zero and launching $120 billion/month in QE, investors priced in prolonged monetary accommodation and deflationary risks. Real yields turned negative as inflation expectations briefly outpaced nominal rates, eroding purchasing power for fixed-income investors[12].  
+
+### Intermediary Fluctuations: 1994, 2000, and 2013  
+- **1994 Bond Massacre**: Yields surged from 5.60% to 8.05% as the Fed raised rates to preempt inflation, catching markets off guard and triggering global bond selloffs[3][10].  
+- **Dot-Com Bubble (2000)**: Yields peaked at 6.79% in January 2000, reflecting tight monetary policy aimed at curbing equity market exuberance, before collapsing to 5.02% as the bubble burst[3][10].  
+- **2013 Taper Tantrum**: Announcements of QE withdrawal spurred a 130-basis-point yield spike, underscoring the market’s dependence on Fed liquidity[7][10].  
+
+---
+
+## Economic Factors Influencing Yield Changes  
+
+### Inflation and Monetary Policy  
+Inflation expectations have been the primary driver of 10-year yields. The Fisher equation (\(r = i - \pi^e\)) posits that nominal yields (\(r\)) reflect real rates (\(i\)) plus expected inflation (\(\pi^e\)). During the 1970s, \(\pi^e\) dominated, with yields tracking oil-driven CPI surges[10][12]. Conversely, post-2008 secular stagnation and subdued inflation (averaging 1.7% from 2012–2020) anchored yields near historic lows[6][8]. Recent Fed pivots to inflation targeting have reintroduced upward pressure, with yields rising to 4.41% in April 2025 as inflation stabilizes around 2.8%[1][8].  
+
+### Global Risk Sentiment and Safe-Haven Demand  
+Geopolitical tensions and risk-off episodes consistently depress yields. For example:  
+- The 2011 Eurozone debt crisis saw yields fall to 1.72% as capital flooded US Treasuries[3].  
+- The 2022 Russia-Ukraine war triggered a 50-basis-point drop, with investors prioritizing capital preservation over returns[7][10].  
+- Trade wars under the Trump administration (2018–2020) created volatility, as tariffs and growth fears alternated with risk-on rallies[2][12].  
+
+### Fiscal Policy and Debt Dynamics  
+Expansionary fiscal policy exerts upward pressure on yields by increasing bond supply and growth expectations. The Reagan tax cuts (1981) and Trump tax reforms (2017) both correlated with yield increases of 200+ basis points[3][7]. Conversely, austerity measures during the 2011 debt ceiling crisis temporarily compressed yields[7]. As US federal debt approaches $35 trillion in 2025, concerns about long-term sustainability may renew upward pressure[1][7].  
+
+---
+
+## Recent Trends and Current Economic Context  
+
+### Post-Pandemic Normalization  
+Since 2022, yields have rebounded from pandemic lows, reaching 4.41% in April 2025, slightly above the 4.25% long-term average[1]. This reflects:  
+1. **Fed Policy Normalization**: Rate hikes (525 basis points from 2022–2024) and quantitative tightening have reduced liquidity[8][12].  
+2. **Resilient Growth**: US GDP growth averaging 2.4% (2023–2025) has dampened recession fears, supporting higher real rates[2][8].  
+3. **Inflation Stabilization**: Core PCE inflation has moderated to 2.8%, aligning with the Fed’s target and reducing uncertainty[8][12].  
+
+### Structural Shifts and Future Risks  
+- **Climate Policy**: Transition risks and green investment mandates may increase long-term inflation uncertainty, influencing yield curves[10].  
+- **Demographic Trends**: Aging populations in developed markets could suppress natural interest rates, perpetuating lower yields[7][12].  
+- **Technological Disruption**: AI-driven productivity gains may curb inflationary pressures, mimicking the 1990s tech boom’s impact[12].  
+
+---
+
+## Conclusion  
+The 10-year Treasury yield’s history since 1970 reveals its dual role as a macroeconomic indicator and a policy transmission mechanism. From the inflationary crucible of the 1980s to the deflationary shocks of the 21st century, the yield has mirrored shifts in investor sentiment, central bank credibility, and structural economic change. As of 2025, yields hover near historical norms, but persistent fiscal deficits, geopolitical fragmentation, and climate transition costs present risks of renewed volatility. For policymakers and investors, understanding the yield’s drivers remains critical to navigating an increasingly complex global economy.</Perplexity_report>
+
+Current output: Analysis:
+We need to form an inside‑view forecast for the 10‑year Treasury yield on May 30, 2025, by adjusting our base‑rate (out‑view) expectation to reflect the latest macro and market developments. 
+
+Out‑view baseline: Over the past decade, 10‑year yields have traded in a roughly 1.5–4.0% band, with 2022–24 volatility driven by Fed tightening and quantitative tightening. As of today (Apr 23), the yield sits near 4.30%. With inflation on a downward path from its 2022 peak but still above target, and Fed officials signaling a likely hold or very gradual easing, a reasonable base‑rate estimate for end‑May is in the 4.0–4.5% range.
+
+Key drivers for the inside view:
+• Fed policy: Minutes from the Apr 30–May 1 FOMC meeting, any shift in the dot‑plot or rhetoric around cuts vs. hold, and updates on balance‑sheet runoff.  
+• Inflation readings: April CPI/PCE data releases and any surprises, plus TIPS breakeven inflation trends.  
+• Growth and labor: Q1 GDP revisions, April jobs report, wage inflation.  
+• Treasury supply and demand: Results and bid‑to‑cover ratios of the upcoming 10‑year auctions, issuance plans tied to the debt ceiling and Treasury financing.  
+• Market positioning: Flows into UST ETFs, repo rates, positioning indicators from futures markets.  
+• Global factors: Geopolitical risks, shifts in overseas central‑bank policy and safe‑haven flows.  
+• Technicals and seasonality: End‑of‑month positioning, typical spring patterns.  
+
+Specific articles we need:
+1. Fed’s latest minutes and post‑meeting commentary on rates and QT.  
+2. Detailed auction results and investor demand for recent 10‑year auctions.  
+3. April inflation and payrolls surprises, plus TIPS breakeven moves.  
+4. Treasury Department statements on funding needs and debt‑limit timeline.  
+
+These inputs will let us adjust our base‑rate forecast toward an inside‑view prediction.  
+
+Search queries:
+1. Fed minutes April 2025 bond yields (Google)
+2. US Treasury auction demand April (Google News)
+3. Please find recent articles on Fed meeting minutes, April inflation surprises, and Treasury auction results, including market commentary on positioning for 10‑year yields. (Assistant)
+Context: 
+<Summary source="https://www.cnbc.com/2025/04/23/us-treasury-yields-trump-backtracks-plans-to-axe-fed-chief.html">
+Article: “10-year treasury yield dips after Trump backtracks plans to axe Fed chief,” CNBC, April 23, 2025, by Sawdah Bhaimiya
+
+Summary:
+
+• At 4:35 a.m. ET on Wednesday, the U.S. 10‑year Treasury yield fell 4 basis points to 4.346%. The 2‑year yield rose 3 basis points to 3.819%. (One basis point = 0.01%. Yields and prices move inversely.)  
+• The drop followed President Trump’s reversal of comments about firing Federal Reserve Chair Jerome Powell. Over the prior week, Trump had called Powell a “major loser,” urged immediate rate cuts, and – per White House economic adviser Kevin Hassett – explored removing him.  
+• On Tuesday Trump said he has “no intention” of firing Powell, adding “Never did.”  
+• Senator Elizabeth Warren warned that if the president could dismiss the Fed chair, “it will crash markets in the United States.”  
+• Treasury Secretary Scott Bessent told investors at a JPMorgan Chase event that there may be a “de‑escalation” in the U.S.–China trade war. Current U.S. tariffs on China stand at 145%; Beijing maintains 125% duties on U.S. goods.  
+• Market participants are now awaiting upcoming data on mortgage rates, the S&P Global PMI Flash, and home sales to gauge U.S. economic health.
+</Summary>
+
+<Summary source="https://www.federalreserve.gov/releases/h15/">
+Disclaimer: Prepared by Capital Advisors Group, Inc. from outside sources believed reliable; no representation as to accuracy or completeness.
+
+Key points from the April 16, 2025 mid‑month market update:
+
+1. Tariff‑Driven Volatility and Stabilization  
+   • Markets were volatile in early April due to on‑again/off‑again U.S. tariff announcements, but showed signs of stabilizing in mid‑April.
+
+2. Treasury Yield Movements (Source: Bloomberg)  
+   – Week of April 7–11:  
+     • 2‑year U.S. Treasury yield rose 30 bps to 3.96%  
+     • 10‑year yield rose 50 bps to 4.49%  
+   – Through April 15:  
+     • 2‑year yield fell 11 bps to 3.85%  
+     • 10‑year yield fell 16 bps to 4.33%
+
+3. Equity and Corporate Bond Markets  
+   • S&P 500 performance: up 5.7% in the prior week and up a further 6.36% through April 15.  
+   • Investment‑grade corporate bond issuance exceeded $35 billion over two days, with strong demand and tighter‐than‐expected pricing.
+
+4. Fund Flows and Duration Positioning (Sources: ICI, EPFR, TD Securities)  
+   • Money market fund assets have climbed above $7 trillion but saw outflows from April 2–9, coinciding with inflows into government and equity funds.  
+   • During April 2–9, long‑duration fund assets declined, while short‑duration funds attracted roughly $9 billion in inflows.
+
+5. Fed vs. Market Views on Rate Cuts  
+   – At the March 19 FOMC meeting, the Fed kept its forecast for 50 bps of rate cuts in 2025 but signaled no rush to move:  
+     • Chair Powell: “It feels like we don’t need to be in a hurry … we have time.”  
+     • Minneapolis Fed President Kashkari: Tariffs likely boost near‑term inflation, raising the bar for cuts.  
+     • New York Fed President Williams: Current “modestly restrictive” stance is appropriate given the labor market and inflation above 2%.  
+   – Market pricing (as of mid‑April):  
+     • 75–100 bps of rate cuts priced in by end‑2025  
+     • >70% probability of a cut by the June 18 FOMC meeting  
+   – Wall Street Journal survey of 60+ economists: average expectation of only 50 bps of cuts by December 2025.
+
+All economic statistics are subject to revision by issuing agencies.
+</Summary>
+
+<Summary source="https://www.bloomberg.com/news/articles/2025-04-07/global-yields-whipsaw-higher-as-treasuries-rocked-by-tariffs">
+Disclaimer: This summary is based on the excerpt provided and may not capture the full scope of the original Bloomberg article.
+
+Key points from “Treasuries Selloff Ramps Up as Investors Spurn US Long‑End Bonds” (Bloomberg, April 7, 2025; Ye Xie):
+
+• Third straight day of U.S. Treasury declines, with long‑end maturities hit hardest.  
+• Notes and bonds maturing in 10–30 years suffered the steepest price drops as yields climbed.  
+• In Asia trading on Wednesday, the 10‑year Treasury‑note yield jumped by 20 basis points.  
+• The 30‑year Treasury‑bond yield rose 21 basis points to 4.97%—about 60 basis points above its lows from the prior week.
+</Summary>
+
+<Summary source="https://www.fi-desk.com/chinas-759bn-treasury-holdings-hang-by-a-thread-as-tariff-war-escalates/">
+Here’s a concise summary of the April 10, 2025 DESK article by Etienne Mercuriali:
+
+• Market backdrop  
+  – A sharp sell‑off in U.S. Treasuries accelerated after a weak 3‑year auction on April 8.  
+  – Traders cite several possible drivers: unwinds of leveraged basis and SOFR‑vs‑Treasury trades, and large-scale sales of Treasuries by China.
+
+• Anonymous macro hedge‑fund manager (unnamed, less‑reliable source)  
+  – “Rumours are swirling … from leverage statistical arbitrage unwinds in basis and relative value trades to foreign governments, particularly China, selling off their Treasury holdings. No one knows, but these last few days have been one hell of a ride with some people getting seriously hurt.”
+
+• Bank of America Securities (Mark Cabana, rates strategist)  
+  – On April 7, a marked shift in demand: official foreign buyers (notably Japan and China) are pulling back, with private investors stepping in.  
+  – According to BofA data, foreign official demand has fallen from 48% of the Treasury market in 2019 to about 39% today.
+
+• U.S. Treasury data on China’s holdings  
+  – China’s U.S. Treasury portfolio stands at US$759 billion, down steadily since 2017.
+
+• Deutsche Bank (George Saravelos, strategist)  
+  – Current U.S. policies and tariff escalation are “inadvertently encouraging” the sell‑off of Treasuries.  
+  – Warns of a risk that China could “weaponize” its holdings in a broader financial conflict.
+
+• UBS economists (Julien Conzano and Matthew Mish)  
+  – End‑Q1 2025 saw widening EU credit spreads, pointing to elevated volatility.  
+  – They argue markets have entered a regime dominated by technical factors and sentiment rather than fundamentals.
+
+• Tradeweb and futures data  
+  – On‑the‑run Treasury bid‑offer spreads have widened; mid‑swap spreads have moved sharply.  
+  – A popular macro trade—betting on banks holding Treasuries over swaps after deregulation—was rapidly unwound.  
+  – In the week to April 9, open interest in 5‑year note futures plunged by 280,000 contracts, signaling forced deleveraging.
+
+• Brookings Institute research  
+  – Recent work urges the Federal Reserve to back‑stop the plumbing of basis and SOFR‑Treasury trades to stabilize the market.
+</Summary>
+
+<Summary source="https://www.cnbc.com/2025/04/09/us-treasury-yields-investors-weigh-new-reciprocal-tariffs-.html">
+• On April 9, 2025, the U.S. 10‑year Treasury yield pulled back to 4.31% (up 5 bp on the day) after having spiked above 4.51% overnight. As recently as the prior week it had been below 3.90%.  
+• A $39 billion 10‑year note auction saw a bid‑cover ratio of 2.67 (well above the previous auction), with “indirects” (e.g. foreign buyers) accounting for over 87% of bids—signaling solid demand and easing concerns about a sell‑off.  
+• Other Treasury yields:  
+  – 30‑year bond: hit 5.02% overnight (highest since Nov. 2023), last at 4.715%  
+  – 2‑year note: jumped ~17 bp to 3.908%  
+• Market context:  
+  – A 90‑day pause in some Trump‑announced tariffs briefly calmed fixed‑income markets, but tariffs on China rose to 104%, then to 125%, with Chinese retaliation adding to trade tensions.  
+  – The S&P 500 fell 12% over four trading days; the iShares 20+ Year Treasury Bond ETF (TLT) dropped over 4% this week—an unusual concurrent decline in equities and long‐term bonds.  
+• Expert views:  
+  – Henry Allen (Deutsche Bank): Treasury markets are “losing their traditional haven status.”  
+  – David Zervos (Jefferies): foreign holders (Japan, China, U.K.) could weaponize their U.S. Treasury stockpiles in the trade war.  
+  – Ed Yardeni (Yardeni Research): despite hopes the tariff rollout would lower rates, the 10‑year yield “is up,” and investors may fear foreign dumping of Treasurys.  
+• Fed context: fed funds stand at 4.25–4.50%. Rising long‑term yields could constrain the Fed’s willingness to cut rates, as a looser policy might fuel even higher long‑term rates.  
+• President Trump (White House, April 9): acknowledged watching the bond market, calling it “tricky” but “beautiful” after yields eased.
+</Summary>
+
+<Asknews_articles>
+Query: Please find recent articles on Fed meeting minutes, April inflation surprises, and Treasury auction results, including market commentary on positioning for 10‑year yields.
+Here are the relevant news articles:
+
+**US Bond Yields Rise Amid Trade Policy Uncertainty**
+The recent rise in US 10-year bond yields has caused concern among investors. The yield rose from 4.01% to 4.49% despite weaker consumer price index (CPI) and producer price index (PPI) numbers. The increase in yields is attributed to the uncertainty surrounding the Trump administration's trade policies, including the recently announced tariffs on 60 countries. The tariffs, which were initially set to take effect on April 9, were postponed for 90 days due to market volatility. The yield curve has steepened, and the 10-year yield has risen above 4.5%. This has led to concerns about inflation and the potential for a recession. The Federal Reserve (Fed) has been cautious in its response, with Chairman Jerome Powell stating that the Fed is now more cautious due to the new tariffs, which are expected to have a more significant impact on the economy. The yield curve has steepened, and the 10-year yield has risen above 4.5%. This has led to concerns about inflation and the potential for a recession. The article also discusses the recent shift in the Fed's strategy, with a focus on short-term debt and a reduction in the issuance of long-term bonds. This has led to concerns about the potential for a bond market crisis. The article concludes by stating that investors should remain vigilant and monitor the situation closely.
+Original language: de
+Publish date: April 23, 2025 06:05 AM
+Source:[Investing.com Deutsch](https://de.investing.com/analysis/zolle-inflation-und-defizite-gefahrliche-krafte-am-bondmarkt-200497860)
+
+**US Treasury Yields Rise Amidst Global Economic Tensions**
+The US 2-year Treasury bond auction did not meet expectations, with the 2-year Treasury yield rebounding by 6bps (0.06%) to around 3.82%. In contrast, the 10-year Treasury yield fell to 4.35%, temporarily easing pressure. The 2-year Treasury bond auction, which sold $69 billion in new securities, saw a winning bid rate of 3.795%, the lowest since September last year, but still higher than expected. The auction saw a high acceptance rate of 13.7% from primary dealers, far exceeding the average of 11.6% over the past six auctions. Meanwhile, indirect bidders, including foreign central banks, took home only 56.2%, the lowest in two years. Direct bidders, such as pension funds and insurance companies, took 30.1%, the highest level since 2004. The decline in indirect investment participation suggests that overseas investors are taking a cautious approach, reducing their demand for US Treasuries. This week, there will be auctions of 5-year and 7-year Treasury bonds, which will be worth watching. The reason for the decline in overseas investment participation is the unpredictable trade policies of Trump, as well as his recent public criticism of Powell, which has left investors feeling uneasy. As a result, funds are being redirected to other European bonds, such as German debt. As one commentator noted, 'If it weren't for Trump, US Treasury yields should be behaving like this.' The current tensions between the US and China have increased, but a positive message was sent to the market on Tuesday, with US Treasury Secretary Scott Bessent telling investors that 'the US-China trade war will cool down.' This news is believed to have contributed to the decline in long-term Treasury yields yesterday. However, Trump's unpredictable nature means that we will continue to monitor the situation.
+Original language: zh
+Publish date: April 23, 2025 02:51 AM
+Source:[UDN](https://udn.com/news/story/123006/8692856)
+
+**Breakfast briefing: Bessent cheerleading not based on anything**
+The IMF has warned that rising US tariffs are marking the start of a new global era of slower growth, cutting its global growth forecast for 2025 to +2.8% from +3.3%. The US Treasury Secretary has told a private meeting that the tariff war is unsustainable and will ease 'soon', but neither Trump nor China show any signs of backing down. Meanwhile, the Redbook retail impulse monitor was up +7.4% last week from the same week a year ago, but this is becoming more of a measure of inflation than real sales activity. The Richmond Fed's factory survey for the mid-Atlantic states reported weak results, plummeting to -13 in April from -4 in the previous month. The US Treasury bond auction saw less support, but more than sufficient, with the median yield falling back to 3.74%. Canadian producer prices rose +4.7% in the year to March, and Taiwanese export orders rose to the elevated level of US$53 bln in March. The UST 10yr yield is now at 4.39%, and the Australian 10 year bond yield starts today at 4.24%. Wall Street is recovering today, up +2.3% in Tuesday trade, and the price of gold will start today at US$3398/oz, and down -US$19 from yesterday.
+Original language: en
+Publish date: April 22, 2025 07:53 PM
+Source:[interest.co.nz](https://www.interest.co.nz/economy/132971/imf-sees-us-hurt-more-others-bessent-guesses-move-markets-us-data-weak-taiwan-export)
+
+**Investor Concerns Drive US Treasury Yield Surge**
+Investors' concerns about the US economy and the Federal Reserve's policy have led to a surge in long-term bond yields and a significant increase in the premium for hedging against interest rate risk. The put (sell) price of US Treasury options has risen to its highest level since the 2021 'Flash Crash', surpassing the call (buy) price. This extreme positioning highlights the growing anxiety among investors, fueled by concerns about the impact of Trump's trade policies and the Fed's potential policy mistakes. The recent market volatility and policy uncertainty have led to a significant increase in the term premium, with the 30-year Treasury yield reaching 4.88% on April 22, its highest level in three months. Lawrence Gilham, Chief Fixed Income Strategist at LPL Financial, notes that 'foreign investors' selling of dollar assets is contributing to market volatility, and that 'concerns about the Fed's independence and the possibility of premature rate cuts' are also contributing to the rise in long-term bond yields.
+Original language: ja
+Publish date: April 22, 2025 03:00 PM
+Source:[Bloomberg.com](https://www.bloomberg.co.jp/news/articles/2025-04-23/SV501IDWX2PS00)
+
+**U.S. short-term yields climb With Treasury auctions set to begin**
+U.S. short-term Treasury yields rose on Tuesday, while European counterparts declined, as investors became cautious about U.S. assets due to a pending auction of two-year notes and Federal Reserve speakers. U.S. two-year yields increased by up to five basis points to 3.81%, while Germany's two-year yield fell by as much as six basis points to its lowest level since 2022. Research by John Velis at BNY Markets found that 'there's an ongoing retreat by cross-border real money investors' from U.S. bond markets, including the Treasury market. The Treasury Department plans to sell $69 billion of new two-year notes in a monthly auction, which is expected to draw the lowest yield for a two-year note auction since September. According to John Canavan, strategist at Oxford Economics, 'the risks to Treasury auctions in the current environment have been adding the pressure on the front-end.' Investors have driven short-term Treasury yields lower anticipating that the Trump administration's tariffs agenda will hurt U.S. economic growth later in the year, leading the Fed to cut interest rates. Derivatives markets are almost fully pricing in a quarter-point rate cut in July and a cumulative 90 basis points of easing by year-end. Fed Vice Chair Philip Jefferson emphasized the central bank's commitment to low and stable inflation for economic mobility. European investors are repatriating some of their investments in the US, said Chris Zaccarelli, chief investment officer for Northlight Asset Management. 'We expect that trend to continue as long as tariff policies and other anti-globalization policies are seriously discussed.' 
+Original language: en
+Publish date: April 22, 2025 02:43 PM
+Source:[BNN](https://www.bnnbloomberg.ca/investing/2025/04/22/us-short-term-yields-climb-with-treasury-auctions-set-to-begin/)
+
+**Trump Again Calls for Fed to Lower Interest Rates, Citing 'No Inflation'**
+The 10-year US Treasury bond yield rose to 4.409% on April 21, while the 2-year Treasury bond yield fell to 3.764% according to CNBC. This comes after former President Trump again called for the Federal Reserve to lower interest rates, calling Chairman Jerome Powell a 'major loser' and stating that there is no inflation in the US. Trump has a history of criticizing the Fed, including during his presidency from 2017 to 2021, when he repeatedly called for negative interest rates to reduce government borrowing costs and boost the economy. However, the Fed has maintained its independence and has not been swayed by Trump's demands. The market is concerned that the Fed's independence is being challenged, which could limit its ability to control inflation and adjust interest rates. As a result, investor confidence in US Treasuries has been shaken, leading to increased volatility in the market and lower prices for US bonds.
+Original language: zh
+Publish date: April 21, 2025 11:25 PM
+Source:[MoneyDJ理財網](https://www.moneydj.com/kmdj/news/newsviewer.aspx?a=6847907d-0362-4059-98b3-f137492f1b8c)
+
+**Long-dated yields rise as Trump ramps up attacks on Powell**
+Long-dated U.S. Treasury yields rose on Monday as investors reacted to President Donald Trump's escalating attacks on Federal Reserve Chairman Jerome Powell. Trump called for interest rate cuts on social media, saying the economy could decelerate unless Powell acts. Investors are concerned about volatile policymaking and the potential for an economic slowdown or recession. 'Markets are just very headline sensitive right now,' said Michael Reynolds, vice president of investment strategy at Glenmede. The Treasury term premium has risen to 67 basis points, reflecting uncertainty around U.S. policymaking. The 2/10 yield curve has steepened to its highest level in over three years, signaling expectations of stronger economic activity, higher inflation, and higher interest rates over the long term.
+Original language: en
+Publish date: April 21, 2025 07:34 PM
+Source:[Daily Mail Online](https://www.dailymail.co.uk/wires/reuters/article-14633197/Long-dated-yields-rise-Trump-ramps-attacks-Powell.html)
+
+**10-year Treasury yield rises as investors weigh Trump's criticism of Powell**
+The 10-year Treasury yield rose as investors weighed Trump's criticism of Powell. Trump said, 'If we had a Fed Chairman that understood what he was doing, interest rates would be coming down, too.' Powell previously warned of growth and inflation risks due to Trump's tariffs, saying, 'We may find ourselves in the challenging scenario in which our dual-mandate goals are in tension.' Concerns over the impact of Trump's tariffs pushed investors toward safe-haven assets like gold, which hit a record high above $3,400 an ounce. One basis point is equal to 0.01%, and yields and prices move in opposite directions. The bond markets were closed on Friday for the Easter holiday.
+Original language: en
+Publish date: April 21, 2025 11:45 AM
+Source:[CNBC](https://www.cnbc.com/2025/04/21/10-year-treasury-yield-rises-as-investors-weigh-trumps-criticism-of-powell.html)
+
+**US Bond Yields Rise Amid Trade Policy Uncertainty**
+The recent rise in US 10-year bond yields has caused concern among investors. The yield rose from 4.01% to 4.49% despite weaker consumer price index (CPI) and producer price index (PPI) numbers. The increase in yields is attributed to the uncertainty surrounding the Trump administration's trade policies, including the recently announced tariffs on 60 countries. The tariffs, which were initially set to take effect on April 9, were postponed for 90 days due to market volatility. The yield curve has steepened, and the 10-year yield has risen above 4.5%. This has led to concerns about inflation and the potential for a recession. The Federal Reserve (Fed) has been cautious in its response, with Chairman Jerome Powell stating that the Fed is now more cautious due to the new tariffs, which are expected to have a more significant impact on the economy. The yield curve has steepened, and the 10-year yield has risen above 4.5%. This has led to concerns about inflation and the potential for a recession. The article also discusses the recent shift in the Fed's strategy, with a focus on short-term debt and a reduction in the issuance of long-term bonds. This has led to concerns about the potential for a bond market crisis. The article concludes by stating that investors should remain vigilant and monitor the situation closely.
+Original language: de
+Publish date: April 23, 2025 06:05 AM
+Source:[Investing.com Deutsch](https://de.investing.com/analysis/zolle-inflation-und-defizite-gefahrliche-krafte-am-bondmarkt-200497860)
+
+**US Treasury Yields Rise Amidst Global Economic Tensions**
+The US 2-year Treasury bond auction did not meet expectations, with the 2-year Treasury yield rebounding by 6bps (0.06%) to around 3.82%. In contrast, the 10-year Treasury yield fell to 4.35%, temporarily easing pressure. The 2-year Treasury bond auction, which sold $69 billion in new securities, saw a winning bid rate of 3.795%, the lowest since September last year, but still higher than expected. The auction saw a high acceptance rate of 13.7% from primary dealers, far exceeding the average of 11.6% over the past six auctions. Meanwhile, indirect bidders, including foreign central banks, took home only 56.2%, the lowest in two years. Direct bidders, such as pension funds and insurance companies, took 30.1%, the highest level since 2004. The decline in indirect investment participation suggests that overseas investors are taking a cautious approach, reducing their demand for US Treasuries. This week, there will be auctions of 5-year and 7-year Treasury bonds, which will be worth watching. The reason for the decline in overseas investment participation is the unpredictable trade policies of Trump, as well as his recent public criticism of Powell, which has left investors feeling uneasy. As a result, funds are being redirected to other European bonds, such as German debt. As one commentator noted, 'If it weren't for Trump, US Treasury yields should be behaving like this.' The current tensions between the US and China have increased, but a positive message was sent to the market on Tuesday, with US Treasury Secretary Scott Bessent telling investors that 'the US-China trade war will cool down.' This news is believed to have contributed to the decline in long-term Treasury yields yesterday. However, Trump's unpredictable nature means that we will continue to monitor the situation.
+Original language: zh
+Publish date: April 23, 2025 02:51 AM
+Source:[UDN](https://udn.com/news/story/123006/8692856)
+
+**Breakfast briefing: Bessent cheerleading not based on anything**
+The IMF has warned that rising US tariffs are marking the start of a new global era of slower growth, cutting its global growth forecast for 2025 to +2.8% from +3.3%. The US Treasury Secretary has told a private meeting that the tariff war is unsustainable and will ease 'soon', but neither Trump nor China show any signs of backing down. Meanwhile, the Redbook retail impulse monitor was up +7.4% last week from the same week a year ago, but this is becoming more of a measure of inflation than real sales activity. The Richmond Fed's factory survey for the mid-Atlantic states reported weak results, plummeting to -13 in April from -4 in the previous month. The US Treasury bond auction saw less support, but more than sufficient, with the median yield falling back to 3.74%. Canadian producer prices rose +4.7% in the year to March, and Taiwanese export orders rose to the elevated level of US$53 bln in March. The UST 10yr yield is now at 4.39%, and the Australian 10 year bond yield starts today at 4.24%. Wall Street is recovering today, up +2.3% in Tuesday trade, and the price of gold will start today at US$3398/oz, and down -US$19 from yesterday.
+Original language: en
+Publish date: April 22, 2025 07:53 PM
+Source:[interest.co.nz](https://www.interest.co.nz/economy/132971/imf-sees-us-hurt-more-others-bessent-guesses-move-markets-us-data-weak-taiwan-export)
+
+**Investor Concerns Drive US Treasury Yield Surge**
+Investors' concerns about the US economy and the Federal Reserve's policy have led to a surge in long-term bond yields and a significant increase in the premium for hedging against interest rate risk. The put (sell) price of US Treasury options has risen to its highest level since the 2021 'Flash Crash', surpassing the call (buy) price. This extreme positioning highlights the growing anxiety among investors, fueled by concerns about the impact of Trump's trade policies and the Fed's potential policy mistakes. The recent market volatility and policy uncertainty have led to a significant increase in the term premium, with the 30-year Treasury yield reaching 4.88% on April 22, its highest level in three months. Lawrence Gilham, Chief Fixed Income Strategist at LPL Financial, notes that 'foreign investors' selling of dollar assets is contributing to market volatility, and that 'concerns about the Fed's independence and the possibility of premature rate cuts' are also contributing to the rise in long-term bond yields.
+Original language: ja
+Publish date: April 22, 2025 03:00 PM
+Source:[Bloomberg.com](https://www.bloomberg.co.jp/news/articles/2025-04-23/SV501IDWX2PS00)
+
+**U.S. short-term yields climb With Treasury auctions set to begin**
+U.S. short-term Treasury yields rose on Tuesday, while European counterparts declined, as investors became cautious about U.S. assets due to a pending auction of two-year notes and Federal Reserve speakers. U.S. two-year yields increased by up to five basis points to 3.81%, while Germany's two-year yield fell by as much as six basis points to its lowest level since 2022. Research by John Velis at BNY Markets found that 'there's an ongoing retreat by cross-border real money investors' from U.S. bond markets, including the Treasury market. The Treasury Department plans to sell $69 billion of new two-year notes in a monthly auction, which is expected to draw the lowest yield for a two-year note auction since September. According to John Canavan, strategist at Oxford Economics, 'the risks to Treasury auctions in the current environment have been adding the pressure on the front-end.' Investors have driven short-term Treasury yields lower anticipating that the Trump administration's tariffs agenda will hurt U.S. economic growth later in the year, leading the Fed to cut interest rates. Derivatives markets are almost fully pricing in a quarter-point rate cut in July and a cumulative 90 basis points of easing by year-end. Fed Vice Chair Philip Jefferson emphasized the central bank's commitment to low and stable inflation for economic mobility. European investors are repatriating some of their investments in the US, said Chris Zaccarelli, chief investment officer for Northlight Asset Management. 'We expect that trend to continue as long as tariff policies and other anti-globalization policies are seriously discussed.' 
+Original language: en
+Publish date: April 22, 2025 02:43 PM
+Source:[BNN](https://www.bnnbloomberg.ca/investing/2025/04/22/us-short-term-yields-climb-with-treasury-auctions-set-to-begin/)
+
+**Trump Warns of Economic Slowdown Unless Fed Cuts Interest Rates**
+US President Trump warned that the economy may slow down unless the Federal Reserve (Fed) lowers interest rates immediately. He also criticized Fed Chairman Powell, saying he is 'a loser' who is waiting to see if tariffs will push up inflation before making a decision on interest rates. Trump's comments sparked market concerns about the Fed's independence, leading to a decline in US stocks and bonds. Trump wrote on his social media platform Truth Social, 'These costs are trending downward, as I predicted, and almost no inflation, but the economy may slow down, unless the 'slowpoke' (Powell) lowers interest rates now.' The market downturn and rising bond yields were triggered by Trump's comments and the apparent pressure from the US government on Powell, who Trump has publicly stated he wants to remove from office. Investors and analysts are cautious about the potential consequences of Trump's attack on the Fed's independence and his attempt to remove Powell from office. The Fed's next meeting is scheduled for May 6-7, and the market expects the benchmark interest rate to remain unchanged at 4.25-4.50%. Trump's tariff policy has weakened the US economic outlook, with leading economic indicators falling, consumer confidence and manufacturing softening, and economists increasing the probability of a recession this year. Although recent data may show a decline in inflation, people believe that Trump's planned import tariffs will push the inflation rate above 4% in the remaining time of the year. Fed officials are concerned about sustained inflation and need to maintain a tighter credit condition. Chicago Federal Reserve Bank President Gusek said in an interview with CNBC on Monday that the central bank needs more time to observe the impact of Trump's policies. Trump's comments led to a further decline in the US stock market, with the S&P 500 index closing down 2.36% and the 10-year Treasury bond yield rising to 4.411%.
+Original language: zh
+Publish date: April 21, 2025 11:57 PM
+Source:[UDN](https://udn.com/news/story/6811/8689869)
+
+**Trump Again Calls for Fed to Lower Interest Rates, Citing 'No Inflation'**
+The 10-year US Treasury bond yield rose to 4.409% on April 21, while the 2-year Treasury bond yield fell to 3.764% according to CNBC. This comes after former President Trump again called for the Federal Reserve to lower interest rates, calling Chairman Jerome Powell a 'major loser' and stating that there is no inflation in the US. Trump has a history of criticizing the Fed, including during his presidency from 2017 to 2021, when he repeatedly called for negative interest rates to reduce government borrowing costs and boost the economy. However, the Fed has maintained its independence and has not been swayed by Trump's demands. The market is concerned that the Fed's independence is being challenged, which could limit its ability to control inflation and adjust interest rates. As a result, investor confidence in US Treasuries has been shaken, leading to increased volatility in the market and lower prices for US bonds.
+Original language: zh
+Publish date: April 21, 2025 11:25 PM
+Source:[MoneyDJ理財網](https://www.moneydj.com/kmdj/news/newsviewer.aspx?a=6847907d-0362-4059-98b3-f137492f1b8c)
+
+**Long-dated yields rise as Trump ramps up attacks on Powell**
+Long-dated U.S. Treasury yields rose on Monday as investors reacted to President Donald Trump's escalating attacks on Federal Reserve Chairman Jerome Powell. Trump called for interest rate cuts on social media, saying the economy could decelerate unless Powell acts. Investors are concerned about volatile policymaking and the potential for an economic slowdown or recession. 'Markets are just very headline sensitive right now,' said Michael Reynolds, vice president of investment strategy at Glenmede. The Treasury term premium has risen to 67 basis points, reflecting uncertainty around U.S. policymaking. The 2/10 yield curve has steepened to its highest level in over three years, signaling expectations of stronger economic activity, higher inflation, and higher interest rates over the long term.
+Original language: en
+Publish date: April 21, 2025 07:34 PM
+Source:[Daily Mail Online](https://www.dailymail.co.uk/wires/reuters/article-14633197/Long-dated-yields-rise-Trump-ramps-attacks-Powell.html)
+
+**10-year Treasury yield rises as investors weigh Trump's criticism of Powell**
+The 10-year Treasury yield rose as investors weighed Trump's criticism of Powell. Trump said, 'If we had a Fed Chairman that understood what he was doing, interest rates would be coming down, too.' Powell previously warned of growth and inflation risks due to Trump's tariffs, saying, 'We may find ourselves in the challenging scenario in which our dual-mandate goals are in tension.' Concerns over the impact of Trump's tariffs pushed investors toward safe-haven assets like gold, which hit a record high above $3,400 an ounce. One basis point is equal to 0.01%, and yields and prices move in opposite directions. The bond markets were closed on Friday for the Easter holiday.
+Original language: en
+Publish date: April 21, 2025 11:45 AM
+Source:[CNBC](https://www.cnbc.com/2025/04/21/10-year-treasury-yield-rises-as-investors-weigh-trumps-criticism-of-powell.html)
+
+**Federal Reserve Minutes Indicate Concerns About Inflation and Economic Growth**
+The minutes of the Federal Reserve's recent meeting indicate that policymakers have expressed concerns about the potential for inflation to rise and economic growth to slow down. Some members of the committee noted that the bank may face 'difficult trade-offs' in the future. The meeting was held after Trump's announcement to impose tariffs, which created uncertainty about economic expectations. As a result, policymakers adopted a 'cautious approach' that may lead to higher interest rates for a longer period if inflation persists or lower rates if the economy performs poorly. The minutes stated that 'most participants saw the uncertainty surrounding economic expectations as having increased and viewed the risks of inflation as tilting up and the risks of employment as tilting down.' Some attendees noted that the Federal Open Market Committee may face difficult trade-offs if inflation persists and growth and employment expectations decline. The Fed lowered its growth forecast and raised its inflation forecast for 2025, and reduced the number of potential interest rate cuts by a quarter of a percentage point this year from three to two. The officials also noted the increasing uncertainty surrounding Trump's policies and their potential impact on the economy. The bank announced that it will lower the maximum value of Treasury securities that can be withdrawn from $25 billion per month to $5 billion starting in April, while keeping the maximum withdrawal limit for mortgage-backed securities at $35 billion.
+Original language: ar
+Publish date: April 09, 2025 08:42 PM
+Source:[Elnashra News](https://www.elnashra.com/news/show/1718198/%D9%85%D8%AD%D8%B6%D8%B1-%D8%A7%D8%AC%D8%AA%D9%85%D8%A7%D8%B9-%D8%A7%D9%84%D9%85%D8%B1%D9%83%D8%B2%D9%8A-%D8%A7%D9%84%D8%A3%D9%85%D9%8A%D8%B1%D9%83%D9%8A-%D9%8A%D8%B4%D9%8A%D8%B1-%D8%A5%D9%84%D9%89-%D8%AA%D8%B5%D8%A7%D8%B9%D8%AF-%D9%85%D8%AE%D8%A7%D8%B7%D8%B1-)
+
+**Treasury yields dip as traders await jobless claims report**
+Treasury yields fell as investors await the jobless claims report, which is expected to show 215,000 initial claims. The minutes of the Federal Reserve's recent policy discussion showed officials want to see further progress on inflation before trimming borrowing costs. Economists are also looking for evidence of how government layoffs are affecting the labor market. Other market catalysts on Thursday include the Philadelphia Fed manufacturing survey, Chicago Fed President Austan Goolsbee's speech, and Treasury's $9 billion 30-year TIPS auction. As analysts at Barclays said, 'The minutes of the January FOMC meeting indicate that participants are in no rush to adjust policy rates, and that cuts will likely not resume until the Committee is confident that inflation has made further progress or that the labor market has weakened.'
+Original language: en
+Publish date: February 20, 2025 09:37 AM
+Source:[Morningstar](https://www.morningstar.com/news/marketwatch/20250220179/treasury-yields-dip-as-traders-await-jobless-claims-report)
+
+**10-year Treasury yield ends lower for 3rd time in 4 sessions after Fed minutes**
+The 10-year Treasury yield ended lower for the third time in four sessions after the Federal Reserve's January meeting minutes were released. The yield on the 10-year Treasury fell less than 1 basis point to 4.535%, from Tuesday's closing level of 4.542%. The minutes revealed that policymakers considered possible changes to the runoff of the central bank's balance sheet, but overall, the minutes lacked any big unexpected information. Market participants focused on the idea that Fed officials remain biased toward easing interest rates. Meanwhile, U.S. data showed housing starts declined sharply to a seasonally adjusted annualized rate of 1.37 million in January, and the Treasury's $16 billion auction of 20-year bonds came in weak.
+Original language: en
+Publish date: February 19, 2025 09:07 PM
+Source:[Morningstar](https://www.morningstar.com/news/marketwatch/20250219145/10-year-treasury-yield-ends-lower-for-3rd-time-in-4-sessions-after-fed-minutes)
+
+**Falling Bond Yields Suggest Growth Concerns Outweigh Inflation Risks | Investing.com**
+Despite President Trump's recent comments and executive orders, the Treasury market remains relatively calm, with key yields for government bonds flat to slightly lower in recent days. This is surprising given the news updates on topics relevant to market expectations, inflation, and economic growth. San Francisco Fed President Mary Daly downplayed plans to tighten policy early on, saying 'The Fed does not 'need to be pre-emptive at this point,' Daly told The New York Times on Monday. 'We have policy calibrated for this economy and the one we expect to have, and we've got time now to be actively watching to see what else is done.' The Treasury market appears to be on board with the watch-and-wait idea, with the 10-year yield easing to 4.51% and the 2-year yield dropping to 4.22%. Fed funds futures are pricing in an 83.5% probability that the central bank will leave interest rates unchanged again at the next policy meeting on Mar. 19.
+Original language: en
+Publish date: February 05, 2025 01:18 PM
+Source:[Investing.com](https://www.investing.com/analysis/falling-bond-yields-suggest-growth-concerns-outweigh-inflation-risks-200656999)
+
+**US 10Y TREASURY: relieved tensions, for the moment**
+The recent FOMC meeting has relieved some of the tension that had been building over the past month, as the Fed left interest rates unchanged and provided no surprises regarding inflation and future Fed moves. However, the US President's announcement of new import tariffs for goods from Canada, Mexico, and China on Friday changed the course of 10Y Treasury yields, which rose from 4.48% to 4.58%. It will take time for markets to digest the implications of these tariffs on the US economy, inflation, and future Fed decisions. The upcoming week will also see the release of non-farm payrolls and unemployment rate data, which may continue to contribute to market volatility.
+Original language: en
+Publish date: February 03, 2025 11:15 AM
+Source:[tradingview.com](https://www.tradingview.com/chart/US10Y/SvqXelQh-US-10Y-TREASURY-relieved-tensions-for-the-moment/)
+
+**Weekly Economic & Financial Commentary: Cutting Rates, but Higher Yields**
+The US economy showed a hot print on service-sector prices and a solid job gain for December, but looming tariff-related uncertainty may lead the Fed to pause interest rate cuts at its upcoming meeting. The 10-year Treasury yield has increased by 100 bps since the Fed's first rate cut in September, despite additional rate cuts. The Federal Reserve's Q3-2024 Distributional Financial Accounts revealed gaps in household net worth across the wealth spectrum. The US population expanded by 1.0% in 2024, driven by immigration, with Americans moving from expensive coastal areas to more affordable locations in the Sunbelt and Mountain West.
+Original language: en
+Publish date: January 10, 2025 09:11 PM
+Source:[actionforex.com](https://www.actionforex.com/contributors/fundamental-analysis/582127-weekly-economic-financial-commentary-cutting-rates-but-higher-yields/)
+
+**US Stocks Try to Digest Fed Warnings on Inflation**
+The US stock market tried to 'digest' the warnings from the Federal Reserve about inflation, despite the continued pressure on prices. The Standard & Poor's 500 index rose slightly on Wednesday, closing at 5,918.25 points, a 0.16% increase. However, the main indices are still on track to record a second consecutive weekly loss. The Federal Reserve's December meeting minutes, released on Wednesday, showed that most participants in the Federal Open Market Committee believed that the risks of inflation had increased, making investors more concerned that interest rate cuts this year may be less than expected. As Jeffery Roche, chief economist at LPL Financial, said, 'The uncertainty surrounding Trump's policies, which are still being developed, makes it increasingly difficult to predict the path of interest rates, growth, and inflation.' The yields on US Treasury bonds fluctuated during Wednesday's trading, after rising on expectations that Trump's plans for tariffs and taxes would lead to higher inflation. The 10-year Treasury bond yield reached 4.7% at one point, approaching levels last seen in late April, while the 20-year bond yield was the first to approach 5%, for the first time since 2023. High bond yields are bad news for stock markets, including the US stock market. After absorbing a batch of economic data this week, investors are now waiting for the December jobs report, expected to be released on Friday. 'The markets may become volatile if there are surprises in the jobs report on Friday,' Roche said.
+Original language: ar
+Publish date: January 08, 2025 10:32 PM
+Source:[العربي الجديد](https://www.alaraby.co.uk/economy/%D8%A7%D9%84%D8%A3%D8%B3%D9%87%D9%85-%D8%A7%D9%84%D8%A3%D9%85%D9%8A%D8%B1%D9%83%D9%8A%D8%A9-%D8%AA%D8%AD%D8%A7%D9%88%D9%84-%D9%87%D8%B6%D9%85-%D8%AA%D8%AD%D8%B0%D9%8A%D8%B1%D8%A7%D8%AA-%D8%A7%D9%84%D8%A8%D9%86%D9%83-%D8%A7%D9%84%D9%81%D9%8A%D8%AF%D8%B1%D8%A7%D9%84%D9%8A-%D9%85%D9%86-%D8%A7%D9%84%D8%AA%D8%B6%D8%AE%D9%85)
+
+</Asknews_articles>
+
+
+Forecaster_1 step 1 output:
+# Analysis:
+
+## (a) Source Analysis:
+
+1. **TradingView/FRED Anonymous User Post**
+   - **Quality**: Low to moderate. Contains unverified personal opinions without institutional backing.
+   - **Date**: Recent but precise date unclear.
+   - **Facts vs Opinions**: Provides references to FRED data series but mixes these with speculative claims about "stagflation coming" and market tops without substantial evidence.
+   - **Reliability**: Low for predictive value; modest utility for identifying potential correlations.
+
+2. **FRED Data Series Documentation**
+   - **Quality**: High. Official Federal Reserve documentation.
+   - **Date**: Current as of query.
+   - **Facts vs Opinions**: Purely factual documentation of methodology and structure of the 10-year Treasury yield data series.
+   - **Reliability**: Very high for understanding the metric being forecasted, though doesn't provide current values.
+
+3. **Journal.firsttuesday.us Article**
+   - **Quality**: Moderate. Industry publication with specific recent data points.
+   - **Date**: Article from June 2023, but contains forward-looking data to April 18, 2025.
+   - **Facts vs Opinions**: Key fact - 10-year Treasury yield was 4.33% on April 18, 2025 (5 days before our current date). Contains opinions about Fed actions and political impacts on rates.
+   - **Reliability**: High for recent yield data point; moderate for analytical components.
+
+4. **REIT.com Market Commentary**
+   - **Quality**: Moderate to high. Data-driven analysis of correlations.
+   - **Date**: Analysis through January 2025.
+   - **Facts vs Opinions**: Primarily factual analysis of correlations between REIT returns and yield changes, with limited subjective interpretations.
+   - **Reliability**: Good for understanding market relationships, but limited direct predictive value for Treasury yields.
+
+5. **Perplexity Report**
+   - **Quality**: Comprehensive with historical context and citations.
+   - **Date**: Current through April 2025.
+   - **Facts vs Opinions**: Provides historical yield data and major inflection points (facts), with some analysis of future risks (opinions).
+   - **Key factual data points**: Historical average (4.25%), current April 2025 yield (4.41%), historical peak (15.84% in 1981), historical trough (0.55% in 2020).
+   - **Reliability**: High for historical context and recent values; moderate for forward-looking insights.
+
+## (b) Reference Class Analysis:
+
+Several potential reference classes apply:
+
+1. **Short-term Treasury yield movements (1-month horizon)**
+   - Most directly relevant to our 37-day forecast period
+   - Historical data shows typical monthly volatility of 15-25 basis points
+   - Captures immediate market dynamics
+
+2. **Pre-FOMC meeting yield behavior**
+   - Relevant if a Fed meeting occurs within our forecast window
+   - Markets often price in expectations ahead of policy announcements
+
+3. **Treasury yields during similar economic conditions**
+   - Current conditions: moderating inflation (2.8%), solid growth (2.4%), post-tightening cycle
+   - Historical comparison to similar economic environments
+
+**Most suitable reference class**: The 1-month horizon movements combined with current economic condition context, as this best matches our forecast timeframe while incorporating fundamental drivers.
+
+## (c) Timeframe Analysis:
+
+We are forecasting 37 days ahead (April 23 to May 30, 2025).
+
+- Recent starting points: 4.41% (April 2025 per Perplexity) and 4.33% (April 18, 2025 per journal.firsttuesday)
+- Historical context: Current yield (4.41%) is slightly above the long-term average (4.25%)
+- Typical monthly volatility: 15-25 basis points under normal market conditions
+
+Over similar 1-month periods, 10-year yields rarely move more than 40-50 basis points without significant economic surprises, policy shifts, or risk events.
+
+## (d) Justification:
+
+My outside view prediction is based on:
+
+1. **Current baseline**: The 10-year Treasury yield stands at approximately 4.33-4.41% (with slight source variation).
+
+2. **Economic context**: We're in a period of policy normalization after the 2022-2024 hiking cycle, with inflation stabilizing around 2.8% and GDP growth at 2.4%.
+
+3. **Mean reversion potential**: Current yield (4.41%) is modestly above long-term average (4.25%), suggesting slight downward pressure.
+
+4. **Volatility expectations**: One-month yield movements typically range ±15-25 basis points barring significant surprises.
+
+5. **Directional bias**: Economic indicators suggest relative stability with no clear strong directional catalyst identified in the source materials.
+
+6. **Potential events during forecast period**:
+   - May economic data releases (inflation, employment)
+   - Possible FOMC communications
+   - Ongoing Treasury issuance and demand dynamics
+
+Given these factors, I expect the 10-year Treasury yield to remain relatively stable over the next 37 days, with modest potential for mean reversion toward the historical average of 4.25%.
+
+## Outside view calibration:
+
+Based on the analysis above, I'll calibrate a probability distribution that:
+
+1. Centers around the current 10-year yield level (4.33-4.41%)
+2. Accounts for typical monthly volatility (15-25 basis points)
+3. Incorporates potential for unexpected developments by widening the tails
+4. Considers slight mean reversion toward the long-term average (4.25%)
+
+Looking at historical monthly movements in 10-year Treasury yields:
+- In normal market conditions, yields typically move 15-25 basis points in either direction over a month
+- About once every 3-4 months, we might see larger moves of 40+ basis points
+- Current economic conditions (stable inflation, solid growth) suggest no immediate catalyst for extreme moves
+
+My 80% confidence interval (20th to 80th percentiles) spans approximately 45 basis points, which aligns with historical monthly volatility plus a buffer for uncertainty. The 10th and 90th percentiles extend this range to account for less likely but still plausible scenarios.
+
+## Outside View Prediction:
+Percentile 10: 4.00%
+Percentile 20: 4.15%
+Percentile 40: 4.30%
+Percentile 60: 4.45%
+Percentile 80: 4.60%
+Percentile 90: 4.75%
+
+Forecaster_2 step 1 output:
+# Analysis:
+
+## (a) Source Analysis
+
+**FRED.stlouisfed.org Summary**
+- This appears to be TradingView user opinions based on FRED data
+- Low reliability: anonymous author sharing personal market predictions without institutional backing
+- No specific date provided, making timeliness difficult to assess
+- More opinion than fact: contains speculative claims about "stagflation coming" and market tops
+- Useful only for understanding some technical indicators traders might be watching
+
+**TradingView FRED-DGS10 Summary**
+- High-quality metadata about the FRED DGS10 data series itself
+- Factual information from the official source (Federal Reserve)
+- Contains no predictive content, but validates the resolution source
+- Confirms data is measured in percent and not seasonally adjusted
+- Reliable for understanding what precisely we're forecasting
+
+**Journal.firsttuesday.us Summary**
+- Source: ft Editorial Staff, dated June 1, 2023, but contains forward-looking data to April 18, 2025
+- Medium reliability: specific editorial source but not a major financial institution
+- Key factual data point: 10-year Treasury yield was 4.33% on April 18, 2025 (5 days ago)
+- Mixed with editorial opinions about future housing market and mortgage rate trends
+- The April 2025 data point is recent and relevant if accurate
+
+**REIT.com Summary**
+- Analysis of correlation between REIT performance and 10-year Treasury yields through January 2025
+- Medium-high reliability for historical analysis
+- Primarily factual correlation analysis without direct yield predictions
+- Useful for understanding relationship between yield curve shape and economic conditions
+- Mentions term spreads recently turning positive, suggesting economic optimism
+
+**Perplexity Report**
+- Comprehensive historical analysis of 10-year Treasury yields since 1970
+- High-quality structured analysis with multiple cited sources
+- Very recent data: states current yield is 4.41% as of April 2025
+- Provides valuable context: long-term average of 4.25%, historical range (0.55%-15.84%)
+- Notes current economic conditions: inflation at 2.8%, GDP growth averaging 2.4% (2023-2025)
+
+## (b) Reference Class Analysis
+
+Several potential reference classes to consider:
+
+1. **Full Historical Range (1970-2025)**: Too broad for a short-term forecast, encompassing drastically different monetary regimes.
+
+2. **Post-2022 Normalization Period**: After pandemic-era policies ended, yields have stabilized in the 3.5-4.5% range as the Fed raised rates by 525 basis points and inflation moderated.
+
+3. **Month-to-Month Yield Movements**: Typical monthly yield changes during periods of relative policy stability range from 5-30 basis points, with standard deviation of 20-25 basis points.
+
+4. **Pre-FOMC Meeting Periods**: Yields often exhibit particular patterns before Fed meetings.
+
+The most suitable reference class is **#3 (Month-to-Month Yield Movements)** since we're forecasting only 37 days ahead, and there are no major regime changes expected in this short timeframe.
+
+## (c) Timeframe Analysis
+
+I'm forecasting from April 23, 2025 to May 30, 2025 – a period of 37 days.
+
+For this timeframe:
+- Most recent data points: 4.33% (April 18, 2025) and 4.41% (April 2025, unspecified day)
+- Standard deviation of monthly yield changes during stable periods: ~20-25 basis points
+- No major Fed meetings appear to be scheduled during this period based on available information
+- The 37-day window is slightly longer than a typical month, suggesting slightly wider possible variation
+
+## (d) Justification
+
+The 10-year Treasury yield is currently around 4.41%, slightly above its long-term historical average of 4.25%. Based on the available information, we're in a period of economic stability with:
+
+1. **Normalized Monetary Policy**: The Fed has completed a tightening cycle with 525 basis points of hikes from 2022-2024.
+
+2. **Moderate Inflation**: Current inflation at 2.8% is close to the Fed's target.
+
+3. **Steady Growth**: GDP growth averaging 2.4% (2023-2025) indicates economic resilience.
+
+4. **Positive Term Spread**: The yield curve has returned to an upward slope, typically suggesting economic optimism.
+
+These factors suggest the 10-year yield should remain relatively stable over the next 37 days, absent major economic surprises. The primary risk factors include:
+
+- Unexpected inflation data
+- Federal debt concerns (approaching $35 trillion)
+- Potential geopolitical developments
+- Shifts in market expectations about future Fed policy
+
+Given the short timeframe, it's reasonable to expect the yield to remain within approximately ±40 basis points of its current level, with the distribution centered slightly below the current value, acknowledging the gravitational pull of the long-term average (4.25%).
+
+## Outside view calibration:
+
+Starting with the most recent yield value of 4.41% (April 2025), I need to calibrate a reasonable distribution for where the yield might be on May 30, 2025.
+
+For a 37-day forecast, I'll use:
+- Historical monthly standard deviation of approximately 20-25 basis points
+- Wider tails to account for unexpected economic events
+- Slight gravitational pull toward the long-term average of 4.25%
+- Current stability in monetary policy and inflation expectations
+
+The 10th percentile represents a significant downward move (approximately -40 basis points) that might occur due to:
+- Weaker-than-expected economic data
+- A flight to safety from equity markets
+- Downside inflation surprises
+
+The 90th percentile represents a significant upward move (approximately +40 basis points) that might occur due to:
+- Stronger-than-expected economic data
+- Rising inflation expectations
+- Concerns about government debt issuance
+
+The middle percentiles follow a distribution that is slightly skewed toward mean reversion (toward 4.25%), but with the median near the current level.
+
+## Outside View Prediction:
+Percentile 10: 4.0%
+Percentile 20: 4.15%
+Percentile 40: 4.35%
+Percentile 60: 4.45%
+Percentile 80: 4.65%
+Percentile 90: 4.8%
+
+Forecaster_3 step 1 output:
+Analysis:
+
+1. Source analysis  
+   a. TradingView user post (anonymous)  
+      – Content: Four brief technical/macro views on stagflation, equity market topping, yield‑strength divergence, and synchronized cyclical sectors.  
+      – Date/Quality: Undated, anonymous, non‑institutional. Opinions are speculative with no firm quantitative forecasts; low reliability for rate forecasting.  
+   b. TradingView FRED-DGS10 series summary  
+      – Content: Official description of the 10‑year Treasury constant‑maturity yield series (GS10): source, frequency (monthly averages), units, methodology.  
+      – Date/Quality: Authoritative, high quality for understanding data characteristics; no forecasts.  
+   c. Journal.firsttuesday.us (“Trending mortgage rates”)  
+      – Content: FRM and ARM rates as of April 18, 2025, relationship to 10‑year Treasury, Fed outlook on rate path, political/policy drivers.  
+      – Date/Quality: June 2023 article updated with 2025 week‑of‑Apr 18 data; editorial staff (likely credible in mortgage context). Provides useful real‑time yield and rate‑spread data, moderate‑high reliability.  
+   d. REIT–Treasury correlation study (REIT.com)  
+      – Content: Historical correlation analysis between daily changes in 10‑year Treasury yields and REIT returns, relationship to term spread and recession odds.  
+      – Date/Quality: Published early 2025, credible institutional research. Useful for understanding cyclical versus risk‑off regimes, but indirect for forecasting absolute level.  
+   e. Perplexity historical overview  
+      – Content: Comprehensive history of 10‑year yields since 1970, major peaks/troughs, economic drivers, recent context (4.41% April 2025).  
+      – Date/Quality: Aggregated model output citing multiple primary sources; broad and consistent with Fed/Government data. Good for historical perspective but check original citations for precision.  
+
+2. Reference‑class analysis  
+   - Option A: 1‑ to 2‑month‑ahead forecasts of the U.S. 10‑year yield. Suitable because of similar horizon (~37 trading days to May 30). Historical short‑term volatility (daily sd ≈5 basis points) implies ~30 bp 1‑sigma move in this period; covers bulk of distribution.  
+   - Option B: End‑of‑May yields in recent years (May 30 or nearest date). Less useful because May 30 falls on different business‑day contexts.  
+   - Option C: Forecast errors from consensus bond economists for 1‑month ahead. Hard to assemble quickly.  
+   – Chosen reference class: short‑term (1‑ to 2‑month) yield forecasting errors.  
+
+3. Timeframe analysis  
+   - Today: April 23, 2025. Forecast date: May 30, 2025 → 37 calendar days, ~26 trading days.  
+   - Historical yield volatility:  
+     • Daily yield sd ~5 bp; over 26 trading days, vol ≈5×√26≈25 bp (1σ).  
+     • 90% prediction interval (±1.64σ) ≈±40 bp.  
+   - But account for tail risks (Fed pivot surprises, geopolitical shocks): extend ±60 bp as a conservative 90/10 band.  
+
+4. Justification for outside‑view prediction  
+   - Base rate: April 18 yield = 4.33%; recent month range ~4.0–4.5%.  
+   - Fed outlook: Market‐implied Fed funds futures price moderate chance of a 25 bp cut in June. That suggests slight downward drift into May.  
+   - Inflation and growth: Core PCE at ~2.8%, growth stable ~2.5%. No clear trigger for rapid yield spikes or collapses absent shock.  
+   - Political/policy: Federal debt trajectory and tax policy may nudge yields up modestly, but effects are gradual.  
+   - Mortgage spreads: FRM–Treasury spreads stay elevated, indicating lenders see risk premia intact even if underlying yields dip.  
+   - Risk regimes: Term spread recently turned positive, recession odds down → supportive for modestly higher yields, but not runaway moves.  
+   - Tail events: Europe or Asia debt crises, geopolitics, Fed balance‐sheet surprises could move yields ±60 bp.  
+
+Outside view calibration:
+
+We tether to a ±60 bp range around current 4.33% for the 90/10 interval, and center the distribution slightly below current given mild market pricing for Fed easing.
+
+Outside View Prediction:
+Percentile 10: 3.70  
+Percentile 20: 3.90  
+Percentile 40: 4.15  
+Percentile 60: 4.35  
+Percentile 80: 4.60  
+Percentile 90: 4.95
+
+Forecaster_4 step 1 output:
+Analysis:
+
+1. Source analysis  
+- TradingView summary (anonymous user, April 2025)  
+  • Type: Retail‑investor opinion, no hard forecasts.  
+  • Strengths: Highlights stagflation thesis, technical divergence, equity‑yield correlations.  
+  • Weaknesses: Anonymous, unverifiable, mixes chart‑based signals with macro claims. Treat as low‑quality for point estimates; only use as a prompt for scenarios (stagflation vs. re‑acceleration).  
+
+- FRED series documentation (GS10 page, ongoing)  
+  • Type: Official data source; authoritative.  
+  • Strengths: Confirms definition, frequency (daily), units. Use for grounding.  
+  • Weaknesses: None for resolution; no opinion.  
+
+- Journal.firsttuesday.us “Trending mortgage rates” (June 1, 2023; data as of April 18, 2025)  
+  • Type: Industry newsletter.  
+  • Facts: 10‑year T‑note = 4.33% on April 18, 2025. Mortgages track T‑note + spread (~2.5%).  
+  • Opinions: Fed outlook, political/policy drivers on rates. Reasonably informed but second‑tier. Use rate level and spread commentary, but discount policy prognostications.  
+
+- REIT.com market commentary (through January 2025)  
+  • Type: Institutional blog.  
+  • Facts: Historical term‑spread/recession correlations with REIT returns. Signals curve steepness and recession odds relate to yield changes.  
+  • Use: As a cross‑check on yield‑curve dynamics: recent term spread has steepened slightly, implying modest upward pressure on long yields.  
+
+- Perplexity historical overview (language‑model aggregation)  
+  • Type: AI‑generated survey of 1970–2025 yield history.  
+  • Strengths: Comprehensive backstory on inflation regimes, key peaks/troughs, long‑run average ~4.25%.  
+  • Weaknesses: Possible minor factual slips; cross‑check with known Fed data. Use for reference class of long‑term average and volatility.  
+
+2. Reference‑class analysis  
+- Candidate classes:  
+  a. Daily changes in 10‑year yields over 30–60‑day horizons (micro‑volatility).  
+  b. 1‑month and 2‑month rolling changes in yields over the past decade.  
+  c. End‑of‑May yields in past years relative to April levels (calendar seasonal effects).  
+- Suitability: (a) and (b) best capture short‑horizon variability; (c) may embed seasonal bias but sample too small. We choose (b): 2‑month (≈37 trading days) changes from 2015–2025 to estimate distribution around current level.  
+
+3. Timeframe analysis  
+- Horizon: 37 calendar days (April 23 to May 30, 2025).  
+- Empirical patterns: Over rolling 2‑month windows in 2015–2025, yields moved ±0.25% at one‑sigma; 90% of outcomes lay within roughly ±0.40%. No persistent directional drift month‑to‑month outside major Fed‑cycle shifts.  
+
+4. Justification for outside‑view baseline  
+- Current level: 4.33% (April 18, 2025).  
+- Fed stance: On hold; core inflation stable ~2.8%; term spread recently turned positive. Balancing forces suggest low drift over next 5 weeks.  
+- Macro scenarios:  
+   • Upside: Surprise CPI uptick or hawkish Fed minutes → yields +0.3–0.5%.  
+   • Downside: Soft jobs or bond‑funding stress → yields –0.3–0.5%.  
+- Historical 2‑month stdev ~0.25%; for 37 days ≈0.30%. A 90% interval ≈±0.50%.  
+
+Outside view calibration  
+- Anchor median at current level (4.33%).  
+- Impose roughly ±0.45% 90% window, slightly skewing tails equally.  
+- Map percentiles (10,20,40,60,80,90) assuming near‑normal but fatteened tails:  
+
+Outside View Prediction  
+Percentile 10: 3.90  
+Percentile 20: 4.10  
+Percentile 40: 4.25  
+Percentile 60: 4.40  
+Percentile 80: 4.60  
+Percentile 90: 4.75
+
+Forecaster_5 step 1 output:
+Analysis:
+a) Source analysis  
+• TradingView forum snippets (dated 2024‑2025).  Mostly retail commentary.  Factual nuggets: none beyond “10‑year ≈ 4.3 %.”  Opinion quality: low.  
+• FRED “DGS10” metadata (permanent).  Purely factual reference series.  High reliability.  
+• firsttuesday.us housing‑rate note (21 Apr 2025).  Gives latest hard number (10‑year = 4.33 %).  Staff opinions on taxes, privatisation, etc. are speculative, but the quoted yield is factual and timely.  
+• Nareit blog on REIT/10‑year correlation (Feb 2025).  Mostly analytical framing; no point estimate of where the 10‑year will be on any specific date.  Useful only to remind us that yield moves are linked to the macro cycle.  
+• Perplexity historical overview (April 2025).  Synthetic but fact‑checked against published peaks/troughs.  Good for long‑run averages (≈ 4.25 %) and for a volatility benchmark.  
+
+b) Reference‑class analysis  
+(i) 5‑week (≈ 25–30 trading days) change in the 10‑year yield, 1990‑2024.  
+(ii) Same horizon but conditional on mid‑cycle Fed‑pause periods (1995, 2006, 2018, 2023‑25 analogue).  
+(iii) “Event” windows around an FOMC plus CPI release, last 20 years.  
+Set (i) gives the largest sample and is chosen.  Empirical 5‑week change distribution (1990‑2024):  
+μ = 0 bp, σ ≈ 40 bp; inter‑decile span ≈ ±80 bp.
+
+c) Timeframe analysis  
+Days to target: 37 calendar days, ~27 trading days.  Over that horizon:  
+– Daily realised σ for the 10‑year ≈ 7 bp the last two years; √27 × 7 ≈ 36 bp for one σ.  
+– Two macro events fall inside the window: 30 Apr‑1 May FOMC meeting and 14 May CPI.  Either could shift yields 20‑35 bp each direction.  Tail moves of ~90 bp (October 2023 style) are rare but not impossible (≈ 3‑4 % historical probability).
+
+d) Justification for outside‑view baseline  
+Current spot = 4.35 % (average of April 18‑22 closes).  
+Long‑run unconditional mean ≈ 4.25 %; macro narrative (sticky core CPI, hefty Treasury supply, Fed not yet cutting) adds mild upward skew.  
+Therefore centre the distribution a touch above spot (4.40 %) and allow a roughly normal core (σ ≈ 40 bp) with a slightly fatter right tail (skew +0.25).  
+Outside‑view 80 % interval: about 3.90 % – 4.90 %.  Add 10 % tails: 3.70 % on the low side, 5.15 % on the high side.
+
+Outside view calibration:
+• Anchor: present yield 4.35 %.  
+• One‑sigma band ±0.40 %.  
+• Apply mild positive skew (shift +0.05 % at and above the median).  
+• Translate to percentiles assuming a skew‑normal with those parameters.  
+Round to the nearest basis‑point 0.01 %.
+
+Outside View Prediction:
+Percentile 10: 3.90  
+Percentile 20: 4.05  
+Percentile 40: 4.30  
+Percentile 60: 4.45  
+Percentile 80: 4.70  
+Percentile 90: 4.95
+Combined CDF: `[0.01, 0.010051000000000001, 0.010102000000000002, 0.010153000000000002, 0.010204000000000003]...`
+
+=== Forecaster 1 ===
+# Analysis:
+
+## (a) Source Analysis:
+
+1. **CNBC Article (April 23, 2025)**
+   - **Quality**: High - reputable financial news source
+   - **Date**: Very recent (today)
+   - **Facts vs Opinions**: Factual data includes current yields (10Y at 4.346%), Trump's reversal on Powell firing, and tariff levels (145% on Chinese goods). Contains expert opinion from Elizabeth Warren on market impacts.
+   - **Reliability**: High for current yields and policy statements
+
+2. **Federal Reserve H15 Release (April 16, 2025)**
+   - **Quality**: Very high - primary source from Federal Reserve
+   - **Date**: One week old
+   - **Facts vs Opinions**: Provides factual yield data and official Fed projections (50 bps cuts in 2025). Includes interpretations from identified Fed officials about policy stance.
+   - **Reliability**: Extremely high for historical yield data and official Fed expectations
+
+3. **Bloomberg & DESK Articles (April 7-10, 2025)**
+   - **Quality**: Moderate-to-high - reputable sources with some speculation
+   - **Date**: Two weeks old
+   - **Facts vs Opinions**: Factual reporting on yield movements and China's Treasury holdings ($759B). Contains speculative commentary from identified experts (Deutsche Bank, BofA).
+   - **Reliability**: Good for understanding recent market dynamics, moderate for forward projections
+
+4. **Asknews Articles (April 9-23, 2025)**
+   - **Quality**: Varies from moderate to high, multiple independent sources
+   - **Date**: Most from past few days
+   - **Facts vs Opinions**: Provides consistent recent yield data (10Y at 4.35-4.41%), auction results, and expert commentary from identified economists and strategists.
+   - **Reliability**: High for recent Treasury market developments and positioning
+
+## (b) Evidence Analysis:
+
+**Strong Evidence:**
+- Current 10-year yield at 4.346% as of April 23 (CNBC) provides anchor point
+- Persistent high tariffs (145% on Chinese goods, 125% on US goods) with documented inflation impact (multiple sources)
+- Clear Fed guidance on rate path (50 bps cuts in 2025) versus market expectations (75-100 bps) from Fed H15 release
+- Declining foreign central bank participation in Treasury auctions (56.2% for recent 2-year auction, lowest in two years) from multiple independent sources
+
+**Moderate Evidence:**
+- Recent yield volatility pattern (50 bps rise followed by retreat in early April) indicates sensitivity to policy headlines
+- Treasury Secretary Bessent's statements about "de-escalation" in US-China trade tensions (CNBC, verified by multiple sources)
+- Warning signals in economic data (Richmond Fed manufacturing at -13, IMF cutting growth forecast to 2.8%)
+- Term premium expansion (to 67 bps) signaling increased uncertainty around US policy
+
+**Weak Evidence:**
+- Anonymous macro fund manager comments about "rumors swirling" (DESK article)
+- Speculative commentary about China "weaponizing" Treasury holdings (lacks concrete evidence)
+- Short-term technical factors like basis trade positioning (likely to wash out over 37-day horizon)
+
+## (c) Timeframe Analysis:
+
+We're forecasting 37 days ahead (April 23 to May 30, 2025).
+
+This timeframe:
+- Includes the May 6-7 FOMC meeting, a significant potential inflection point
+- Allows time for April inflation data release
+- Spans at least one major Treasury auction cycle
+
+If the timeframe were halved (~18 days):
+- The forecast would be narrower and more aligned with current momentum
+- The May FOMC meeting would still be the dominant event
+- Less time for fundamental factors to influence yields
+
+If the timeframe were doubled (~74 days):
+- We'd need to consider additional FOMC meetings
+- Trade policy developments would have more time to materialize
+- The uncertainty range would widen considerably, particularly in the tails
+
+## (d) Justification:
+
+Starting with the current 10-year yield at 4.346%, I examine factors that could shift yields by May 30:
+
+**Factors supporting higher yields:**
+1. Inflationary impact of high tariffs (145% on Chinese goods) remains unresolved despite Bessent's comments
+2. Documented decline in foreign demand for Treasuries (from 48% to 39% of market)
+3. Heightened term premium due to policy uncertainty (67 bps versus historical norm)
+
+**Factors supporting lower yields:**
+1. Economic slowdown signals (Richmond Fed at -13, IMF growth downgrade to 2.8%)
+2. Potential Fed signaling about rate cuts at May meeting (market pricing 75-100 bps by year-end)
+3. Possible trade tension de-escalation (per Treasury Secretary Bessent)
+
+**Recent pivotal developments:**
+- Trump's reversal on firing Powell has reduced immediate uncertainty
+- Treasury Secretary Bessent's mention of trade "de-escalation" partially offset tariff concerns
+- The upcoming May 6-7 FOMC meeting will be critical for yield direction
+
+## Probability Calibration
+
+Starting with the current yield of 4.346% as my anchor point, I calibrate based on:
+
+1. **Recent volatility:** The 10-year yield moved 50 bps higher and then 16 bps lower in a single week this month, indicating heightened sensitivity to headlines.
+
+2. **Historical monthly ranges:** Typically 15-25 bps in normal periods, expanding to 40-50 bps during policy uncertainty.
+
+3. **Key event risk:** The May FOMC meeting could trigger significant repricing of rate expectations.
+
+I assess the following probabilities:
+- 60% chance yield stays within ±30 bps of current level (4.05-4.65%)
+- 80% chance yield stays within ±45 bps of current level (3.90-4.80%)
+- 90% chance yield stays within ±60 bps of current level (3.75-4.95%)
+
+My distribution shows a slight upward skew reflecting inflation and supply concerns, with significant tail risks in both directions.
+
+## Checklist:
+1. **Target variable:** 10-year Treasury yield on May 30, 2025, as reported by FRED (%)
+2. **Outside view:** Current 10Y at 4.346% with typical monthly volatility of ±25-40 bps in similar conditions
+3. **Consistency check:** Implied median ~4.35%; mean ~4.38% (slight upward skew); aligned with balanced risks assessment
+4. **Key evidence:** Current yield 4.346%; high tariffs (145%) create inflation risk; declining foreign demand (down to 39%); Fed projecting 50 bps cuts vs. market's 75-100 bps; recent demonstrated volatility
+5. **Blind-spot:** Major geopolitical crisis causing flight-to-safety would drive yields much lower; unexpected inflation surge from tariffs could push yields significantly higher
+
+Distribution:
+Percentile 1: 3.50
+Percentile 5: 3.75
+Percentile 10: 3.85
+Percentile 20: 4.00
+Percentile 40: 4.25
+Percentile 60: 4.45
+Percentile 80: 4.65
+Percentile 90: 4.80
+Percentile 95: 4.95
+Percentile 99: 5.20
+
+
+=== Forecaster 2 ===
+# Analysis:
+
+## (a) Source Analysis
+
+**CNBC Article (April 23, 2025)**
+- High-quality, very recent reporting on Treasury yields
+- Factual data: 10-year yield at 4.346% (down 4 bps), 2-year at 3.819% (up 3 bps)
+- Key context: Trump reversed comments about firing Powell; Treasury Secretary mentioned potential trade war de-escalation
+- Reliable for current market data and official statements
+
+**Federal Reserve H15 Release (April 16, 2025)**
+- High-quality official data, though week-old
+- 10-year yield moved from 4.49% to 4.33% in early April
+- Market pricing 75-100 bps of cuts by end-2025, with >70% probability of a June cut
+- Expert opinions from Fed officials (Powell, Kashkari, Williams) showing caution on rate cuts
+- Very reliable for Fed positioning and recent yield movements
+
+**DESK Article (April 10, 2025)**
+- Medium-high quality financial publication from two weeks ago
+- Details China's Treasury holdings ($759 billion)
+- Expert opinions from Mark Cabana (BofA): Foreign official demand fallen from 48% to 39% of Treasury market
+- Reliable for structural market analysis, less so for short-term movements
+
+**AskNews Articles (April 2025)**
+- Recent reporting showing:
+  * 10-year yield stable around 4.35-4.41% (April 21-23)
+  * Recent 2-year auction showed declining foreign participation (56.2%, lowest in two years)
+  * IMF cut global growth forecast for 2025 to 2.8% from 3.3% due to tariff concerns
+  * Fed officials cautious on rate cuts due to trade policy uncertainty
+- Mix of factual reporting and expert analysis from credible sources
+
+## (b) Evidence Analysis
+
+**Strong Evidence:**
+1. **Current yield level and recent pattern** - Multiple sources confirm 10-year yield at 4.346% (April 23), showing stabilization after early-April volatility spike to 4.51%.
+2. **Declining foreign official demand** - Multiple reliable sources (BofA, BNY Markets) confirm reduced participation from foreign central banks, creating structural pressure on yields.
+3. **Fed policy stance** - Consistent messaging across sources that Fed officials remain cautious about rate cuts due to tariff-induced inflation concerns.
+4. **High tariff levels** - Verified 145% US tariffs on China with 125% Chinese retaliation creates sustained inflation risk.
+
+**Moderate Evidence:**
+1. **Market pricing of rate cuts** - Markets pricing 75-100 bps of cuts by year-end with >70% probability of a June cut, though these expectations can shift rapidly.
+2. **Signs of trade war de-escalation** - Treasury Secretary Bessent's comments suggest potential cooling, though implementation remains uncertain.
+3. **Term premium increase** - Multiple sources note rising term premium due to policy uncertainty.
+4. **Economic growth concerns** - IMF's growth forecast reduction represents credible concern about growth trajectory.
+
+**Weak Evidence:**
+1. **Anonymous market rumors** about China weaponizing Treasury holdings.
+2. **Short-term market reactions** to Trump's Powell comments.
+3. **Individual bank analyst predictions** with limited track records.
+
+## (c) Timeframe Analysis
+
+I'm forecasting the 10-year Treasury yield on May 30, 2025, which is 37 days from today (April 23, 2025).
+
+Key timing considerations:
+- The next FOMC meeting appears scheduled for early May (6-7), falling within our forecast period
+- Multiple economic data releases will occur during these 37 days
+- Treasury auctions will test market demand several times
+
+If the timeframe were halved (18 days), my prediction would have a narrower range, still including the Fed meeting but with less time for economic shifts to manifest.
+
+If doubled (74 days), I would widen the range significantly to account for potential secondary effects from policy changes and higher likelihood of geopolitical/economic surprises.
+
+## (d) Justification
+
+Starting with our baseline (current yield: 4.346%, historical average: ~4.25%), I'll adjust based on the evidence:
+
+**Factors supporting higher yields by May 30:**
+1. Structural decline in foreign official demand for Treasuries creates persistent selling pressure
+2. Tariff-induced inflation concerns (145% on Chinese goods) could elevate inflation expectations
+3. Increased term premium due to policy uncertainty under Trump administration
+4. Steepening yield curve suggests market expectations of stronger economic activity
+
+**Factors supporting lower yields by May 30:**
+1. Potential trade war de-escalation signals from Treasury Secretary
+2. Reduced political pressure on Fed independence as Trump backs off Powell criticism
+3. IMF's lowered global growth forecast (2.8%) suggests economic weakening
+4. Market expectations for Fed cuts could pull longer-term yields down
+
+The evidence suggests a distribution centered slightly above current levels, with modestly greater upside risk than downside risk. The key structural factor of declining foreign demand, combined with inflation concerns, appears more persistent than the tentative de-escalation signals.
+
+## Probability calibration
+
+Starting with the current 10-year yield of 4.346%, I'll calibrate a distribution that:
+- Centers slightly above current levels (reflecting modest upward pressure)
+- Places 60% of probability mass within ±25 basis points (reflecting the short timeframe)
+- Has a longer upside tail (reflecting asymmetric risks from inflation/foreign selling)
+- Accounts for the upcoming Fed meeting as a potential inflection point
+
+I anticipate:
+- Low-end scenarios (economic weakness, safe-haven flows, significant de-escalation)
+- Mid-range scenarios (continued policy uncertainty but no major shocks)
+- High-end scenarios (inflation surprises, accelerated foreign selling, escalating trade tensions)
+
+## Checklist:
+1. Target: 10-year US Treasury yield (%) on May 30, 2025, per FRED DGS10 data
+2. Outside view: Current 4.346%; historical average ~4.25%; typical monthly volatility ~20-25 bps
+3. Consistency: Median ~4.4%; mean ~4.45% due to slight upward skew; aligns with justification
+4. Key evidence: Declining foreign Treasury demand; Fed caution on cuts; tariff-related inflation risks; tentative trade de-escalation signals
+5. Blind spot: Rapid escalation of foreign Treasury selling in response to trade tensions
+
+## Distribution:
+Percentile 1: 3.8
+Percentile 5: 3.95
+Percentile 10: 4.05
+Percentile 20: 4.18
+Percentile 40: 4.3
+Percentile 60: 4.45
+Percentile 80: 4.6
+Percentile 90: 4.75
+Percentile 95: 4.9
+Percentile 99: 5.2
+
+
+=== Forecaster 3 ===
+Analysis:
+
+1. Source analysis  
+   • CNBC (April 23): Reports 10‑yr yield at 4.346% after Trump backtrack; high quality, real‑time market data.  
+   • Fed H.15 (April 16): Mid‑April 10‑yr at 4.33%, Fed signals no rush to cut; authoritative, moderate‑lag.  
+   • Bloomberg (April 7): 10‑yr spiked to ~4.69% after tariff news; high quality but older.  
+   • FI‑Desk (April 10): Technical drivers (China sales, basis unwinds) pushed yields higher; credible but indirect.  
+   • CNBC/Alexandra Ulbrich (April 9): Auction data showing strong foreign demand, yield around 4.31%; reliable auction metrics.  
+
+   Weigh factual yield data heavily; treat opinions (e.g. “losing haven status”) as moderate‑evidence directional color from identifiable strategists.
+
+2. Evidence analysis  
+   Strong evidence (± directional shift ≥10 bp):  
+     – Market pricing (>70% chance of June cut) → gentle downward drift.  
+     – Trump’s backtrack on Powell firing → lower risk premium (4 bp dip).  
+     – Solid auction demand (87% indirect bids) → caps upside.  
+   Moderate evidence (±5 –10 bp):  
+     – Fed’s “no hurry” language → structural support around current level.  
+     – Early‑April tariff oscillations → elevated volatility risk.  
+   Weak evidence (±≤5 bp):  
+     – Anecdotal hedge‑fund rumors of large China sell‑offs.  
+     – REIT‑Treasury correlation shifts.  
+
+3. Timeframe analysis  
+   • Horizon: 37 calendar days (~26 trading days) to May 30, 2025.  
+   • Historical daily σ≈5 bp → 26‑day σ≈25 bp; 90% interval ≈±40 bp.  
+   • Halved horizon (~13 trading days): σ≈14 bp, distribution narrows ~√2.  
+   • Doubled horizon (~52 trading days): σ≈35 bp, distribution widens ~√2.
+
+4. Justification / Inside‑view adjustment  
+   Outside view base rate: current yield ≈4.33%.  
+   • Fed funds futures ⇒ ~100 bp of cuts by year‑end, >70% odds of June move ⇒ yields to drift ~–10 bp.  
+   • Trump’s de‑escalation comments & solid auctions ⇒ modest downward pressure.  
+   • Tariff‑volatility tail and balance‑sheet runoff → fatter tails, preserve wide distribution.  
+
+   Median shift: 4.33% → 4.23%. 1σ band (~25 bp) centered there; extend tails to ±60 bp for 90/10 uncertainty.
+
+Probability calibration  
+We aim for a distribution reflecting mild downward drift (–10 bp) with 1σ ≈25 bp, 90/10 ≈±50 bp, tails to ±60 bp.
+
+Checklist:  
+1. Target: 10‑yr US Treasury yield on May 30, 2025 (% yield, daily frequency).  
+2. Outside view base = ~4.33% (today’s yield).  
+3. Implied median = 4.25%; mean ≈4.27%; aligns with downward drift rationale.  
+4. Key evidence: Fed futures pricing; Trump backtrack; auction demand.  
+5. Blind spot: Major trade‑war escalation or Fed surprise keeps yields >4.75% (upward).
+
+Distribution:  
+Percentile 1: 3.75  
+Percentile 5: 3.95  
+Percentile 10: 4.05  
+Percentile 20: 4.15  
+Percentile 40: 4.25  
+Percentile 60: 4.35  
+Percentile 80: 4.50  
+Percentile 90: 4.60  
+Percentile 95: 4.70  
+Percentile 99: 4.85
+
+
+=== Forecaster 4 ===
+Analysis:
+1. Source analysis  
+- CNBC (Apr 23): High‑quality market report; 10‑year yield 4.346% after Trump backtrack. Factual yield data; expert quotes on trade de‑escalation.  
+- Federal Reserve H.15 (Apr 16): Authoritative mid‑month update; 10‑year yield 4.33% April 15; Fed pricing ~75–100 bps cuts by year‑end.  
+- Bloomberg (Apr 7): Reliable; long‑end yields spiked ~20 bps on tariff news; shows volatility.  
+- DESK (Apr 10): Medium quality; cites China sales and technical unwinds; background on foreign demand drop.  
+- Other Asknews articles: Consistent theme of tariff uncertainty, Fed criticism → term premium up; some de‑escalation comments from Treasury.  
+
+2. Evidence analysis  
+Strong (multiple sources, direct causality):  
+- Trade policy uncertainty raising term premium and volatility → yields elevated (CNBC, Bloomberg, DESK).  
+- Fed priced cuts by June (H.15) → downward pressure on long yields.  
+Moderate:  
+- Trump’s backtrack + Bessent talk of de‑escalation → recent yield drop ~16 bps (CNBC).  
+- Auction results: strong indirect bids → demand support (CNBC, UDN).  
+Weak:  
+- Speculative reports of forced deleveraging; anonymous rumors.  
+
+3. Timeframe analysis  
+- Horizon: 37 days (Apr 23–May 30).  
+- Historical 2‑month stdev ~0.25%; 90% window ≈±0.50%.  
+- Halved (18 days): stdev ~±0.18%; doubled (74 days): stdev ~±0.35%.  
+
+4. Justification and inside‑view adjustments  
+(a) Outside view baseline: anchor at 4.33% (today’s yield); 90% interval ≈[3.85, 4.80].  
+(b) Downside factors: Fed cuts priced, de‑escalation talk, strong auction demand → yields could fall to ~3.9–4.1%.  
+(c) Upside factors: Tariffs remain high, policy uncertainty persists, term premium elevated → yields could spike toward 4.75–5.00%.  
+(d) Tilt median slightly upward to 4.40%: trade tensions not fully resolved, Fed cuts moderate by year‑end.  
+(e) Maintain wide tails for policy shocks and macro surprises.  
+
+Probability calibration  
+Based on ref‑class ±0.5% 90% band, with slight right skew due to volatility and term premia, and minor downward tilt from Fed‑cut risk.
+
+Checklist:
+1. Paraphrase: Daily 10‑year US Treasury yield on May 30, 2025 in percent.  
+2. Outside‑view base rate: median 4.33%, 90% interval roughly [3.85, 4.80].  
+3. Consistency: Implied median ≈4.40%; aligns with slight uptilt justified above.  
+4. Key evidence:  
+   • Trade uncertainty & elevated term premium → upward pressure  
+   • Fed‑cut pricing (75–100 bps by year‑end; >70% cut by June) → downward pressure  
+   • Recent de‑escalation talk → small yield drop (~16 bps)  
+   • Strong auction demand & indirect bidding → baseline support  
+5. Blind spot: A sudden recession signal or Fed deferral could crash yields below 3.5% (or extreme hawkish shock could push past 5.3%).
+
+Distribution:
+Percentile 1: 3.50
+Percentile 5: 3.75
+Percentile 10: 3.90
+Percentile 20: 4.05
+Percentile 40: 4.25
+Percentile 60: 4.55
+Percentile 80: 4.75
+Percentile 90: 4.90
+Percentile 95: 5.05
+Percentile 99: 5.30
+
+
+=== Forecaster 5 ===
+Analysis:
+1. Source analysis (chronological, key facts vs. opinion, my quality grade)
+
+• FRED H.15 / DGS10 (ongoing). Hard data, highest quality.  
+• CNBC 23 Apr 25. Spot 10‑y = 4.35 %. Factual A‑; market colour B+.  
+• Fed mid‑month update 16 Apr 25. Gives week‑to‑week moves, cites Bloomberg. Factual A.  
+• Bloomberg 7 Apr 25. Big sell‑off, cites auction data. Factual A‑; opinion B.  
+• DESK 10 Apr 25. China‑selling narrative. Factual nuggets A‑, rumour portion C.  
+• CNBC 9 Apr 25 & follow‑up wires 21‑23 Apr 25. Auction stats, tariff timeline. Facts A, commentary B.  
+• Fed minutes (9 Apr, 20 Feb) & Morningstar pieces. Central‑bank signalling, A source.  
+• Asknews packet (Investing.com DE, UDN, Bloomberg JP, etc.). Most duplicate facts already captured; quality ranges B+ to C. Used only when consistent with higher‑grade sources.
+
+2. Evidence analysis (impact on May 30 yield)
+
+Strong evidence  
+• Current level 4.35 % (multiple A‑sources).  
+• 1‑month historical σ ≈ 35‑40 bp; one‑month distribution empirically normal‑ish.  
+• Fed signalling: no hurry to cut before 2H 25 → short‑end anchored, long‑end mainly driven by term‑premium/supply (structural).  
+• Treasury supply heavy and foreign official demand shrinking (Fed & BofA data) → mild upward bias to term‑premium.
+
+Moderate evidence  
+• Tariff volatility: on/off headlines can move 20‑30 bp in a day but mean‑revert.  
+• Data flow mixed: ISM weak, labour still solid, April CPI surprise risk in both directions.  
+• Political risk to Fed independence appears to have peaked (Trump backtracks on firing Powell), trimming crisis premium by ≈ 10‑15 bp.
+
+Weak evidence  
+• Anecdotes of “weaponised” China sales—little confirmation and partly priced.  
+• Single auction tails/cover ratios—no lasting predictive power.
+
+Net: baseline upward skew of ~10 bp relative to spot, 1‑σ ≈ 40 bp.
+
+3. Timeframe analysis  
+Horizon = 37 calendar / ≈ 27 trading days. Halving to two weeks would cut σ to ≈ 25 bp; doubling to 10 weeks would raise σ to ≈ 55 bp and widen tails by ≈ 20 bp each side.
+
+4. Justification / inside‑view adjustment  
+Outside‑view centre (history 1990‑24): current spot itself is already ~+30 bp above 35‑yr median 4.05 %.  
+Inside view pushes slightly higher because  
+(a) Treasury net‑issuance and shrinking foreign share (structural, strong)  
+(b) Fed likely on hold until at least late June (strong)  
+(c) Trade‑war uncertainty keeps term‑premium high despite softer data (moderate)  
+Offset by  
+(d) Latest de‑escalation talk and fading “fire‑Powell” risk removed ~½ of early‑April spike (moderate downward).  
+
+Resulting best‑guess median ≈ 4.42 %. Keep σ 0.38 %, apply mild +0.05 % right‑tail skew.
+
+Probability calibration
+Mean ≈ 4.46 %; median ≈ 4.42 %; 90 % CI 3.75 %–5.15 %. Distribution below is monotone‑increasing and reflects the above parameters.
+
+Checklist:
+1 Target variable: 10‑year Treasury constant‑maturity yield (%), close of 30 May 2025.  
+2 Outside‑view base: N(4.35, 0.40).  
+3 Consistency: implied median 4.42, mean 4.46; matches drivers (slightly upward skew).  
+4 Key evidence: current 4.35 %; Fed on‑hold language; heavy issuance / shrinking foreign bid; tariff headline volatility; Powell‑firing risk receded.  
+5 Blind‑spot: Sudden severe risk‑off (e.g., China credit event) could drive flight‑to‑quality and push yield below 3.8 %.
+
+Distribution:
+Percentile 1: 3.60  
+Percentile 5: 3.85  
+Percentile 10: 3.95  
+Percentile 20: 4.10  
+Percentile 40: 4.30  
+Percentile 60: 4.45  
+Percentile 80: 4.70  
+Percentile 90: 4.90  
+Percentile 95: 5.10  
+Percentile 99: 5.40
+
+-----------------------------------------------
+Question: What will be the yield on U.S. Treasury securities with 10-year maturities on May 30, 2025?
+URL: https://www.metaculus.com/questions/37031/
+Forecast: [0.01, 0.010051000000000001, 0.010102000000000002, 0.010153000000000002, 0.010204000000000003, 0.010255000000000004, 0.010306000000000004, 0.010357000000000005, 0.010408000000000006, 0.010459000000000005, 0.010510000000000007, 0.010561000000000008, 0.010612000000000009, 0.010663000000000011, 0.01071400000000001, 0.01076500000000001, 0.010816000000000011, 0.01086700000000001, 0.010918000000000013, 0.010969000000000013, 0.011020000000000014, 0.011071000000000017, 0.011122000000000016, 0.011173000000000016, 0.011224000000000017, 0.011275000000000016, 0.011326000000000018, 0.011377000000000019, 0.01142800000000002, 0.011479000000000022, 0.011530000000000021, 0.011581000000000022, 0.011632000000000023, 0.011683000000000021, 0.011734000000000024, 0.011785000000000025, 0.011836000000000025, 0.011887000000000028, 0.011938000000000027, 0.011989000000000027, 0.012040000000000028, 0.012091000000000027, 0.01214200000000003, 0.01219300000000003, 0.012244000000000031, 0.012295000000000033, 0.012346000000000032, 0.012397000000000033, 0.012448000000000034, 0.012499000000000033, 0.012550000000000035, 0.012601000000000036, 0.012652000000000036, 0.012703000000000039, 0.012754000000000038, 0.012805000000000039, 0.01285600000000004, 0.012907000000000038, 0.01295800000000004, 0.013009000000000041, 0.013060000000000042, 0.013111000000000044, 0.013162000000000043, 0.013213000000000044, 0.013264000000000045, 0.013315000000000044, 0.013366000000000046, 0.013417000000000047, 0.013468000000000048, 0.01351900000000005, 0.013570000000000049, 0.01362100000000005, 0.01367200000000005, 0.013807567589572451, 0.015072714468374668, 0.01696478965205991, 0.019205387727002903, 0.02282296242502348, 0.027394509678919904, 0.03265270268882115, 0.03959298957509371, 0.0488556745564904, 0.06069111253704571, 0.0759098688350014, 0.0933793578049037, 0.11222211060367528, 0.1335118061201096, 0.1569044386486171, 0.1827547518188836, 0.21216585246135625, 0.24520674430185388, 0.283285085394138, 0.3273460230564307, 0.37322500641939294, 0.41879798646921973, 0.4632732443416003, 0.5073403779824582, 0.5500290865919789, 0.5903684725386881, 0.6275144833843619, 0.6640228862235663, 0.7000171916105709, 0.7342861571781815, 0.7653617315566987, 0.7934280963752426, 0.8191474777723807, 0.842611174458325, 0.8637399188295506, 0.8824936935845963, 0.8991863314103631, 0.913718891343544, 0.9252558115478396, 0.9347274119846093, 0.9430543108112217, 0.9505202871320725, 0.9572003382061688, 0.9630870088984725, 0.9683242090437822, 0.9729837327596563, 0.9770883002151662, 0.9805502669756635, 0.9831166016517106, 0.9853623206340875, 0.9872004363531559, 0.9884936122169034, 0.9895940854094696, 0.9902635000000001, 0.9903145000000001, 0.9903655000000001, 0.9904165000000001, 0.9904675000000002, 0.9905185000000002, 0.9905695000000002, 0.9906205000000002, 0.9906715000000003, 0.9907225000000003, 0.9907735000000003, 0.9908245000000003, 0.9908755000000004, 0.9909265000000004, 0.9909775000000004, 0.9910285000000004, 0.9910795000000004, 0.9911305000000005, 0.9911815000000005, 0.9912325000000005, 0.9912835000000005, 0.9913345000000006, 0.9913855000000006, 0.9914365000000006, 0.9914875000000006, 0.9915385000000007, 0.9915895000000007, 0.9916405000000007, 0.9916915000000007, 0.9917425000000007, 0.9917935000000008, 0.9918445000000008, 0.9918955000000008, 0.9919465000000008, 0.9919975000000009, 0.9920485000000009, 0.9920995000000009, 0.9921505000000009, 0.992201500000001, 0.992252500000001, 0.992303500000001, 0.992354500000001, 0.992405500000001, 0.9924565000000011, 0.9925075000000011, 0.9925585000000011, 0.9926095000000011, 0.9926605000000012, 0.9927115000000012, 0.9927625000000012, 0.9928135000000012, 0.9928645000000013, 0.9929155000000013, 0.9929665000000013, 0.9930175000000013, 0.9930685000000014, 0.9931195000000014, 0.9931705000000014, 0.9932215000000014, 0.9932725000000014, 0.9933235000000015, 0.9933745000000015, 0.9934255000000015, 0.9934765000000015, 0.9935275000000016, 0.9935785000000016, 0.9936295000000016, 0.9936805000000016, 0.9937315000000017, 0.9937825000000017, 0.9938335000000017, 0.9938845000000017, 0.9939355000000017, 0.9939865000000018, 0.9940375000000018]
+Comment:
+```
+Combined CDF: `[0.01, 0.010051000000000001, 0.010102000000000002, 0.010153000000000002, 0.010204000000000003]...`
+
+=== Forecaster 1 ===
+# Analysis:
+
+## (a) Source Analysis:
+
+1. **CNBC Article (April 23, 2025)**
+   - **Quality**: High - reputable financial news source
+   - **Date**: Very recent (today)
+   - **Facts vs Opinions**: Factual data includes current yields (10Y at 4.346%), Trump's reversal on Powell firing, and tariff levels (145% on Chinese goods). Contains expert opinion from Elizabeth Warren on market impacts.
+   - **Reliability**: High for current yields and policy statements
+
+2. **Federal Reserve H15 Release (April 16, 2025)**
+   - **Quality**: Very high - primary source from Federal Reserve
+   - **Date**: One week old
+   - **Facts vs Opinions**: Provides factual yield data and official Fed projections (50 bps cuts in 2025). Includes interpretations from identified Fed officials about policy stance.
+   - **Reliability**: Extremely high for historical yield data and official Fed expectations
+
+3. **Bloomberg & DESK Articles (April 7-10, 2025)**
+   - **Quality**: Moderate-to-high - reputable sources with some speculation
+   - **Date**: Two weeks old
+   - **Facts vs Opinions**: Factual reporting on yield movements and China's Treasury holdings ($759B). Contains speculative commentary from identified experts (Deutsche Bank, BofA).
+   - **Reliability**: Good for understanding recent market dynamics, moderate for forward projections
+
+4. **Asknews Articles (April 9-23, 2025)**
+   - **Quality**: Varies from moderate to high, multiple independent sources
+   - **Date**: Most from past few days
+   - **Facts vs Opinions**: Provides consistent recent yield data (10Y at 4.35-4.41%), auction results, and expert commentary from identified economists and strategists.
+   - **Reliability**: High for recent Treasury market developments and positioning
+
+## (b) Evidence Analysis:
+
+**Strong Evidence:**
+- Current 10-year yield at 4.346% as of April 23 (CNBC) provides anchor point
+- Persistent high tariffs (145% on Chinese goods, 125% on US goods) with documented inflation impact (multiple sources)
+- Clear Fed guidance on rate path (50 bps cuts in 2025) versus market expectations (75-100 bps) from Fed H15 release
+- Declining foreign central bank participation in Treasury auctions (56.2% for recent 2-year auction, lowest in two years) from multiple independent sources
+
+**Moderate Evidence:**
+- Recent yield volatility pattern (50 bps rise followed by retreat in early April) indicates sensitivity to policy headlines
+- Treasury Secretary Bessent's statements about "de-escalation" in US-China trade tensions (CNBC, verified by multiple sources)
+- Warning signals in economic data (Richmond Fed manufacturing at -13, IMF cutting growth forecast to 2.8%)
+- Term premium expansion (to 67 bps) signaling increased uncertainty around US policy
+
+**Weak Evidence:**
+- Anonymous macro fund manager comments about "rumors swirling" (DESK article)
+- Speculative commentary about China "weaponizing" Treasury holdings (lacks concrete evidence)
+- Short-term technical factors like basis trade positioning (likely to wash out over 37-day horizon)
+
+## (c) Timeframe Analysis:
+
+We're forecasting 37 days ahead (April 23 to May 30, 2025).
+
+This timeframe:
+- Includes the May 6-7 FOMC meeting, a significant potential inflection point
+- Allows time for April inflation data release
+- Spans at least one major Treasury auction cycle
+
+If the timeframe were halved (~18 days):
+- The forecast would be narrower and more aligned with current momentum
+- The May FOMC meeting would still be the dominant event
+- Less time for fundamental factors to influence yields
+
+If the timeframe were doubled (~74 days):
+- We'd need to consider additional FOMC meetings
+- Trade policy developments would have more time to materialize
+- The uncertainty range would widen considerably, particularly in the tails
+
+## (d) Justification:
+
+Starting with the current 10-year yield at 4.346%, I examine factors that could shift yields by May 30:
+
+**Factors supporting higher yields:**
+1. Inflationary impact of high tariffs (145% on Chinese goods) remains unresolved despite Bessent's comments
+2. Documented decline in foreign demand for Treasuries (from 48% to 39% of market)
+3. Heightened term premium due to policy uncertainty (67 bps versus historical norm)
+
+**Factors supporting lower yields:**
+1. Economic slowdown signals (Richmond Fed at -13, IMF growth downgrade to 2.8%)
+2. Potential Fed signaling about rate cuts at May meeting (market pricing 75-100 bps by year-end)
+3. Possible trade tension de-escalation (per Treasury Secretary Bessent)
+
+**Recent pivotal developments:**
+- Trump's reversal on firing Powell has reduced immediate uncertainty
+- Treasury Secretary Bessent's mention of trade "de-escalation" partially offset tariff concerns
+- The upcoming May 6-7 FOMC meeting will be critical for yield direction
+
+## Probability Calibration
+
+Starting with the current yield of 4.346% as my anchor point, I calibrate based on:
+
+1. **Recent volatility:** The 10-year yield moved 50 bps higher and then 16 bps lower in a single week this month, indicating heightened sensitivity to headlines.
+
+2. **Historical monthly ranges:** Typically 15-25 bps in normal periods, expanding to 40-50 bps during policy uncertainty.
+
+3. **Key event risk:** The May FOMC meeting could trigger significant repricing of rate expectations.
+
+I assess the following probabilities:
+- 60% chance yield stays within ±30 bps of current level (4.05-4.65%)
+- 80% chance yield stays within ±45 bps of current level (3.90-4.80%)
+- 90% chance yield stays within ±60 bps of current level (3.75-4.95%)
+
+My distribution shows a slight upward skew reflecting inflation and supply concerns, with significant tail risks in both directions.
+
+## Checklist:
+1. **Target variable:** 10-year Treasury yield on May 30, 2025, as reported by FRED (%)
+2. **Outside view:** Current 10Y at 4.346% with typical monthly volatility of ±25-40 bps in similar conditions
+3. **Consistency check:** Implied median ~4.35%; mean ~4.38% (slight upward skew); aligned with balanced risks assessment
+4. **Key evidence:** Current yield 4.346%; high tariffs (145%) create inflation risk; declining foreign demand (down to 39%); Fed projecting 50 bps cuts vs. market's 75-100 bps; recent demonstrated volatility
+5. **Blind-spot:** Major geopolitical crisis causing flight-to-safety would drive yields much lower; unexpected inflation surge from tariffs could push yields significantly higher
+
+Distribution:
+Percentile 1: 3.50
+Percentile 5: 3.75
+Percentile 10: 3.85
+Percentile 20: 4.00
+Percentile 40: 4.25
+Percentile 60: 4.45
+Percentile 80: 4.65
+Percentile 90: 4.80
+Percentile 95: 4.95
+Percentile 99: 5.20
+
+
+=== Forecaster 2 ===
+# Analysis:
+
+## (a) Source Analysis
+
+**CNBC Article (April 23, 2025)**
+- High-quality, very recent reporting on Treasury yields
+- Factual data: 10-year yield at 4.346% (down 4 bps), 2-year at 3.819% (up 3 bps)
+- Key context: Trump reversed comments about firing Powell; Treasury Secretary mentioned potential trade war de-escalation
+- Reliable for current market data and official statements
+
+**Federal Reserve H15 Release (April 16, 2025)**
+- High-quality official data, though week-old
+- 10-year yield moved from 4.49% to 4.33% in early April
+- Market pricing 75-100 bps of cuts by end-2025, with >70% probability of a June cut
+- Expert opinions from Fed officials (Powell, Kashkari, Williams) showing caution on rate cuts
+- Very reliable for Fed positioning and recent yield movements
+
+**DESK Article (April 10, 2025)**
+- Medium-high quality financial publication from two weeks ago
+- Details China's Treasury holdings ($759 billion)
+- Expert opinions from Mark Cabana (BofA): Foreign official demand fallen from 48% to 39% of Treasury market
+- Reliable for structural market analysis, less so for short-term movements
+
+**AskNews Articles (April 2025)**
+- Recent reporting showing:
+  * 10-year yield stable around 4.35-4.41% (April 21-23)
+  * Recent 2-year auction showed declining foreign participation (56.2%, lowest in two years)
+  * IMF cut global growth forecast for 2025 to 2.8% from 3.3% due to tariff concerns
+  * Fed officials cautious on rate cuts due to trade policy uncertainty
+- Mix of factual reporting and expert analysis from credible sources
+
+## (b) Evidence Analysis
+
+**Strong Evidence:**
+1. **Current yield level and recent pattern** - Multiple sources confirm 10-year yield at 4.346% (April 23), showing stabilization after early-April volatility spike to 4.51%.
+2. **Declining foreign official demand** - Multiple reliable sources (BofA, BNY Markets) confirm reduced participation from foreign central banks, creating structural pressure on yields.
+3. **Fed policy stance** - Consistent messaging across sources that Fed officials remain cautious about rate cuts due to tariff-induced inflation concerns.
+4. **High tariff levels** - Verified 145% US tariffs on China with 125% Chinese retaliation creates sustained inflation risk.
+
+**Moderate Evidence:**
+1. **Market pricing of rate cuts** - Markets pricing 75-100 bps of cuts by year-end with >70% probability of a June cut, though these expectations can shift rapidly.
+2. **Signs of trade war de-escalation** - Treasury Secretary Bessent's comments suggest potential cooling, though implementation remains uncertain.
+3. **Term premium increase** - Multiple sources note rising term premium due to policy uncertainty.
+4. **Economic growth concerns** - IMF's growth forecast reduction represents credible concern about growth trajectory.
+
+**Weak Evidence:**
+1. **Anonymous market rumors** about China weaponizing Treasury holdings.
+2. **Short-term market reactions** to Trump's Powell comments.
+3. **Individual bank analyst predictions** with limited track records.
+
+## (c) Timeframe Analysis
+
+I'm forecasting the 10-year Treasury yield on May 30, 2025, which is 37 days from today (April 23, 2025).
+
+Key timing considerations:
+- The next FOMC meeting appears scheduled for early May (6-7), falling within our forecast period
+- Multiple economic data releases will occur during these 37 days
+- Treasury auctions will test market demand several times
+
+If the timeframe were halved (18 days), my prediction would have a narrower range, still including the Fed meeting but with less time for economic shifts to manifest.
+
+If doubled (74 days), I would widen the range significantly to account for potential secondary effects from policy changes and higher likelihood of geopolitical/economic surprises.
+
+## (d) Justification
+
+Starting with our baseline (current yield: 4.346%, historical average: ~4.25%), I'll adjust based on the evidence:
+
+**Factors supporting higher yields by May 30:**
+1. Structural decline in foreign official demand for Treasuries creates persistent selling pressure
+2. Tariff-induced inflation concerns (145% on Chinese goods) could elevate inflation expectations
+3. Increased term premium due to policy uncertainty under Trump administration
+4. Steepening yield curve suggests market expectations of stronger economic activity
+
+**Factors supporting lower yields by May 30:**
+1. Potential trade war de-escalation signals from Treasury Secretary
+2. Reduced political pressure on Fed independence as Trump backs off Powell criticism
+3. IMF's lowered global growth forecast (2.8%) suggests economic weakening
+4. Market expectations for Fed cuts could pull longer-term yields down
+
+The evidence suggests a distribution centered slightly above current levels, with modestly greater upside risk than downside risk. The key structural factor of declining foreign demand, combined with inflation concerns, appears more persistent than the tentative de-escalation signals.
+
+## Probability calibration
+
+Starting with the current 10-year yield of 4.346%, I'll calibrate a distribution that:
+- Centers slightly above current levels (reflecting modest upward pressure)
+- Places 60% of probability mass within ±25 basis points (reflecting the short timeframe)
+- Has a longer upside tail (reflecting asymmetric risks from inflation/foreign selling)
+- Accounts for the upcoming Fed meeting as a potential inflection point
+
+I anticipate:
+- Low-end scenarios (economic weakness, safe-haven flows, significant de-escalation)
+- Mid-range scenarios (continued policy uncertainty but no major shocks)
+- High-end scenarios (inflation surprises, accelerated foreign selling, escalating trade tensions)
+
+## Checklist:
+1. Target: 10-year US Treasury yield (%) on May 30, 2025, per FRED DGS10 data
+2. Outside view: Current 4.346%; historical average ~4.25%; typical monthly volatility ~20-25 bps
+3. Consistency: Median ~4.4%; mean ~4.45% due to slight upward skew; aligns with justification
+4. Key evidence: Declining foreign Treasury demand; Fed caution on cuts; tariff-related inflation risks; tentative trade de-escalation signals
+5. Blind spot: Rapid escalation of foreign Treasury selling in response to trade tensions
+
+## Distribution:
+Percentile 1: 3.8
+Percentile 5: 3.95
+Percentile 10: 4.05
+Percentile 20: 4.18
+Percentile 40: 4.3
+Percentile 60: 4.45
+Percentile 80: 4.6
+Percentile 90: 4.75
+Percentile 95: 4.9
+Percentile 99: 5.2
+
+
+=== Forecaster 3 ===
+Analysis:
+
+1. Source analysis  
+   • CNBC (April 23): Reports 10‑yr yield at 4.346% after Trump backtrack; high quality, real‑time market data.  
+   • Fed H.15 (April 16): Mid‑April 10‑yr at 4.33%, Fed signals no rush to cut; authoritative, moderate‑lag.  
+   • Bloomberg (April 7): 10‑yr spiked to ~4.69% after tariff news; high quality but older.  
+   • FI‑Desk (April 10): Technical drivers (China sales, basis unwinds) pushed yields higher; credible but indirect.  
+   • CNBC/Alexandra Ulbrich (April 9): Auction data showing strong foreign demand, yield around 4.31%; reliable auction metrics.  
+
+   Weigh factual yield data heavily; treat opinions (e.g. “losing haven status”) as moderate‑evidence directional color from identifiable strategists.
+
+2. Evidence analysis  
+   Strong evidence (± directional shift ≥10 bp):  
+     – Market pricing (>70% chance of June cut) → gentle downward drift.  
+     – Trump’s backtrack on Powell firing → lower risk premium (4 bp dip).  
+     – Solid auction demand (87% indirect bids) → caps upside.  
+   Moderate evidence (±5 –10 bp):  
+     – Fed’s “no hurry” language → structural support around current level.  
+     – Early‑April tariff oscillations → elevated volatility risk.  
+   Weak evidence (±≤5 bp):  
+     – Anecdotal hedge‑fund rumors of large China sell‑offs.  
+     – REIT‑Treasury correlation shifts.  
+
+3. Timeframe analysis  
+   • Horizon: 37 calendar days (~26 trading days) to May 30, 2025.  
+   • Historical daily σ≈5 bp → 26‑day σ≈25 bp; 90% interval ≈±40 bp.  
+   • Halved horizon (~13 trading days): σ≈14 bp, distribution narrows ~√2.  
+   • Doubled horizon (~52 trading days): σ≈35 bp, distribution widens ~√2.
+
+4. Justification / Inside‑view adjustment  
+   Outside view base rate: current yield ≈4.33%.  
+   • Fed funds futures ⇒ ~100 bp of cuts by year‑end, >70% odds of June move ⇒ yields to drift ~–10 bp.  
+   • Trump’s de‑escalation comments & solid auctions ⇒ modest downward pressure.  
+   • Tariff‑volatility tail and balance‑sheet runoff → fatter tails, preserve wide distribution.  
+
+   Median shift: 4.33% → 4.23%. 1σ band (~25 bp) centered there; extend tails to ±60 bp for 90/10 uncertainty.
+
+Probability calibration  
+We aim for a distribution reflecting mild downward drift (–10 bp) with 1σ ≈25 bp, 90/10 ≈±50 bp, tails to ±60 bp.
+
+Checklist:  
+1. Target: 10‑yr US Treasury yield on May 30, 2025 (% yield, daily frequency).  
+2. Outside view base = ~4.33% (today’s yield).  
+3. Implied median = 4.25%; mean ≈4.27%; aligns with downward drift rationale.  
+4. Key evidence: Fed futures pricing; Trump backtrack; auction demand.  
+5. Blind spot: Major trade‑war escalation or Fed surprise keeps yields >4.75% (upward).
+
+Distribution:  
+Percentile 1: 3.75  
+Percentile 5: 3.95  
+Percentile 10: 4.05  
+Percentile 20: 4.15  
+Percentile 40: 4.25  
+Percentile 60: 4.35  
+Percentile 80: 4.50  
+Percentile 90: 4.60  
+Percentile 95: 4.70  
+Percentile 99: 4.85
+
+
+=== Forecaster 4 ===
+Analysis:
+1. Source analysis  
+- CNBC (Apr 23): High‑quality market report; 10‑year yield 4.346% after Trump backtrack. Factual yield data; expert quotes on trade de‑escalation.  
+- Federal Reserve H.15 (Apr 16): Authoritative mid‑month update; 10‑year yield 4.33% April 15; Fed pricing ~75–100 bps cuts by year‑end.  
+- Bloomberg (Apr 7): Reliable; long‑end yields spiked ~20 bps on tariff news; shows volatility.  
+- DESK (Apr 10): Medium quality; cites China sales and technical unwinds; background on foreign demand drop.  
+- Other Asknews articles: Consistent theme of tariff uncertainty, Fed criticism → term premium up; some de‑escalation comments from Treasury.  
+
+2. Evidence analysis  
+Strong (multiple sources, direct causality):  
+- Trade policy uncertainty raising term premium and volatility → yields elevated (CNBC, Bloomberg, DESK).  
+- Fed priced cuts by June (H.15) → downward pressure on long yields.  
+Moderate:  
+- Trump’s backtrack + Bessent talk of de‑escalation → recent yield drop ~16 bps (CNBC).  
+- Auction results: strong indirect bids → demand support (CNBC, UDN).  
+Weak:  
+- Speculative reports of forced deleveraging; anonymous rumors.  
+
+3. Timeframe analysis  
+- Horizon: 37 days (Apr 23–May 30).  
+- Historical 2‑month stdev ~0.25%; 90% window ≈±0.50%.  
+- Halved (18 days): stdev ~±0.18%; doubled (74 days): stdev ~±0.35%.  
+
+4. Justification and inside‑view adjustments  
+(a) Outside view baseline: anchor at 4.33% (today’s yield); 90% interval ≈[3.85, 4.80].  
+(b) Downside factors: Fed cuts priced, de‑escalation talk, strong auction demand → yields could fall to ~3.9–4.1%.  
+(c) Upside factors: Tariffs remain high, policy uncertainty persists, term premium elevated → yields could spike toward 4.75–5.00%.  
+(d) Tilt median slightly upward to 4.40%: trade tensions not fully resolved, Fed cuts moderate by year‑end.  
+(e) Maintain wide tails for policy shocks and macro surprises.  
+
+Probability calibration  
+Based on ref‑class ±0.5% 90% band, with slight right skew due to volatility and term premia, and minor downward tilt from Fed‑cut risk.
+
+Checklist:
+1. Paraphrase: Daily 10‑year US Treasury yield on May 30, 2025 in percent.  
+2. Outside‑view base rate: median 4.33%, 90% interval roughly [3.85, 4.80].  
+3. Consistency: Implied median ≈4.40%; aligns with slight uptilt justified above.  
+4. Key evidence:  
+   • Trade uncertainty & elevated term premium → upward pressure  
+   • Fed‑cut pricing (75–100 bps by year‑end; >70% cut by June) → downward pressure  
+   • Recent de‑escalation talk → small yield drop (~16 bps)  
+   • Strong auction demand & indirect bidding → baseline support  
+5. Blind spot: A sudden recession signal or Fed deferral could crash yields below 3.5% (or extreme hawkish shock could push past 5.3%).
+
+Distribution:
+Percentile 1: 3.50
+Percentile 5: 3.75
+Percentile 10: 3.90
+Percentile 20: 4.05
+Percentile 40: 4.25
+Percentile 60: 4.55
+Percentile 80: 4.75
+Percentile 90: 4.90
+Percentile 95: 5.05
+Percentile 99: 5.30
+
+
+=== Forecaster 5 ===
+Analysis:
+1. Source analysis (chronological, key facts vs. opinion, my quality grade)
+
+• FRED H.15 / DGS10 (ongoing). Hard data, highest quality.  
+• CNBC 23 Apr 25. Spot 10‑y = 4.35 %. Factual A‑; market colour B+.  
+• Fed mid‑month update 16 Apr 25. Gives week‑to‑week moves, cites Bloomberg. Factual A.  
+• Bloomberg 7 Apr 25. Big sell‑off, cites auction data. Factual A‑; opinion B.  
+• DESK 10 Apr 25. China‑selling narrative. Factual nuggets A‑, rumour portion C.  
+• CNBC 9 Apr 25 & follow‑up wires 21‑23 Apr 25. Auction stats, tariff timeline. Facts A, commentary B.  
+• Fed minutes (9 Apr, 20 Feb) & Morningstar pieces. Central‑bank signalling, A source.  
+• Asknews packet (Investing.com DE, UDN, Bloomberg JP, etc.). Most duplicate facts already captured; quality ranges B+ to C. Used only when consistent with higher‑grade sources.
+
+2. Evidence analysis (impact on May 30 yield)
+
+Strong evidence  
+• Current level 4.35 % (multiple A‑sources).  
+• 1‑month historical σ ≈ 35‑40 bp; one‑month distribution empirically normal‑ish.  
+• Fed signalling: no hurry to cut before 2H 25 → short‑end anchored, long‑end mainly driven by term‑premium/supply (structural).  
+• Treasury supply heavy and foreign official demand shrinking (Fed & BofA data) → mild upward bias to term‑premium.
+
+Moderate evidence  
+• Tariff volatility: on/off headlines can move 20‑30 bp in a day but mean‑revert.  
+• Data flow mixed: ISM weak, labour still solid, April CPI surprise risk in both directions.  
+• Political risk to Fed independence appears to have peaked (Trump backtracks on firing Powell), trimming crisis premium by ≈ 10‑15 bp.
+
+Weak evidence  
+• Anecdotes of “weaponised” China sales—little confirmation and partly priced.  
+• Single auction tails/cover ratios—no lasting predictive power.
+
+Net: baseline upward skew of ~10 bp relative to spot, 1‑σ ≈ 40 bp.
+
+3. Timeframe analysis  
+Horizon = 37 calendar / ≈ 27 trading days. Halving to two weeks would cut σ to ≈ 25 bp; doubling to 10 weeks would raise σ to ≈ 55 bp and widen tails by ≈ 20 bp each side.
+
+4. Justification / inside‑view adjustment  
+Outside‑view centre (history 1990‑24): current spot itself is already ~+30 bp above 35‑yr median 4.05 %.  
+Inside view pushes slightly higher because  
+(a) Treasury net‑issuance and shrinking foreign share (structural, strong)  
+(b) Fed likely on hold until at least late June (strong)  
+(c) Trade‑war uncertainty keeps term‑premium high despite softer data (moderate)  
+Offset by  
+(d) Latest de‑escalation talk and fading “fire‑Powell” risk removed ~½ of early‑April spike (moderate downward).  
+
+Resulting best‑guess median ≈ 4.42 %. Keep σ 0.38 %, apply mild +0.05 % right‑tail skew.
+
+Probability calibration
+Mean ≈ 4.46 %; median ≈ 4.42 %; 90 % CI 3.75 %–5.15 %. Distribution below is monotone‑increasing and reflects the above parameters.
+
+Checklist:
+1 Target variable: 10‑year Treasury constant‑maturity yield (%), close of 30 May 2025.  
+2 Outside‑view base: N(4.35, 0.40).  
+3 Consistency: implied median 4.42, mean 4.46; matches drivers (slightly upward skew).  
+4 Key evidence: current 4.35 %; Fed on‑hold language; heavy issuance / shrinking foreign bid; tariff headline volatility; Powell‑firing risk receded.  
+5 Blind‑spot: Sudden severe risk‑off (e.g., China credit event) could drive flight‑to‑quality and push yield below 3.8 %.
+
+Distribution:
+Percentile 1: 3.60  
+Percentile 5: 3.85  
+Percentile 10: 3.95  
+Percentile 20: 4.10  
+Percentile 40: 4.30  
+Percentile 60: 4.45  
+Percentile 80: 4.70  
+Percentile 90: 4.90  
+Percentile 95: 5.10  
+Percentile 99: 5.40
+...
+```
+
+Posted: Forecast was posted to Metaculus.
+
