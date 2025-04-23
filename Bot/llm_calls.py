@@ -191,7 +191,6 @@ async def call_gpt_o1(prompt):
 
 
 async def call_gpt_o3(prompt):
-    # We are temporarily going to short gpt while my o1 credits are out
     prompt = gpt_context + "\n" + prompt
     try:
         url = "https://llm-proxy.metaculus.com/proxy/openai/v1/chat/completions"
@@ -201,7 +200,7 @@ async def call_gpt_o3(prompt):
         }
         
         data = {
-            "model": "o1",
+            "model": "o3",
             "messages": [{"role": "user", "content": prompt}],
         }
         
@@ -236,7 +235,6 @@ async def call_gpt(prompt):
 
 
 async def call_gpt_o4_mini(prompt):
-    # We are temporarily going to short gpt while my o1 credits are out
     prompt = gpt_context + "\n" + prompt
     try:
         url = "https://llm-proxy.metaculus.com/proxy/openai/v1/chat/completions"
@@ -246,7 +244,7 @@ async def call_gpt_o4_mini(prompt):
         }
         
         data = {
-            "model": "o1",
+            "model": "o4-mini",
             "messages": [{"role": "user", "content": prompt}],
         }
         

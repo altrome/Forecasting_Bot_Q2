@@ -1,8 +1,8 @@
-from search import call_asknews
+from llm_calls import call_gpt_o4_mini
 import asyncio
 
 async def f():
-    ans = await call_asknews("Fetch latest news article on the Pope.")
+    ans = await call_gpt_o4_mini("Java or python?")
     print(ans)
     return ans
 
