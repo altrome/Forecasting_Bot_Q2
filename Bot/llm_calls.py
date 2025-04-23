@@ -190,7 +190,7 @@ async def call_gpt_o1(prompt):
         return f"Error generating response: {str(e)}"
 
 
-async def call_gpt_o3_METAC(prompt):
+async def call_gpt_o3(prompt):
     # We are temporarily going to short gpt while my o1 credits are out
     prompt = gpt_context + "\n" + prompt
     try:
@@ -235,21 +235,9 @@ async def call_gpt(prompt):
     return response.output_text
 
 
-async def call_gpt_o3(prompt):
-    prompt = gpt_context + "/n" + prompt
-    client = OpenAI(api_key=OPENAI_API_KEY)
-    response = client.responses.create(
-        model="o3",
-        input= gpt_context + "\n" + prompt
-    )
-    return response.output_text
-
-
 async def call_gpt_o4_mini(prompt):
     # We are temporarily going to short gpt while my o1 credits are out
     prompt = gpt_context + "\n" + prompt
-    output = await call_gpt(prompt)
-    return output
     try:
         url = "https://llm-proxy.metaculus.com/proxy/openai/v1/chat/completions"
         headers = {

@@ -10,7 +10,7 @@ from prompts import (
     MULTIPLE_CHOICE_PROMPT_2,
     MULTIPLE_CHOICE_PROMPT_MONTE_CARLO,
 )
-from llm_calls import call_claude, call_gpt_o1, call_gpt_o3, call_gpt_o4_mini
+from llm_calls import call_claude, call_gpt_o3, call_gpt_o4_mini
 from search import process_search_queries
 
 def extract_option_probabilities_from_response(forecast_text: str, num_options: int) -> list[float]:
