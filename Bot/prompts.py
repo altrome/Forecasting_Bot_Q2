@@ -88,9 +88,9 @@ For google/google news:
 Your query for google and google news are processed by classical search engines, so please phrase the queries in a way optimal for keyword optimized search (i.e., the phrase you search is likely to appear on desired web pages). Avoid writing overly specific queries. Limit to six words.
 
 For assistant:
-Your query for your assistant will be processed more naturally, so feel free to to write a sentence-long query in natural language. If desired, you can indicate multiple kinds of news articles you're looking for in your query. Keep your query to a maximum of two sentences.
+Your query for your assistant will be processed more naturally, so feel free to to write a sentence-long query in natural language. If desired, you can indicate multiple kinds of news articles you're looking for in your query. Keep your query to a maximum of two sentences. Important note: Do not prefix your query with 'Assistant:' or something similar. Please add the word 'Assistant' enclosed in brackets at the end of the query, referring closely to the example below.
 
-You should format your answer exactly as below, always formatting the source in parentheses **on the same line as and after** the query. Do not wrap your query in quotes. Be sure to include two queries for Google/Google News and one for your assistant.
+You should format your answer exactly as below, always formatting the source in parentheses **on the same line as and after** the query, applicable for Google, Google News and Assistant. Do not wrap your query in quotes. Be sure to include two queries for Google/Google News and one for your assistant.
 
 Analysis:
 {{Your initial impression/analysis of the forecasting question followed by reasoning about the most relevant current information/news articles needed to generate an inside view.}}
