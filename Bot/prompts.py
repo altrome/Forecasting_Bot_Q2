@@ -90,7 +90,13 @@ Your query for google and google news are processed by classical search engines,
 For assistant:
 Your query for your assistant will be processed more naturally, so feel free to to write a sentence-long query in natural language. If desired, you can indicate multiple kinds of news articles you're looking for in your query. Keep your query to a maximum of two sentences. Important note: Do not prefix your query with 'Assistant:' or something similar. Please add the word 'Assistant' enclosed in brackets at the end of the query, referring closely to the example below.
 
-You should format your answer exactly as below, always formatting the source in brackets () **on the same line as and after** the query, applicable for Google, Google News and Assistant. Do not wrap your query in quotes. Be sure to include two queries for Google/Google News and one for your assistant.
+You should format your answer exactly as below, always formatting the source in brackets () (NOT curly brackets, NOT square brackets [], you need to use normal brackets ()) **on the same line as and after** the query, applicable for Google, Google News and Assistant. Do not wrap your query in quotes. Be sure to include two queries for Google/Google News and one for your assistant.
+
+Use the following verification checklist:
+1. One query for google?
+2. One query for google news?
+3. One query for assistant?
+4. All queries followed by either (Google), (Google News) or (Assistant) in brackets () on the same line as the query?
 
 Analysis:
 {{Your initial impression/analysis of the forecasting question followed by reasoning about the most relevant current information/news articles needed to generate an inside view.}}
@@ -375,7 +381,13 @@ Your query for google and google news are processed by classical search engines,
 
 Your query for your assistant will be processed more naturally, so feel free to to write a sentence-long query in natural language. If desired, you can indicate multiple kinds of news articles you're looking for in your query. Keep your query to a maximum of two sentences.
 
-You should format your answer exactly as below, always formatting the source in brackets () **on the same line as and after** the query, applicable for Google, Google News and Assistant. Do not wrap your query in quotes. Be sure to include two queries for Google/Google News and one for your assistant.
+You should format your answer exactly as below, always formatting the source in brackets () (NOT curly brackets, NOT square brackets [], you need to use normal brackets ()) **on the same line as and after** the query, applicable for Google, Google News and Assistant. Do not wrap your query in quotes. Be sure to include two queries for Google/Google News and one for your assistant.
+
+Use the following verification checklist:
+1. One query for google?
+2. One query for google news?
+3. One query for assistant?
+4. All queries followed by either (Google), (Google News) or (Assistant) in brackets () on the same line as the query?
 
 Analysis:
 {{Your initial impression/analysis of the forecasting question followed by reasoning about the most relevant current information/news articles needed to generate an inside view.}}
@@ -684,8 +696,13 @@ Your query for google and google news are processed by classical search engines,
 For assistant:
 Your query for your assistant will be processed more naturally, so feel free to to write a sentence-long query in natural language. If desired, you can indicate multiple kinds of news articles you're looking for in your query. Keep your query to a maximum of two sentences.
 
-You should format your answer exactly as below, always formatting the source in brackets () **on the same line as and after** the query, applicable for Google, Google News and Assistant. Do not wrap your query in quotes. Be sure to include two queries for Google/Google News and one for your assistant.
+You should format your answer exactly as below, always formatting the source in brackets () (NOT curly brackets, NOT squared brackets [], you need to use normal brackets ()) **on the same line as and after** the query, applicable for Google, Google News and Assistant. Do not wrap your query in quotes. Be sure to include two queries for Google/Google News and one for your assistant.
 
+Use the following verification checklist:
+1. One query for google?
+2. One query for google news?
+3. One query for assistant?
+4. All queries followed by either (Google), (Google News) or (Assistant) in brackets () on the same line as the query?
 
 Analysis:
 {{Your initial impression/analysis of the forecasting question followed by reasoning about the most relevant current information/news articles needed to generate an inside view.}}
