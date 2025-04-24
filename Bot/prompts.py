@@ -55,7 +55,7 @@ For perplexity:
 Your query will be processed by a reasoning model equipped with capable web crawlers and designed to generate lengthy, detailed responses. As such, you may use a longer query with detailed instructions. It is possible to ask multiple questions. 
 Nonetheless, you are advised to keep your query to at most four sentences.
 
-You should format your answer exactly as below, always formatting the source in curved brackets () **on the same line as and after** the query. Do not wrap your query in quotes. Be sure to include two queries for Google/Google News and one for Perplexity.
+You should format your answer exactly as below, always formatting the source in brackets () **on the same line as and after** the query. Do not wrap your query in quotes. Be sure to include two queries for Google/Google News and one for Perplexity.
 
 Analysis:
 {{Your initial impression/analysis of the forecasting question followed by reasoning about the most relevant historical context needed to generate an outside view.}}
@@ -90,7 +90,7 @@ Your query for google and google news are processed by classical search engines,
 For assistant:
 Your query for your assistant will be processed more naturally, so feel free to to write a sentence-long query in natural language. If desired, you can indicate multiple kinds of news articles you're looking for in your query. Keep your query to a maximum of two sentences. Important note: Do not prefix your query with 'Assistant:' or something similar. Please add the word 'Assistant' enclosed in brackets at the end of the query, referring closely to the example below.
 
-You should format your answer exactly as below, always formatting the source in curved brackets () **on the same line as and after** the query, applicable for Google, Google News and Assistant. Do not wrap your query in quotes. Be sure to include two queries for Google/Google News and one for your assistant.
+You should format your answer exactly as below, always formatting the source in brackets () **on the same line as and after** the query, applicable for Google, Google News and Assistant. Do not wrap your query in quotes. Be sure to include two queries for Google/Google News and one for your assistant.
 
 Analysis:
 {{Your initial impression/analysis of the forecasting question followed by reasoning about the most relevant current information/news articles needed to generate an inside view.}}
@@ -339,7 +339,7 @@ For perplexity:
 Your query will be processed by a reasoning model equipped with capable web crawlers and designed to generate lengthy, detailed responses. As such, you may use a longer query with detailed instructions. It is possible to ask multiple questions. 
 Nonetheless, you are advised to keep your query to at most four sentences.
 
-You should format your answer exactly as below, always formatting the source in curved brackets () **on the same line as and after** the query. Do not wrap your query in quotes. Be sure to include two queries for Google/Google News and one for Perplexity.
+You should format your answer exactly as below, always formatting the source in brackets () **on the same line as and after** the query. Do not wrap your query in quotes. Be sure to include two queries for Google/Google News and one for Perplexity.
 
 Analysis:
 {{Your initial impression/analysis of the forecasting question followed by reasoning about the most relevant historical context needed to generate an outside view.}}
@@ -375,7 +375,7 @@ Your query for google and google news are processed by classical search engines,
 
 Your query for your assistant will be processed more naturally, so feel free to to write a sentence-long query in natural language. If desired, you can indicate multiple kinds of news articles you're looking for in your query. Keep your query to a maximum of two sentences.
 
-You should format your answer exactly as below, always formatting the source in curved brackets () **on the same line as and after** the query, applicable for Google, Google News and Assistant. Do not wrap your query in quotes. Be sure to include two queries for Google/Google News and one for your assistant.
+You should format your answer exactly as below, always formatting the source in brackets () **on the same line as and after** the query, applicable for Google, Google News and Assistant. Do not wrap your query in quotes. Be sure to include two queries for Google/Google News and one for your assistant.
 
 Analysis:
 {{Your initial impression/analysis of the forecasting question followed by reasoning about the most relevant current information/news articles needed to generate an inside view.}}
@@ -643,7 +643,7 @@ For perplexity:
 Your query will be processed by a reasoning model equipped with capable web crawlers and designed to generate lengthy, detailed responses. As such, you may use a longer query with detailed instructions. It is possible to ask multiple questions. 
 Nonetheless, you are advised to keep your query to at most three sentences.
 
-You should format your answer exactly as below, always formatting the source in curved brackets () **on the same line as and after** the query. Do not wrap your query in quotes or brackets. Be sure to include two queries for Google/Google News and one for Perplexity. Be sure to include two queries for Google/Google News and one for Perplexity.
+You should format your answer exactly as below, always formatting the source in brackets () **on the same line as and after** the query. Do not wrap your query in quotes or brackets. Be sure to include two queries for Google/Google News and one for Perplexity. Be sure to include two queries for Google/Google News and one for Perplexity.
 
 Analysis:
 {{Your initial impression/analysis of the forecasting question followed by reasoning about the most relevant historical context needed to generate an outside view.}}
@@ -684,7 +684,7 @@ Your query for google and google news are processed by classical search engines,
 For assistant:
 Your query for your assistant will be processed more naturally, so feel free to to write a sentence-long query in natural language. If desired, you can indicate multiple kinds of news articles you're looking for in your query. Keep your query to a maximum of two sentences.
 
-You should format your answer exactly as below, always formatting the source in curved brackets () **on the same line as and after** the query, applicable for Google, Google News and Assistant. Do not wrap your query in quotes. Be sure to include two queries for Google/Google News and one for your assistant.
+You should format your answer exactly as below, always formatting the source in brackets () **on the same line as and after** the query, applicable for Google, Google News and Assistant. Do not wrap your query in quotes. Be sure to include two queries for Google/Google News and one for your assistant.
 
 
 Analysis:
