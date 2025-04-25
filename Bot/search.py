@@ -222,7 +222,7 @@ async def google_search(query, is_news=False, date_before=None):
                             write(f"[google_search] ✅ Keeping: {item_url}")
                             filtered_items.append(item)
 
-                        if len(filtered_items) >=10:
+                        if len(filtered_items) >=12:
                             break
                     
                     urls = [item['link'] for item in filtered_items]
@@ -259,7 +259,7 @@ async def google_search_and_scrape(query, is_news, question_details, date_before
         write(f"[google_search_and_scrape] ✅ Finished content extraction")
 
     summarize_tasks = []
-    no_results = random.choices([2, 3], weights=[0.62, 0.38], k=1)[0]
+    no_results = random.choices([2, 3], weights=[0.44, 0.56], k=1)[0]
     for url, data in results.items():
         if len(summarize_tasks) >= no_results:
             break  
