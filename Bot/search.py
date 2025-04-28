@@ -274,7 +274,7 @@ async def google_search_and_scrape(query, is_news, question_details, date_before
         write(f"[google_search_and_scrape] ✅ Finished content extraction")
 
     summarize_tasks = []
-    no_results = random.choices([2, 3], weights=[0.44, 0.56], k=1)[0]
+    no_results = 3
     for url, data in results.items():
         if len(summarize_tasks) >= no_results:
             break  
