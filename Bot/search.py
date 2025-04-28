@@ -172,7 +172,7 @@ def call_perplexity(prompt: str) -> str:
 
     for attempt in range(1, max_retries + 1):
         try:
-            response = requests.post(url, json=payload, headers=headers, timeout=45)
+            response = requests.post(url, json=payload, headers=headers, timeout=200)
             if response.status_code == 200:
                 data = response.json()
                 content = data['choices'][0]['message']['content']
