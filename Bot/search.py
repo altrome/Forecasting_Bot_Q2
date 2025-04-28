@@ -17,7 +17,10 @@ from dotenv import load_dotenv
 import aiohttp
 import re
 import random
-from openai import OpenAI
+import time
+from openai import OpenAI   
+from requests.exceptions import ConnectionError, Timeout
+from http.client import RemoteDisconnected
 import requests
 load_dotenv()
 
@@ -145,7 +148,6 @@ async def call_asknews(question: str) -> str:
 
 def call_perplexity(prompt: str) -> str:
     url = "https://api.perplexity.ai/chat/completions"
-
     payload = {
         "model": "sonar-deep-research",
         "messages": [
@@ -165,20 +167,33 @@ def call_perplexity(prompt: str) -> str:
         "authorization": f"Bearer {PERPLEXITY_API_KEY}"
     }
 
-    response = requests.post(url, json=payload, headers=headers)
+    max_retries = 3
+    backoff = 3  # seconds to wait between retries
 
-    if response.status_code == 200:
-        # Parse the JSON content of the response
-        data = response.json()
-        content = data['choices'][0]['message']['content']
+    for attempt in range(1, max_retries + 1):
+        try:
+            response = requests.post(url, json=payload, headers=headers, timeout=45)
+            if response.status_code == 200:
+                data = response.json()
+                content = data['choices'][0]['message']['content']
+                content = re.sub(r'<think>.*?</think>', '', content, flags=re.DOTALL)
+                return content.strip()
+            else:
+                print(f"[Perplexity API] ❌ Error: HTTP {response.status_code}: {response.text}")
+                return f"Error: {response.status_code}, {response.text}"
 
-        # Remove any text enclosed in <think>...</think>
-        content = re.sub(r'<think>.*?</think>', '', content, flags=re.DOTALL)
+        except (ConnectionError, RemoteDisconnected, Timeout) as e:
+            print(f"[Perplexity API] ⚠️ Attempt {attempt} failed: {e}")
+            if attempt == max_retries:
+                print("[Perplexity API] ❌ Max retries reached. Giving up.")
+                return f"Error: Connection aborted after {max_retries} retries ({str(e)})"
+            else:
+                wait_time = backoff * attempt
+                print(f"[Perplexity API] 🔁 Retrying in {wait_time} seconds...")
+                time.sleep(wait_time)
 
-        return content.strip()
-    else:
-        # Handle error cases
-        return f"Error: {response.status_code}, {response.text}"
+    # Should never reach here
+    return "Unexpected error in call_perplexity"
 
 
 
