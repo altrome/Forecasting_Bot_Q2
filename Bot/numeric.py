@@ -24,6 +24,15 @@ NUM_PATTERN = re.compile(
 
 BULLET_CHARS = "•▪●‣–*-"
 
+def _safe_cdf_bounds(cdf, open_lower, open_upper, min_step):
+    # Always expose at least [0, 1] so the range ≥ 1 %
+    if open_lower and cdf[0] > min_step:
+        cdf[0] = 0.0
+    if open_upper and 1.0 - cdf[-1] > min_step:
+        cdf[-1] = 1.0
+    return cdf
+
+
 def clean(s: str) -> str:
     return (
         s.strip()
@@ -42,7 +51,7 @@ def enforce_strict_increasing(pct_dict: dict) -> dict:
     
     for p, v in sorted_items:
         if v <= last_val:
-            v = last_val + 1e-6  # Add a tiny epsilon
+            v = last_val + 1e-8  # Add a tiny epsilon
         new_pct_dict[p] = v
         last_val = v
         
@@ -81,7 +90,7 @@ def extract_percentiles_from_response(text: Union[str, list], verbose: bool = Tr
     return percentiles
 
 def generate_continuous_cdf(percentile_values, open_upper_bound, open_lower_bound, upper_bound, 
-                        lower_bound, zero_point=None, *, min_step=5.1e-5, num_points=201):
+                        lower_bound, zero_point=None, *, min_step=5.0e-5, num_points=201):
     """
     Generate a robust continuous CDF with strict enforcement of minimum step size.
     
@@ -92,7 +101,7 @@ def generate_continuous_cdf(percentile_values, open_upper_bound, open_lower_boun
         upper_bound (float): Maximum possible value
         lower_bound (float): Minimum possible value
         zero_point (float, optional): Reference point for non-linear scaling
-        min_step (float): Minimum step size between adjacent CDF points (default: 5.1e-5)
+        min_step (float): Minimum step size between adjacent CDF points (default: 5.0e-5)
         num_points (int): Number of points in the output CDF (default: 201)
     
     Returns:
@@ -250,6 +259,11 @@ def generate_continuous_cdf(percentile_values, open_upper_bound, open_lower_boun
     
     # Apply strict step enforcement
     cdf_y = enforce_min_steps(cdf_y, min_step)
+
+    cdf_y = _safe_cdf_bounds(cdf_y, open_lower_bound, open_upper_bound, min_step)
+
+    required_range = (len(cdf_y)-1) * min_step
+    available_range = cdf_y[-1] - cdf_y[0]
     
     # Double-check minimum step size requirement
     steps = np.diff(cdf_y)
@@ -320,6 +334,7 @@ def generate_continuous_cdf(percentile_values, open_upper_bound, open_lower_boun
     
     if not open_upper_bound and abs(cdf_y[-1] - 1.0) > 1e-10:
         raise RuntimeError(f"Failed to enforce upper bound: {cdf_y[-1]}")
+    
     
     return cdf_y.tolist()
 
