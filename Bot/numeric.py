@@ -24,14 +24,30 @@ NUM_PATTERN = re.compile(
 
 BULLET_CHARS = "•▪●‣–*-"
 
-def _safe_cdf_bounds(cdf, open_lower, open_upper, min_step):
-    # Always expose at least [0, 1] so the range ≥ 1 %
-    if open_lower and cdf[0] > min_step:
-        cdf[0] = 0.0
-    if open_upper and 1.0 - cdf[-1] > min_step:
-        cdf[-1] = 1.0
-    return cdf
+def _safe_cdf_bounds(cdf, open_lower, open_upper, step):
+        """
+       • Metaculus requires, for *open* bounds:
+            - cdf[0]  ≥ 0.001
+            - cdf[-1] ≤ 0.999
+        • Also no single step may exceed 0.59.
+        """
+        # Pin tails to legal open-bound limits
+        if open_lower:
+            cdf[0] = max(cdf[0], 0.001)
+        if open_upper:
+            cdf[-1] = min(cdf[-1], 0.999)
 
+        # Enforce the 0.59 maximum step rule
+        big_jumps = np.where(np.diff(cdf) > 0.59)[0]
+        for idx in big_jumps:
+            excess = cdf[idx+1] - cdf[idx] - 0.59
+            # Spread the excess evenly over the remaining points
+            span = len(cdf) - idx - 1
+            cdf[idx+1:] -= excess * np.linspace(1, 0, span)
+            # Re-monotonise
+            cdf[idx+1:] = np.maximum.accumulate(cdf[idx+1:])
+
+        return cdf
 
 def clean(s: str) -> str:
     return (
