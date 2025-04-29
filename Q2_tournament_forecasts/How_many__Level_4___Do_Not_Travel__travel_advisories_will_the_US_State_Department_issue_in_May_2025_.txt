@@ -1,0 +1,1847 @@
+
+Historical context LLM output:
+Analysis:
+We need to establish an outside‐view baseline by examining the historical frequency of new Level 4 “Do Not Travel” advisories by month. Key questions are: over the past five years, how many Level 4 advisories were typically issued in May (and other months)? What events or risk criteria drove these issuances? By compiling count‐by‐month data from the State Department’s travel advisory archives and understanding the triggers (e.g., coups, civil wars, terrorism), we can form a base‐rate distribution (0, 1, 2, >2 advisories) and then later adjust for any current special circumstances in May 2025.
+
+Search queries:
+1. site:travel.state.gov Level 4 travel advisories (Google)
+2. US State Dept Level 4 travel advisories (Google News)
+3. Provide the monthly counts of new Level 4 – Do Not Travel advisories issued by the U.S. State Department from January 2020 through April 2025. Also explain the main criteria used to determine issuing a Level 4 advisory. (Perplexity)
+
+Current context LLM output:
+Analysis:
+To forecast the number of new Level 4 “Do Not Travel” advisories in May 2025, I need two types of intel. First, a quick count and list of recent Level 4 advisories (the base rate and trend through April). Second, identification of emerging crises—conflicts, terrorist threats, health emergencies or natural disasters—that could trigger additional Level 4 advisories in May. Queries will target the State Department’s advisory lists and news on country situations likely to push the risk to “Do Not Travel.”
+
+Search queries:
+1. level 4 travel advisories US State (Google)  
+2. potential Level 4 Do Not Travel (Google News)  
+3. Summarize recent country crises likely to prompt new US State Department Level 4 travel advisories in May 2025. (Assistant)
+
+Historical context search results:
+<Summary query="site:travel.state.gov Level 4 travel advisories">No usable content extracted from any URL.</Summary>
+
+<Summary source="https://www.9news.com/article/news/nation-world/travel-advisories-countries-list-state-department/507-fa599a49-727c-4587-aeb9-ce968e77ea6b">
+Here’s a concise summary of the KUSA.com article “Traveling abroad? Here’s an updated list of travel advisories from the US State Department”:
+
+Source  
+• KUSA.com
+
+Key points  
+• The US State Department publishes travel advisories at four levels, from Level 1 (“Exercise Normal Precautions”) up to Level 4 (“Do Not Travel”).  
+• Advisories are updated routinely to reflect changing risks (health, crime, civil unrest, etc.), even if the level itself doesn’t change.  
+
+Most recent updates (all issued March 2025)  
+• Level 4 – Do Not Travel  
+  – Yemen (March 31, 2025)  
+  – Iran (March 31, 2025)  
+  – South Sudan (March 8, 2025)  
+  – Syria (March 3, 2025)  
+• Level 3 – Reconsider Travel  
+  – Guinea‐Bissau (March 24, 2025)  
+  – Trinidad and Tobago (March 21, 2025)  
+  – Niger (March 21, 2025)  
+  – Chad (March 18, 2025)  
+  – Pakistan (March 7, 2025)  
+• Level 2 – Exercise Increased Caution  
+  – The Bahamas (March 31, 2025)  
+  – Timor‐Leste (March 21, 2025)  
+  – Kenya (March 17, 2025)  
+  – Equatorial Guinea (March 7, 2025)  
+  – Djibouti (March 6, 2025)  
+  – Turks and Caicos Islands (March 4, 2025)  
+
+Why The Bahamas advisory was updated  
+• Cited rising violent crime, unsafe boating practices and swimming‐related risks, and strict firearm laws.  
+• Most incidents occur in Nassau and Freeport—especially the “Over the Hill” area in Nassau, south of Shirley Street, where gangs have killed residents.  
+• Advisory text: “Stay alert in the ‘Over the Hill’ area in Nassau….”
+</Summary>
+
+<Summary source="https://africa.businessinsider.com/local/lifestyle/4-african-countries-added-to-us-travel-warning-list-in-april/wn39mkx">
+Source: Business Insider Africa, April 25 2025
+
+Summary:
+- In April 2025 the U.S. State Department updated travel advisories for four African countries, citing terrorism, violent crime, discriminatory laws, and political unrest.
+- Ghana (April 8): Level 2 (“Exercise Increased Caution”). Cited violent crimes (carjackings, muggings, assaults, rape), weak enforcement of domestic-violence laws, underreporting of sexual assaults.
+- Burkina Faso (April 16): Level 4 (“Do Not Travel”). Cited extreme risk of terrorist attacks (IEDs, kidnappings, attacks on public spaces) amid strained U.S.–Burkinabè relations over AFRICOM commander’s gold-power allegations.
+- Morocco (April 21): Level 2. Warns of persistent terrorist threats against public venues frequented by foreigners.
+- Uganda (issued < 48 hours after Morocco): Level 3 (“Reconsider Travel”). Cites crime, terrorism, discriminatory laws targeting LGBTQ+ individuals, unpredictable demonstrations ahead of January–February 2026 elections.
+- Travel Advisory System tiers: Level 1 (Normal Precautions), Level 2 (Increased Caution), Level 3 (Reconsider Travel), Level 4 (Do Not Travel).
+</Summary>
+
+<Summary source="https://www.travelandleisure.com/us-travel-advisory-colombia-update-civil-unrest-kidnapping-11721554">
+Here’s a concise summary of the Travel + Leisure article, based entirely on its content:
+
+• Source: Travel + Leisure reporting on the U.S. Department of State’s updated travel advisory for Colombia.  
+• Overall assessment: Violent crime (murder, assault, robbery) and organized-crime activities (extortion, kidnapping) are common; there is also a risk of terrorist violence.  
+
+• Advisory levels (from the Department of State):  
+  – Level 1: Exercise Normal Precautions  
+  – Level 2: Exercise Increased Caution  
+  – Level 3: Reconsider Travel  
+  – Level 4: Do Not Travel  
+
+• Level 4 “Do Not Travel” areas in Colombia (as of this advisory):  
+  – Departments of Arauca, Cauca (excluding Popayán), and Norte de Santander  
+  – Colombia–Venezuela border region  
+
+  “Do not travel to this area for any reason. Crime, kidnapping, and armed conflict are common here,” the advisory warns.  “Do not cross the border into Venezuela from Colombia. You may be detained by Venezuelan authorities. … The U.S. government has limited ability to provide emergency services to U.S. citizens here.”  
+
+• General traveler recommendations (from the advisory):  
+  – Avoid demonstrations  
+  – Keep a low profile and refrain from ostentatious displays of wealth  
+  – Stay aware of your surroundings  
+
+• Despite these warnings, the article notes that Colombia remains a popular destination for its beaches, cities, and natural scenery.
+</Summary>
+
+<Perplexity_report>
+Query: Provide the monthly counts of new Level 4 – Do Not Travel advisories issued by the U.S. State Department from January 2020 through April 2025. Also explain the main criteria used to determine issuing a Level 4 advisory.
+# Analysis of U.S. State Department Level 4 Travel Advisories (January 2020 – April 2025)  
+
+The U.S. Department of State’s Level 4 ("Do Not Travel") advisories represent the highest risk designation for international destinations, reflecting severe threats to safety and security. This report synthesizes available data on monthly advisory issuances and updates from January 2020 through April 2025, alongside the criteria governing these designations.  
+
+---
+
+## Criteria for Level 4 Advisories  
+
+Level 4 advisories are reserved for countries or regions where life-threatening risks—such as terrorism, armed conflict, catastrophic health crises, or systemic violence—outweigh any potential benefits of travel. The State Department evaluates multiple risk indicators[9]:  
+
+1. **Terrorism (T):** Active terrorist networks capable of targeting civilians, as seen in Afghanistan[9] and Iraq[1].  
+2. **Civil Unrest (U):** Political instability or armed conflict, such as in Haiti[1] and South Sudan[1].  
+3. **Kidnapping/Hostage-Taking (K):** High prevalence of criminal or politically motivated abductions, notably in regions like the Sahel[5].  
+4. **Health (H):** Disease outbreaks overwhelming local healthcare systems, exemplified by the 2020 COVID-19 global advisory[10][11].  
+5. **Crime (C):** Pervasive violent crime, including gang activity in Honduras and Colombia[1][7].  
+
+Advisories are reassessed every six months for Levels 3 and 4, with updates triggered by emerging threats[7][9].  
+
+---
+
+## Monthly Counts of Level 4 Advisories (2020–2025)  
+
+### **2020**  
+- **March 2020:** A historic global Level 4 advisory urged U.S. citizens to avoid all international travel due to COVID-19, marking the first worldwide application of this designation[10][11].  
+- **Other 2020 Months:** No country-specific Level 4 updates were publicly documented beyond the March global advisory.  
+
+### **2021**  
+- **April 2021:** Approximately 80% of countries were elevated to Level 4 under a revised framework prioritizing CDC COVID-19 data, though this reflected methodological changes rather than new threats[3].  
+
+### **2022**  
+- **April 2022:** The CDC ceased blanket Level 4 COVID-19 designations, reserving it for "healthcare infrastructure collapse" or novel variants[4]. The State Department maintained Level 4 for security-driven risks (e.g., Afghanistan, Syria)[9].  
+
+### **2023**  
+- **July 2023:** Indonesia retained Level 2 despite COVID-19 concerns, highlighting the decoupling of health and security advisories post-pandemic[1].  
+
+### **2024**  
+- **September 2024:** Haiti was redesignated Level 4 due to gang violence and political instability[1].  
+- **November 2024:** Iraq and Iran maintained Level 4 status over terrorism and civil unrest[1].  
+
+### **2025**  
+- **January 2025:** Afghanistan’s advisory was reaffirmed due to terrorism and wrongful detention risks[9].  
+- **March 2025:** South Sudan and Iran received updated Level 4 designations[1][7].  
+
+---
+
+## Limitations in Monthly Reporting  
+The State Department does not publish granular monthly counts of advisory changes. Publicly available data[1][7][9] suggests updates cluster around:  
+- **Bulk Reassessments:** Systemic revisions (e.g., April 2021 COVID-19 adjustments)[3].  
+- **Emergent Crises:** Rapid escalations, such as Haiti’s 2024 gang violence surge[1].  
+
+---
+
+## Conclusion  
+Level 4 advisories correlate strongly with geopolitical instability, terrorism, and public health emergencies. While COVID-19 prompted unprecedented global warnings, security-related risks dominate post-pandemic updates. The lack of transparent monthly statistics complicates trend analysis, though recurring themes—such as conflict zones and institutional collapse—underscore the advisory system’s focus on mitigating extreme dangers.  
+
+---
+
+### Sources  
+1. U.S. Department of State – Travel Advisories (2024–2025)  
+2. USCIS Immigration Data (2024)  
+3. The Points Guy – "Most Countries Added to Level 4" (April 2021)  
+4. Lonely Planet – CDC Guideline Changes (April 2022)  
+5. Squaremouth – Level 4 Criteria (February 2025)  
+7. Flutrackers – March 2025 Advisory Updates  
+9. InsureMyTrip – Advisory System Overview (2021)  
+10. Hypebeast – March 2020 Global Advisory  
+11. Paul Weiss Law Firm – March 2020 Global Advisory PDF</Perplexity_report>
+
+
+Current context search results:
+
+<Summary source="https://www.newsweek.com/map-shows-countries-americans-advised-not-travel-2042891">
+Disclaimer: This summary is based solely on the Newsweek article “Map shows countries where Americans advised not to travel” (Joe Edwards, March 13, 2025).
+
+Key points  
+• As of March 11, 2025, the U.S. Department of State has issued “Level 4: Do Not Travel” advisories for 22 jurisdictions (21 countries plus parts of Mexico).  
+• These are the State Department’s highest‐risk alerts, prompted by one or more of the following: armed conflict, terrorism, violent crime (including kidnapping and hostage‐taking), civil unrest, political instability, health‐care limitations, risk of wrongful detention, unexploded ordnance, piracy, and limited U.S. consular assistance.  
+• Below is the full list of Level 4 advisories and the primary risks cited:
+
+1. Afghanistan  
+   – Armed conflict, civil unrest, crime, terrorism, kidnapping; U.S. Embassy in Kabul closed in 2021; no routine or emergency consular services.  
+2. Belarus  
+   – Arbitrary law enforcement, risk of detention, facilitation of Russia’s war in Ukraine, potential civil unrest, limited U.S. assistance.  
+3. Burkina Faso  
+   – “Terrorists may conduct attacks anywhere with little or no warning,” plus crime and kidnapping.  
+4. Burma (Myanmar)  
+   – Armed conflict, civil unrest, wrongful detentions, limited healthcare and emergency medical resources.  
+5. Central African Republic  
+   – Armed conflict, crime, civil unrest, kidnapping; election‐related violence possible.  
+6. Democratic Republic of Congo  
+   – Armed conflict, crime, civil unrest, kidnapping, terrorism.  
+7. Haiti  
+   – Kidnapping, violent crime, civil unrest, poor health infrastructure.  
+8. Iran  
+   – Terrorism, civil unrest, kidnapping, arbitrary arrest and wrongful detentions: “U.S. citizens should not travel to Iran for any reason.”  
+9. Iraq  
+   – Violence, kidnapping, terrorist and insurgent attacks, threats from anti-U.S. militias; limited ability to assist U.S. citizens.  
+10. Lebanon  
+    – Crime, terrorism, civil unrest, kidnapping, unexploded landmines, risk of armed conflict (especially near borders).  
+11. Libya  
+    – Crime, terrorism, unexploded landmines, civil unrest, kidnapping, armed conflict.  
+12. Mali  
+    – Violent crime (including kidnapping), armed robbery, terrorist attacks targeting foreigners.  
+13. North Korea  
+    – “Serious risk of arrest and long-term detention of U.S. nationals.”  
+14. Russia  
+    – Consequences of the full-scale invasion of Ukraine; risk of wrongful detention by Russian authorities.  
+15. Somalia  
+    – Crime, terrorism, civil unrest, health issues, kidnapping, piracy, lack of routine consular services; “violent crime such as kidnapping and murder is common.”  
+16. South Sudan  
+    – Crime, kidnapping, armed conflict.  
+17. Sudan  
+    – Armed conflict, crime (kidnapping, armed robbery, home invasions, carjackings), terrorist attacks.  
+18. Syria  
+    – Terrorism, civil unrest, kidnapping, armed conflict, risk of unjust detention.  
+19. Ukraine (certain regions)  
+    – Frontline areas and border zones with Belarus: active combat, shelling, missile and drone attacks, limited embassy assistance.  
+20. Venezuela  
+    – Wrongful detentions, terrorism, kidnapping, arbitrary law enforcement, crime, civil unrest, poor health infrastructure.  
+21. Yemen  
+    – Terrorism, civil unrest, crime, health risks, kidnapping, armed conflict, landmines.  
+22. Mexico (partial)  
+    – Level 4 warnings for the states of Tamaulipas, Zacatecas, Sinaloa, Michoacán, Guerrero, and Colima due to high levels of violent crime and kidnapping.
+
+Source attribution  
+– All advisories and quotations are drawn from U.S. Department of State travel advisories as reported by Newsweek.  
+– Criteria for advisories include security threats, health‐care capacity, and the U.S. government’s ability to assist citizens abroad.
+</Summary>
+
+<Summary source="https://www.usa.gov/travel-advisory">
+Summary of “Travel Advisory Guide: Level 4 Countries for U.S. Citizens”  
+Source: Travel Insurance Advice  
+Author: Sabina Bhasin  
+Date: February 25, 2025  
+
+Overview  
+• The U.S. Department of State’s Level 4 “Do Not Travel” advisory is its highest warning, citing life-threatening risks (armed conflict, civil unrest, terrorism, high crime, health hazards).  
+• Level 4 means the U.S. government may have very limited ability to assist citizens; travelers are urged to write wills, leave DNA samples, and avoid or exit the country.  
+
+The Turbulent Ten: 10 Level 4 Destinations  
+1. Mexico (certain regions)  
+  – Risk factors: violent crime, drug cartels, kidnappings in Tamaulipas, Sinaloa, Guerrero  
+  – Note: Resort areas may be safer; venturing outside tourist zones is highly dangerous.  
+
+2. Haiti  
+  – Risk factors: political unrest, gang violence, kidnappings and extortion targeting locals and foreigners alike  
+
+3. Russia  
+  – Risk factors: diplomatic tensions, arbitrary arrests of U.S. citizens, rising hostility toward foreigners  
+
+4. Egypt (certain areas)  
+  – Risk factors: terrorism and kidnapping in the Sinai Peninsula and western deserts  
+  – Note: Popular sites (Cairo, Luxor) are comparatively safer.  
+
+5. Iran  
+  – Risk factors: high risk of wrongful detention, especially for dual nationals; political tensions  
+
+6. Ukraine (war zones)  
+  – Risk factors: ongoing armed conflict in eastern regions  
+  – Note: Western Ukraine retains some infrastructure but remains volatile near frontlines.  
+
+7. Colombia (certain regions)  
+  – Risk factors: cartel activity and kidnappings near the Venezuela border and in parts of Cauca and Nariño  
+  – Note: Major cities have improved safety but caution is still advised.  
+
+8. Libya  
+  – Risk factors: civil war, violent militias, frequent ransom kidnappings, terrorist attacks  
+
+9. Syria  
+  – Risk factors: active warfare, presence of extremist groups, areas controlled by hostile forces  
+
+10. North Korea  
+  – Risk factors: extreme repression, risk of imprisonment or forced labor for minor infractions; U.S. travel ban  
+
+If You Must Travel to a Level 4 Country  
+• Enroll in the Smart Traveler Enrollment Program (STEP) for alerts and embassy support  
+• Prepare a detailed emergency plan (exit routes, contacts, safe zones)  
+• Avoid high-risk areas and public gatherings  
+• Secure comprehensive travel insurance covering medical evacuation and kidnapping  
+• Maintain a low profile and avoid drawing attention to your nationality  
+
+Staying Updated  
+• U.S. Department of State (travel.state.gov)  
+• Centers for Disease Control and Prevention (cdc.gov/travel)  
+• Overseas Security Advisory Council (osac.gov)  
+
+Bottom Line  
+Travel to Level 4 countries carries extreme dangers. Even culturally or historically significant destinations may pose life-threatening risks. Thorough preparation and constant monitoring of official advisories are essential.
+</Summary>
+
+<Summary source="https://www.squaremouth.com/travel-advice/travel-advisory-guide-level-4-countries-for-u-s-citizens">
+Source: Northwestern University brief on the U.S. Department of State (DOS) Travel Advisory System
+
+Disclaimer: Extraction appears complete for the advisory system overview; no obvious gaps noted.
+
+Key points:
+
+1. Advisory Levels (color-coded 1–4)
+   • Level 1 – Exercise Normal Precautions: lowest risk  
+   • Level 2 – Exercise Increased Caution: heightened risks; additional DOS advice provided  
+   • Level 3 – Reconsider Travel: serious safety/security risks; avoid travel  
+   • Level 4 – Do Not Travel: highest risk; life-threatening hazards; U.S. government assistance may be very limited; U.S. citizens advised not to travel or to depart as soon as safe
+
+2. Risk Indicators (used to justify Levels 2–4)
+   • E – Time-Limited Event (elections, sporting events, etc.)  
+   • C – Crime (widespread violent/organized crime; limited local law enforcement response)  
+   • T – Terrorism (past attacks or specific threats)  
+   • U – Civil Unrest (political/economic/religious/ethnic instability causing violence or disruptions)  
+   • N – Natural Disaster (ongoing or aftermath hazards)  
+   • H – Health (disease outbreaks or medical-infrastructure crises; may align with CDC Travel Notices)  
+   • K – Kidnapping/Hostage Taking (threats or incidents by criminal/terrorist actors)  
+   • D – Wrongful Detention (risk of U.S. nationals detained by foreign governments)  
+   • O – Other (risks not covered above)
+
+3. Alerts (replacing Emergency and Security Messages)
+   • Issued by U.S. embassies/consulates for specific, time-sensitive concerns  
+   • Labeled as Security Alert, Health Alert, Weather Alert, or Demonstration Alert  
+   • Listed under each country’s main Travel Advisory page and on individual embassy/consulate sites
+
+4. Updates and Additional Resources
+   • DOS updates advisories “as needed” based on security and safety changes  
+   • Each advisory includes country-specific guidance and actionable mitigation steps  
+   • For deeper terminology background, refer to the Overseas Security Advisory Council (OSAC) document “Understanding the Consular Travel Advisory System”
+</Summary>
+
+<Summary source="https://www.thetravel.com/us-department-of-state-issues-level-3-travel-advisory-for-uganda-americans-urged-to-reconsider-travel/">
+Here’s a concise summary of the April 25, 2025 TheTravel article “U.S. Department of State Issues Level 3 Travel Advisory for Uganda”:
+
+• Advisory Level and Date  
+  – On April 25, 2025, the U.S. State Department raised its Uganda travel advisory to Level 3: “Reconsider Travel.”  
+
+• Main Reasons Cited  
+  – Crime (armed robbery, home invasion, sexual assault)  
+  – Ongoing terrorist threats and past attacks  
+  – Laws targeting LGBTQ+ persons (even private, consensual same-sex relations are illegal)  
+  – Risk of violent escalation at public demonstrations ahead of Uganda’s 2025 primary elections and 2026 national elections  
+
+• Specific Locations to Avoid  
+  – Venues targeted by terrorists: religious sites, schools, government buildings, police stations, transport hubs, popular tourist areas  
+  – High-risk regions and cities: Kampala, Jinja, Entebbe, the Karamoja region, and western and northern border areas  
+
+• Demonstration-Related Risks  
+  – Peaceful protests can turn violent; U.S. citizens advised to steer clear of any demonstrations or nearby areas  
+
+• Election Timeline  
+  – Primary elections: summer 2025  
+  – National elections: January–February 2026  
+
+• Potential for Escalation  
+  – If crime or attacks worsen, the advisory could be raised to Level 4: “Do Not Travel.”  
+
+• U.S. State Department Safety Recommendations for Travelers  
+  – Avoid demonstrations and crowds; keep a low profile  
+  – Be vigilant of your surroundings; use caution at night  
+  – Do not display wealth (e.g., expensive jewelry, smartphones)  
+  – Do not physically resist robbery; verify visitors before opening doors at hotels/residences  
+  – Stay alert in tourist-frequented locations and when using ATMs or banks  
+  – Recognize that any public or perceived LGBTQ+ identity could lead to prosecution or violence  
+
+• Ongoing Guidance  
+  – Americans planning travel to Uganda are urged to monitor the official State Department travel advisory page for updates.
+</Summary>
+
+<Summary source="https://www.india.com/guide/us-issues-do-not-travel-advisory-after-india-pakistan-border-tensions-full-details-inside-7778353/">
+Source: india.com (Updated Apr 25, 2025)
+
+Key Facts and Advisory Details  
+1. The U.S. Department of State has raised its travel advisory for Jammu and Kashmir (excluding Ladakh and Leh) to Level 4 – “Do Not Travel,” citing “conflict, terrorism or natural disasters.”  
+2. Other parts of India remain at Level 2 (“Exercise Increased Caution”) or Level 3 (“Reconsider Travel”).  
+3. The advisory follows escalating tensions along the India–Pakistan Line of Control and a recent suspected terrorist attack in Pahalgam that killed 26 people and injured several others.  
+4. The State Department warns of potential attacks on crowded places, religious sites and government buildings, plus risks of civil unrest and sudden security restrictions.  
+5. Tensions may lead to roadblocks, curfews, increased military presence and disruptions to transportation, internet access and emergency services.
+
+Official Source  
+– U.S. Department of State travel advisory (Level 4 for Jammu & Kashmir).
+
+Additional Guidance (from the article)  
+– Register with the Smart Traveler Enrollment Program (STEP) for alerts and easier embassy contact.  
+– Maintain a local contact, clear itinerary and emergency plan.  
+– Avoid public demonstrations, large gatherings and isolated areas.  
+– Consider hiring local guides and traveling in groups.  
+– Carry proper identification; secure adequate health and travel insurance.  
+
+Bottom Line  
+While much of India remains safe, travelers should exercise extreme caution in Jammu and Kashmir and stay up to date via official channels.
+</Summary>
+
+<Summary source="https://timesofindia.indiatimes.com/life-style/travel/news/do-not-travel-us-issues-advisory-for-jk-in-wake-of-pahalgam-attack/articleshow/120579401.cms">
+Disclaimer: Extraction is based solely on the April 24, 2025 Times of India article and may omit details not included in that report.
+
+Key points:
+
+• Advisory issued: On April 24, 2025, the U.S. State Department elevated its travel advisory for Jammu & Kashmir to Level 4 (“Do Not Travel”), citing heightened risk of life-threatening violence.
+
+• Triggering incident: On April 22, militants opened fire on tourists in the Baisaran Valley near Pahalgam, killing at least 26 people and wounding many others.
+
+• U.S. Embassy guidance: Americans in J&K are urged to remain alert, avoid all travel to the region, and stay at least 10 km from the India–Pakistan border due to potential armed clashes.
+
+• Perpetrator claims: The attack was claimed by “Kashmir Resistance” (also known as The Resistance Front), believed to be an offshoot of Pakistan-based Lashkar-e-Taiba.
+
+• Indian government stance: Authorities link The Resistance Front to prior attacks and accuse Pakistan of backing cross-border terrorism; Pakistan denies these allegations.
+</Summary>
+
+<Asknews_articles>
+Query: Summarize recent country crises likely to prompt new US State Department Level 4 travel advisories in May 2025.
+Here are the relevant news articles:
+
+**Turismo do Perigo: the dangers of traveling to crisis countries**
+The 'Turismo do Perigo' or 'Danger Tourism' has been attracting an increasing number of Brazilians seeking adrenaline or unique experiences. However, experts in security and the Itamaraty warn that the risks outweigh any emotions, and certain countries should be avoided at all costs. Based on recent data and international reports, the proposal is to explore this phenomenon, list the most dangerous destinations in 2025, and emphasize the need for caution. According to the World Tourism Organization (WTO), adventure tourism grew 15% globally between 2015 and 2023, and a small but growing portion includes high-risk destinations. Brazilian agencies specializing in adventure tourism report a 20% increase in inquiries about destinations such as the Sahel African region or the Middle East, according to the Brazilian Association of Travel Agencies (ABAV). However, the price of this adventure may be too high. Traveling to crisis countries exposes tourists to dangers that go beyond the imaginable. Data from the Global Peace Index 2024 shows that 23 countries are in a state of 'maximum alert' for violence, and many of them are destinations avoided even by humanitarian organizations. Among the risks are: 'A real case: In 2022, a Brazilian couple was detained in Afghanistan for entering without the proper visa, and was released after three months of diplomatic negotiations. Cases like this reinforce the gravity of underestimating the risks.' Based on alerts from the Itamaraty, the US Department of State, the British FCDO, and UN reports, we list the countries where travel should be avoided due to extreme risks. Attention: This list reflects the scenario in April 2025 and may change; consult official sources before any planning. The Brazilian Ministry of Foreign Affairs emphasizes: 'No trip to crisis countries is worth the risk of losing life or freedom.' In 2024, the Itamaraty assisted in the repatriation of 150 Brazilians detained in conflict zones, a 30% increase from 2022. 'Travelers should prioritize security and consult our alerts before any displacement,' said a note from the Consular Assistance Division. In addition to personal risks, experts question the ethical impact of visiting crisis zones. Tourists may exacerbate local tensions, consume scarce resources, or treat tragedies as a spectacle. In 2023, a group of influencers was criticized for posting selfies in refugee camps in Sudan, illustrating how tourism can be insensitive. The 'Turismo do Perigo' may offer unique experiences, but the costs -- for the traveler and local communities -- are extremely high. Countries like Afghanistan, Syria, Yemen, and others listed are off-limits for any responsible traveler in 2025. For those considering these adventures, meticulous planning, consulting official sources, and respecting local realities are non-negotiable.
+Original language: pt
+Publish date: April 28, 2025 10:24 PM
+Source:[Jornal Estado de Minas | Not�cias Online](https://www.em.com.br/turismo/2025/04/7128367-turismo-do-perigo-como-tem-gente-doida-que-se-arrisca-por-puro-sadismo.html)
+
+**U.S. Issues Level 3 Travel Alert for Colombia Due to Crime and Terrorism**
+The United States has updated the travel alert level for American citizens planning to visit Colombia. The country is currently at level 3, which advises reconsidering travel due to 'crime, terrorism, civil unrest, and kidnappings'. The U.S. Consular Affairs Office warns against traveling to the departments of Arauca, Cauca (excluding Popayán), and Norte de Santander, as well as the Colombian-Venezuelan border region, due to high risk of violent crimes, terrorist activity, and detention. The alert states, 'Do not travel to these areas under any circumstances. Violent crimes, such as armed robbery and murder, are common in these places. Terrorist groups are active in some areas. Due to the risks, U.S. government employees in Colombia are prohibited from traveling to these areas.' The U.S. government advises tourists to avoid demonstrations and crowds, stay informed through local media, and maintain a low profile. They also recommend traveling during the day, reviewing the Colombia Country Security Report, and purchasing travel insurance.
+Original language: es
+Publish date: April 28, 2025 10:11 PM
+Source:[Portafolio.co](https://www.portafolio.co/economia/regiones/estados-unidos-emite-alerta-de-viaje-nivel-3-para-colombia-por-que-628915)
+
+**Government issues new warning about travel to this country**
+The U.S. government has issued a new travel advisory warning about Uganda, citing crime, terrorism, and laws targeting LGBTQ individuals. The advisory, which was updated on April 23, 2024, recommends that travelers 'reconsider travel' to the country due to potential security risks and unpredictable public demonstrations. The advisory also warns of the Anti-Homosexuality Act (AHA), which was passed in 2023 and makes anyone convicted of homosexual activity liable for life imprisonment, with the possibility of the death penalty for 'aggravated homosexuality.' The AHA applies to both visitors and residents of Uganda and increases the danger for LGBTQ individuals, who may face fines, imprisonment, or the death penalty, as well as harassment, violence, or attacks by vigilantes or mobs. According to the State Department, more than 60 countries consider consensual same-sex relations a crime, and travelers can face unique challenges abroad based on their real or perceived sexual orientation. 'Reconsider travel to Uganda due to crime, terrorism, and laws targeting persons on the basis of sexual orientation,' the advisory reads. 'Exercise increased caution due to potential security risks and the unpredictable nature of public demonstrations.' 
+Original language: en
+Publish date: April 28, 2025 01:47 PM
+Source:[TheStreet](https://www.thestreet.com/travel/what-is-the-travel-advisory-for-uganda)
+
+**US Issues Strong Warning to Citizens About Traveling to Morocco**
+The US Department of State has issued a strong warning to its citizens about traveling to Morocco, categorizing it as a level 2 destination that requires extreme caution. The warning is due to potential terrorist threats targeting sensitive locations within the country. According to the department's statement, the threat affects various potential targets, including markets, transportation centers, government facilities, and major tourist sites. The statement notes that these threats may lead to attacks targeting areas with large gatherings. Previously, the US consulate in Casablanca had issued a warning about planned protests on April 18 and 20, which could lead to local unrest. The consulate stated that the protests would start in busy areas such as Casablanca's port and the United Nations Square, with a possibility of spreading to major cities. In light of these circumstances, the US Department of State advises its citizens to avoid crowded areas, remain vigilant in public places, and areas with heavy traffic. The department also encourages American travelers to register in the 'Smart Traveler Enrollment Program' to receive the latest security alerts. Additionally, the department recommends that travelers prepare personal emergency plans, review the country's security report, and obtain health insurance that covers medical evacuation and emergency cases. Furthermore, reports indicate that Morocco is facing increasing security threats due to the rise of extremist activities, with some extremist groups attempting to recruit local elements to carry out operations within the country. According to security reports, over 130 Moroccans have joined the ranks of the 'ISIS' organization in coastal and western African regions, with some holding leadership positions within the group. In this context, security officials have warned that these groups may attempt to carry out internal operations exploiting the rise of violent rhetoric in some Moroccan circles.
+Original language: ar
+Publish date: April 27, 2025 10:16 AM
+Source:[الشروق أونلاين](https://www.echoroukonline.com/%D8%AA%D8%AD%D8%B0%D9%8A%D8%B1%D8%A7%D8%AA-%D8%A3%D9%85%D8%B1%D9%8A%D9%83%D9%8A%D8%A9-%D8%B4%D8%AF%D9%8A%D8%AF%D8%A9-%D9%84%D8%B1%D8%B9%D8%A7%D9%8A%D8%A7%D9%87%D8%A7-%D8%A8%D8%AE%D8%B5%D9%88%D8%B5)
+
+**U.S. warning: 'Reconsider travel' to this African nation due to violent crime**
+The U.S. Department of State has issued a 'Level 3: travel advisory' for Uganda, urging travelers to 'reconsider travel' due to violent crime, terrorism, and laws targeting people based on sexual orientation. The advisory warns of terrorist attacks, armed robbery, home invasion, and sexual assault, as well as security risks during demonstrations leading up to the 2026 elections. The State Department advises travelers to exercise increased caution, avoid demonstrations, and be aware of local laws, particularly for LGBTQ individuals, as same-sex relations are illegal in Uganda.
+Original language: en
+Publish date: April 27, 2025 10:05 AM
+Source:[NJ.com](https://www.nj.com/news/2025/04/us-warning-reconsider-travel-to-this-african-nation-due-to-violent-crime.html)
+
+**US Issues Level 3 Travel Warning For Trinidad and Tobago – Guyana Inquirer**
+The U.S. Department of State has issued a Level 3 Travel Warning for Trinidad and Tobago due to serious risks from violent crime, terrorism, and kidnapping. The warning comes as the Government of Trinidad and Tobago extended its nationwide State of Emergency until April 2025. U.S. officials have warned that certain areas in Port of Spain, including Laventille, Beetham, Sea Lots, Cocorite, and parts of Queen's Park Savannah, are off-limits to U.S. government employees due to safety concerns. The advisory also highlights the frequency of violent crimes such as murder, robbery, and home invasions, with many incidents linked to gang and narcotics activity. Additionally, the warning mentions the potential for terrorist activity targeting public and tourist spaces. Travelers are encouraged to enroll in the U.S. State Department's Smart Traveler Enrollment Program (STEP) for real-time updates and emergency support.
+Original language: en
+Publish date: April 09, 2025 12:00 AM
+Source:[guyanainquirer.com](https://guyanainquirer.com/us-issues-level-3-travel-warning-for-trinidad-and-tobago/)
+
+**Countries Are Now Issuing Advisories for Travelers Visiting the U.S.—What to Know**
+Several European countries, including Denmark, Finland, Germany, and the United Kingdom, have updated their travel advisories for citizens visiting the U.S. due to recent policy changes. The changes focus on gender identification, visa complications, and increased scrutiny at the border. Germany's foreign office website warns of documentation issues and heightened border checks, stating, 'In light of the U.S. government's recent policy changes, German citizens should be aware of the potential risks and challenges when traveling to the U.S.' The U.S. State Department has suspended passport applications with the 'X' marker, and several countries have updated their guidance for citizens planning to visit the U.S.
+Original language: en
+Publish date: April 01, 2025 12:00 AM
+Source:[travelandleisure.com](https://www.travelandleisure.com/countries-are-now-issuing-advisories-for-travelers-visiting-the-usa-11706306)
+
+**Turismo do Perigo: the dangers of traveling to crisis countries**
+The 'Turismo do Perigo' or 'Danger Tourism' has been attracting an increasing number of Brazilians seeking adrenaline or unique experiences. However, experts in security and the Itamaraty warn that the risks outweigh any emotions, and certain countries should be avoided at all costs. Based on recent data and international reports, the proposal is to explore this phenomenon, list the most dangerous destinations in 2025, and emphasize the need for caution. According to the World Tourism Organization (WTO), adventure tourism grew 15% globally between 2015 and 2023, and a small but growing portion includes high-risk destinations. Brazilian agencies specializing in adventure tourism report a 20% increase in inquiries about destinations such as the Sahel African region or the Middle East, according to the Brazilian Association of Travel Agencies (ABAV). However, the price of this adventure may be too high. Traveling to crisis countries exposes tourists to dangers that go beyond the imaginable. Data from the Global Peace Index 2024 shows that 23 countries are in a state of 'maximum alert' for violence, and many of them are destinations avoided even by humanitarian organizations. Among the risks are: 'A real case: In 2022, a Brazilian couple was detained in Afghanistan for entering without the proper visa, and was released after three months of diplomatic negotiations. Cases like this reinforce the gravity of underestimating the risks.' Based on alerts from the Itamaraty, the US Department of State, the British FCDO, and UN reports, we list the countries where travel should be avoided due to extreme risks. Attention: This list reflects the scenario in April 2025 and may change; consult official sources before any planning. The Brazilian Ministry of Foreign Affairs emphasizes: 'No trip to crisis countries is worth the risk of losing life or freedom.' In 2024, the Itamaraty assisted in the repatriation of 150 Brazilians detained in conflict zones, a 30% increase from 2022. 'Travelers should prioritize security and consult our alerts before any displacement,' said a note from the Consular Assistance Division. In addition to personal risks, experts question the ethical impact of visiting crisis zones. Tourists may exacerbate local tensions, consume scarce resources, or treat tragedies as a spectacle. In 2023, a group of influencers was criticized for posting selfies in refugee camps in Sudan, illustrating how tourism can be insensitive. The 'Turismo do Perigo' may offer unique experiences, but the costs -- for the traveler and local communities -- are extremely high. Countries like Afghanistan, Syria, Yemen, and others listed are off-limits for any responsible traveler in 2025. For those considering these adventures, meticulous planning, consulting official sources, and respecting local realities are non-negotiable.
+Original language: pt
+Publish date: April 28, 2025 10:24 PM
+Source:[Jornal Estado de Minas | Not�cias Online](https://www.em.com.br/turismo/2025/04/7128367-turismo-do-perigo-como-tem-gente-doida-que-se-arrisca-por-puro-sadismo.html)
+
+**U.S. Issues Level 3 Travel Alert for Colombia Due to Crime and Terrorism**
+The United States has updated the travel alert level for American citizens planning to visit Colombia. The country is currently at level 3, which advises reconsidering travel due to 'crime, terrorism, civil unrest, and kidnappings'. The U.S. Consular Affairs Office warns against traveling to the departments of Arauca, Cauca (excluding Popayán), and Norte de Santander, as well as the Colombian-Venezuelan border region, due to high risk of violent crimes, terrorist activity, and detention. The alert states, 'Do not travel to these areas under any circumstances. Violent crimes, such as armed robbery and murder, are common in these places. Terrorist groups are active in some areas. Due to the risks, U.S. government employees in Colombia are prohibited from traveling to these areas.' The U.S. government advises tourists to avoid demonstrations and crowds, stay informed through local media, and maintain a low profile. They also recommend traveling during the day, reviewing the Colombia Country Security Report, and purchasing travel insurance.
+Original language: es
+Publish date: April 28, 2025 10:11 PM
+Source:[Portafolio.co](https://www.portafolio.co/economia/regiones/estados-unidos-emite-alerta-de-viaje-nivel-3-para-colombia-por-que-628915)
+
+**Government issues new warning about travel to this country**
+The U.S. government has issued a new travel advisory warning about Uganda, citing crime, terrorism, and laws targeting LGBTQ individuals. The advisory, which was updated on April 23, 2024, recommends that travelers 'reconsider travel' to the country due to potential security risks and unpredictable public demonstrations. The advisory also warns of the Anti-Homosexuality Act (AHA), which was passed in 2023 and makes anyone convicted of homosexual activity liable for life imprisonment, with the possibility of the death penalty for 'aggravated homosexuality.' The AHA applies to both visitors and residents of Uganda and increases the danger for LGBTQ individuals, who may face fines, imprisonment, or the death penalty, as well as harassment, violence, or attacks by vigilantes or mobs. According to the State Department, more than 60 countries consider consensual same-sex relations a crime, and travelers can face unique challenges abroad based on their real or perceived sexual orientation. 'Reconsider travel to Uganda due to crime, terrorism, and laws targeting persons on the basis of sexual orientation,' the advisory reads. 'Exercise increased caution due to potential security risks and the unpredictable nature of public demonstrations.' 
+Original language: en
+Publish date: April 28, 2025 01:47 PM
+Source:[TheStreet](https://www.thestreet.com/travel/what-is-the-travel-advisory-for-uganda)
+
+**US State Department Cracks Down on 'Birth Tourism', Warns of Future Consequences**
+The US State Department has issued a statement emphasizing that it 'does not accept' foreign nationals using tourist visas to travel to the US for childbirth. The department will strictly review and reject visa applications for 'birth tourism' behavior, which aims to prevent the abuse of US citizenship rights and protect American taxpayers' resources. The article summarizes the background and latest policy developments, reminding people planning to travel to the US to be aware of the potential impact on their future visa and entry qualifications. According to the State Department, 'birth tourism' refers to the use of tourist visas to enter the US with the primary intention of giving birth and obtaining US citizenship for the child. The department warns that anyone involved in 'birth tourism' will be rejected for a visa and may face difficulties entering the US in the future. The policy is aimed at preventing the abuse of the US immigration system and the financial burden on American taxpayers for unnecessary medical care. The State Department has defined and established standards for handling 'birth tourism' cases, and the policy will be implemented globally. The Trump administration's executive order from 2017, which aimed to end the practice of foreign nationals using US citizenship loopholes to give birth in the US, is currently being reviewed by the US Supreme Court. The court is scheduled to hear the case on May 15 and may issue a ruling in June or July, which will have significant implications for US immigration policy.
+Original language: zh
+Publish date: April 28, 2025 07:59 AM
+Source:[風傳媒](https://www.storm.mg/lifestyle/5364291)
+
+**TSA Adds 10 Risky Destinations to Travel Warning List -- And One Spot Might Surprise You**
+The Transportation Security Administration (TSA) has added 10 countries to its travel warning list, including Colombia, a popular destination for Americans. The list includes Morocco, El Salvador, Serbia, Ghana, Uganda, the Kyrgyz Republic, Bangladesh, Burkina Faso, and Kuwait. Burkina Faso has received a level four warning, with the TSA advising against all travel due to terrorism, crime, and kidnapping. The U.S. government has also prohibited its employees from traveling to regions outside the capital due to security concerns. The U.S. Embassy has urged government personnel to avoid traveling at night through certain neighborhoods in Ouagadougou. The TSA has also issued level three warnings for Bangladesh, Colombia, and Uganda, advising travelers to reconsider their plans. The U.S. Department of State has described Burkina Faso as one of the most dangerous places for international travelers due to escalating violence and deadly attacks on civilians and foreign nationals.
+Original language: en
+Publish date: April 28, 2025 04:03 AM
+Source:[The Inquisitr](https://www.inquisitr.com/tsa-adds-10-risky-destinations10-risky-destinations-to-travel-warning-list-and-one-spot-might-surprise-you)
+
+**US Issues Strong Warning to Citizens About Traveling to Morocco**
+The US Department of State has issued a strong warning to its citizens about traveling to Morocco, categorizing it as a level 2 destination that requires extreme caution. The warning is due to potential terrorist threats targeting sensitive locations within the country. According to the department's statement, the threat affects various potential targets, including markets, transportation centers, government facilities, and major tourist sites. The statement notes that these threats may lead to attacks targeting areas with large gatherings. Previously, the US consulate in Casablanca had issued a warning about planned protests on April 18 and 20, which could lead to local unrest. The consulate stated that the protests would start in busy areas such as Casablanca's port and the United Nations Square, with a possibility of spreading to major cities. In light of these circumstances, the US Department of State advises its citizens to avoid crowded areas, remain vigilant in public places, and areas with heavy traffic. The department also encourages American travelers to register in the 'Smart Traveler Enrollment Program' to receive the latest security alerts. Additionally, the department recommends that travelers prepare personal emergency plans, review the country's security report, and obtain health insurance that covers medical evacuation and emergency cases. Furthermore, reports indicate that Morocco is facing increasing security threats due to the rise of extremist activities, with some extremist groups attempting to recruit local elements to carry out operations within the country. According to security reports, over 130 Moroccans have joined the ranks of the 'ISIS' organization in coastal and western African regions, with some holding leadership positions within the group. In this context, security officials have warned that these groups may attempt to carry out internal operations exploiting the rise of violent rhetoric in some Moroccan circles.
+Original language: ar
+Publish date: April 27, 2025 10:16 AM
+Source:[الشروق أونلاين](https://www.echoroukonline.com/%D8%AA%D8%AD%D8%B0%D9%8A%D8%B1%D8%A7%D8%AA-%D8%A3%D9%85%D8%B1%D9%8A%D9%83%D9%8A%D8%A9-%D8%B4%D8%AF%D9%8A%D8%AF%D8%A9-%D9%84%D8%B1%D8%B9%D8%A7%D9%8A%D8%A7%D9%87%D8%A7-%D8%A8%D8%AE%D8%B5%D9%88%D8%B5)
+
+**U.S. warning: 'Reconsider travel' to this African nation due to violent crime**
+The U.S. Department of State has issued a 'Level 3: travel advisory' for Uganda, urging travelers to 'reconsider travel' due to violent crime, terrorism, and laws targeting people based on sexual orientation. The advisory warns of terrorist attacks, armed robbery, home invasion, and sexual assault, as well as security risks during demonstrations leading up to the 2026 elections. The State Department advises travelers to exercise increased caution, avoid demonstrations, and be aware of local laws, particularly for LGBTQ individuals, as same-sex relations are illegal in Uganda.
+Original language: en
+Publish date: April 27, 2025 10:05 AM
+Source:[NJ.com](https://www.nj.com/news/2025/04/us-warning-reconsider-travel-to-this-african-nation-due-to-violent-crime.html)
+
+**US Department of State Reveals Ideal Destinations for Travel in 2025**
+The US Department of State has revealed the ideal destinations for travel in 2025. The department classifies destinations into four levels: Level 1 - Normal Precautions, Level 2 - Increased Caution, Level 3 - Reconsider Travel, and Level 4 - Do Not Travel. The countries that have received a 'green light' with Level 1 status include El Salvador, Singapore, Portugal, Norway, New Zealand, and Cyprus. According to the Department of State, travelers should only maintain basic precautions when visiting these countries. The Department of State recommends that travelers consult the official website for updated travel alerts, enroll in the Smart Traveler Enrollment Program (STEP), inform themselves about local laws, have an emergency plan, and stay alert during their trip.
+Original language: es
+Publish date: April 21, 2025 09:11 PM
+Source:[mundodeportivo.com](https://www.mundodeportivo.com/us/actualidad/20250421/720703/estados-unidos-departamento-revela-destinos-ideales-viajar-2025.html)
+
+**US Issues Level 3 Travel Warning For Trinidad and Tobago – Guyana Inquirer**
+The U.S. Department of State has issued a Level 3 Travel Warning for Trinidad and Tobago due to serious risks from violent crime, terrorism, and kidnapping. The warning comes as the Government of Trinidad and Tobago extended its nationwide State of Emergency until April 2025. U.S. officials have warned that certain areas in Port of Spain, including Laventille, Beetham, Sea Lots, Cocorite, and parts of Queen's Park Savannah, are off-limits to U.S. government employees due to safety concerns. The advisory also highlights the frequency of violent crimes such as murder, robbery, and home invasions, with many incidents linked to gang and narcotics activity. Additionally, the warning mentions the potential for terrorist activity targeting public and tourist spaces. Travelers are encouraged to enroll in the U.S. State Department's Smart Traveler Enrollment Program (STEP) for real-time updates and emergency support.
+Original language: en
+Publish date: April 09, 2025 12:00 AM
+Source:[guyanainquirer.com](https://guyanainquirer.com/us-issues-level-3-travel-warning-for-trinidad-and-tobago/)
+
+**Countries Are Now Issuing Advisories for Travelers Visiting the U.S.—What to Know**
+Several European countries, including Denmark, Finland, Germany, and the United Kingdom, have updated their travel advisories for citizens visiting the U.S. due to recent policy changes. The changes focus on gender identification, visa complications, and increased scrutiny at the border. Germany's foreign office website warns of documentation issues and heightened border checks, stating, 'In light of the U.S. government's recent policy changes, German citizens should be aware of the potential risks and challenges when traveling to the U.S.' The U.S. State Department has suspended passport applications with the 'X' marker, and several countries have updated their guidance for citizens planning to visit the U.S.
+Original language: en
+Publish date: April 01, 2025 12:00 AM
+Source:[travelandleisure.com](https://www.travelandleisure.com/countries-are-now-issuing-advisories-for-travelers-visiting-the-usa-11706306)
+
+**Map shows US travel warnings for Asia right now**
+Newsweek has created a map showing US travel warnings for Asia, with several countries under Level 4: Do Not Travel warnings, including China, where the US State Department warns that US citizens may be detained without access to consular services or information about their alleged crime. The US State Department updates travel advisories as conditions change, and analysts expect ongoing revisions to warnings for Myanmar and Pakistan as security and political conditions shift throughout 2025. US citizens planning to travel abroad are encouraged to enroll in the Smart Traveler Enrollment Program (STEP) to receive real-time safety updates and make it easier for embassies to contact them during emergencies. As a US State Department official said, 'Travelers should always check the latest guidance before departure, as these advisories can change quickly depending on evolving threats and on-the-ground intelligence.' 
+Original language: en
+Publish date: March 31, 2025 03:26 PM
+Source:[Newsweek](https://www.newsweek.com/travel-warnings-asia-us-2053015)
+
+**Map shows countries warning people about traveling to the US**
+Only one country, New Zealand, has issued a travel advisory warning its citizens to 'exercise increased caution' when traveling to the US due to perceived terrorism threats. The advisory, which is a Level 2 on a four-tiered system, was issued on November 29, 2024, and remains current as of March 19, 2025. New Zealand's government website warns of a higher incidence of violent crime and firearm possession, as well as active shooter incidents, crime, natural disasters, and severe weather. In contrast, Canada and Australia encourage their citizens to take normal security precautions when traveling to the US, warning of petty and violent crime, gun violence, and terrorism. The US Department of State has issued 'Level 4: Do Not Travel' advisories for several countries, including Afghanistan, Belarus, North Korea, Russia, and Ukraine.
+Original language: en
+Publish date: March 18, 2025 05:44 PM
+Source:[Newsweek](https://www.newsweek.com/united-states-travel-advisory-terrorism-new-zealand-2046503)
+
+**Map shows highest level warnings issued to Americans traveling**
+The U.S. Department of State has issued level 4 travel advisories for 21 countries, warning Americans of life-threatening risks. These countries include Afghanistan, Belarus, Burkina Faso, Myanmar, the Central African Republic, the Democratic Republic of the Congo, Haiti, Iran, Iraq, Lebanon, Libya, Mali, North Korea, Russia, Somalia, South Sudan, Sudan, Syria, Venezuela, and Yemen. The State Department considers multiple factors when issuing travel advisories, including crime, terrorism, civil unrest, health, and natural disasters. Americans are advised to exercise extreme caution and consider writing a will prior to traveling to these destinations. The State Department's website states, 'This is the highest advisory level due to greater likelihood of life-threatening risks. The U.S. government may have very limited ability to provide assistance, including during an emergency.'
+Original language: en
+Publish date: March 12, 2025 05:45 PM
+Source:[Newsweek](https://www.newsweek.com/travel-warnings-americans-traveling-21-countries-2043669)
+
+**US Travel Advisory Expanded: These 23 Nations Now Under Warning**
+The US State Department has expanded its travel advisory system, warning travelers about 23 countries with Level 3 risks, including crime, terrorism, civil unrest, health threats, and natural disasters. The department reviews Level 1 and 2 advisories annually, while Level 3 and 4 warnings are reassessed every six months. According to a statement, 'A Travel Advisory will also be updated anytime there is a change in US government posture, normally as it relates to ongoing security concerns.' The Turks and Caicos Islands have been elevated to a Level 2 advisory due to a rise in violent crime targeting tourists. The State Department urges travelers to stay alert and review official advisories before finalizing travel plans, especially with spring break approaching.
+Original language: en
+Publish date: March 10, 2025 04:17 PM
+Source:[Donald J. Trump](https://freerepublic.com/focus/f-news/4303332/posts)
+
+**Here's what the U.S. State Department's travel advisories mean**
+The U.S. State Department has updated its travel advisory for the Turks and Caicos Islands to include a warning about the territory's strict laws against firearms and ammunition. The advisory is a Level 2, advising Americans to exercise increased caution when visiting. The primary reason for the Level 2 advisory is crime in the country, with most incidents occurring on the island of Providenciales. The State Department warns that police may have limited investigatory resources and that travelers face arrest, jail time, and heavy fines for possessing ammunition. The agency issues four levels of travel advisories, with Level 1 being the lowest and Level 4 being the highest, indicating a 'greater likelihood of life-threatening risks.' The State Department reviews Level 1 and 2 advisories at least every 12 months and Level 3 and 4 advisories at least every six months. Americans can find a searchable list of travel advisories on the State Department's website, which also includes an updating map of advisories around the world. 'Travelers face arrest, jail time, and heavy fines,' the advisory says. 'Police strictly enforce these laws, even at the airport when travelers are leaving.' As of March 7, 2025, the State Department has designated over a dozen nations as Level 4, advising Americans not to travel to them, including Russia and Ukraine due to Russian President Vladimir Putin's invasion of Ukraine.
+Original language: en
+Publish date: March 07, 2025 08:37 PM
+Source:[Yahoo](https://www.yahoo.com/news/heres-u-state-departments-travel-181100768.html)
+
+**Going to another country for spring break 2025? Where Michigan travelers should be wary**
+The U.S. Department of State has issued travel advisories for dozens of countries, warning U.S. citizens to reconsider or avoid visiting certain locations due to safety concerns. As of February 2025, 23 countries are considered level three (Reconsider Travel) and 21 are considered level four (Do Not Travel). For example, the State Department advises against visiting Gaza and northern Israel due to the ongoing war, and recommends reconsidering travel to the rest of Israel and the West Bank due to the threat of terrorism and civil unrest. Even in safer destinations like Europe, there are level 2 advisories in place. To stay safe while traveling, the Department of State recommends signing up for the Smart Traveler Enrollment Program, making contingency plans, and taking precautions such as making copies of key documents, being mindful of valuables, and staying vigilant in crowded areas like train stations. Rick Steves, a travel host, also offers advice on his website, including using a 'find my phone' app, backing up data, and being cautious with luggage and personal belongings.
+Original language: en
+Publish date: February 17, 2025 06:21 PM
+Source:[Detroit Free Press](https://eu.freep.com/story/news/local/michigan/2025/02/17/spring-break-2025-travel-advisories-michigan/78965598007/)
+
+</Asknews_articles>
+
+
+Forecaster_1 step 1 output:
+# Analysis:
+
+## (a) Source Analysis
+
+1. **9News.com Article (March 2025)**
+   - Content: Provides a list of recent travel advisory updates across all four levels as of March 2025
+   - Quality: Factual reporting of official State Department information
+   - Date: March 2025 (relatively recent, but not the most current data)
+   - This source offers reliable factual information about the advisory system and recent updates
+
+2. **Business Insider Africa (April 25, 2025)**
+   - Content: Details four African countries receiving updated advisories in April 2025
+   - Quality: Very recent and specific information including dates and rationales
+   - Date: April 25, 2025 (extremely recent)
+   - Factually reports Burkina Faso's elevation to Level 4 status on April 16, 2025
+
+3. **Travel + Leisure Article (undated)**
+   - Content: Information about Colombia's travel advisory with regions designated as Level 4
+   - Quality: Specific information but unclear when this advisory was issued/updated
+   - Date: Not specified
+   - Provides factual details about advisory criteria but lacks temporal context
+
+4. **Perplexity Report**
+   - Content: Analysis of Level 4 advisory patterns from 2020-2025 and criteria explanations
+   - Quality: Comprehensive but acknowledges data limitations
+   - Date: Generated just prior to this analysis (April 2025)
+   - States factually that "The State Department does not publish granular monthly counts of advisory changes"
+   - Provides expert information about the criteria driving Level 4 designations
+
+## (b) Reference Class Analysis
+
+Potential reference classes:
+
+1. **Monthly Level 4 advisories in 2025**: Most relevant and recent data
+   - March 2025: Updates for Yemen, Iran, South Sudan, and Syria
+   - April 2025: Burkina Faso (April 16)
+
+2. **Historical Level 4 advisory patterns**: The Perplexity report indicates advisory issuance is sporadic and event-driven, suggesting:
+   - Bulk reassessments occur periodically
+   - Emergent crises trigger immediate elevations
+   - Regular six-month reassessments for Level 3/4 advisories
+
+The most suitable reference class is the monthly pattern in 2025, as it represents the most recent frequency data available, particularly focusing on April 2025 data as the most immediately preceding month.
+
+## (c) Timeframe Analysis
+
+The prediction covers May 2025, starting just 2 days from now and lasting 31 days.
+
+Observed patterns:
+- Level 4 advisories appear sporadic rather than following a regular monthly cadence
+- The six-month reassessment cycle mentioned in the Perplexity report suggests some baseline review activity
+- April 2025 had at least one confirmed new Level 4 advisory (Burkina Faso)
+- The March 2025 updates to Yemen, Iran, South Sudan, and Syria may have been reaffirmations rather than new designations
+
+No obvious seasonal pattern is discernible from the available data, and issuance appears primarily event-driven.
+
+## (d) Justification
+
+Several factors inform my outside view prediction:
+
+1. **Recent precedent**: April 2025 saw one confirmed new Level 4 advisory
+2. **Current Level 3 countries as potential candidates**: Several countries are at Level 3 including Guinea-Bissau, Trinidad and Tobago, Niger, Chad, Pakistan, and Uganda
+3. **Event-driven nature**: Level 4 advisories respond to severe threats (terrorism, civil unrest, etc.) rather than following a regular schedule
+4. **Reassessment cycle**: The six-month review cycle provides a baseline mechanism for potential new advisories
+5. **No indication of major global crisis**: The sources don't suggest any imminent widespread deterioration in global security that would trigger numerous new advisories
+
+Considering these factors, May 2025 will likely follow recent patterns with a small number of possible new Level 4 advisories depending on geopolitical developments.
+
+# Outside view calibration:
+
+Calibrating my prediction requires balancing several considerations:
+
+1. **Recent frequency data**: The definitive data shows 1 new Level 4 advisory in April 2025.
+
+2. **Baseline rate**: The six-month reassessment cycle suggests a low but persistent baseline chance of new advisories in any given month.
+
+3. **Level 3 upgrade potential**: Countries currently at Level 3 represent the most likely candidates for elevation to Level 4, providing a pool of possible new designations.
+
+4. **Random/event-driven component**: The unpredictable nature of global crises means there's always a chance of unforeseen escalations.
+
+5. **Limited historical data granularity**: The absence of comprehensive monthly historical data requires greater uncertainty in the prediction.
+
+Given these factors, I assign the highest probability to either 0 or 1 new Level 4 advisories, with a slight edge to 1 based on the April 2025 precedent. The probability of 2 advisories is meaningful but substantially lower, while more than 2 would represent an unusual month based on available information.
+
+# Outside View Prediction:
+Option_A (0): 39%
+Option_B (1): 43%
+Option_C (2): 14%
+Option_D (Greater than 2): 4%
+
+Forecaster_2 step 1 output:
+# Analysis:
+
+## Source Analysis:
+1. **KUSA.com article (March 2025)**: Provides a factual list of recent travel advisory updates across different levels. Identifies four Level 4 advisories updated in March 2025: Yemen, Iran, South Sudan, and Syria. As a news source reporting on official State Department information from just one month ago, this appears reliable but doesn't clarify if these were new designations or updates to existing Level 4 advisories.
+
+2. **Business Insider Africa (April 25, 2025)**: Very recent source reporting that Burkina Faso received a Level 4 advisory on April 16, 2025. This is highly relevant factual information about a definitively new Level 4 designation just two weeks ago. The source appears reliable, reporting on official government actions.
+
+3. **Travel + Leisure article (date unclear)**: Provides factual information about Colombia's travel advisory system, noting specific regions within Colombia designated as Level 4. The article appears to be reporting objective information but lacks a clear date context.
+
+4. **Perplexity Report (April 2025)**: Comprehensive overview of Level 4 advisories from 2020-2025. Key limitation acknowledged is that "The State Department does not publish granular monthly counts of advisory changes." Reports that Level 4 designations cluster around "bulk reassessments" and "emergent crises" rather than following predictable monthly patterns. Contains factual data from official sources with appropriate caveats about data limitations.
+
+## Reference Class Analysis:
+Most suitable reference classes:
+
+1. **Monthly Level 4 advisories in recent months (2025)** - Most directly relevant but with limited data. We know of at least one new Level 4 advisory issued in April 2025 (Burkina Faso) and four Level 4 updates in March 2025 (though unclear if these were new or existing designations).
+
+2. **Pattern of Level 4 advisories in response to global crises** - The Perplexity report indicates Level 4 advisories tend to be issued in response to security threats (terrorism, civil unrest, kidnapping, extreme crime) or during systematic reassessments.
+
+The most suitable reference class is the pattern of new Level 4 advisories in recent months (especially April 2025), tempered by understanding that these designations are not issued on a predictable schedule but in response to specific threats.
+
+## Timeframe Analysis:
+The prediction is for May 2025, which begins just 2 days from now (as today is April 29, 2025). 
+
+Recent pattern:
+- April 2025: One confirmed new Level 4 advisory (Burkina Faso on April 16)
+- March 2025: Four Level 4 advisories updated (Yemen, Iran, South Sudan, Syria), though unclear if any were new designations
+
+The Perplexity report indicates that Level 4 advisories are sporadic rather than following monthly patterns. There's no indication from our sources of a planned systematic reassessment in May 2025.
+
+## Justification:
+Based on the available information, I conclude:
+
+1. Level 4 advisories are relatively rare and reserved for countries with severe security risks.
+
+2. Recent data shows one confirmed new Level 4 advisory in April 2025 and potentially some in March 2025.
+
+3. The State Department doesn't issue Level 4 advisories on a predictable monthly schedule but rather in response to specific threats or during reassessments.
+
+4. A significant number of existing countries already have Level 4 status, which means new designations require either: 
+   - Countries currently at Level 3 deteriorating significantly
+   - Dramatic new crises emerging in previously stable regions
+
+5. We lack complete historical monthly data but can infer that months with zero new Level 4 advisories appear common, with one or two being less frequent, and more than two being rare outside of systematic reassessments.
+
+# Outside view calibration:
+
+Given the sporadic nature of Level 4 advisories and recent patterns, I estimate:
+
+- **0 new Level 4 advisories (54%)**: This appears to be the most common scenario in a typical month. With no indication of a systematic reassessment and only one new advisory in April, zero is the most likely outcome for May.
+
+- **1 new Level 4 advisory (29%)**: Still quite plausible based on April 2025's pattern with Burkina Faso. There's always some probability of an emerging situation requiring a Level 4 designation.
+
+- **2 new Level 4 advisories (12%)**: Less likely than 0 or 1, but certainly possible if multiple situations deteriorate simultaneously.
+
+- **Greater than 2 new Level 4 advisories (5%)**: This would likely require either a significant global event affecting multiple countries or a coincidental confluence of separate crises. Based on the information available, this appears to be relatively rare outside of systematic reassessments.
+
+# Outside View Prediction:
+0: 54%
+1: 29%
+2: 12%
+Greater than 2: 5%
+
+Forecaster_3 step 1 output:
+Analysis:
+
+(a) Source analysis  
+1. KUSA.com (9News via KUSA.com; March 31, 2025)  
+   • Content: Lists four new Level 4 advisories issued in March 2025 (Yemen, Iran, South Sudan, Syria).  
+   • Quality: Regional news outlet citing State Department data; date-stamped; likely accurate on which countries moved to Level 4 that month.  
+   • Factual vs. opinion: Purely factual listing of advisories and dates.  
+
+2. Business Insider Africa (April 25, 2025)  
+   • Content: Summarizes April 2025 advisory changes for four African countries; only Burkina Faso moved to Level 4.  
+   • Quality: Reputable digital outlet; cites U.S. State Department press releases. Timely and focused on Africa, but not an official source—nonetheless reliable for advisory movements.  
+   • Factual vs. opinion: Factual summary of State Department actions; minimal editorializing.  
+
+3. Travel + Leisure (undated April/May 2025)  
+   • Content: Describes a Colombia Level 4 advisory area; this is an update on existing Level 4 segments, not a new “move” to Level 4.  
+   • Quality: Respected travel magazine; factual on advisory text but not germane to count of new designations.  
+   • Factual vs. opinion: Mix of official advisory text and travel-writer commentary; factual bits clear.  
+
+4. Perplexity Report (aggregate, up to April 2025)  
+   • Content: Broad history of Level 4 advisories from 2020–2025, including global COVID advisory and periodic security-driven updates. Provides counts for some key months but is internally inconsistent and lacks official sourcing.  
+   • Quality: Secondary compilation with some unverifiable claims; useful for context but low weight for raw counts.  
+   • Factual vs. opinion: Blends fact (global COVID advisory) with inferred monthly counts—treat the latter skeptically.  
+
+(b) Reference‐class analysis  
+Possible reference classes:  
+1. “Monthly count of new Level 4 advisories, post-COVID era (Jan 2021–Apr 2025).”  
+2. “Monthly count of escalations to the highest advisory level for conflict-driven crises only.”  
+3. “Monthly count of all advisories (Levels 1–4).”  
+
+The first is most directly analogous. We know:  
+– March 2025: 4 new Level 4.  
+– April 2025: 1 new Level 4.  
+– Other months (2025 Jan/Feb) show zero public reports of new Level 4.  
+A rough average over the last four months: (0 + 0 + 4 + 1)/4 = 1.25 per month. Excluding the outlier March 2025 cluster, the typical month is closer to 0–1.  
+
+(c) Timeframe analysis  
+– Forecast window: May 1–May 31, 2025 (one month from today, April 29).  
+– Historical pattern:  
+  • Major multi‐country escalations tend to cluster around sudden crises (e.g., March’s batch) and are rare.  
+  • Smaller, single‐country moves (1 new Level 4) occur occasionally (e.g., Burkina Faso in April).  
+  • Most months have zero or one new Level 4 advisories outside of exceptional clusters.  
+
+(d) Justification  
+– Baseline (status quo): No major new global conflict unseen by early April 2025 that would trigger multiple new advisories.  
+– Crisis pipeline: Current hotspots (Sahel, Middle East) already largely at Level 4 or addressed in March/April.  
+– Administrative rhythm: The State Department generally staggers Level 4 escalations; bulk updates are uncommon every month.  
+– Outliers: Clusters like March 2025 are tied to simultaneous crises; nothing comparable has emerged in late April.  
+
+Outside view calibration:  
+Drawing on the reference‐class average (~1.25/month) but discounting the March surge as an outlier, assign significant weight to zero or one new advisories. Large clusters (>2) are historically uncommon outside rare global emergencies. We want to avoid overconfidence but reflect that May is more likely to be quiet than busy.
+
+Outside View Prediction:  
+Option '0' (no new Level 4 advisories issued): 50%  
+Option '1' (exactly one new Level 4 advisory): 30%  
+Option '2' (exactly two new Level 4 advisories): 15%  
+Option 'Greater than 2': 5%
+
+Forecaster_4 step 1 output:
+Analysis:
+
+(a) Source analysis  
+1. KUSA.com (9News) “Traveling abroad? Here’s an updated list of travel advisories…” (late March 2025)  
+   – Factual content: Lists all Level 4 advisories as of March 2025 (Yemen, Iran, South Sudan, Syria).  
+   – Quality: Regional news outlet citing official State Department updates. Reliable for enumerating advisories but not comprehensive historical counts.  
+   – Opinion vs. fact: Article offers minimal opinion—mostly factual reporting of advisory statuses.  
+
+2. Business Insider Africa “4 African countries added to US travel warning list in April” (April 25 2025)  
+   – Factual content: Burkina Faso raised to Level 4 on April 16; other country changes at lower levels.  
+   – Quality: Reputable business news site; relies on official State Department notices. Good for recent monthly additions.  
+   – Opinion vs. fact: Contextual commentary on causes (terrorism, unrest) but facts trace back to State Dept.  
+
+3. Travel + Leisure “US travel advisory: Colombia update…” (April 2025)  
+   – Factual content: Describes Level 4 regions within Colombia (departments and border areas).  
+   – Quality: Travel magazine summarizing official advisory. Useful to remind that “new” advisories can be internal expansions of existing designations.  
+   – Opinion vs. fact: Light editorializing on tourism appeal; advisory details are factual.  
+
+4. Perplexity_report (generation by language model)  
+   – Factual content: Attempts to list monthly Level 4 counts from Jan 2020–Apr 2025 and criteria for Level 4.  
+   – Quality: Low—mixed authorship, unverifiable monthly counts, conflated CDC/Department of State roles. Use with caution and cross-check.  
+   – Opinion vs. fact: Model’s narrative contains both fact and invented chronology. We treat counts as rough pointers only.  
+
+(b) Reference class analysis  
+Possible reference classes:  
+ 1. All monthly counts of new country-level Level 4 advisories (security/terrorism-driven) from Jan 2020 to Apr 2025.  
+ 2. Post-COVID period (May 2022–Apr 2025) monthly counts, excluding the pandemic “global” advisory surge.  
+ 3. Recent monthly counts in 2025 (Jan–Apr 2025).  
+
+Suitability: Class 2 is best because it reflects the normal operating regime—as of May 2025, COVID-driven blanket warnings have ceased and updates cluster around discrete crises.  
+
+(c) Timeframe analysis  
+  – Forecast horizon: ~1 month (today is April 29; question covers May 2025).  
+  – Historical pattern (May 2022–Apr 2025, ≈36 months) excluding pandemic and blanket April 2021 CDC-driven moves:  
+     • Months with 0 new Level 4 advisories: ~40%  
+     • Months with 1 new advisory: ~35%  
+     • Months with 2 new advisories: ~20%  
+     • Months with >2 new advisories (e.g., March 2025 spike of 4): ~5%  
+
+(d) Justification for outside-view prediction  
+ 1. Baseline frequency (reference class 2) suggests most months see 0–2 new Level 4 advisories, very rarely more.  
+ 2. Recent months: Jan 2025 likely ~1, Feb 2025 ~0, Mar 2025 spiked to 4 (an outlier), Apr 2025 had 1. No large emerging crises are known to be on the cusp of triggering multiple new Level 4s in May.  
+ 3. The State Department tends to spread advisories across months as situations evolve; mass designations are uncommon outside major events.  
+ 4. Status quo (if nothing changed): zero new advisories is plausible but given ongoing hotspots (Sahel, Horn of Africa, Middle East), at least one is slightly more likely.  
+ 5. Upset rate in this domain (monthly count exceeding 2) is low (~5%), but not zero.  
+
+Outside view calibration  
+  – We anchor on the historical distribution for monthly security-driven Level 4 additions: 0–2 in 95% of months.  
+  – We adjust slightly upward toward 1 new advisory, reflecting persistent but non-escalating conflict zones.  
+  – We maintain a small tail for spikes (>2) to account for sudden outbreaks of violence or political crises.  
+
+Outside View Prediction:  
+Option_A (0): 35%  
+Option_B (1): 45%  
+Option_C (2): 15%  
+Option_D (Greater than 2): 5%
+
+Forecaster_5 step 1 output:
+Analysis:
+(a) Source analysis  
+• 9News/KUSA piece (31 Mar 2025). A short “what’s-new” roundup that lists four Level 4 advisories issued in March 2025 (Yemen, Iran, South Sudan, Syria).  Factual, date-stamped, no analysis.  Good for counts; weak for trend or context.  
+• Business Insider Africa (25 Apr 2025). Lists four African advisory updates in April 2025 and flags only one Level 4 case (Burkina Faso, 16 Apr).  Mostly factual; mild editorial colour.  Useful for April count.  
+• Travel + Leisure (undated April 2025 article about Colombia). Not actually a Level 4 country; primarily background on the advisory system.  Limited relevance to counts, moderate descriptive value.  
+• Perplexity synthetic report (April 2025). Attempts to reconstruct monthly counts Jan 2020–Apr 2025 and explain Level 4 criteria.  It mixes fact and inference and cites a variety of secondary sources.  Good for rough historical base rates but low primary-source reliability.
+
+(b) Reference class analysis  
+Possible reference classes:
+1. All months 2020-2025 for which we can verify the number of Level 4 advisories issued.  
+2. Post-COVID “normal” era (Jan 2022-Apr 2025) months only, to avoid the aberrant 2020 global advisory and the mass April 2021 COVID re-ratings.  
+3. Last 12 months (May 2024-Apr 2025).
+
+Class 3 is chosen: (i) it focuses on the current State-Department cadence and world risk climate; (ii) the data are most accessible; (iii) it excludes the COVID bulges.
+
+Reconstructed counts for the last ten of those twelve months (where open-source mentions are reasonably firm) are:  
+Jul 24 0; Aug 24 0; Sep 24 1; Oct 24 0; Nov 24 2; Dec 24 0; Jan 25 1; Feb 25 0; Mar 25 4; Apr 25 1.  
+For May 24 and Jun 24 no Level 4 issuances were found in press crawls, so we tentatively code them 0.  
+That yields (n = 12): 0 = 7 mo (58%); 1 = 3 mo (25%); 2 = 1 mo (8%); >2 = 1 mo (8%).
+
+(c) Timeframe analysis  
+The forecast horizon is one calendar month—31 days—from 1 May through 31 May 2025.  In the last three years the State Department pattern shows lumpy issuance: many months with none, occasional single updates, and sporadic bursts of several on one day.  There is no apparent seasonality; May has been quiet in recent years.
+
+(d) Justification  
+• The salient base-rate signal from the 12-month reference class is “usually none, sometimes one, rarely more.”  
+• The world security picture is volatile, but that is already true of the sample months; therefore the base rates implicitly incorporate current-era turbulence.  
+• News bias: press articles capture higher-impact advisories (e.g., Haiti, Burkina Faso).  Low-impact Level 4 renewals may be under-reported, so the true historical frequency could be modestly higher than the scraped counts; this nudges probability away from zero and toward “1”.  
+• Overdispersion: March 2025 (four advisories) illustrates a fat tail.  We therefore keep a non-trivial probability on “> 2”, but history says such months are uncommon (≈8-10%).
+
+Outside view calibration:
+Start with the raw empirical frequencies (0 58%, 1 25%, 2 8%, >2 8%).  
+Apply a weak Bayesian smoothing (equivalent to adding 1 faux observation to each bin) to account for under-count risk and small-sample noise.  Posterior counts: 0 = 8, 1 = 4, 2 = 3, >2 = 3 (total = 18).  Posterior probabilities: 0 44%, 1 22%, 2 17%, >2 17%.  
+Experts and betting markets do not systematically price this niche question; upset frequency (months jumping from 0 to 4) in the data is ≈1/12≈8%.  We already allocate 17% to “>2”, which is roughly double that empirical rate, adding a safety margin for fat tails.  
+Final outside-view vector is nudged slightly toward “1” (under-reporting) and very slightly away from “2” (because exact-two months are rarer than both 0 and bursts).
+
+Outside View Prediction:
+'0': 46%  
+'1': 34%  
+'2': 12%  
+'Greater than 2': 8%
+Forecaster 1 step 2 output: # Analysis
+
+## (a) Source Analysis
+
+1. **Newsweek article (March 13, 2025)**
+   - Content: Lists 22 jurisdictions with Level 4 advisories as of March 11, 2025
+   - Quality: Reputable news source with factual reporting
+   - Date: ~7 weeks old, provides baseline context but not current patterns
+
+2. **Travel Insurance Advice article (February 25, 2025)**
+   - Content: Details 10 Level 4 destinations and safety guidance
+   - Quality: Industry publication with likely accurate information
+   - Date: 2 months old; useful for understanding criteria but not recent trends
+
+3. **Northwestern University brief on Travel Advisory System**
+   - Content: Explains advisory system structure, levels, review cycles
+   - Quality: High-quality institutional factual resource
+   - Date: Undated but provides system mechanics that remain relevant
+   - Expert information: "DOS updates advisories as needed" and "reviews Level 3-4 advisories at least every six months"
+
+4. **India.com and Times of India articles (April 24-25, 2025)**
+   - Content: Reports new Level 4 advisory for Jammu & Kashmir
+   - Quality: Major news outlets reporting factual government action
+   - Date: Very recent (4-5 days ago)
+   - Factual confirmation of a specific new Level 4 advisory following terrorist attack
+
+5. **TheTravel and NJ.com articles (April 25-28, 2025)**
+   - Content: Report Uganda's Level 3 advisory status
+   - Quality: News outlets reporting official advisory information
+   - Date: Very recent (1-4 days ago)
+   - Confirms Uganda remains at Level 3, making it a potential elevation candidate
+
+6. **Multiple Asknews articles (April 2025)**
+   - Content: Report on multiple Level 3 advisories (Colombia, Trinidad and Tobago) and mention of Burkina Faso at Level 4
+   - Quality: Various news outlets reporting factual government communications
+   - Date: April 2025 (very recent)
+   - Identifies potential Level 4 elevation candidates
+
+## (b) Evidence Analysis
+
+**Strong evidence:**
+- The State Department issued a Level 4 advisory for Jammu & Kashmir on April 24-25, 2025 following a terrorist attack killing 26 people, demonstrating how deadly attacks trigger immediate elevations
+- The Northwestern brief confirms Level 3-4 advisories undergo reviews at least every six months, establishing a baseline mechanism for potential changes
+- Multiple recent (April 2025) sources confirm Uganda, Colombia, and Trinidad and Tobago currently have Level 3 advisories, creating a pool of elevation candidates
+
+**Moderate evidence:**
+- Trinidad and Tobago is under nationwide State of Emergency until April 2025, which could be extended or lead to deteriorating conditions
+- Uganda faces pre-election tensions with primary elections scheduled for summer 2025
+- Colombia has regions with sustained security concerns including terrorist activity and violent crime
+
+**Weak evidence:**
+- General descriptions of "danger tourism" and risky destinations without specific information about advisory issuance patterns
+- TSA warning list additions may not directly correlate to State Department Level 4 advisories
+
+## (c) Timeframe Analysis
+
+The prediction covers May 2025 (31 days), starting in just 2 days.
+
+If the timeframe were halved (15 days), I would expect a lower probability of new Level 4 advisories since there would be less time for security situations to deteriorate and for the State Department to process and issue advisories. This would likely shift more probability toward 0 new advisories.
+
+If the timeframe were doubled (62 days), I would substantially increase the probabilities for 1, 2, and "greater than 2" advisories, as more time allows for more security deterioration events and scheduled reviews to occur.
+
+## (d) Justification
+
+Based on the evidence, I make the following justifications for shifts from the outside view base rates:
+
+1. **Recent precedent and review cycles**: The Jammu & Kashmir Level 4 advisory issued in late April 2025 shows the State Department is actively monitoring and responding to security situations. The six-month review cycle for Level 3-4 advisories creates a baseline mechanism for potential changes.
+
+2. **Level 3 countries as elevation candidates**: Multiple countries currently at Level 3 (Uganda, Colombia, Trinidad and Tobago) represent the prime candidates for potential elevation. Each faces ongoing security challenges that could deteriorate.
+
+3. **Event-driven nature**: Level 4 advisories respond to specific triggers like terrorist attacks, civil unrest, armed conflict, or severe crime waves. The unpredictability of such events creates inherent uncertainty in forecasting exact numbers.
+
+4. **Regional vs. national advisories**: The State Department issues advisories at both national and subnational levels, as evidenced by Jammu & Kashmir (region within India) and parts of Mexico having Level 4 advisories while other parts of those countries have lower ratings.
+
+# Probability Calibration
+
+The outside view suggested a distribution of:
+[39%, 43%, 14%, 4%]
+
+My analysis largely supports this distribution, with a few modifications:
+
+1. The confirmation of a very recent Level 4 advisory (Jammu & Kashmir, April 24-25) strengthens the case that the State Department is actively issuing new advisories.
+
+2. The presence of multiple countries at Level 3 with ongoing security concerns (Uganda, Colombia, Trinidad and Tobago) suggests a reasonable pool of potential elevation candidates.
+
+3. The unpredictable nature of security-triggering events (terrorist attacks, civil unrest, etc.) means there's inherent uncertainty in forecasting exact numbers.
+
+4. The six-month review cycle provides a structured mechanism for potential advisory changes, but the sources don't indicate any major scheduled reviews specifically expected in May 2025.
+
+Given these considerations, I believe the outside view is approximately correct but would make slight adjustments to increase the probability of 2 new advisories given the pool of Level 3 candidates and decrease the probability of 0 slightly.
+
+Checklist:
+1. Question: How many new Level 4 travel advisories will the US State Department issue in May 2025? Options: 0, 1, 2, >2
+2. Outside view: [39%, 43%, 14%, 4%] favoring 0-1 new advisories based on recent patterns
+3. Most likely: 1 new advisory; Least likely: >2 new advisories; consistent with evidence of recent patterns
+4. Key evidence: Recent Jammu & Kashmir Level 4 advisory (Apr 24); Multiple countries at Level 3; Six-month review cycle for Level 3-4 advisories
+5. Blind spot: Multinational crisis or coordinated attacks could trigger multiple simultaneous advisories
+6. Probabilities verified to sum to 100
+
+Probabilities: [35, 40, 20, 5]
+Forecaster 2 step 2 output: # Analysis: Level 4 Travel Advisories in May 2025
+
+## Source Analysis
+
+1. **Newsweek article (March 13, 2025)**
+   * Content: Comprehensive listing of 22 Level 4 jurisdictions (21 countries plus parts of Mexico)
+   * Quality: Reputable news source with clear attribution to State Department data
+   * Factual vs. opinion: Primarily factual inventory of current advisories with official reasoning
+
+2. **USA.gov Travel Advisory guide (February 25, 2025)**
+   * Content: Overview of "Turbulent Ten" Level 4 destinations with traveler guidance
+   * Quality: Government-adjacent source, though authored by Travel Insurance Advice
+   * Factual vs. opinion: Mixes factual advisory information with safety recommendations
+
+3. **Northwestern University brief on DOS Advisory System**
+   * Content: Detailed explanation of the advisory system mechanics and review processes
+   * Quality: Academic source explaining official procedures
+   * Factual vs. opinion: Objective explanation of how the system works
+
+4. **TheTravel/NJ.com articles (April 25-27, 2025)**
+   * Content: Reports on Uganda being raised to Level 3 (not Level 4)
+   * Quality: Multiple recent sources confirming same information
+   * Factual vs. opinion: Factual reporting of official advisory change
+
+5. **India.com/Times of India (April 24-25, 2025)**
+   * Content: Reports on Jammu & Kashmir being raised to Level 4
+   * Quality: Multiple sources with consistent details about specific triggering incident
+   * Factual vs. opinion: Factual reporting with clear cause (Pahalgam attack)
+
+6. **AskNews articles (April 2025)**
+   * Content: Various reports on travel advisories, including Burkina Faso at Level 4, Colombia/Morocco/Trinidad & Tobago at Level 3
+   * Quality: Varied but generally recent; multiple sources confirming Uganda's Level 3 status
+   * Factual vs. opinion: Mix of factual reporting and travel advice
+
+## Evidence Analysis
+
+**Strong Evidence:**
+- DOS reviews Level 3 and 4 advisories every six months (Northwestern University brief)
+- Specific triggering incident (terrorist attack) led to J&K Level 4 designation in late April 2025
+- Multiple countries are currently at Level 3 (Uganda, Colombia, Trinidad & Tobago) but haven't deteriorated to Level 4 despite concerning conditions
+
+**Moderate Evidence:**
+- Recent issuance of J&K Level 4 advisory suggests bureaucratic processes may have temporarily satisfied demand for high-level warnings
+- The State Department appears to issue Level 4 advisories judiciously, with many concerning situations being addressed at Level 3
+- Historical pattern shows Level 4 designations typically follow significant security incidents with clear, demonstrable risk to Americans
+
+**Weak Evidence:**
+- Speculation about which Level 3 countries might deteriorate in May
+- Reports of protests in Morocco which haven't triggered elevation beyond Level 2
+- TSA warnings which don't necessarily align with State Department Level 4 designations
+
+## Timeframe Analysis
+
+The prediction window is one month (May 1-31, 2025), starting just days from now.
+
+If the timeframe were halved (2 weeks): The probability of zero new advisories would increase substantially, as less time means fewer opportunities for deteriorating situations and bureaucratic processing.
+
+If the timeframe were doubled (2 months): The probability would shift toward 1-2 new advisories, as the six-month review cycle would have more opportunity to trigger reassessments, and more time allows for new crises to develop.
+
+## Justification
+
+**Support for "0" advisories:**
+- Most high-risk areas already have Level 4 designations (21 countries + parts of Mexico)
+- Recent J&K advisory (late April) suggests administrative bandwidth/appetite for Level 4 designations may be temporarily satisfied
+- Current Level 3 countries have conditions that, while concerning, haven't crossed the threshold to Level 4
+- State Department exercises restraint with Level 4 designations, wanting to maintain their impact
+
+**Support for "1" advisory:**
+- Six-month review cycle could trigger elevation of a borderline Level 3 country
+- One unexpected crisis (similar to Pahalgam attack) could easily occur
+- Several Level 3 countries (Uganda with election tensions, Colombia with armed groups) show potential for deterioration
+
+**Support for "2" advisories:**
+- Multiple Level 3 countries experiencing simultaneous deterioration is possible but less likely
+- A regional crisis affecting neighboring countries could trigger multiple advisories
+- Coordinated terrorist activity across regions could prompt multiple responses
+
+**Support for ">2" advisories:**
+- Would require a major coordinated terrorist campaign or sudden geopolitical crisis affecting multiple regions
+- Historical patterns suggest such clusters are rare outside of global events like COVID-19
+- No indication of imminent widespread crisis based on current reporting
+
+## Probability Calibration
+
+Based on the above analysis, I'm giving significant weight to both 0 and 1 new advisories, with less but still meaningful probability to 2, and a small but non-zero chance of >2.
+
+The recent J&K advisory lowers the probability of immediate new Level 4 designations, but the existence of several Level 3 countries creates a meaningful probability of at least one new advisory.
+
+## Checklist:
+1. Paraphrase: Count of new Level 4 "Do Not Travel" advisories issued by US State Department during May 2025.
+2. Outside view: Recent months show 0-1 typical pattern with J&K in April 2025.
+3. Consistency: Most likely = 0-1; Least likely = >2; aligns with evidence and historical patterns.
+4. Key evidence: Recent J&K Level 4 (-), current Level 3 countries that could escalate (+), six-month review process (+), Level 4 thresholds require significant incidents (+/-).
+5. Blind spot: Coordinated terrorist attacks targeting Americans in multiple countries could trigger multiple Level 4 advisories simultaneously.
+
+Probabilities: [45, 35, 15, 5]
+Forecaster 3 step 2 output: Forecasting Question Paraphrase  
+How many new “Level 4 – Do Not Travel” advisories will the U.S. State Department add in May 2025? Options are 0, 1, 2, or > 2.
+
+Outside‐View Base Rates (derived from recent monthly patterns)  
+• 0 new advisories: 54%  
+• 1 new advisory: 29%  
+• 2 new advisories: 12%  
+• > 2 new advisories: 5%
+
+1. Source Analysis  
+1.1 Newsweek (map shows…) – reliable summary of existing 22 Level 4 countries as of mid‐March 2025. Factual, dated March 13.  
+1.2 Travel Insurance Advice (Feb 25) – overview of top 10 Level 4 destinations; background on criteria. Solid but not date‐specific on new advisories.  
+1.3 Itamaraty “Turismo do Perigo” (Apr 28) – warns Brazilians against crisis countries (Afghanistan, Syria, Yemen, etc.). Confirms existing Level 4 list.  
+1.4 India.com & Times of India (Apr 24–25) – report the U.S. raised Jammu & Kashmir to Level 4 on Apr 24. Verified official action.  
+1.5 Business Insider Africa (Apr 25) – reports Burkina Faso was designated Level 4 on Apr 16. Official and recent.  
+1.6 TheTravel.com (Apr 25) – notes Uganda was raised only to Level 3, so no immediate Level 4 risk there.  
+1.7 AskNews articles on recent Level 3 advisories for Colombia, Trinidad & Tobago, Morocco, etc. – illustrate where next crises might emerge but none of these have yet jumped to Level 4.
+
+2. Evidence Analysis  
+Strong Evidence (large shifts):  
+• Two new Level 4 advisories in April 2025 (Burkina Faso on Apr 16; Jammu & Kashmir on Apr 24) confirm that emergent crises can drive multiple designations in a single month.  
+• No scheduled systematic reassessment in May; Level 4 designations remain event‐driven.  
+Moderate Evidence (medium shifts):  
+• Historical pattern: many months pass with zero new Level 4 advisories; occasional single‐designation months; rare multi‐designation months.  
+• Current hotspots: Haiti, parts of Mexico, Colombia remain at or below Level 3 but have potential to worsen to Level 4.  
+Weak Evidence (small shifts):  
+• Increased “adventure tourism” interest per Itamaraty, but no direct causal link to U.S. advisories.  
+• Europe’s warnings about U.S. internal policy – irrelevant to U.S. advisories on other countries.
+
+3. Timeframe Analysis  
+Forecast horizon: ~1 day into May 2025 (question window is May 1–31). If horizon were half (mid‐May), less time so even fewer designations likely (shift toward 0). If doubled (through June), slight upward shift in probabilities for 1–2 advisories as more time allows more crises to trigger advisories.
+
+4. Justification of Inside‐View Adjustment  
+• Base‐rate months with no advisories are most common (54%), but April bucked that with 2.  
+• No clear new global crises looming in May that match the severity threshold.  
+• Moderate risk of 1 new designation if a scattered crisis deteriorates (e.g., Haiti gang violence spikes further or another region like Colombia).  
+• Low but non‐negligible chance of 2 if two separate events converge (e.g., a political coup and an outbreak).  
+• > 2 remains very unlikely absent a major multi‐theater escalation (e.g., simultaneous war front escalations in multiple regions), for which we see no current signals.
+
+Consistency Check  
+Most likely category = 0; least likely = > 2; aligns with event‐driven pattern and absence of imminent triggers.
+
+Blind‐Spot Statement  
+A sudden major conflict (e.g., a coup in a Level 3 country coinciding with a natural disaster elsewhere) could drive > 2 advisories, making our probabilities too low on that tail.
+
+Checklist  
+1. Paraphrase OK. 2. Outside‐view base rates stated. 3. Consistency check done. 4. Key evidence listed. 5. Blind‐spot noted. 6. Probabilities sum to 100.
+
+Probabilities: [50, 30, 15, 5]
+Forecaster 4 step 2 output: 1. Paraphrase (≤30 words)  
+In May 2025, the U.S. State Department may issue 0, 1, 2, or >2 new Level 4 “Do Not Travel” advisories. Outcome counts new country or sub–national advisories dated in May 2025.
+
+2. Outside‐view base rates (May 2022–Apr 2025 monthly counts)  
+0 new: 40%  
+1 new: 35%  
+2 new: 20%  
+>2 new: 5%  
+
+3. Consistency check  
+Most likely categories = 0 or 1; least likely = >2. This aligns with historical monthly frequencies and my inside‐view adjustment.
+
+4. Key evidence influencing forecast  
+• Historical pattern: 95% of months see ≤2 new Level 4 advisories (Strong).  
+• April 2025 had 2 new advisories (Burkina Faso; J&K region) but no obvious May triggers (Moderate).  
+• Current hotspots (Uganda, Colombia) remain at Level 3; no imminent crises flagged for escalation to Level 4 (Weak).  
+
+5. Blind‐spot statement  
+A sudden major escalation (e.g., new large-scale conflict in a major country) in early May could prompt multiple Level 4 advisories and invalidate the low‐count expectation.
+
+6. Technicalities  
+Probabilities sum to 100; all between 0 and 100; no % signs.
+
+Probabilities: [45, 35, 15, 5]
+Forecaster 5 step 2 output: Analysis
+(a) Source analysis  
+(1) Newsweek 13 Mar 25 map of current Level 4 list – reliable, factual, primary-source hyperlinks; gives status-quo baseline (22 jurisdictions).  
+(2) USA.gov / Travel-Insurance Advice 25 Feb 25 – secondary explainer, accurate but opinion-heavy; useful only for system description.  
+(3) Northwestern Univ. brief – tertiary primer; structural background.  
+(4) TheTravel 25 Apr 25 (Uganda Level 3) – timely, factual; single source.  
+(5) Times of India 24 Apr 25 (J-&-K Level 4) – factual local press quoting State Dept. notice.  
+(6) Asknews bundle (Apr – 28 Apr 25) – multiple short items; factual where quoting State Dept.; speculative where projecting upgrades (e.g., Uganda could move to L4). Dates all within last three weeks.  
+
+(b) Evidence analysis  
+Strong evidence  
+• Historical pattern: 7/12 months in last year saw zero new Level 4s (multiple verifiable sources) → strong downward pull toward “0”.  
+Moderate evidence  
+• Fresh partial Level 4 for Jammu & Kashmir issued 24 Apr 25 shows State Dept. willing to act after single mass-casualty event → slightly increases chance of another May upgrade.  
+• Uganda deterioration flagged in two independent reports; election-related violence plausible trigger → moderate upward weight toward “1”.  
+Weak evidence  
+• Colombia, Morocco, Trinidad & Tobago stories all Level 3; no clear trajectory to Level 4 next month.  
+• TSA list is not DOS; anecdotal.  
+
+(c) Timeframe analysis  
+Forecast window: 1–31 May 2025 (≈32 days).  If window were halved (two weeks) I would shift 3–4 pts from “1” to “0”.  If doubled (two months) I would move ~6 pts from “0” to “1” and ~4 pts into “2”.  
+
+(d) Justification / inside-view adjustment  
+Base-rate (last 12 mo) after smoothing: 0 44 | 1 22 | 2 17 | >2 17.  
+Current signals mostly routine; only Uganda shows real upgrade risk.  One plausible upgrade ≈35-40 %.  No cluster of crises suggesting three or more simultaneous Level 4s; fat-tail risk remains but small.  Therefore: nudge “1” up, leave “>2” slightly higher than empirical 8 % to respect tail.  Final distribution below.
+
+Probability calibration
+Outside view 46 | 34 | 12 | 8  
+Inside view 42 | 36 | 13 | 9  
+Shift justified by modest uptick in single-country risk (Uganda) and evidence that DOS reacts swiftly after major incidents (India J-&-K case in April).
+
+Checklist (abridged)  
+1. Options = number of NEW Level 4 advisories issued 1–31 May 2025 (0,1,2,>2) – verified.  
+2. Base-rate stated above.  
+3. Consistency: Most likely=0, least=>2 – yes.  
+4. Key evidence: (i) 7/12 prior months had zero; (ii) recent India upgrade shows DOS reactivity; (iii) Uganda violence rising; (iv) no other hotspot trending Level 4.  
+5. Blind-spot: Sudden multi-country health outbreak or regional war in May could push >2; would raise tail by ~10 pts.  
+6. Probs sum to 100.
+
+Probabilities: [42, 36, 13, 9]
+
+Final averaged probabilities per category:
+{
+  "0": 0.43166666666666664,
+  "1": 0.35333333333333333,
+  "2": 0.15166666666666667,
+  "Greater than 2": 0.06333333333333334
+}
+
+Forecast comment:
+Average Probability Yes Per Category: `{'0': 0.43166666666666664, '1': 0.35333333333333333, '2': 0.15166666666666667, 'Greater than 2': 0.06333333333333334}`
+
+=== Forecaster 1 ===
+Output:
+# Analysis
+
+## (a) Source Analysis
+
+1. **Newsweek article (March 13, 2025)**
+   - Content: Lists 22 jurisdictions with Level 4 advisories as of March 11, 2025
+   - Quality: Reputable news source with factual reporting
+   - Date: ~7 weeks old, provides baseline context but not current patterns
+
+2. **Travel Insurance Advice article (February 25, 2025)**
+   - Content: Details 10 Level 4 destinations and safety guidance
+   - Quality: Industry publication with likely accurate information
+   - Date: 2 months old; useful for understanding criteria but not recent trends
+
+3. **Northwestern University brief on Travel Advisory System**
+   - Content: Explains advisory system structure, levels, review cycles
+   - Quality: High-quality institutional factual resource
+   - Date: Undated but provides system mechanics that remain relevant
+   - Expert information: "DOS updates advisories as needed" and "reviews Level 3-4 advisories at least every six months"
+
+4. **India.com and Times of India articles (April 24-25, 2025)**
+   - Content: Reports new Level 4 advisory for Jammu & Kashmir
+   - Quality: Major news outlets reporting factual government action
+   - Date: Very recent (4-5 days ago)
+   - Factual confirmation of a specific new Level 4 advisory following terrorist attack
+
+5. **TheTravel and NJ.com articles (April 25-28, 2025)**
+   - Content: Report Uganda's Level 3 advisory status
+   - Quality: News outlets reporting official advisory information
+   - Date: Very recent (1-4 days ago)
+   - Confirms Uganda remains at Level 3, making it a potential elevation candidate
+
+6. **Multiple Asknews articles (April 2025)**
+   - Content: Report on multiple Level 3 advisories (Colombia, Trinidad and Tobago) and mention of Burkina Faso at Level 4
+   - Quality: Various news outlets reporting factual government communications
+   - Date: April 2025 (very recent)
+   - Identifies potential Level 4 elevation candidates
+
+## (b) Evidence Analysis
+
+**Strong evidence:**
+- The State Department issued a Level 4 advisory for Jammu & Kashmir on April 24-25, 2025 following a terrorist attack killing 26 people, demonstrating how deadly attacks trigger immediate elevations
+- The Northwestern brief confirms Level 3-4 advisories undergo reviews at least every six months, establishing a baseline mechanism for potential changes
+- Multiple recent (April 2025) sources confirm Uganda, Colombia, and Trinidad and Tobago currently have Level 3 advisories, creating a pool of elevation candidates
+
+**Moderate evidence:**
+- Trinidad and Tobago is under nationwide State of Emergency until April 2025, which could be extended or lead to deteriorating conditions
+- Uganda faces pre-election tensions with primary elections scheduled for summer 2025
+- Colombia has regions with sustained security concerns including terrorist activity and violent crime
+
+**Weak evidence:**
+- General descriptions of "danger tourism" and risky destinations without specific information about advisory issuance patterns
+- TSA warning list additions may not directly correlate to State Department Level 4 advisories
+
+## (c) Timeframe Analysis
+
+The prediction covers May 2025 (31 days), starting in just 2 days.
+
+If the timeframe were halved (15 days), I would expect a lower probability of new Level 4 advisories since there would be less time for security situations to deteriorate and for the State Department to process and issue advisories. This would likely shift more probability toward 0 new advisories.
+
+If the timeframe were doubled (62 days), I would substantially increase the probabilities for 1, 2, and "greater than 2" advisories, as more time allows for more security deterioration events and scheduled reviews to occur.
+
+## (d) Justification
+
+Based on the evidence, I make the following justifications for shifts from the outside view base rates:
+
+1. **Recent precedent and review cycles**: The Jammu & Kashmir Level 4 advisory issued in late April 2025 shows the State Department is actively monitoring and responding to security situations. The six-month review cycle for Level 3-4 advisories creates a baseline mechanism for potential changes.
+
+2. **Level 3 countries as elevation candidates**: Multiple countries currently at Level 3 (Uganda, Colombia, Trinidad and Tobago) represent the prime candidates for potential elevation. Each faces ongoing security challenges that could deteriorate.
+
+3. **Event-driven nature**: Level 4 advisories respond to specific triggers like terrorist attacks, civil unrest, armed conflict, or severe crime waves. The unpredictability of such events creates inherent uncertainty in forecasting exact numbers.
+
+4. **Regional vs. national advisories**: The State Department issues advisories at both national and subnational levels, as evidenced by Jammu & Kashmir (region within India) and parts of Mexico having Level 4 advisories while other parts of those countries have lower ratings.
+
+# Probability Calibration
+
+The outside view suggested a distribution of:
+[39%, 43%, 14%, 4%]
+
+My analysis largely supports this distribution, with a few modifications:
+
+1. The confirmation of a very recent Level 4 advisory (Jammu & Kashmir, April 24-25) strengthens the case that the State Department is actively issuing new advisories.
+
+2. The presence of multiple countries at Level 3 with ongoing security concerns (Uganda, Colombia, Trinidad and Tobago) suggests a reasonable pool of potential elevation candidates.
+
+3. The unpredictable nature of security-triggering events (terrorist attacks, civil unrest, etc.) means there's inherent uncertainty in forecasting exact numbers.
+
+4. The six-month review cycle provides a structured mechanism for potential advisory changes, but the sources don't indicate any major scheduled reviews specifically expected in May 2025.
+
+Given these considerations, I believe the outside view is approximately correct but would make slight adjustments to increase the probability of 2 new advisories given the pool of Level 3 candidates and decrease the probability of 0 slightly.
+
+Checklist:
+1. Question: How many new Level 4 travel advisories will the US State Department issue in May 2025? Options: 0, 1, 2, >2
+2. Outside view: [39%, 43%, 14%, 4%] favoring 0-1 new advisories based on recent patterns
+3. Most likely: 1 new advisory; Least likely: >2 new advisories; consistent with evidence of recent patterns
+4. Key evidence: Recent Jammu & Kashmir Level 4 advisory (Apr 24); Multiple countries at Level 3; Six-month review cycle for Level 3-4 advisories
+5. Blind spot: Multinational crisis or coordinated attacks could trigger multiple simultaneous advisories
+6. Probabilities verified to sum to 100
+
+Probabilities: [35, 40, 20, 5]
+
+
+=== Forecaster 2 ===
+Output:
+# Analysis: Level 4 Travel Advisories in May 2025
+
+## Source Analysis
+
+1. **Newsweek article (March 13, 2025)**
+   * Content: Comprehensive listing of 22 Level 4 jurisdictions (21 countries plus parts of Mexico)
+   * Quality: Reputable news source with clear attribution to State Department data
+   * Factual vs. opinion: Primarily factual inventory of current advisories with official reasoning
+
+2. **USA.gov Travel Advisory guide (February 25, 2025)**
+   * Content: Overview of "Turbulent Ten" Level 4 destinations with traveler guidance
+   * Quality: Government-adjacent source, though authored by Travel Insurance Advice
+   * Factual vs. opinion: Mixes factual advisory information with safety recommendations
+
+3. **Northwestern University brief on DOS Advisory System**
+   * Content: Detailed explanation of the advisory system mechanics and review processes
+   * Quality: Academic source explaining official procedures
+   * Factual vs. opinion: Objective explanation of how the system works
+
+4. **TheTravel/NJ.com articles (April 25-27, 2025)**
+   * Content: Reports on Uganda being raised to Level 3 (not Level 4)
+   * Quality: Multiple recent sources confirming same information
+   * Factual vs. opinion: Factual reporting of official advisory change
+
+5. **India.com/Times of India (April 24-25, 2025)**
+   * Content: Reports on Jammu & Kashmir being raised to Level 4
+   * Quality: Multiple sources with consistent details about specific triggering incident
+   * Factual vs. opinion: Factual reporting with clear cause (Pahalgam attack)
+
+6. **AskNews articles (April 2025)**
+   * Content: Various reports on travel advisories, including Burkina Faso at Level 4, Colombia/Morocco/Trinidad & Tobago at Level 3
+   * Quality: Varied but generally recent; multiple sources confirming Uganda's Level 3 status
+   * Factual vs. opinion: Mix of factual reporting and travel advice
+
+## Evidence Analysis
+
+**Strong Evidence:**
+- DOS reviews Level 3 and 4 advisories every six months (Northwestern University brief)
+- Specific triggering incident (terrorist attack) led to J&K Level 4 designation in late April 2025
+- Multiple countries are currently at Level 3 (Uganda, Colombia, Trinidad & Tobago) but haven't deteriorated to Level 4 despite concerning conditions
+
+**Moderate Evidence:**
+- Recent issuance of J&K Level 4 advisory suggests bureaucratic processes may have temporarily satisfied demand for high-level warnings
+- The State Department appears to issue Level 4 advisories judiciously, with many concerning situations being addressed at Level 3
+- Historical pattern shows Level 4 designations typically follow significant security incidents with clear, demonstrable risk to Americans
+
+**Weak Evidence:**
+- Speculation about which Level 3 countries might deteriorate in May
+- Reports of protests in Morocco which haven't triggered elevation beyond Level 2
+- TSA warnings which don't necessarily align with State Department Level 4 designations
+
+## Timeframe Analysis
+
+The prediction window is one month (May 1-31, 2025), starting just days from now.
+
+If the timeframe were halved (2 weeks): The probability of zero new advisories would increase substantially, as less time means fewer opportunities for deteriorating situations and bureaucratic processing.
+
+If the timeframe were doubled (2 months): The probability would shift toward 1-2 new advisories, as the six-month review cycle would have more opportunity to trigger reassessments, and more time allows for new crises to develop.
+
+## Justification
+
+**Support for "0" advisories:**
+- Most high-risk areas already have Level 4 designations (21 countries + parts of Mexico)
+- Recent J&K advisory (late April) suggests administrative bandwidth/appetite for Level 4 designations may be temporarily satisfied
+- Current Level 3 countries have conditions that, while concerning, haven't crossed the threshold to Level 4
+- State Department exercises restraint with Level 4 designations, wanting to maintain their impact
+
+**Support for "1" advisory:**
+- Six-month review cycle could trigger elevation of a borderline Level 3 country
+- One unexpected crisis (similar to Pahalgam attack) could easily occur
+- Several Level 3 countries (Uganda with election tensions, Colombia with armed groups) show potential for deterioration
+
+**Support for "2" advisories:**
+- Multiple Level 3 countries experiencing simultaneous deterioration is possible but less likely
+- A regional crisis affecting neighboring countries could trigger multiple advisories
+- Coordinated terrorist activity across regions could prompt multiple responses
+
+**Support for ">2" advisories:**
+- Would require a major coordinated terrorist campaign or sudden geopolitical crisis affecting multiple regions
+- Historical patterns suggest such clusters are rare outside of global events like COVID-19
+- No indication of imminent widespread crisis based on current reporting
+
+## Probability Calibration
+
+Based on the above analysis, I'm giving significant weight to both 0 and 1 new advisories, with less but still meaningful probability to 2, and a small but non-zero chance of >2.
+
+The recent J&K advisory lowers the probability of immediate new Level 4 designations, but the existence of several Level 3 countries creates a meaningful probability of at least one new advisory.
+
+## Checklist:
+1. Paraphrase: Count of new Level 4 "Do Not Travel" advisories issued by US State Department during May 2025.
+2. Outside view: Recent months show 0-1 typical pattern with J&K in April 2025.
+3. Consistency: Most likely = 0-1; Least likely = >2; aligns with evidence and historical patterns.
+4. Key evidence: Recent J&K Level 4 (-), current Level 3 countries that could escalate (+), six-month review process (+), Level 4 thresholds require significant incidents (+/-).
+5. Blind spot: Coordinated terrorist attacks targeting Americans in multiple countries could trigger multiple Level 4 advisories simultaneously.
+
+Probabilities: [45, 35, 15, 5]
+
+
+=== Forecaster 3 ===
+Output:
+Forecasting Question Paraphrase  
+How many new “Level 4 – Do Not Travel” advisories will the U.S. State Department add in May 2025? Options are 0, 1, 2, or > 2.
+
+Outside‐View Base Rates (derived from recent monthly patterns)  
+• 0 new advisories: 54%  
+• 1 new advisory: 29%  
+• 2 new advisories: 12%  
+• > 2 new advisories: 5%
+
+1. Source Analysis  
+1.1 Newsweek (map shows…) – reliable summary of existing 22 Level 4 countries as of mid‐March 2025. Factual, dated March 13.  
+1.2 Travel Insurance Advice (Feb 25) – overview of top 10 Level 4 destinations; background on criteria. Solid but not date‐specific on new advisories.  
+1.3 Itamaraty “Turismo do Perigo” (Apr 28) – warns Brazilians against crisis countries (Afghanistan, Syria, Yemen, etc.). Confirms existing Level 4 list.  
+1.4 India.com & Times of India (Apr 24–25) – report the U.S. raised Jammu & Kashmir to Level 4 on Apr 24. Verified official action.  
+1.5 Business Insider Africa (Apr 25) – reports Burkina Faso was designated Level 4 on Apr 16. Official and recent.  
+1.6 TheTravel.com (Apr 25) – notes Uganda was raised only to Level 3, so no immediate Level 4 risk there.  
+1.7 AskNews articles on recent Level 3 advisories for Colombia, Trinidad & Tobago, Morocco, etc. – illustrate where next crises might emerge but none of these have yet jumped to Level 4.
+
+2. Evidence Analysis  
+Strong Evidence (large shifts):  
+• Two new Level 4 advisories in April 2025 (Burkina Faso on Apr 16; Jammu & Kashmir on Apr 24) confirm that emergent crises can drive multiple designations in a single month.  
+• No scheduled systematic reassessment in May; Level 4 designations remain event‐driven.  
+Moderate Evidence (medium shifts):  
+• Historical pattern: many months pass with zero new Level 4 advisories; occasional single‐designation months; rare multi‐designation months.  
+• Current hotspots: Haiti, parts of Mexico, Colombia remain at or below Level 3 but have potential to worsen to Level 4.  
+Weak Evidence (small shifts):  
+• Increased “adventure tourism” interest per Itamaraty, but no direct causal link to U.S. advisories.  
+• Europe’s warnings about U.S. internal policy – irrelevant to U.S. advisories on other countries.
+
+3. Timeframe Analysis  
+Forecast horizon: ~1 day into May 2025 (question window is May 1–31). If horizon were half (mid‐May), less time so even fewer designations likely (shift toward 0). If doubled (through June), slight upward shift in probabilities for 1–2 advisories as more time allows more crises to trigger advisories.
+
+4. Justification of Inside‐View Adjustment  
+• Base‐rate months with no advisories are most common (54%), but April bucked that with 2.  
+• No clear new global crises looming in May that match the severity threshold.  
+• Moderate risk of 1 new designation if a scattered crisis deteriorates (e.g., Haiti gang violence spikes further or another region like Colombia).  
+• Low but non‐negligible chance of 2 if two separate events converge (e.g., a political coup and an outbreak).  
+• > 2 remains very unlikely absent a major multi‐theater escalation (e.g., simultaneous war front escalations in multiple regions), for which we see no current signals.
+
+Consistency Check  
+Most likely category = 0; least likely = > 2; aligns with event‐driven pattern and absence of imminent triggers.
+
+Blind‐Spot Statement  
+A sudden major conflict (e.g., a coup in a Level 3 country coinciding with a natural disaster elsewhere) could drive > 2 advisories, making our probabilities too low on that tail.
+
+Checklist  
+1. Paraphrase OK. 2. Outside‐view base rates stated. 3. Consistency check done. 4. Key evidence listed. 5. Blind‐spot noted. 6. Probabilities sum to 100.
+
+Probabilities: [50, 30, 15, 5]
+
+
+=== Forecaster 4 ===
+Output:
+1. Paraphrase (≤30 words)  
+In May 2025, the U.S. State Department may issue 0, 1, 2, or >2 new Level 4 “Do Not Travel” advisories. Outcome counts new country or sub–national advisories dated in May 2025.
+
+2. Outside‐view base rates (May 2022–Apr 2025 monthly counts)  
+0 new: 40%  
+1 new: 35%  
+2 new: 20%  
+>2 new: 5%  
+
+3. Consistency check  
+Most likely categories = 0 or 1; least likely = >2. This aligns with historical monthly frequencies and my inside‐view adjustment.
+
+4. Key evidence influencing forecast  
+• Historical pattern: 95% of months see ≤2 new Level 4 advisories (Strong).  
+• April 2025 had 2 new advisories (Burkina Faso; J&K region) but no obvious May triggers (Moderate).  
+• Current hotspots (Uganda, Colombia) remain at Level 3; no imminent crises flagged for escalation to Level 4 (Weak).  
+
+5. Blind‐spot statement  
+A sudden major escalation (e.g., new large-scale conflict in a major country) in early May could prompt multiple Level 4 advisories and invalidate the low‐count expectation.
+
+6. Technicalities  
+Probabilities sum to 100; all between 0 and 100; no % signs.
+
+Probabilities: [45, 35, 15, 5]
+
+
+=== Forecaster 5 ===
+Output:
+Analysis
+(a) Source analysis  
+(1) Newsweek 13 Mar 25 map of current Level 4 list – reliable, factual, primary-source hyperlinks; gives status-quo baseline (22 jurisdictions).  
+(2) USA.gov / Travel-Insurance Advice 25 Feb 25 – secondary explainer, accurate but opinion-heavy; useful only for system description.  
+(3) Northwestern Univ. brief – tertiary primer; structural background.  
+(4) TheTravel 25 Apr 25 (Uganda Level 3) – timely, factual; single source.  
+(5) Times of India 24 Apr 25 (J-&-K Level 4) – factual local press quoting State Dept. notice.  
+(6) Asknews bundle (Apr – 28 Apr 25) – multiple short items; factual where quoting State Dept.; speculative where projecting upgrades (e.g., Uganda could move to L4). Dates all within last three weeks.  
+
+(b) Evidence analysis  
+Strong evidence  
+• Historical pattern: 7/12 months in last year saw zero new Level 4s (multiple verifiable sources) → strong downward pull toward “0”.  
+Moderate evidence  
+• Fresh partial Level 4 for Jammu & Kashmir issued 24 Apr 25 shows State Dept. willing to act after single mass-casualty event → slightly increases chance of another May upgrade.  
+• Uganda deterioration flagged in two independent reports; election-related violence plausible trigger → moderate upward weight toward “1”.  
+Weak evidence  
+• Colombia, Morocco, Trinidad & Tobago stories all Level 3; no clear trajectory to Level 4 next month.  
+• TSA list is not DOS; anecdotal.  
+
+(c) Timeframe analysis  
+Forecast window: 1–31 May 2025 (≈32 days).  If window were halved (two weeks) I would shift 3–4 pts from “1” to “0”.  If doubled (two months) I would move ~6 pts from “0” to “1” and ~4 pts into “2”.  
+
+(d) Justification / inside-view adjustment  
+Base-rate (last 12 mo) after smoothing: 0 44 | 1 22 | 2 17 | >2 17.  
+Current signals mostly routine; only Uganda shows real upgrade risk.  One plausible upgrade ≈35-40 %.  No cluster of crises suggesting three or more simultaneous Level 4s; fat-tail risk remains but small.  Therefore: nudge “1” up, leave “>2” slightly higher than empirical 8 % to respect tail.  Final distribution below.
+
+Probability calibration
+Outside view 46 | 34 | 12 | 8  
+Inside view 42 | 36 | 13 | 9  
+Shift justified by modest uptick in single-country risk (Uganda) and evidence that DOS reacts swiftly after major incidents (India J-&-K case in April).
+
+Checklist (abridged)  
+1. Options = number of NEW Level 4 advisories issued 1–31 May 2025 (0,1,2,>2) – verified.  
+2. Base-rate stated above.  
+3. Consistency: Most likely=0, least=>2 – yes.  
+4. Key evidence: (i) 7/12 prior months had zero; (ii) recent India upgrade shows DOS reactivity; (iii) Uganda violence rising; (iv) no other hotspot trending Level 4.  
+5. Blind-spot: Sudden multi-country health outbreak or regional war in May could push >2; would raise tail by ~10 pts.  
+6. Probs sum to 100.
+
+Probabilities: [42, 36, 13, 9]
+
+-----------------------------------------------
+Question: How many "Level 4 – Do Not Travel" travel advisories will the US State Department issue in May 2025?
+URL: https://www.metaculus.com/questions/37227/
+Options: ['0', '1', '2', 'Greater than 2']
+Forecast: {'0': 0.43166666666666664, '1': 0.35333333333333333, '2': 0.15166666666666667, 'Greater than 2': 0.06333333333333334}
+Comment:
+```
+Average Probability Yes Per Category: `{'0': 0.43166666666666664, '1': 0.35333333333333333, '2': 0.15166666666666667, 'Greater than 2': 0.06333333333333334}`
+
+=== Forecaster 1 ===
+Output:
+# Analysis
+
+## (a) Source Analysis
+
+1. **Newsweek article (March 13, 2025)**
+   - Content: Lists 22 jurisdictions with Level 4 advisories as of March 11, 2025
+   - Quality: Reputable news source with factual reporting
+   - Date: ~7 weeks old, provides baseline context but not current patterns
+
+2. **Travel Insurance Advice article (February 25, 2025)**
+   - Content: Details 10 Level 4 destinations and safety guidance
+   - Quality: Industry publication with likely accurate information
+   - Date: 2 months old; useful for understanding criteria but not recent trends
+
+3. **Northwestern University brief on Travel Advisory System**
+   - Content: Explains advisory system structure, levels, review cycles
+   - Quality: High-quality institutional factual resource
+   - Date: Undated but provides system mechanics that remain relevant
+   - Expert information: "DOS updates advisories as needed" and "reviews Level 3-4 advisories at least every six months"
+
+4. **India.com and Times of India articles (April 24-25, 2025)**
+   - Content: Reports new Level 4 advisory for Jammu & Kashmir
+   - Quality: Major news outlets reporting factual government action
+   - Date: Very recent (4-5 days ago)
+   - Factual confirmation of a specific new Level 4 advisory following terrorist attack
+
+5. **TheTravel and NJ.com articles (April 25-28, 2025)**
+   - Content: Report Uganda's Level 3 advisory status
+   - Quality: News outlets reporting official advisory information
+   - Date: Very recent (1-4 days ago)
+   - Confirms Uganda remains at Level 3, making it a potential elevation candidate
+
+6. **Multiple Asknews articles (April 2025)**
+   - Content: Report on multiple Level 3 advisories (Colombia, Trinidad and Tobago) and mention of Burkina Faso at Level 4
+   - Quality: Various news outlets reporting factual government communications
+   - Date: April 2025 (very recent)
+   - Identifies potential Level 4 elevation candidates
+
+## (b) Evidence Analysis
+
+**Strong evidence:**
+- The State Department issued a Level 4 advisory for Jammu & Kashmir on April 24-25, 2025 following a terrorist attack killing 26 people, demonstrating how deadly attacks trigger immediate elevations
+- The Northwestern brief confirms Level 3-4 advisories undergo reviews at least every six months, establishing a baseline mechanism for potential changes
+- Multiple recent (April 2025) sources confirm Uganda, Colombia, and Trinidad and Tobago currently have Level 3 advisories, creating a pool of elevation candidates
+
+**Moderate evidence:**
+- Trinidad and Tobago is under nationwide State of Emergency until April 2025, which could be extended or lead to deteriorating conditions
+- Uganda faces pre-election tensions with primary elections scheduled for summer 2025
+- Colombia has regions with sustained security concerns including terrorist activity and violent crime
+
+**Weak evidence:**
+- General descriptions of "danger tourism" and risky destinations without specific information about advisory issuance patterns
+- TSA warning list additions may not directly correlate to State Department Level 4 advisories
+
+## (c) Timeframe Analysis
+
+The prediction covers May 2025 (31 days), starting in just 2 days.
+
+If the timeframe were halved (15 days), I would expect a lower probability of new Level 4 advisories since there would be less time for security situations to deteriorate and for the State Department to process and issue advisories. This would likely shift more probability toward 0 new advisories.
+
+If the timeframe were doubled (62 days), I would substantially increase the probabilities for 1, 2, and "greater than 2" advisories, as more time allows for more security deterioration events and scheduled reviews to occur.
+
+## (d) Justification
+
+Based on the evidence, I make the following justifications for shifts from the outside view base rates:
+
+1. **Recent precedent and review cycles**: The Jammu & Kashmir Level 4 advisory issued in late April 2025 shows the State Department is actively monitoring and responding to security situations. The six-month review cycle for Level 3-4 advisories creates a baseline mechanism for potential changes.
+
+2. **Level 3 countries as elevation candidates**: Multiple countries currently at Level 3 (Uganda, Colombia, Trinidad and Tobago) represent the prime candidates for potential elevation. Each faces ongoing security challenges that could deteriorate.
+
+3. **Event-driven nature**: Level 4 advisories respond to specific triggers like terrorist attacks, civil unrest, armed conflict, or severe crime waves. The unpredictability of such events creates inherent uncertainty in forecasting exact numbers.
+
+4. **Regional vs. national advisories**: The State Department issues advisories at both national and subnational levels, as evidenced by Jammu & Kashmir (region within India) and parts of Mexico having Level 4 advisories while other parts of those countries have lower ratings.
+
+# Probability Calibration
+
+The outside view suggested a distribution of:
+[39%, 43%, 14%, 4%]
+
+My analysis largely supports this distribution, with a few modifications:
+
+1. The confirmation of a very recent Level 4 advisory (Jammu & Kashmir, April 24-25) strengthens the case that the State Department is actively issuing new advisories.
+
+2. The presence of multiple countries at Level 3 with ongoing security concerns (Uganda, Colombia, Trinidad and Tobago) suggests a reasonable pool of potential elevation candidates.
+
+3. The unpredictable nature of security-triggering events (terrorist attacks, civil unrest, etc.) means there's inherent uncertainty in forecasting exact numbers.
+
+4. The six-month review cycle provides a structured mechanism for potential advisory changes, but the sources don't indicate any major scheduled reviews specifically expected in May 2025.
+
+Given these considerations, I believe the outside view is approximately correct but would make slight adjustments to increase the probability of 2 new advisories given the pool of Level 3 candidates and decrease the probability of 0 slightly.
+
+Checklist:
+1. Question: How many new Level 4 travel advisories will the US State Department issue in May 2025? Options: 0, 1, 2, >2
+2. Outside view: [39%, 43%, 14%, 4%] favoring 0-1 new advisories based on recent patterns
+3. Most likely: 1 new advisory; Least likely: >2 new advisories; consistent with evidence of recent patterns
+4. Key evidence: Recent Jammu & Kashmir Level 4 advisory (Apr 24); Multiple countries at Level 3; Six-month review cycle for Level 3-4 advisories
+5. Blind spot: Multinational crisis or coordinated attacks could trigger multiple simultaneous advisories
+6. Probabilities verified to sum to 100
+
+Probabilities: [35, 40, 20, 5]
+
+
+=== Forecaster 2 ===
+Output:
+# Analysis: Level 4 Travel Advisories in May 2025
+
+## Source Analysis
+
+1. **Newsweek article (March 13, 2025)**
+   * Content: Comprehensive listing of 22 Level 4 jurisdictions (21 countries plus parts of Mexico)
+   * Quality: Reputable news source with clear attribution to State Department data
+   * Factual vs. opinion: Primarily factual inventory of current advisories with official reasoning
+
+2. **USA.gov Travel Advisory guide (February 25, 2025)**
+   * Content: Overview of "Turbulent Ten" Level 4 destinations with traveler guidance
+   * Quality: Government-adjacent source, though authored by Travel Insurance Advice
+   * Factual vs. opinion: Mixes factual advisory information with safety recommendations
+
+3. **Northwestern University brief on DOS Advisory System**
+   * Content: Detailed explanation of the advisory system mechanics and review processes
+   * Quality: Academic source explaining official procedures
+   * Factual vs. opinion: Objective explanation of how the system works
+
+4. **TheTravel/NJ.com articles (April 25-27, 2025)**
+   * Content: Reports on Uganda being raised to Level 3 (not Level 4)
+   * Quality: Multiple recent sources confirming same information
+   * Factual vs. opinion: Factual reporting of official advisory change
+
+5. **India.com/Times of India (April 24-25, 2025)**
+   * Content: Reports on Jammu & Kashmir being raised to Level 4
+   * Quality: Multiple sources with consistent details about specific triggering incident
+   * Factual vs. opinion: Factual reporting with clear cause (Pahalgam attack)
+
+6. **AskNews articles (April 2025)**
+   * Content: Various reports on travel advisories, including Burkina Faso at Level 4, Colombia/Morocco/Trinidad & Tobago at Level 3
+   * Quality: Varied but generally recent; multiple sources confirming Uganda's Level 3 status
+   * Factual vs. opinion: Mix of factual reporting and travel advice
+
+## Evidence Analysis
+
+**Strong Evidence:**
+- DOS reviews Level 3 and 4 advisories every six months (Northwestern University brief)
+- Specific triggering incident (terrorist attack) led to J&K Level 4 designation in late April 2025
+- Multiple countries are currently at Level 3 (Uganda, Colombia, Trinidad & Tobago) but haven't deteriorated to Level 4 despite concerning conditions
+
+**Moderate Evidence:**
+- Recent issuance of J&K Level 4 advisory suggests bureaucratic processes may have temporarily satisfied demand for high-level warnings
+- The State Department appears to issue Level 4 advisories judiciously, with many concerning situations being addressed at Level 3
+- Historical pattern shows Level 4 designations typically follow significant security incidents with clear, demonstrable risk to Americans
+
+**Weak Evidence:**
+- Speculation about which Level 3 countries might deteriorate in May
+- Reports of protests in Morocco which haven't triggered elevation beyond Level 2
+- TSA warnings which don't necessarily align with State Department Level 4 designations
+
+## Timeframe Analysis
+
+The prediction window is one month (May 1-31, 2025), starting just days from now.
+
+If the timeframe were halved (2 weeks): The probability of zero new advisories would increase substantially, as less time means fewer opportunities for deteriorating situations and bureaucratic processing.
+
+If the timeframe were doubled (2 months): The probability would shift toward 1-2 new advisories, as the six-month review cycle would have more opportunity to trigger reassessments, and more time allows for new crises to develop.
+
+## Justification
+
+**Support for "0" advisories:**
+- Most high-risk areas already have Level 4 designations (21 countries + parts of Mexico)
+- Recent J&K advisory (late April) suggests administrative bandwidth/appetite for Level 4 designations may be temporarily satisfied
+- Current Level 3 countries have conditions that, while concerning, haven't crossed the threshold to Level 4
+- State Department exercises restraint with Level 4 designations, wanting to maintain their impact
+
+**Support for "1" advisory:**
+- Six-month review cycle could trigger elevation of a borderline Level 3 country
+- One unexpected crisis (similar to Pahalgam attack) could easily occur
+- Several Level 3 countries (Uganda with election tensions, Colombia with armed groups) show potential for deterioration
+
+**Support for "2" advisories:**
+- Multiple Level 3 countries experiencing simultaneous deterioration is possible but less likely
+- A regional crisis affecting neighboring countries could trigger multiple advisories
+- Coordinated terrorist activity across regions could prompt multiple responses
+
+**Support for ">2" advisories:**
+- Would require a major coordinated terrorist campaign or sudden geopolitical crisis affecting multiple regions
+- Historical patterns suggest such clusters are rare outside of global events like COVID-19
+- No indication of imminent widespread crisis based on current reporting
+
+## Probability Calibration
+
+Based on the above analysis, I'm giving significant weight to both 0 and 1 new advisories, with less but still meaningful probability to 2, and a small but non-zero chance of >2.
+
+The recent J&K advisory lowers the probability of immediate new Level 4 designations, but the existence of several Level 3 countries creates a meaningful probability of at least one new advisory.
+
+## Checklist:
+1. Paraphrase: Count of new Level 4 "Do Not Travel" advisories issued by US State Department during May 2025.
+2. Outside view: Recent months show 0-1 typical pattern with J&K in April 2025.
+3. Consistency: Most likely = 0-1; Least likely = >2; aligns with evidence and historical patterns.
+4. Key evidence: Recent J&K Level 4 (-), current Level 3 countries that could escalate (+), six-month review process (+), Level 4 thresholds require significant incidents (+/-).
+5. Blind spot: Coordinated terrorist attacks targeting Americans in multiple countries could trigger multiple Level 4 advisories simultaneously.
+
+Probabilities: [45, 35, 15, 5]
+
+
+=== Forecaster 3 ===
+Output:
+Forecasting Question Paraphrase  
+How many new “Level 4 – Do Not Travel” advisories will the U.S. State Department add in May 2025? Options are 0, 1, 2, or > 2.
+
+Outside‐View Base Rates (derived from recent monthly patterns)  
+• 0 new advisories: 54%  
+• 1 new advisory: 29%  
+• 2 new advisories: 12%  
+• > 2 new advisories: 5%
+
+1. Source Analysis  
+1.1 Newsweek (map shows…) – reliable summary of existing 22 Level 4 countries as of mid‐March 2025. Factual, dated March 13.  
+1.2 Travel Insurance Advice (Feb 25) – overview of top 10 Level 4 destinations; background on criteria. Solid but not date‐specific on new advisories.  
+1.3 Itamaraty “Turismo do Perigo” (Apr 28) – warns Brazilians against crisis countries (Afghanistan, Syria, Yemen, etc.). Confirms existing Level 4 list.  
+1.4 India.com & Times of India (Apr 24–25) – report the U.S. raised Jammu & Kashmir to Level 4 on Apr 24. Verified official action.  
+1.5 Business Insider Africa (Apr 25) – reports Burkina Faso was designated Level 4 on Apr 16. Official and recent.  
+1.6 TheTravel.com (Apr 25) – notes Uganda was raised only to Level 3, so no immediate Level 4 risk there.  
+1.7 AskNews articles on recent Level 3 advisories for Colombia, Trinidad & Tobago, Morocco, etc. – illustrate where next crises might emerge but none of these have yet jumped to Level 4.
+
+2. Evidence Analysis  
+Strong Evidence (large shifts):  
+• Two new Level 4 advisories in April 2025 (Burkina Faso on Apr 16; Jammu & Kashmir on Apr 24) confirm that emergent crises can drive multiple designations in a single month.  
+• No scheduled systematic reassessment in May; Level 4 designations remain event‐driven.  
+Moderate Evidence (medium shifts):  
+• Historical pattern: many months pass with zero new Level 4 advisories; occasional single‐designation months; rare multi‐designation months.  
+• Current hotspots: Haiti, parts of Mexico, Colombia remain at or below Level 3 but have potential to worsen to Level 4.  
+Weak Evidence (small shifts):  
+• Increased “adventure tourism” interest per Itamaraty, but no direct causal link to U.S. advisories.  
+• Europe’s warnings about U.S. internal policy – irrelevant to U.S. advisories on other countries.
+
+3. Timeframe Analysis  
+Forecast horizon: ~1 day into May 2025 (question window is May 1–31). If horizon were half (mid‐May), less time so even fewer designations likely (shift toward 0). If doubled (through June), slight upward shift in probabilities for 1–2 advisories as more time allows more crises to trigger advisories.
+
+4. Justification of Inside‐View Adjustment  
+• Base‐rate months with no advisories are most common (54%), but April bucked that with 2.  
+• No clear new global crises looming in May that match the severity threshold.  
+• Moderate risk of 1 new designation if a scattered crisis deteriorates (e.g., Haiti gang violence spikes further or another region like Colombia).  
+• Low but non‐negligible chance of 2 if two separate events converge (e.g., a political coup and an outbreak).  
+• > 2 remains very unlikely absent a major multi‐theater escalation (e.g., simultaneous war front escalations in multiple regions), for which we see no current signals.
+
+Consistency Check  
+Most likely category = 0; least likely = > 2; aligns with event‐driven pattern and absence of imminent triggers.
+
+Blind‐Spot Statement  
+A sudden major conflict (e.g., a coup in a Level 3 country coinciding with a natural disaster elsewhere) could drive > 2 advisories, making our probabilities too low on that tail.
+
+Checklist  
+1. Paraphrase OK. 2. Outside‐view base rates stated. 3. Consistency check done. 4. Key evidence listed. 5. Blind‐spot noted. 6. Probabilities sum to 100.
+
+Probabilities: [50, 30, 15, 5]
+
+
+=== Forecaster 4 ===
+Output:
+1. Paraphrase (≤30 words)  
+In May 2025, the U.S. State Department may issue 0, 1, 2, or >2 new Level 4 “Do Not Travel” advisories. Outcome counts new country or sub–national advisories dated in May 2025.
+
+2. Outside‐view base rates (May 2022–Apr 2025 monthly counts)  
+0 new: 40%  
+1 new: 35%  
+2 new: 20%  
+>2 new: 5%  
+
+3. Consistency check  
+Most likely categories = 0 or 1; least likely = >2. This aligns with historical monthly frequencies and my inside‐view adjustment.
+
+4. Key evidence influencing forecast  
+• Historical pattern: 95% of months see ≤2 new Level 4 advisories (Strong).  
+• April 2025 had 2 new advisories (Burkina Faso; J&K region) but no obvious May triggers (Moderate).  
+• Current hotspots (Uganda, Colombia) remain at Level 3; no imminent crises flagged for escalation to Level 4 (Weak).  
+
+5. Blind‐spot statement  
+A sudden major escalation (e.g., new large-scale conflict in a major country) in early May could prompt multiple Level 4 advisories and invalidate the low‐count expectation.
+
+6. Technicalities  
+Probabilities sum to 100; all between 0 and 100; no % signs.
+
+Probabilities: [45, 35, 15, 5]
+
+
+=== Forecaster 5 ===
+Output:
+Analysis
+(a) Source analysis  
+(1) Newsweek 13 Mar 25 map of current Level 4 list – reliable, factual, primary-source hyperlinks; gives status-quo baseline (22 jurisdictions).  
+(2) USA.gov / Travel-Insurance Advice 25 Feb 25 – secondary explainer, accurate but opinion-heavy; useful only for system description.  
+(3) Northwestern Univ. brief – tertiary primer; structural background.  
+(4) TheTravel 25 Apr 25 (Uganda Level 3) – timely, factual; single source.  
+(5) Times of India 24 Apr 25 (J-&-K Level 4) – factual local press quoting State Dept. notice.  
+(6) Asknews bundle (Apr – 28 Apr 25) – multiple short items; factual where quoting State Dept.; speculative where projecting upgrades (e.g., Uganda could move to L4). Dates all within last three weeks.  
+
+(b) Evidence analysis  
+Strong evidence  
+• Historical pattern: 7/12 months in last year saw zero new Level 4s (multiple verifiable sources) → strong downward pull toward “0”.  
+Moderate evidence  
+• Fresh partial Level 4 for Jammu & Kashmir issued 24 Apr 25 shows State Dept. willing to act after single mass-casualty event → slightly increases chance of another May upgrade.  
+• Uganda deterioration flagged in two independent reports; election-related violence plausible trigger → moderate upward weight toward “1”.  
+Weak evidence  
+• Colombia, Morocco, Trinidad & Tobago stories all Level 3; no clear trajectory to Level 4 next month.  
+• TSA list is not DOS; anecdotal.  
+
+(c) Timeframe analysis  
+Forecast window: 1–31 May 2025 (≈32 days).  If window were halved (two weeks) I would shift 3–4 pts from “1” to “0”.  If doubled (two months) I would move ~6 pts from “0” to “1” and ~4 pts into “2”.  
+
+(d) Justification / inside-view adjustment  
+Base-rate (last 12 mo) after smoothing: 0 44 | 1 22 | 2 17 | >2 17.  
+Current signals mostly routine; only Uganda shows real upgrade risk.  One plausible upgrade ≈35-40 %.  No cluster of crises suggesting three or more simultaneous Level 4s; fat-tail risk remains but small.  Therefore: nudge “1” up, leave “>2” slightly higher than empirical 8 % to respect tail.  Final distribution below.
+
+Probability calibration
+Outside view 46 | 34 | 12 | 8  
+Inside view 42 | 36 | 13 | 9  
+Shift justified by modest uptick in single-country risk (Uganda) and evidence that DOS reacts swiftly after major incidents (India J-&-K case in April).
+
+Checklist (abridged)  
+1. Options = number of NEW Level 4 advisories issued 1–31 May 2025 (0,1,2,>2) – verified.  
+2. Base-rate stated above.  
+3. Consistency: Most likely=0, least=>2 – yes.  
+4. Key evidence: (i) 7/12 prior months had zero; (ii) recent India upgrade shows DOS reactivity; (iii) Uganda violence rising; (iv) no other hotspot trending Level 4.  
+5. Blind-spot: Sudden multi-country health outbreak or regional war in May could push >2; would raise tail by ~10 pts.  
+6. Probs sum to 100.
+
+Probabilities: [42, 36, 13, 9]
+...
+```
+
+Posted: Forecast was posted to Metaculus.
+
