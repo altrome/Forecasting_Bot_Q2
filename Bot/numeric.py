@@ -34,6 +34,20 @@ def clean(s: str) -> str:
          .lower()
     )
 
+def enforce_strict_increasing(pct_dict: dict) -> dict:
+    """Ensure strictly increasing values by adding tiny jitter if necessary."""
+    sorted_items = sorted(pct_dict.items())
+    last_val = -float('inf')
+    new_pct_dict = {}
+    
+    for p, v in sorted_items:
+        if v <= last_val:
+            v = last_val + 1e-6  # Add a tiny epsilon
+        new_pct_dict[p] = v
+        last_val = v
+        
+    return new_pct_dict
+
 def extract_percentiles_from_response(text: Union[str, list], verbose: bool = True) -> dict:
     lines = text if isinstance(text, list) else text.splitlines()
     percentiles = {}
@@ -380,6 +394,7 @@ async def get_numeric_forecast(question_details: dict, write=print):
     for i, output in enumerate(step2_outputs):
         try:
             parsed = extract_percentiles_from_response(output, verbose=True)
+            parsed = enforce_strict_increasing(parsed)
             cdf = generate_continuous_cdf(parsed, open_upper, open_lower, upper, lower, zero)
             all_cdfs.append((cdf, 2 if i == 4 else 1))
         except Exception as e:
