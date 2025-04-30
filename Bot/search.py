@@ -1,3 +1,4 @@
+
 import asyncio
 from typing import List, Dict
 import sys
@@ -19,9 +20,7 @@ import re
 import random
 import time
 from openai import OpenAI   
-from requests.exceptions import ConnectionError, Timeout
-from http.client import RemoteDisconnected
-import requests
+import traceback
 load_dotenv()
 
 SERPER_KEY = os.getenv("SERPER_KEY")
@@ -96,55 +95,59 @@ async def call_asknews(question: str) -> str:
     Use the AskNews `news` endpoint to get news context for your query.
     The full API reference can be found here: https://docs.asknews.app/en/reference#get-/v1/news/search
     """
-    ask = AskNewsSDK(
-        client_id=ASKNEWS_CLIENT_ID, client_secret=ASKNEWS_SECRET, scopes=set(["news"])
-    )
-
-    async with aiohttp.ClientSession() as session:
-        # Create tasks for both API calls
-        hot_task = asyncio.create_task(asyncio.to_thread(ask.news.search_news,
-            query=question,
-            n_articles=8,
-            return_type="both",
-            strategy="latest news"
-        ))
-        historical_task = asyncio.create_task(asyncio.to_thread(ask.news.search_news,
-            query=question,
-            n_articles=8,
-            return_type="both",
-            strategy="news knowledge"
-        ))
-
-        # Wait for both tasks to complete
-        hot_response, historical_response = await asyncio.gather(hot_task, historical_task)
-
-    hot_articles = hot_response.as_dicts
-    historical_articles = historical_response.as_dicts
-    formatted_articles = "Here are the relevant news articles:\n\n"
-
-    if hot_articles:
-        hot_articles = [article.__dict__ for article in hot_articles]
-        hot_articles = sorted(hot_articles, key=lambda x: x["pub_date"], reverse=True)
-
-        for article in hot_articles:
-            pub_date = article["pub_date"].strftime("%B %d, %Y %I:%M %p")
-            formatted_articles += f"**{article['eng_title']}**\n{article['summary']}\nOriginal language: {article['language']}\nPublish date: {pub_date}\nSource:[{article['source_id']}]({article['article_url']})\n\n"
-
-    if historical_articles:
-        historical_articles = [article.__dict__ for article in historical_articles]
-        historical_articles = sorted(
-            historical_articles, key=lambda x: x["pub_date"], reverse=True
+    try:
+        ask = AskNewsSDK(
+            client_id=ASKNEWS_CLIENT_ID, client_secret=ASKNEWS_SECRET, scopes=set(["news"])
         )
 
-        for article in historical_articles:
-            pub_date = article["pub_date"].strftime("%B %d, %Y %I:%M %p")
-            formatted_articles += f"**{article['eng_title']}**\n{article['summary']}\nOriginal language: {article['language']}\nPublish date: {pub_date}\nSource:[{article['source_id']}]({article['article_url']})\n\n"
+        async with aiohttp.ClientSession() as session:
+            # Create tasks for both API calls
+            hot_task = asyncio.create_task(asyncio.to_thread(ask.news.search_news,
+                query=question,
+                n_articles=8,
+                return_type="both",
+                strategy="latest news"
+            ))
+            historical_task = asyncio.create_task(asyncio.to_thread(ask.news.search_news,
+                query=question,
+                n_articles=8,
+                return_type="both",
+                strategy="news knowledge"
+            ))
 
-    if not hot_articles and not historical_articles:
-        formatted_articles += "No articles were found.\n\n"
+            # Wait for both tasks to complete
+            hot_response, historical_response = await asyncio.gather(hot_task, historical_task)
+
+        hot_articles = hot_response.as_dicts
+        historical_articles = historical_response.as_dicts
+        formatted_articles = "Here are the relevant news articles:\n\n"
+
+        if hot_articles:
+            hot_articles = [article.__dict__ for article in hot_articles]
+            hot_articles = sorted(hot_articles, key=lambda x: x["pub_date"], reverse=True)
+
+            for article in hot_articles:
+                pub_date = article["pub_date"].strftime("%B %d, %Y %I:%M %p")
+                formatted_articles += f"**{article['eng_title']}**\n{article['summary']}\nOriginal language: {article['language']}\nPublish date: {pub_date}\nSource:[{article['source_id']}]({article['article_url']})\n\n"
+
+        if historical_articles:
+            historical_articles = [article.__dict__ for article in historical_articles]
+            historical_articles = sorted(
+                historical_articles, key=lambda x: x["pub_date"], reverse=True
+            )
+
+            for article in historical_articles:
+                pub_date = article["pub_date"].strftime("%B %d, %Y %I:%M %p")
+                formatted_articles += f"**{article['eng_title']}**\n{article['summary']}\nOriginal language: {article['language']}\nPublish date: {pub_date}\nSource:[{article['source_id']}]({article['article_url']})\n\n"
+
+        if not hot_articles and not historical_articles:
+            formatted_articles += "No articles were found.\n\n"
+            return formatted_articles
+
         return formatted_articles
-
-    return formatted_articles
+    except Exception as e:
+        write(f"[call_asknews] Error: {str(e)}")
+        return f"Error retrieving news articles: {str(e)}"
 
 async def call_perplexity(prompt: str) -> str:
     """
@@ -172,10 +175,11 @@ async def call_perplexity(prompt: str) -> str:
     }
 
     max_retries = 3
-    backoff_base = 3  # seconds to wait between retries, will be multiplied by attempt number
+    backoff_base = 3  # seconds to wait between retries
 
     for attempt in range(1, max_retries + 1):
         try:
+            write(f"[Perplexity API] Attempt {attempt} for query: {prompt[:50]}...")
             async with aiohttp.ClientSession() as session:
                 timeout = aiohttp.ClientTimeout(total=200)  # 200 seconds timeout
                 async with session.post(url, json=payload, headers=headers, timeout=timeout) as response:
@@ -183,27 +187,27 @@ async def call_perplexity(prompt: str) -> str:
                         data = await response.json()
                         content = data['choices'][0]['message']['content']
                         content = re.sub(r'<think>.*?</think>', '', content, flags=re.DOTALL)
+                        write(f"[Perplexity API] ✅ Success on attempt {attempt}")
                         return content.strip()
                     else:
                         response_text = await response.text()
                         write(f"[Perplexity API] ❌ Error: HTTP {response.status}: {response_text}")
-                        if attempt == max_retries:
-                            return f"Error: {response.status}, {response_text}"
-
+                        # Continue to retry on non-200 response
+                        
         except (aiohttp.ClientError, asyncio.TimeoutError) as e:
             write(f"[Perplexity API] ⚠️ Attempt {attempt} failed: {e}")
-            if attempt == max_retries:
-                write("[Perplexity API] ❌ Max retries reached. Giving up.")
-                return f"Error: Connection aborted after {max_retries} retries ({str(e)})"
-            else:
-                wait_time = backoff_base * attempt
-                write(f"[Perplexity API] 🔁 Retrying in {wait_time} seconds...")
-                await asyncio.sleep(wait_time)
+        
+        # Only enter retry logic if not on last attempt
+        if attempt < max_retries:
+            wait_time = backoff_base * attempt
+            write(f"[Perplexity API] 🔁 Retrying in {wait_time} seconds...")
+            await asyncio.sleep(wait_time)
+        else:
+            write(f"[Perplexity API] ❌ Max retries ({max_retries}) reached. Giving up.")
+            return f"Error: Perplexity API failed after {max_retries} attempts. The system will continue with other available data."
 
     # Should never reach here
     return "Unexpected error in call_perplexity"
-
-
 
 async def google_search(query, is_news=False, date_before=None):
     original_query = query
@@ -261,64 +265,72 @@ async def google_search(query, is_news=False, date_before=None):
 
 async def call_gpt(prompt):
     client = OpenAI(api_key=OPENAI_API_KEY)
-    response = client.responses.create(
-        model="o4-mini",
-        input= prompt
-    )
-    return response.output_text
+    try:
+        response = client.responses.create(
+            model="o4-mini",
+            input=prompt
+        )
+        return response.output_text
+    except Exception as e:
+        write(f"[call_gpt] Error: {str(e)}")
+        return f"Error calling OpenAI API: {str(e)}"
 
 
 async def google_search_and_scrape(query, is_news, question_details, date_before=None):
     write(f"[google_search_and_scrape] Called with query='{query}', is_news={is_news}, date_before={date_before}")
-    urls = await google_search(query, is_news, date_before)
+    try:
+        urls = await google_search(query, is_news, date_before)
 
-    if not urls:
-        write(f"[google_search_and_scrape] ❌ No URLs returned for query: '{query}'")
-        return f"<Summary query=\"{query}\">No URLs returned from Google.</Summary>\n"
+        if not urls:
+            write(f"[google_search_and_scrape] ❌ No URLs returned for query: '{query}'")
+            return f"<Summary query=\"{query}\">No URLs returned from Google.</Summary>\n"
 
-    async with FastContentExtractor() as extractor:
-        write(f"[google_search_and_scrape] 🔍 Starting content extraction for {len(urls)} URLs")
-        results = await extractor.extract_content(urls)
-        write(f"[google_search_and_scrape] ✅ Finished content extraction")
+        async with FastContentExtractor() as extractor:
+            write(f"[google_search_and_scrape] 🔍 Starting content extraction for {len(urls)} URLs")
+            results = await extractor.extract_content(urls)
+            write(f"[google_search_and_scrape] ✅ Finished content extraction")
 
-    summarize_tasks = []
-    no_results = 3
-    for url, data in results.items():
-        if len(summarize_tasks) >= no_results:
-            break  
-        content = (data.get('content') or '').strip()
-        if len(content.split()) < 100:
-            write(f"[google_search_and_scrape] ⚠️ Skipping low-content article: {url}")
-            continue
-        if content:
-            truncated = content[:8000]
-            write(f"[google_search_and_scrape] ✂️ Truncated content for summarization: {len(truncated)} chars from {url}")
-            summarize_tasks.append(
-                asyncio.create_task(summarize_article(truncated, question_details))
-            )
-        else:
-            write(f"[google_search_and_scrape] ⚠️ No content for {url}, skipping summarization.")
+        summarize_tasks = []
+        no_results = 3
+        valid_urls = []
+        for url, data in results.items():
+            if len(summarize_tasks) >= no_results:
+                break  
+            content = (data.get('content') or '').strip()
+            if len(content.split()) < 100:
+                write(f"[google_search_and_scrape] ⚠️ Skipping low-content article: {url}")
+                continue
+            if content:
+                truncated = content[:8000]
+                write(f"[google_search_and_scrape] ✂️ Truncated content for summarization: {len(truncated)} chars from {url}")
+                summarize_tasks.append(
+                    asyncio.create_task(summarize_article(truncated, question_details))
+                )
+                valid_urls.append(url)
+            else:
+                write(f"[google_search_and_scrape] ⚠️ No content for {url}, skipping summarization.")
 
-    if not summarize_tasks:
-        write("[google_search_and_scrape] ⚠️ Warning: No content to summarize")
-        return f"<Summary query=\"{query}\">No usable content extracted from any URL.</Summary>\n"
+        if not summarize_tasks:
+            write("[google_search_and_scrape] ⚠️ Warning: No content to summarize")
+            return f"<Summary query=\"{query}\">No usable content extracted from any URL.</Summary>\n"
 
-    summaries = await asyncio.gather(*summarize_tasks, return_exceptions=True)
+        summaries = await asyncio.gather(*summarize_tasks, return_exceptions=True)
 
-    output = ""
-    for url, summary in zip(results.keys(), summaries):
-        if isinstance(summary, Exception):
-            write(f"[google_search_and_scrape] ❌ Error summarizing {url}: {summary}")
-            continue
-        output += f"\n<Summary source=\"{url}\">\n{summary}\n</Summary>\n"
+        output = ""
+        for url, summary in zip(valid_urls, summaries):
+            if isinstance(summary, Exception):
+                write(f"[google_search_and_scrape] ❌ Error summarizing {url}: {summary}")
+                output += f"\n<Summary source=\"{url}\">\nError summarizing content: {str(summary)}\n</Summary>\n"
+            else:
+                output += f"\n<Summary source=\"{url}\">\n{summary}\n</Summary>\n"
 
-    return output
+        return output
+    except Exception as e:
+        write(f"[google_search_and_scrape] Error: {str(e)}")
+        traceback_str = traceback.format_exc()
+        write(f"Traceback: {traceback_str}")
+        return f"<Summary query=\"{query}\">Error during search and scrape: {str(e)}</Summary>\n"
 
-# question_details has the below structure:
-# title = question_details["title"]
-# resolution_criteria = question_details["resolution_criteria"]
-# background = question_details["description"]
-# fine_print = question_details["fine_print"]
 
 async def process_search_queries(response: str, forecaster_id: str, question_details: dict):
     """
@@ -389,31 +401,41 @@ async def process_search_queries(response: str, forecaster_id: str, question_det
             write(f"Forecaster {forecaster_id}: No tasks generated")
             return ""
 
-        # 5) Await all tasks in parallel
-        results = await asyncio.wait_for(asyncio.gather(*tasks, return_exceptions=True), timeout=300)
-
-        # 6) Format the outputs
+        # 5) Await all tasks one by one to avoid timeout issues
         formatted_results = ""
+        
+        # First gather with return_exceptions=True to prevent one failure from breaking everything
+        results = await asyncio.gather(*tasks, return_exceptions=True)
+            
+        # 6) Format the outputs
         for (query, source), result in zip(query_sources, results):
             if isinstance(result, Exception):
-                write(f"[process_search_queries] ❌ Forecaster {forecaster_id}: Error for '{query}' → {result}")
-                continue
+                write(f"[process_search_queries] ❌ Forecaster {forecaster_id}: Error for '{query}' → {str(result)}")
+                # Add a message about the error in the formatted results
+                if source == "Assistant":
+                    formatted_results += f"\n<Asknews_articles>\nQuery: {query}\nError retrieving results: {str(result)}\n</Asknews_articles>\n"
+                elif source == "Perplexity":
+                    formatted_results += f"\n<Perplexity_report>\nQuery: {query}\nError retrieving results: {str(result)}\n</Perplexity_report>\n"
+                else:
+                    formatted_results += f"\n<Summary query=\"{query}\">\nError retrieving results: {str(result)}\n</Summary>\n"
             else:
                 write(f"[process_search_queries] ✅ Forecaster {forecaster_id}: Query '{query}' processed successfully.")
                 
-            if source == "Assistant":
-                formatted_results += f"\n<Asknews_articles>\nQuery: {query}\n{result}</Asknews_articles>\n"
-            elif source == "Perplexity":
-                formatted_results += f"\n<Perplexity_report>\nQuery: {query}\n{result}</Perplexity_report>\n"
-            else:
-                # Google/Google News tasks already return <Summary> blocks
-                formatted_results += result
+                if source == "Assistant":
+                    formatted_results += f"\n<Asknews_articles>\nQuery: {query}\n{result}</Asknews_articles>\n"
+                elif source == "Perplexity":
+                    formatted_results += f"\n<Perplexity_report>\nQuery: {query}\n{result}</Perplexity_report>\n"
+                else:
+                    # Google/Google News tasks already return <Summary> blocks
+                    formatted_results += result
 
         return formatted_results
 
     except Exception as e:
-        write(f"Forecaster {forecaster_id}: Error processing search queries: {e}")
-        return ""
+        write(f"Forecaster {forecaster_id}: Error processing search queries: {str(e)}")
+        write(f"Traceback: {traceback.format_exc()}")
+        # Return what we have so far instead of nothing
+        return "Error processing some search queries. Partial results may be available."
 
 async def main():
     """
