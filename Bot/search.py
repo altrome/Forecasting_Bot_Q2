@@ -1,4 +1,3 @@
-
 import asyncio
 from typing import List, Dict
 import sys
@@ -101,7 +100,7 @@ async def get_session(timeout: int = 60) -> ClientSession:
 # Concurrency limiter for external calls
 HTTP_CONCURRENCY_SEMAPHORE = asyncio.Semaphore(5)
 
-# Retry decorator/helper
+# Retry decorator/helper for general use
 async def with_retries(fn, *args, retries: int = 3, backoff: float = 3.0, **kwargs):
     for attempt in range(1, retries + 1):
         try:
@@ -113,28 +112,28 @@ async def with_retries(fn, *args, retries: int = 3, backoff: float = 3.0, **kwar
             print(f"[with_retries] Attempt {attempt} failed: {e}. Retrying in {wait:.1f}s...")
             await asyncio.sleep(wait)
 
-# Utility functions
-
-def parse_date(date_str: str) -> str:
-    parsed = dateparser.parse(date_str, settings={'STRICT_PARSING': False})
-    return parsed.strftime("%b %d, %Y") if parsed else "Unknown"
-
-
-def validate_time(before_date_str: str, source_date_str: str) -> bool:
-    if source_date_str == "Unknown":
-        return False
-    before = dateparser.parse(before_date_str)
-    src = dateparser.parse(source_date_str)
-    return src <= before
-
-# Perplexity API call
-async def _call_perplexity_once(prompt: str) -> str:
+# Enhanced Perplexity API call with robust error handling
+async def call_perplexity(prompt: str) -> str:
+    """
+    Async function to call Perplexity API with robust error handling:
+    - Extended timeout (200s) for deep research queries
+    - Explicit backoff strategy
+    - Detailed logging
+    - Proper handling of HTTP status codes
+    - Clear error messages
+    """
     url = "https://api.perplexity.ai/chat/completions"
     payload = {
         "model": "sonar-deep-research",
         "messages": [
-            {"role": "system", "content": "Be thorough and detailed. Cite all sources with names and dates."},
-            {"role": "user",   "content": prompt + " Cite all sources with names and dates."}
+            {
+                "role": "system",
+                "content": "Be thorough and detailed. Be objective in your analysis, proving documented facts only. Cite all sources with names and dates."
+            },
+            {
+                "role": "user",
+                "content": prompt + " Cite all sources with names and dates, compiling a list of sources at the end. Be objective in your analysis, providing documented facts only."
+            }
         ]
     }
     headers = {
@@ -142,52 +141,48 @@ async def _call_perplexity_once(prompt: str) -> str:
         "content-type": "application/json",
         "authorization": f"Bearer {PERPLEXITY_API_KEY}"
     }
-    session = await get_session(timeout=60)
-    async with HTTP_CONCURRENCY_SEMAPHORE, session.post(url, json=payload, headers=headers) as resp:
-        resp.raise_for_status()
-        # Stream and accumulate
-        chunks = []
-        async for chunk in resp.content.iter_chunked(1024):
-            chunks.append(chunk.decode())
-        content = ''.join(chunks)
-        # Strip internal think tags
-        return re.sub(r'<think>.*?</think>', '', content, flags=re.DOTALL).strip()
 
-async def call_perplexity(prompt: str) -> str:
-    return await with_retries(_call_perplexity_once, prompt)
+    max_retries = 3
+    backoff_base = 3  # seconds to wait between retries
 
-# Google/Serper search with date filtering
-async def _google_search_once(query: str, is_news: bool, date_before: str = None) -> List[str]:
-    path = 'news' if is_news else 'search'
-    url = f"https://google.serper.dev/{path}"
-    payload = {"q": query, "num": 20}
-    headers = {'X-API-KEY': SERPER_KEY, 'Content-Type': 'application/json'}
-    session = await get_session(timeout=30)
-    async with HTTP_CONCURRENCY_SEMAPHORE, session.post(url, json=payload, headers=headers) as resp:
-        resp.raise_for_status()
-        data = await resp.json()
-        items = data.get('news' if is_news else 'organic', [])
-        urls: List[str] = []
-        for item in items:
-            if len(urls) >= 12:
-                break
-            link = item.get('link')
-            date_raw = item.get('date', '')
-            date_str = parse_date(date_raw)
-            if date_before and date_str != "Unknown":
-                if not validate_time(date_before, date_str):
-                    continue
-            if link:
-                urls.append(link)
-        return urls
+    for attempt in range(1, max_retries + 1):
+        try:
+            write(f"[Perplexity API] Attempt {attempt} for query: {prompt[:50]}...")
+            # Use shared session pattern but with extended timeout specifically for Perplexity
+            session = await get_session(timeout=200)  # 200 second timeout
+            
+            # Still respect the concurrency semaphore
+            async with HTTP_CONCURRENCY_SEMAPHORE, session.post(url, json=payload, headers=headers) as response:
+                if response.status == 200:
+                    # Process the response data
+                    data = await response.json()
+                    content = data['choices'][0]['message']['content']
+                    # Strip internal thinking tags
+                    content = re.sub(r'<think>.*?</think>', '', content, flags=re.DOTALL)
+                    write(f"[Perplexity API] ✅ Success on attempt {attempt}")
+                    return content.strip()
+                else:
+                    # Handle non-200 responses explicitly
+                    response_text = await response.text()
+                    write(f"[Perplexity API] ❌ Error: HTTP {response.status}: {response_text}")
+                    # We'll continue to retry rather than raising an exception
+                    
+        except (aiohttp.ClientError, asyncio.TimeoutError) as e:
+            write(f"[Perplexity API] ⚠️ Attempt {attempt} failed: {e}")
+        
+        # Only sleep if we're going to retry
+        if attempt < max_retries:
+            wait_time = backoff_base * (2 ** (attempt - 1))
+            write(f"[Perplexity API] 🔁 Retrying in {wait_time} seconds...")
+            await asyncio.sleep(wait_time)
+        else:
+            write(f"[Perplexity API] ❌ Max retries ({max_retries}) reached. Giving up.")
+            return f"Error: Perplexity API failed after {max_retries} attempts. The system will continue with other available data."
 
+    # Should never reach here
+    return "Unexpected error in call_perplexity"
 
-async def google_search(query: str, is_news: bool = False, date_before: str = None) -> List[str]:
-    # Clean query
-    clean_q = query.replace('"', '').replace("'", '').strip()
-    return await with_retries(_google_search_once, clean_q, is_news)
-
-# AskNews call
+# AskNews API call
 async def _call_asknews_once(question: str) -> str:
     ask = AskNewsSDK(client_id=ASKNEWS_CLIENT_ID, client_secret=ASKNEWS_SECRET, scopes={'news'})
     hot = await asyncio.to_thread(ask.news.search_news, query=question, n_articles=8, return_type='both', strategy='latest news')
@@ -216,6 +211,45 @@ async def call_gpt(prompt):
     except Exception as e:
         write(f"[call_gpt] Error: {str(e)}")
         return f"Error calling OpenAI API: {str(e)}"
+
+
+# Google search with date filtering
+async def _google_search_once(query: str, is_news: bool, date_before: str = None) -> List[str]:
+    path = 'news' if is_news else 'search'
+    url = f"https://google.serper.dev/{path}"
+    payload = {"q": query, "num": 20}
+    headers = {'X-API-KEY': SERPER_KEY, 'Content-Type': 'application/json'}
+    session = await get_session(timeout=30)
+    async with HTTP_CONCURRENCY_SEMAPHORE, session.post(url, json=payload, headers=headers) as resp:
+        resp.raise_for_status()
+        data = await resp.json()
+        items = data.get('news' if is_news else 'organic', [])
+        urls: List[str] = []
+        for item in items:
+            if len(urls) >= 12:
+                break
+            link = item.get('link')
+            date_raw = item.get('date', '')
+            date_str = parse_date(date_raw)
+            if date_before and date_str != "Unknown":
+                if not validate_time(date_before, date_str):
+                    write(f"[google_search] ❌ Dropped by date: {link} (date: {date_str})")
+                    continue
+                else:
+                    write(f"[google_search] ✅ Keeping: {link} (date: {date_str})")
+            else:
+                write(f"[google_search] ✅ Keeping: {link}")
+            if link:
+                urls.append(link)
+        write(f"[google_search] Returning {len(urls)} URLs")
+        return urls
+
+
+async def google_search(query: str, is_news: bool = False, date_before: str = None) -> List[str]:
+    # Clean query
+    clean_q = query.replace('"', '').replace("'", '').strip()
+    write(f"[google_search] Cleaned query: '{clean_q}' (original: '{query}') | is_news={is_news}, date_before={date_before}")
+    return await with_retries(_google_search_once, clean_q, is_news, date_before)
 
 
 async def google_search_and_scrape(query, is_news, question_details, date_before=None):
@@ -337,7 +371,7 @@ async def process_search_queries(response: str, forecaster_id: str, question_det
             elif source == "Assistant":
                 tasks.append(call_asknews(query))
             else:  # Perplexity
-                tasks.append(call_perplexity(query))  # Now directly call as async
+                tasks.append(call_perplexity(query))  # Now directly call the enhanced function
 
         if not tasks:
             write(f"Forecaster {forecaster_id}: No tasks generated")
@@ -397,7 +431,16 @@ async def main():
     forecaster_id = "demo_forecaster"
     print(f"Processing sample search queries for forecaster: {forecaster_id}")
     
-    results = await process_search_queries(sample_response, forecaster_id)
+    # Sample question_details dict
+    question_details = {
+        "title": "Sample Question",
+        "resolution_criteria": "Sample resolution criteria",
+        "fine_print": "Sample fine print",
+        "description": "Sample background information",
+        "resolution_date": "2025-12-31"
+    }
+    
+    results = await process_search_queries(sample_response, forecaster_id, question_details)
     
     print("\n=== SEARCH RESULTS ===\n")
     print(results)
