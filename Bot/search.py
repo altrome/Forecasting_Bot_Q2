@@ -146,7 +146,11 @@ async def call_asknews(question: str) -> str:
 
     return formatted_articles
 
-def call_perplexity(prompt: str) -> str:
+async def call_perplexity(prompt: str) -> str:
+    """
+    Async function to call Perplexity API for deep research
+    Includes retry logic and proper timeout handling
+    """
     url = "https://api.perplexity.ai/chat/completions"
     payload = {
         "model": "sonar-deep-research",
@@ -168,29 +172,33 @@ def call_perplexity(prompt: str) -> str:
     }
 
     max_retries = 3
-    backoff = 3  # seconds to wait between retries
+    backoff_base = 3  # seconds to wait between retries, will be multiplied by attempt number
 
     for attempt in range(1, max_retries + 1):
         try:
-            response = requests.post(url, json=payload, headers=headers, timeout=200)
-            if response.status_code == 200:
-                data = response.json()
-                content = data['choices'][0]['message']['content']
-                content = re.sub(r'<think>.*?</think>', '', content, flags=re.DOTALL)
-                return content.strip()
-            else:
-                print(f"[Perplexity API] ❌ Error: HTTP {response.status_code}: {response.text}")
-                return f"Error: {response.status_code}, {response.text}"
+            async with aiohttp.ClientSession() as session:
+                timeout = aiohttp.ClientTimeout(total=200)  # 200 seconds timeout
+                async with session.post(url, json=payload, headers=headers, timeout=timeout) as response:
+                    if response.status == 200:
+                        data = await response.json()
+                        content = data['choices'][0]['message']['content']
+                        content = re.sub(r'<think>.*?</think>', '', content, flags=re.DOTALL)
+                        return content.strip()
+                    else:
+                        response_text = await response.text()
+                        write(f"[Perplexity API] ❌ Error: HTTP {response.status}: {response_text}")
+                        if attempt == max_retries:
+                            return f"Error: {response.status}, {response_text}"
 
-        except (ConnectionError, RemoteDisconnected, Timeout) as e:
-            print(f"[Perplexity API] ⚠️ Attempt {attempt} failed: {e}")
+        except (aiohttp.ClientError, asyncio.TimeoutError) as e:
+            write(f"[Perplexity API] ⚠️ Attempt {attempt} failed: {e}")
             if attempt == max_retries:
-                print("[Perplexity API] ❌ Max retries reached. Giving up.")
+                write("[Perplexity API] ❌ Max retries reached. Giving up.")
                 return f"Error: Connection aborted after {max_retries} retries ({str(e)})"
             else:
-                wait_time = backoff * attempt
-                print(f"[Perplexity API] 🔁 Retrying in {wait_time} seconds...")
-                time.sleep(wait_time)
+                wait_time = backoff_base * attempt
+                write(f"[Perplexity API] 🔁 Retrying in {wait_time} seconds...")
+                await asyncio.sleep(wait_time)
 
     # Should never reach here
     return "Unexpected error in call_perplexity"
@@ -346,6 +354,8 @@ async def process_search_queries(response: str, forecaster_id: str, question_det
 
         # 4) Kick off one asyncio task per query
         tasks = []
+        query_sources = []  # Track which source goes with which task
+        
         for match in search_queries:
             # match can be ("\"text\"", "text", "Source") or ("text", "Source")
             if len(match) == 3:
@@ -358,6 +368,7 @@ async def process_search_queries(response: str, forecaster_id: str, question_det
                 continue
 
             write(f"Forecaster {forecaster_id}: Query='{query}' Source={source}")
+            query_sources.append((query, source))
 
             if source in ("Google", "Google News"):
                 # pass question_details through so summarizer can fill the prompt
@@ -372,7 +383,7 @@ async def process_search_queries(response: str, forecaster_id: str, question_det
             elif source == "Assistant":
                 tasks.append(call_asknews(query))
             else:  # Perplexity
-                tasks.append(asyncio.to_thread(call_perplexity, query))
+                tasks.append(call_perplexity(query))  # Now directly call as async
 
         if not tasks:
             write(f"Forecaster {forecaster_id}: No tasks generated")
@@ -383,14 +394,7 @@ async def process_search_queries(response: str, forecaster_id: str, question_det
 
         # 6) Format the outputs
         formatted_results = ""
-        for match, result in zip(search_queries, results):
-            # recover query and source for labeling
-            if len(match) == 3:
-                _, raw_query, source = match
-            else:
-                raw_query, source = match
-            query = raw_query.strip().strip('"').strip("'")
-
+        for (query, source), result in zip(query_sources, results):
             if isinstance(result, Exception):
                 write(f"[process_search_queries] ❌ Forecaster {forecaster_id}: Error for '{query}' → {result}")
                 continue
