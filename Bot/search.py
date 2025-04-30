@@ -149,7 +149,7 @@ async def call_perplexity(prompt: str) -> str:
         try:
             write(f"[Perplexity API] Attempt {attempt} for query: {prompt[:50]}...")
             # Use shared session pattern but with extended timeout specifically for Perplexity
-            session = await get_session(timeout=200)  # 200 second timeout
+            session = await get_session(timeout=300)  # 300 second timeout
             
             # Still respect the concurrency semaphore
             async with HTTP_CONCURRENCY_SEMAPHORE, session.post(url, json=payload, headers=headers) as response:
@@ -445,6 +445,10 @@ async def main():
     print("\n=== SEARCH RESULTS ===\n")
     print(results)
     print("\n=== END OF RESULTS ===\n")
+
+    global _http_session
+    if _http_session and not _http_session.closed:
+        await _http_session.close()
 
 if __name__ == "__main__":
     asyncio.run(main())
