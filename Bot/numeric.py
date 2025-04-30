@@ -4,6 +4,7 @@ import datetime
 import numpy as np
 import asyncio
 import re
+import unicodedata
 import itertools
 from typing import Union
 from prompts import (
@@ -49,15 +50,19 @@ def _safe_cdf_bounds(cdf, open_lower, open_upper, step):
 
         return cdf
 
+DASH_RE = re.compile(r"[\u2010\u2011\u2012\u2013\u2014\u2015\u2212]")
+
 def clean(s: str) -> str:
-    return (
-        s.strip()
-         .lstrip(BULLET_CHARS)
-         .replace(",", "")
-         .replace("\u00A0", "")
-         .replace("−", "-")
-         .lower()
-    )
+    # 1) Normalize compatibility forms
+    s = unicodedata.normalize("NFKC", s)
+    # 2) Replace every dash‐like char with ASCII hyphen
+    s = DASH_RE.sub("-", s)
+    # 3) Strip bullets from the start
+    s = s.strip().lstrip(BULLET_CHARS)
+    # 4) Remove thousands-sep commas & NBSPs
+    s = s.replace(",", "").replace("\u00A0", "")
+    return s.lower()
+
 
 def enforce_strict_increasing(pct_dict: dict) -> dict:
     """Ensure strictly increasing values by adding tiny jitter if necessary."""
