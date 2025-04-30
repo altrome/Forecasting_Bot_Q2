@@ -90,82 +90,51 @@ async def summarize_article(article: str, question_details: dict) -> str:
     return await call_gpt(prompt)
 
 
-async def call_asknews(question: str) -> str:
-    """
-    Use the AskNews `news` endpoint to get news context for your query.
-    The full API reference can be found here: https://docs.asknews.app/en/reference#get-/v1/news/search
-    """
-    try:
-        ask = AskNewsSDK(
-            client_id=ASKNEWS_CLIENT_ID, client_secret=ASKNEWS_SECRET, scopes=set(["news"])
-        )
+# Shared HTTP session
+_http_session: ClientSession = None
+async def get_session(timeout: int = 60) -> ClientSession:
+    global _http_session
+    if _http_session is None or _http_session.closed:
+        _http_session = ClientSession(timeout=ClientTimeout(total=timeout))
+    return _http_session
 
-        async with aiohttp.ClientSession() as session:
-            # Create tasks for both API calls
-            hot_task = asyncio.create_task(asyncio.to_thread(ask.news.search_news,
-                query=question,
-                n_articles=8,
-                return_type="both",
-                strategy="latest news"
-            ))
-            historical_task = asyncio.create_task(asyncio.to_thread(ask.news.search_news,
-                query=question,
-                n_articles=8,
-                return_type="both",
-                strategy="news knowledge"
-            ))
+# Concurrency limiter for external calls
+HTTP_CONCURRENCY_SEMAPHORE = asyncio.Semaphore(5)
 
-            # Wait for both tasks to complete
-            hot_response, historical_response = await asyncio.gather(hot_task, historical_task)
+# Retry decorator/helper
+async def with_retries(fn, *args, retries: int = 3, backoff: float = 3.0, **kwargs):
+    for attempt in range(1, retries + 1):
+        try:
+            return await fn(*args, **kwargs)
+        except (aiohttp.ClientError, asyncio.TimeoutError) as e:
+            if attempt == retries:
+                raise
+            wait = backoff * (2 ** (attempt - 1))
+            print(f"[with_retries] Attempt {attempt} failed: {e}. Retrying in {wait:.1f}s...")
+            await asyncio.sleep(wait)
 
-        hot_articles = hot_response.as_dicts
-        historical_articles = historical_response.as_dicts
-        formatted_articles = "Here are the relevant news articles:\n\n"
+# Utility functions
 
-        if hot_articles:
-            hot_articles = [article.__dict__ for article in hot_articles]
-            hot_articles = sorted(hot_articles, key=lambda x: x["pub_date"], reverse=True)
+def parse_date(date_str: str) -> str:
+    parsed = dateparser.parse(date_str, settings={'STRICT_PARSING': False})
+    return parsed.strftime("%b %d, %Y") if parsed else "Unknown"
 
-            for article in hot_articles:
-                pub_date = article["pub_date"].strftime("%B %d, %Y %I:%M %p")
-                formatted_articles += f"**{article['eng_title']}**\n{article['summary']}\nOriginal language: {article['language']}\nPublish date: {pub_date}\nSource:[{article['source_id']}]({article['article_url']})\n\n"
 
-        if historical_articles:
-            historical_articles = [article.__dict__ for article in historical_articles]
-            historical_articles = sorted(
-                historical_articles, key=lambda x: x["pub_date"], reverse=True
-            )
+def validate_time(before_date_str: str, source_date_str: str) -> bool:
+    if source_date_str == "Unknown":
+        return False
+    before = dateparser.parse(before_date_str)
+    src = dateparser.parse(source_date_str)
+    return src <= before
 
-            for article in historical_articles:
-                pub_date = article["pub_date"].strftime("%B %d, %Y %I:%M %p")
-                formatted_articles += f"**{article['eng_title']}**\n{article['summary']}\nOriginal language: {article['language']}\nPublish date: {pub_date}\nSource:[{article['source_id']}]({article['article_url']})\n\n"
-
-        if not hot_articles and not historical_articles:
-            formatted_articles += "No articles were found.\n\n"
-            return formatted_articles
-
-        return formatted_articles
-    except Exception as e:
-        write(f"[call_asknews] Error: {str(e)}")
-        return f"Error retrieving news articles: {str(e)}"
-
-async def call_perplexity(prompt: str) -> str:
-    """
-    Async function to call Perplexity API for deep research
-    Includes retry logic and proper timeout handling
-    """
+# Perplexity API call
+async def _call_perplexity_once(prompt: str) -> str:
     url = "https://api.perplexity.ai/chat/completions"
     payload = {
         "model": "sonar-deep-research",
         "messages": [
-            {
-                "role": "system",
-                "content": "Be thorough and detailed. Be objective in your analysis, proving documented facts only. Cite all sources with names and dates."
-            },
-            {
-                "role": "user",
-                "content": prompt + " Cite all sources with names and dates, compiling a list of sources at the end. Be objective in your analysis, providing documented facts only."
-            }
+            {"role": "system", "content": "Be thorough and detailed. Cite all sources with names and dates."},
+            {"role": "user",   "content": prompt + " Cite all sources with names and dates."}
         ]
     }
     headers = {
@@ -173,94 +142,67 @@ async def call_perplexity(prompt: str) -> str:
         "content-type": "application/json",
         "authorization": f"Bearer {PERPLEXITY_API_KEY}"
     }
+    session = await get_session(timeout=60)
+    async with HTTP_CONCURRENCY_SEMAPHORE, session.post(url, json=payload, headers=headers) as resp:
+        resp.raise_for_status()
+        # Stream and accumulate
+        chunks = []
+        async for chunk in resp.content.iter_chunked(1024):
+            chunks.append(chunk.decode())
+        content = ''.join(chunks)
+        # Strip internal think tags
+        return re.sub(r'<think>.*?</think>', '', content, flags=re.DOTALL).strip()
 
-    max_retries = 3
-    backoff_base = 3  # seconds to wait between retries
+async def call_perplexity(prompt: str) -> str:
+    return await with_retries(_call_perplexity_once, prompt)
 
-    for attempt in range(1, max_retries + 1):
-        try:
-            write(f"[Perplexity API] Attempt {attempt} for query: {prompt[:50]}...")
-            async with aiohttp.ClientSession() as session:
-                timeout = aiohttp.ClientTimeout(total=200)  # 200 seconds timeout
-                async with session.post(url, json=payload, headers=headers, timeout=timeout) as response:
-                    if response.status == 200:
-                        data = await response.json()
-                        content = data['choices'][0]['message']['content']
-                        content = re.sub(r'<think>.*?</think>', '', content, flags=re.DOTALL)
-                        write(f"[Perplexity API] ✅ Success on attempt {attempt}")
-                        return content.strip()
-                    else:
-                        response_text = await response.text()
-                        write(f"[Perplexity API] ❌ Error: HTTP {response.status}: {response_text}")
-                        # Continue to retry on non-200 response
-                        
-        except (aiohttp.ClientError, asyncio.TimeoutError) as e:
-            write(f"[Perplexity API] ⚠️ Attempt {attempt} failed: {e}")
-        
-        # Only enter retry logic if not on last attempt
-        if attempt < max_retries:
-            wait_time = backoff_base * attempt
-            write(f"[Perplexity API] 🔁 Retrying in {wait_time} seconds...")
-            await asyncio.sleep(wait_time)
-        else:
-            write(f"[Perplexity API] ❌ Max retries ({max_retries}) reached. Giving up.")
-            return f"Error: Perplexity API failed after {max_retries} attempts. The system will continue with other available data."
+# Google/Serper search with date filtering
+async def _google_search_once(query: str, is_news: bool, date_before: str = None) -> List[str]:
+    path = 'news' if is_news else 'search'
+    url = f"https://google.serper.dev/{path}"
+    payload = {"q": query, "num": 20}
+    headers = {'X-API-KEY': SERPER_KEY, 'Content-Type': 'application/json'}
+    session = await get_session(timeout=30)
+    async with HTTP_CONCURRENCY_SEMAPHORE, session.post(url, json=payload, headers=headers) as resp:
+        resp.raise_for_status()
+        data = await resp.json()
+        items = data.get('news' if is_news else 'organic', [])
+        urls: List[str] = []
+        for item in items:
+            if len(urls) >= 12:
+                break
+            link = item.get('link')
+            date_raw = item.get('date', '')
+            date_str = parse_date(date_raw)
+            if date_before and date_str != "Unknown":
+                if not validate_time(date_before, date_str):
+                    continue
+            if link:
+                urls.append(link)
+        return urls
 
-    # Should never reach here
-    return "Unexpected error in call_perplexity"
 
-async def google_search(query, is_news=False, date_before=None):
-    original_query = query
-    query = query.replace('"', '').replace("'", '').strip()
-    write(f"[google_search] Cleaned query: '{query}' (original: '{original_query}') | is_news={is_news}, date_before={date_before}")
-    
-    search_type = "news" if is_news else "search"
-    url = f"https://google.serper.dev/{search_type}"
-    headers = {
-        'X-API-KEY': SERPER_KEY,
-        'Content-Type': 'application/json'
-    }
-    payload = json.dumps({
-        "q": query,
-        "num": 20
-    })
-    timeout = ClientTimeout(total=70)
+async def google_search(query: str, is_news: bool = False, date_before: str = None) -> List[str]:
+    # Clean query
+    clean_q = query.replace('"', '').replace("'", '').strip()
+    return await with_retries(_google_search_once, clean_q, is_news)
 
-    try:
-        async with ClientSession(timeout=timeout) as session:
-            async with session.post(url, headers=headers, data=payload) as response:
-                if response.status == 200:
-                    data = await response.json()
-                    items = data.get('news' if is_news else 'organic', [])
-                    write(f"[google_search] Found {len(items)} raw results")
+# AskNews call
+async def _call_asknews_once(question: str) -> str:
+    ask = AskNewsSDK(client_id=ASKNEWS_CLIENT_ID, client_secret=ASKNEWS_SECRET, scopes={'news'})
+    hot = await asyncio.to_thread(ask.news.search_news, query=question, n_articles=8, return_type='both', strategy='latest news')
+    hist = await asyncio.to_thread(ask.news.search_news, query=question, n_articles=8, return_type='both', strategy='news knowledge')
+    def format_list(lst):
+        entries = sorted(lst.as_dicts, key=lambda a: a['pub_date'], reverse=True)
+        text = ''
+        for art in entries:
+            pd = art['pub_date'].strftime('%B %d, %Y %I:%M %p')
+            text += f"**{art['eng_title']}**\n{art['summary']}\n{pd}\n[{art['source_id']}]({art['article_url']})\n\n"
+        return text or 'No articles found.'
+    return "Hot Articles:\n" + format_list(hot) + "\nHistorical Articles:\n" + format_list(hist)
 
-                    filtered_items = []
-                    for item in items:
-                        item_url = item.get('link')
-                        item_date_str = item.get('date', '')
-                        item_date = parse_date(item_date_str)
-                        if date_before:
-                            if item_date != "Unknown" and validate_time(date_before, item_date):
-                                write(f"[google_search] ✅ Keeping: {item_url} (date: {item_date})")
-                                filtered_items.append(item)
-                            else:
-                                write(f"[google_search] ❌ Dropped by date: {item_url} (date: {item_date})")
-                        else:
-                            write(f"[google_search] ✅ Keeping: {item_url}")
-                            filtered_items.append(item)
-
-                        if len(filtered_items) >=12:
-                            break
-                    
-                    urls = [item['link'] for item in filtered_items]
-                    write(f"[google_search] Returning {len(urls)} URLs: {urls}")
-                    return urls
-                else:
-                    write(f"[google_search] Error in Serper API response: Status {response.status}")
-                    response.raise_for_status()
-    except Exception as e:
-        write(f"[google_search] Exception: {str(e)}")
-        raise
+async def call_asknews(question: str) -> str:
+    return await with_retries(_call_asknews_once, question)
 
 
 async def call_gpt(prompt):
