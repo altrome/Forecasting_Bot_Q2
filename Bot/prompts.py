@@ -734,6 +734,9 @@ Today is {today}.
 {lower_bound_message}
 {upper_bound_message}
 
+You should consider the following hint regarding the interval the answer is expected to lie in: 
+{hint}
+
 Outside view analysis + current information/news articles:
 {context}
 
@@ -800,6 +803,9 @@ Today is {today}.
 
 {lower_bound_message}
 {upper_bound_message}
+
+You should consider the following hint regarding the interval the answer is expected to lie in:
+{hint}
 
 Current Context (outside view + relevant evidence):
 {context}
@@ -897,6 +903,9 @@ Today is {today}.
 
 {lower_bound_message}
 {upper_bound_message}
+
+You should consider the following hint regarding the interval the answer is expected to lie in:
+{hint}
 
 Current Context (outside view + relevant evidence):
 {context}
