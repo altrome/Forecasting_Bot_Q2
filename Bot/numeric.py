@@ -379,7 +379,7 @@ async def get_numeric_forecast(question_details: dict, write=print):
             lower_bound_message="" if open_lower else f"Cannot go below {lower}.",
             upper_bound_message="" if open_upper else f"Cannot go above {upper}.",
             units=unit,
-            hint = "The answer is expected to be above {lower} and below {upper}. Think carefully if your projections are outside this range."
+            hint = f"The answer is expected to be above {lower} and below {upper}. Think carefully, and reconsider your sources, if your projections are outside this range."
         )
         return txt, await call_gpt_o4_mini(txt)
 
@@ -396,7 +396,7 @@ async def get_numeric_forecast(question_details: dict, write=print):
         title=title, today=today, resolution_criteria=resolution,
         fine_print=fine_print, context=hist_context,
         units=unit, lower_bound_message="", upper_bound_message="",
-        hint = "The answer is expected to be above {lower} and below {upper}. Think carefully if your projections are outside this range."
+        hint = f"The answer is expected to be above {lower} and below {upper}. Think carefully, and reconsider your sources, if your projections are outside this range."
     )
 
     base_forecasts = await asyncio.gather(
@@ -418,7 +418,7 @@ async def get_numeric_forecast(question_details: dict, write=print):
         title=title, today=today, resolution_criteria=resolution,
         fine_print=fine_print, context=context_map[str(i+1)],
         units=unit, lower_bound_message="", upper_bound_message="",
-        hint = "The answer is expected to be above {lower} and below {upper}. Think carefully if your projections are outside this range."
+        hint = f"The answer is expected to be above {lower} and below {upper}. Think carefully, and reconsider your sources, if your projections are outside this range."
     ) for i in range(5)]
 
     step2_outputs = await asyncio.gather(
