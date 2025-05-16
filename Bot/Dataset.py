@@ -2,6 +2,15 @@ from benchmark import CustomQuestion
 
 ds = [
         CustomQuestion(
+            title="Will the price of one bitcoin on July 1 2025 be more than USD $120,000?",
+            resolution_criteria="No additional criterion.",
+            description="The second 2025 bitcoin surge has pushed bitcoin prices above $100,000 again, but it remains to be seen whether this will continue rising.",
+            fine_print="The price units are in USD, and the resolution source is Yahoo Finance",
+            community_prediction=0.40,
+            url="https://www.gjopen.com/questions/4162-what-will-be-the-average-us-city-price-of-a-pound-of-ground-beef-in-august-2025",
+            type = "binary",
+        ),
+        CustomQuestion(
             title="What will be the average US city price of a pound of ground beef in August 2025?",
             resolution_criteria="No additional criterion.",
             description="The US beef market, already facing high demand and tight supplies, is expected to be hit hard by tariff policies with Canada and Mexico (Economist, Drovers). The question will be suspended on 31 August 2025 and the outcome determined using Bureau of Labor Statistics (BLS) data as reported by the Federal Reserve Economic Data database (FRED) (FRED).",

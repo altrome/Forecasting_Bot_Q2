@@ -136,6 +136,7 @@ async def get_binary_forecast(question_details, write=print):
         weighted_probs = [p * w for p, w in zip(probabilities, weights) if p is not None]
         weight_sum = sum(w for p, w in zip(probabilities, weights) if p is not None)
         final_prob = float(np.sum(weighted_probs) / weight_sum)
+        final_prob = min(0.999, max(0.001, final_prob / 100))  # Normalize to [0.001, 0.999]
     else:
         final_prob = None
 
