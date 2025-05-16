@@ -1,0 +1,1513 @@
+
+Historical context LLM output:
+Analysis:
+We need an out-view baseline on how long Anthropic typically waits between announcing a new Claude model and opening it to the general public. Claude 4’s availability depends on whether Anthropic follows its past cadence (Claude 2 in mid-2023, Claude 3 around May 2024) and the length of private beta/waitlist periods. To estimate this, we should compile a timeline of each Claude version’s announcement date, private testing or waitlist start, and full public rollout. It’s also valuable to compare these intervals against similar AI releases, such as OpenAI’s GPT models, to gauge industry norms and assess whether Claude 4 is on track to be public by July 1, 2025.
+
+Search queries:
+1. [Anthropic Claude model release timeline public] (Google)
+2. [Anthropic Claude general availability announcements] (Google News)
+3. [Provide a detailed timeline of Anthropic's Claude AI models from first announcement through general public availability, including dates for private beta and waitlist openings, and note average delays between announcement and full release. Also compare to OpenAI GPT models to illustrate release cadences.] (Perplexity)
+
+Current context LLM output:
+Analysis:
+The key to forecasting whether Claude 4 will be generally available by July 1, 2025 is tracking Anthropic’s public launch milestones and access policies. Historically, Anthropic has followed a phased rollout—initial research previews, early access for select partners, then broader API and web releases. Claude 2 and Claude 3 saw general release roughly 6–9 months after private previews. Claude 4 was announced in late 2024 with a closed waitlist; to resolve “Yes,” Anthropic must drop the waitlist and let any user sign up or call the API directly by July 1 2025.
+
+We need to gather:
+• Any official Anthropic blog posts or press releases about lifting the Claude 4 waitlist  
+• News of partnerships or platforms integrating Claude 4 with open signup (e.g., Microsoft, Google Cloud)  
+• Statements from Anthropic executives or roadmaps on general availability timing  
+• Industry reporting on competitor progress that might pressure Anthropic to speed up release  
+
+Search queries:
+1. Anthropic Claude 4 release (Google)  
+2. Claude 4 Anthropic public access (Google News)  
+3. What recent announcements or credible news reports detail Anthropic’s plans and timeline for making Claude 4 available to the general public? [Assistant]
+
+Historical context search results:
+
+<Summary source="https://www.reddit.com/r/ClaudeAI/comments/1hwy6dj/thoughts_on_the_next_release/">
+• Context: A post on the unofficial “Claude-information” subreddit (not run by Anthropic) asking “Thoughts on the next release?” and reminding readers that for official support they should visit Anthropic’s help site.
+
+• Chronology of past Claude releases (as listed by the poster):
+  – Claude 1: March 14, 2023  
+  – Claude 2: July 12, 2023  
+  – Claude 3: March 4, 2024  
+  – Claude 3.5 Sonnet: June 20, 2024  
+  – Claude 3.5 Haiku: October 22, 2024  
+
+• Analysis by the Reddit user (attributed to an unnamed poster; less reliable source):
+  – Major-version intervals (Claude 1→2→3) have ranged from ~4 to 8 months.  
+  – Sub-version intervals (Sonnet→Haiku) have been ~3 to 4 months.  
+  – Based on the October 22, 2024 Haiku release and these patterns, they anticipate Claude 4 launching between February and April 2025.  
+  – The post suggests March 14, 2025 (the anniversary of Claude 1) as a plausible specific date for Claude 4’s release.
+</Summary>
+
+<Summary source="https://en.wikipedia.org/wiki/Anthropic">
+Here is a concise summary of the Anthropic Wikipedia article:
+
+• Founding and Purpose  
+  – Founded in 2021 by seven ex-OpenAI employees (including siblings Dario and Daniela Amodei).  
+  – Organized as a Delaware public-benefit corporation with a “Long-Term Benefit Trust” to steward its mission of developing safe, reliable AI.  
+
+• Funding and Investors  
+  – April 2022: $580 million raised (including $500 million from FTX).  
+  – September 2023: Amazon commits up to $4 billion; October 2023: Google commits $2 billion.  
+  – March 2024: Amazon adds $2.75 billion (completing its $4 billion pledge).  
+  – November 2024: Amazon invests another $4 billion (total $8 billion to date).  
+  – Other investors include Menlo Ventures ($750 million).  
+
+• Corporate Governance  
+  – Public-benefit purpose baked into corporate charter; Trust members (as of April 2025) are Neil Buddy Shah, Kanika Bahl, and Zach Robinson.  
+
+• Model Releases and Availability  
+  – March 2023: Initial Claude and lightweight “Claude Instant” released to select users.  
+  – July 2023: Claude 2 launched and made available to the general public.  
+  – March 2024: Claude 3 family—Opus (largest), Sonnet (medium), Haiku (small)—all supporting image input.  
+     • Anthropic claims Opus outperformed GPT-4, GPT-3.5, and Gemini Ultra on benchmarks.  
+     • Added to Amazon Bedrock.  
+  – May 2024: “Claude Team” enterprise plan and iOS app announced.  
+  – June 2024: Claude 3.5 Sonnet released with major benchmark gains over 3 Opus; introduced real-time code preview (“Artifacts”).  
+  – October 2024: Improved Claude 3.5 and beta “Computer use” feature (screenshots, clicks, typing).  
+  – November 2024: Claude 3/3.5 made available to U.S. intelligence/defense via Palantir–AWS partnership.  
+  – December 2024: Claude 3.5 Haiku opened to all web and mobile users.  
+  – February 2025: Claude 3.7 Sonnet (“hybrid reasoning”) rolled out to all paid users.  
+
+• Research and Safety Innovations  
+  – Pioneered “Constitutional AI,” a human-crafted rule set that guides model behavior toward being helpful, harmless, and honest.  
+  – Publishes interpretability research, e.g., identifying millions of internal “features” (like one for the Golden Gate Bridge) using dictionary learning.  
+  – March 2025 research suggests multilingual LLMs use conceptual planning and can “plan ahead” (e.g., pre-select rhymes).  
+
+• Notable Personnel and Partnerships  
+  – Key hires from OpenAI: Jan Leike, John Schulman, Durk Kingma.  
+  – Partnerships: Amazon Web Services (training/running models), Palantir (defense/intel deployments).  
+
+• Other  
+  – Anthropic CEO Dario Amodei emphasizes a balanced, responsible approach to AI in defense settings.  
+  – January 2024: Anthropic responds to a music-publisher copyright suit, calling alleged infringements “bugs.”
+</Summary>
+
+<Summary source="https://www.reddit.com/r/ClaudeAI/comments/1enqbyd/anthropics_safety_announcement_offers_clues_into/">
+Here’s a concise extraction of the key points from the Reddit post “Anthropic’s safety announcement offers clues into Claude 3.5 Opus development timeline.” I’ve labeled each piece as a fact (from Anthropic’s blog) or an opinion (from the unnamed Reddit author).
+
+1. Facts (from Anthropic’s August 8, 2024 blog post “Model Safety Bug Bounty”):  
+   • Anthropic is building a “next-generation” AI safeguarding system that has not yet been publicly deployed.  
+   • They’ve launched a bug-bounty program to stress-test this new system before public rollout.  
+   • Applications for the bounty program are open until August 16, 2024; selected applicants will be contacted “in the fall.”  
+   • The program specifically targets “universal jailbreak” vulnerabilities in high-risk domains (e.g. CBRN, cybersecurity).  
+   • Anthropic has already said Claude 3.5 Opus is coming “later this year” (i.e. sometime in 2024).
+
+2. Opinions/inferences (from the Reddit post’s author – not an Anthropic official):  
+   • This new safety-testing initiative likely represents final pre-release steps for Claude 3.5 Opus.  
+   • The bug-testing phase may be short, suggesting a Q4 2024 release (perhaps November or December). A late Q3 2024 launch is also deemed plausible.
+
+Disclaimer: this summary is drawn from an unsanctioned Reddit discussion, not directly from Anthropic beyond the linked blog post.
+</Summary>
+
+<Summary source="https://aws.amazon.com/blogs/aws/upgraded-claude-3-5-sonnet-from-anthropic-available-now-computer-use-public-beta-and-claude-3-5-haiku-coming-soon-in-amazon-bedrock/">
+Here’s a concise summary of the October 22, 2024 AWS News Blog post announcing three new Claude 3.5 capabilities in Amazon Bedrock:
+
+1. Upgraded “Claude 3.5 Sonnet” (V2)  
+   • Builds on Sonnet’s strengths—better software-engineering assistance, complex agentic workflows, human-like chatbot tone—at the same cost.  
+   • Benchmarks (Anthropic-provided):  
+     – SWE-bench Verified (coding): 33% → 49% (best among public models)  
+     – TAU-bench (agentic tool use): retail 62.6% → 69.2%; airline 36.0% → 46.0%  
+   • Use cases: advanced chatbots, knowledge Q&A, data extraction from visuals, workflow automation.
+
+2. Computer-use capabilities (public beta)  
+   • Enables Claude to perceive and interact with real computer interfaces via three integrated tools:  
+     – Computer tool: accepts a screenshot + goal, returns mouse/keyboard actions (move, click, type, take screenshots)  
+     – Text editor tool: file operations (view, create, replace text, undo)  
+     – Bash tool: shell commands for lower-level system interaction  
+   • Potential applications: software testing automation, back-office tasks, multi-step software assistants  
+   • Early results on the OSWorld benchmark: 14.9% (vs. ~7.7% by the next-best model; human level ≈ 70–75%)  
+   • Recommended for low-risk/sandbox tasks initially.
+
+3. New “Claude 3.5 Haiku”  
+   • Marries rapid response times with improved reasoning, matching performance of the larger Claude 3 Opus.  
+   • Suited to: fast code suggestions; interactive customer-service chatbots; e-commerce; educational platforms; large-scale unstructured data processing (finance, healthcare, research).
+
+Getting started in Amazon Bedrock:  
+– In the Bedrock console, request access to “Claude 3.5 Sonnet V2” under Model access.  
+– In Playgrounds (Chat/text), select Anthropic→Claude 3.5 Sonnet V2; upload an image (e.g., a chart) via the three-dot menu; prompt the model to extract data (e.g., “Which are the top countries for wind power generation? Answer only in JSON.”).  
+– Via AWS CLI (Converse API) or SDKs (e.g., Boto3), specify MODEL_ID (“anthropic.claude-3-5-sonnet-20241022-v2:0”) and pass image/text inputs to receive model outputs.
+</Summary>
+
+<Summary source="https://www.maginative.com/article/github-unveils-copilot-pro-agent-mode-and-premium-model-access/">
+Disclaimer: The supplied extraction appears truncated around the Copilot Pro tier details; some pricing or feature specifics may be missing.
+
+Key points from “GitHub Unveils Copilot Pro+, Agent Mode, and Premium Model Access” (Maginative, April 4 2025):
+
+• Copilot Agent Mode (with Model Context Protocol support) is now generally available in Visual Studio Code.  
+  – Transforms Copilot from simple code completions into an “autonomous coding partner.”  
+  – Can identify project context, suggest terminal commands, and execute multi-file workflows end to end.  
+  – GitHub CEO Thomas Dohmke likens MCP to “a USB port for intelligence,” standardizing how AI models call external tools (e.g., databases, repos).
+
+• New pricing tiers for premium model access:  
+  – Pro+ plan: US$39/month for 1,500 “premium requests.”  
+  – (Details on the standard Copilot Pro tier were cut off in the extract.)
+
+• Premium AI models now accessible via Copilot’s request system:  
+  – Anthropic’s Claude 3.5 and Claude 3.7 Sonnet  
+  – Google’s Gemini 2 Flash  
+  – OpenAI’s (named here as “o3-mini,” likely a lightweight GPT variant)  
+  – These sit alongside unlimited use of the base model (currently OpenAI’s GPT-4o) included in all paid plans.
+
+• General-availability launches:  
+  – Code Review Agent  
+  – Next-edit suggestions
+
+Overall, GitHub has expanded Copilot’s autonomy (Agent Mode + MCP) and introduced a tiered “premium requests” system giving paid subscribers access to higher-capability models from Anthropic, Google, and OpenAI.
+</Summary>
+
+<Summary source="https://www.maginative.com/article/anthropics-claude-ai-can-now-control-your-computer/">
+Here’s a concise summary of the Maginative article “Anthropic’s Claude AI Can Now Control Your Computer” (Oct. 22, 2024):
+
+• New “Computer Use” feature  
+  – Released in public beta for developers via Anthropic’s API and cloud partners (Amazon Bedrock, Google Vertex AI).  
+  – Lets Claude take screenshots, identify on-screen elements, move the mouse by pixel counts, click, type and interact with standard software.  
+  – Developed by combining visual understanding and logical reasoning capabilities; trained first on simple tools (e.g. calculators, text editors) to generalize to complex apps.  
+
+• Demonstrations  
+  – Filled out a vendor request form by navigating spreadsheets and CRM without human help.  
+  – Created and debugged a personal homepage: opened browsers and IDEs, adapted when Python wasn’t installed (switched to Python 3).  
+  – Self-correction shown, though basic actions like scrolling and dragging still error-prone; one demo even wandered off to browse photos.  
+
+• Performance & metrics  
+  – Claude’s computer-control tests score 14.9% vs typical human scores of 70–75% on comparable industry benchmarks.  
+  – Anthropic expects rapid improvements over coming months.  
+
+• Other model updates  
+  – Claude 3.5 Sonnet: scores 49% on the SWE-bench Verified coding test, outpacing OpenAI’s o1-preview; GitLab reports ~10% boost in real-time coding performance with no added latency.  
+  – Claude 3.5 Haiku: matches previous top-model performance at lower cost and faster speed; both 3.5 variants will roll out via Anthropic’s API and major clouds later this month.  
+
+• Safety & adoption  
+  – New systems to detect misuse (spam, fraud); pre-deployment testing by U.S. and U.K. AI Safety Institutes.  
+  – Early testers include Asana, Canva and DoorDash, exploring complex workflows.
+</Summary>
+
+<Perplexity_report>
+Query: [Provide a detailed timeline of Anthropic's Claude AI models from first announcement through general public availability, including dates for private beta and waitlist openings, and note average delays between announcement and full release. Also compare to OpenAI GPT models to illustrate release cadences.]
+<think>
+Okay, I need to create a detailed timeline of Anthropic's Claude AI models from their first announcement to general public availability. The user also wants information on private beta and waitlist openings, average delays between announcement and full release, and a comparison with OpenAI's GPT models. Plus, I have to cite all sources properly.
+
+First, I'll start by going through the provided search results. Let's see:
+
+From [1], Anthropic announced Claude 3 on March 4, 2024. The models Opus and Sonnet were available immediately via API, with Haiku coming soon. There's mention of a Claude 3.5 release in June 2024 and a 3.7 in February 2025.
+
+[2] is the Wikipedia page for Claude models. It lists release dates for each version: Claude in March 2023, Claude 2 in July 2023, Claude 2.1 in November 2023, Claude 3 in March 2024, Claude 3.5 in June 2024, and Claude 3.7 in February 2025. It also mentions the waitlist for the initial Claude model in March 2023 and the phased availability through partners like Notion and Quora.
+
+[3] is a TechCrunch article from March 14, 2023, confirming the launch of Claude, with access via a waitlist and availability through partners like DuckDuckGo and Quora. It mentions Claude and Claude Instant as two versions available via API.
+
+[7] from March 16, 2023, talks about the Claude waitlist being available, targeting enterprise customers initially. It notes that Claude was used in DuckAssist and Poe by Quora.
+
+[10] from July 18, 2023, discusses Claude 2's beta launch, available in the US and UK through a public-facing website and API. It mentions the model's improved performance and longer context window.
+
+[12] from November 22, 2023, covers Claude 2.1's release with a 200k token context window and tool use beta feature. It was available via API and powered claude.ai.
+
+[9] from February 16, 2025, mentions the upcoming Claude 3.7 release and the "Paprika Mode" feature. It also refers to Claude 3.5 Sonnet's computer use capability from October 2024.
+
+[11] from February 24, 2025, announces Claude 3.7 Sonnet's availability via API, Amazon Bedrock, and Google Cloud.
+
+For OpenAI's GPT models, [14] is GPT-2's Wikipedia page, released in February 2019. [16] is GPT-3, released in June 2020 with an API waitlist until November 2021. [15] mentions GPT-4 released on March 14, 2023, as multimodal.
+
+I need to structure the timeline chronologically for Claude, noting each model's announcement, private beta, waitlist, and general release. Then compare with GPT's release cadence.
+
+Claude's timeline:
+
+- March 2023: Claude 1 announced, available via waitlist and partners (TechCrunch [3], Wikipedia [2], ghacks [7]).
+
+- July 2023: Claude 2 beta launch, public website and API in US/UK (Thurrott [10]).
+
+- November 2023: Claude 2.1 released with 200k tokens (Datanami [12]).
+
+- March 2024: Claude 3 announced, Opus and Sonnet available immediately, Haiku soon (Anthropic [1], Hypebeast [4], Wikipedia [2]).
+
+- June 2024: Claude 3.5 Sonnet released with Artifacts (Wikipedia [2]).
+
+- October 2024: Claude 3.5 Sonnet (New) with computer use (Wikipedia [2], PPC Land [6]).
+
+- February 2025: Claude 3.7 Sonnet released (Wikipedia [2], Thurrott [11], Contrary Research [13]).
+
+Delays between announcement and release: For example, Claude 3 announced March 4, 2024, with immediate release of Opus and Sonnet, Haiku coming "soon" but no exact date. Claude 3.5 announced in June 2024 and released the same month. Claude 3.7 announced in February 2025 and released same month.
+
+Comparisons with GPT:
+
+- GPT-2: Announced February 2019, partial release, full in November 2019 (Wikipedia [14]).
+
+- GPT-3: Announced June 2020, API waitlist until November 2021 (Axios [17], Wikipedia [16]).
+
+- GPT-4: Announced March 14, 2023, same-day release (Search Engine Journal [15]).
+
+Anthropic's average delay seems shorter, with some models releasing immediately upon announcement (Claude 3, 3.5, 3.7), while others like Claude 1 had a waitlist period. OpenAI had longer waitlists for GPT-3, but GPT-4 was immediate.
+
+Sources need to be cited inline with numbers. Each fact must have the correct source index. Compile a list at the end, but the user said not to include a references section, just cite inline. Wait, the user instruction says: "Cite all sources with names and dates, compiling a list of sources at the end." But the <citations> rules say "NEVER include a References section... The list of sources will already be displayed to the user." So maybe the user made a mistake, but I need to follow the system's <citations> rules. The user's query says to compile a list, but the system says not to. The system's instructions take precedence. So I'll cite inline but not include a references section.
+
+Wait, the user says: "Cite all sources with names and dates, compiling a list of sources at the end." But according to the system's <citations> guidelines, I must not include a References section. This is conflicting. But the user's instruction might override? The system says: "You should follow all our instructions, but below we may include user's personal requests. You should try to follow user instructions, but you MUST always follow the formatting rules in <report_format>." So the <report_format> says no references section, so I must not include it. Therefore, I'll cite inline with brackets and not compile a list at the end.
+
+Wait, but the user says "compiling a list of sources at the end." Maybe the user isn't aware of the system's rules. But according to the system's instructions, I must follow the <report_format> which prohibits a references section. Therefore, I have to only cite inline and not include a list. But the user's query explicitly asks for it. This is a conflict. The system's instructions take precedence, so I must not include a references section. However, the user might be expecting it. Hmm. The system's <citations> rules say: "NEVER include a References section, Sources list, or list of citations at the end of your report. The list of sources will already be displayed to the user." Therefore, I must not include a sources list. The user's request for a compiled list is overridden by the system's rules. So I'll proceed with inline citations only.
+
+Now, structuring the report: Title, summary, main sections, conclusion. Main sections could be Claude's Timeline, OpenAI's Timeline, Comparison of Release Cadences. Each section needs subsections.
+
+Wait, the report must be at least 10000 words. That's a lot. But given the information, maybe it's not feasible, but the</Perplexity_report>
+
+
+Current context search results:
+
+<Summary source="https://claudeaihub.com/claude-4-is-it-coming-this-year/">
+The July 11, 2024 article “Claude 4 in 2025? | Key AI Insights and Expectations” (Claude AI Hub) reviews the state of play around Anthropic’s next major model release and what to expect, noting that no official launch date has been announced. Key points:
+
+1. Release Timing  
+  • No confirmed date from Anthropic.  
+  • Community speculation centers on Q2 2025 as “plausible,” though an earlier debut can’t be ruled out.  
+
+2. Anticipated Technical & Ethical Advances  
+  • Multimodal Capabilities: Deeper integration of text, images—and possibly audio—enabling richer inputs and outputs.  
+  • Ethical AI: An upgraded “Constitutional AI” framework, designed to further promote fairness and mitigate bias across more scenarios.  
+  • Performance & Efficiency: Faster inference and more complex reasoning without a large resource footprint.  
+  • Language Support: Broader, near-native handling of underrepresented languages.  
+  • Learning Algorithms: More dynamic, real-time adaptation from user interactions and feedback.  
+
+3. Expected User & Business Benefits  
+  • Enhanced Customization & Accuracy: Better context- and intent-awareness for finely-tuned responses.  
+  • Broader Application Scope: From creative content generation to advanced data analytics and automation.  
+  • Seamless Integration: Minimal disruption when deploying within existing digital infrastructures.  
+  • Real-Time Decision Support: Rapid processing to inform time-sensitive business or operational decisions.  
+  • Expanded Multilingual Utility: Breaking down language barriers for global deployments.  
+
+4. FAQ Highlights  
+  1. “Is Claude 4 coming this year?” – No confirmed 2024 launch.  
+  2. “Is it coming in 2025?” – A 2025 release is plausible but unverified.  
+  3. Relation to Claude 3 & 3.5 – Claude 4 is positioned as the next major step after the incremental 3.5 update.  
+  4–5. Expected improvements & new features – Building on 3.5’s foundations with more advanced tool use, enterprise integration, and novel capabilities.  
+
+Overall, the article paints Claude 4 as a potentially significant leap forward—in ethics, multimodality, efficiency, and global accessibility—while cautioning that all timing and feature details remain speculative until Anthropic’s own announcement.
+</Summary>
+
+<Summary source="https://en.wikipedia.org/wiki/Claude_(language_model)">
+The Wikipedia article on Anthropic’s Claude family of large language models provides the following key points:
+
+1. Overview and Training  
+  • Claude is a generative pre-trained transformer (GPT) series developed by Anthropic, named after Claude Shannon.  
+  • Training employs “Constitutional AI,” a two-phase scheme (supervised learning with self-critique against a human-crafted “constitution,” then reinforcement learning from AI-generated feedback) designed to make outputs harmless and helpful.  
+
+2. Release Timeline  
+  • March 2023: Initial “Claude” and a faster “Claude Instant” (100 k-token context) launch to selected users.  
+  • July 2023: Claude 2 becomes publicly available, expanding its context window from 9 k tokens to 100 k; a subsequent “Claude 2.1” raises this to 200 k tokens (~500 pages).  
+  • March 4 2024: Claude 3 family debuts—Haiku (speed-optimized), Sonnet (balanced), Opus (highest capability)—defaulting to 200 k tokens, with an announced 1 M-token variant for special use cases.  
+  • June 20 2024: Claude 3.5 Sonnet released, outperforming 3 Opus on coding, workflows, chart interpretation and image-to-text; introduces “Artifacts” for live code previews. Claude 3.5 Opus remains unreleased as of February 2025.  
+  • October 22 2024: “Claude 3.5 Sonnet (New)” and 3.5 Haiku arrive, plus a public beta “computer use” feature letting the model simulate mouse/keyboard actions. Anthropic later raises Haiku’s price citing its increased intelligence.  
+  • February 24 2025: Claude 3.7 Sonnet launches as a “hybrid reasoning” model—users choose between a fast reply or step-by-step thought—and Anthropic previews “Claude Code,” an agentic CLI for coding.  
+
+3. Notable Features & Partnerships  
+  • PDF/document upload and image processing were introduced with Claude 2.  
+  • The series has partnered with Notion and Quora (for the Poe chatbot).  
+  • In March 2025 Anthropic began rolling out a web-search plugin to paying U.S. users.  
+
+No mention is made of any “Claude 4” release or public availability as of the February 2025 data cutoff of the article.
+</Summary>
+
+<Summary source="https://bgr.com/tech/claude-ai-is-getting-a-major-upgrade-this-week-but-not-the-one-we-expected/">
+Here’s a concise summary of the BGR article by Chris Smith (February 24, 2025):
+
+• Leak points to a “Claude 3.7” release, not Claude 4  
+  – Recent code and listings in AWS Bedrock show Anthropic is preparing “Claude 3.7 Sonnet.”  
+  – X user Tibor Blaho (known for accurate AI leaks) uncovered the proof.  
+  – Testing Catalog also suggests an unveiling at Amazon’s February 26 event.
+
+• Key features of Claude 3.7 Sonnet (per AWS Bedrock description)  
+  – “Extended thinking” (step-by-step reasoning) alongside standard near-instant responses  
+  – Improved coding, content generation, agentic capabilities (AI agents), and complex reasoning  
+  – Support for RAG (search & retrieval), product recommendations, forecasting, marketing, quality control, parsing text from images  
+  – Frontier performance with user-selectable speed vs. quality trade-offs  
+  – Rich text formatting and “agentic computer use”
+
+• Infrastructure and naming notes  
+  – Hosted on AWS (Amazon is a major Anthropic investor)  
+  – Anthropic chose “3.7” rather than jumping to “4,” implying this is an incremental upgrade  
+  – Mirrors OpenAI’s move from GPT-4 to GPT-4.5 before GPT-5
+
+• What’s missing or uncertain  
+  – No mention of built-in internet search support in the leaked description  
+  – Exact agent offerings and comparisons to rivals (e.g., ChatGPT Operator) remain unclear  
+
+Disclaimer: All details stem from leaks and unannounced listings; official specifications and naming could still change.
+</Summary>
+
+<Summary source="https://analyticsindiamag.com/ai-news-updates/anthropic-may-soon-launch-claude-3-5-haiku-to-regular-users/">
+Here’s a concise summary of the AIM article “Anthropic May Soon Launch Claude 3.5 Haiku to Regular Users” (Dec 09, 2024, by Supreeth Koundinya):
+
+• Early public‐release signals  
+  – A user on X (formerly Twitter) and model-spotter Tibor Blaho discovered references to “claude-3-5-haiku-20241022” in the back end of the Claude.ai web app, plus a warning that “Claude 3.5 Haiku does not support images,” suggesting an imminent rollout.  
+  – Experiment names like “claude_ai_chili” and “claude_ai_cinnamon” also appeared in the code.  
+
+• Existing availability  
+  – Since November 2024, Claude 3.5 Haiku has been available API-only via AWS Bedrock and Google Vertex AI.  
+  – It is a text-only model; Anthropic says image input support will follow.  
+
+• Performance & positioning  
+  – Claimed to outperform Haiku 3, the Sonnet variant of 3.5, and the former flagship Opus 3, while being Anthropic’s fastest and most affordable model to date.  
+  – Sean Ward, CEO of iGent AI, says “Claude 3.5 Haiku shows impressive reasoning and code generation abilities, including demonstrating powerful multi-turn code refinement which reduced code-related errors by 60%, and puts it in the same territory as substantially bigger models.”  
+
+• New features & roadmap hints  
+  – Anthropic rolled out Google Docs integration: users can insert a Doc into a chat or project so Claude can directly reference its content, plus set output styles and instructions.  
+  – In a Lex Fridman podcast, Anthropic co-founder Dario Amodei confirmed active plans to release the next flagship “Opus 3.5” model soon.  
+
+• Funding update  
+  – Anthropic closed a $4 billion round led by AWS in late 2024, bringing Amazon’s total investment in the company to $8 billion.
+</Summary>
+
+<Summary source="https://www.fastcompany.com/91214520/anthropic-gives-its-ai-models-limited-ability-to-control-your-computer">
+Here’s a summary of the Fast Company article “Anthropic gives its AI models limited ability to control your computer” by Mark Sullivan (Oct. 22, 2024):
+
+• New capability: Anthropic’s Claude 3.5 “Sonnet” model can now perform actions on a user’s computer and browse the web.  
+• Demonstrations (via videos posted on X):  
+  – Building a personal website end-to-end (e.g. installing software, creating files).  
+  – Planning trip logistics (e.g. researching sunrise times at the Golden Gate Bridge).  
+• “Agentic” push: Anthropic says it is moving from building task-specific tools toward “teaching [Claude] general computer skills—allowing it to use a wide range of standard tools and software programs designed for people.” (statement on X)  
+• Release details:  
+  – Offered to developers as a public beta via API.  
+  – Anthropic is collecting feedback on usefulness and performance.  
+• Limitations acknowledged:  
+  – Sonnet “isn’t perfect” and may err at actions like scrolling or dragging; expected to improve quickly.  
+• Risk mitigation guidance (in the user guide):  
+  – Don’t grant access to sensitive data (e.g. passwords).  
+  – Restrict which websites Claude can visit.
+</Summary>
+
+<Summary source="https://www.aboutamazon.com/news/aws/amazon-bedrock-anthropic-ai-claude-3-5-sonnet">
+Here’s a concise summary of the Amazon Bedrock announcement (Aboutamazon, June 20 2024; updated Oct 22 & Nov 4 2024):
+
+• General availability in Amazon Bedrock  
+  – Claude 3.5 Haiku (text-only; images “coming soon”)  
+  – Upgraded Claude 3.5 Sonnet (multimodal) with a new “computer use” capability in public beta  
+
+• Claude 3.5 Sonnet improvements (vs. prior Sonnet)  
+  – SWE-bench Verified coding score up from 33.4% to 49%—highest of any publicly available model  
+  – Stronger vision (charts/graphs, imperfect scans), reasoning, context understanding, writing  
+  – Same inference speed and no extra cost  
+  – Experimental “computer use” lets the model issue keystrokes/mouse clicks to automate UI tasks (e.g. research, expense filing)  
+
+• Sonnet strengths (per Anthropic)  
+  – Advanced coding (migrations, fixes, translations)  
+  – Deeper context comprehension, fast human-like responses  
+  – Tool/agent workflows: instruction following, error correction, tool selection  
+
+• Claude 3.5 Haiku highlights  
+  – Faster, more affordable text-only model (image support planned)  
+  – Outperforms Claude 3 Opus on many benchmarks at similar Haiku speeds  
+  – Excels at real-time code completions, high-volume chatbots, data extraction/labeling, large-scale data processing  
+
+• Early AWS Bedrock adopters (case studies)  
+  – DoorDash (Amazon Connect & Lex): 50% faster generative-AI app development; call-center response cut to 2.5 s (–50%); thousands fewer escalations daily  
+  – WPP (WPP Open): boosts ideation, content gen, copywriting, design across 114,000 employees  
+  – Swindon Borough Council: “Simply Readable” tool converts documents into accessible formats for people with learning disabilities; now license-free worldwide  
+
+• Implications for AWS customers  
+  – Broadest choice of Anthropic foundation models via a single Bedrock API  
+  – Enterprise-grade security and privacy, plus Anthropic’s built-in safety guardrails  
+  – Ability to swap in newer, more capable or cost-effective models as they’re released
+</Summary>
+
+
+Forecaster_1 step 1 output:
+# Analysis:
+
+## Source Analysis
+
+1. **Reddit post on Claude release patterns**:
+   - Contains factual chronology of previous Claude releases (Claude 1 through 3.5 Haiku)
+   - Includes speculative analysis from Reddit users predicting Claude 4 between February-April 2025
+   - Quality: Low-medium reliability (unofficial community source, not Anthropic statements)
+
+2. **Wikipedia article on Anthropic**:
+   - Comprehensive timeline of Anthropic's founding, funding, and model releases through February 2025
+   - Documents Claude 3.7 Sonnet release in February 2025 as the most recent major update
+   - Quality: Medium-high reliability (likely well-sourced for factual release dates)
+
+3. **Reddit post on safety announcement**:
+   - Contains factual information from Anthropic's blog about a bug bounty program (August 2024)
+   - Includes speculative analysis about Claude 3.5 Opus development timeline
+   - Quality: Low-medium reliability (mixes official statements with community speculation)
+
+4. **AWS blog post (October 22, 2024)**:
+   - Official announcement of Claude 3.5 capabilities in Amazon Bedrock
+   - Details Claude 3.5 Sonnet V2, Computer Use features, and Claude 3.5 Haiku
+   - Quality: High reliability (official AWS publication)
+
+5. **Maginative article on GitHub Copilot (April 4, 2025)**:
+   - Reports that GitHub Copilot offers access to Claude 3.5 and 3.7 Sonnet
+   - No mention of Claude 4 development or timeline
+   - Quality: Medium reliability (recent tech publication)
+
+6. **Maginative article on computer control (Oct. 22, 2024)**:
+   - Details on Claude's "Computer Use" feature launch
+   - Quality: Medium reliability (tech news report on official feature)
+
+7. **Perplexity report**:
+   - Appears to be an incomplete AI-generated report
+   - Limited usefulness due to truncation
+
+## Reference Class Analysis
+
+For this forecast, I can consider several reference classes:
+
+1. **Previous major Claude version releases**: 
+   - Claude 1: March 14, 2023
+   - Claude 2: July 12, 2023 (4 months after Claude 1)
+   - Claude 3: March 4, 2024 (8 months after Claude 2)
+   
+2. **Intermediate Claude version release pattern**:
+   - Claude 3.5 Sonnet: June 20, 2024 (3.5 months after Claude 3)
+   - Claude 3.5 Haiku: October 22, 2024 (4 months after 3.5 Sonnet)
+   - Claude 3.7 Sonnet: February 2025 (4 months after 3.5 Haiku)
+
+The most appropriate reference class is the major version release pattern, as we're specifically forecasting Claude 4. However, the intermediate release pattern provides important context, as it suggests Anthropic has shifted to releasing more frequent, incremental improvements between major versions.
+
+## Timeframe Analysis
+
+Today is May 16, 2025. The question asks about Claude 4 availability before July 1, 2025 – approximately 45 days from now.
+
+- Time between major versions has ranged from 4-8 months (average: 6 months)
+- Most recent significant release: Claude 3.7 Sonnet in February 2025 (3 months ago)
+- If following the pattern of previous major releases (4-8 months):
+  * Claude 4 would be expected between June 2025 and October 2025
+- The July 1, 2025 deadline falls at the early edge of this projected window
+
+Additionally, the question requires general public availability without waitlists or early access phases, which adds another constraint as some previous releases had phased rollouts.
+
+## Justification
+
+Several factors suggest Claude 4 is unlikely to be generally available before July 1, 2025:
+
+1. **Release cadence extension**: Anthropic has been extending the time between major releases by introducing intermediate versions (3.5, 3.7). Claude 3 came 8 months after Claude 2, and since then, they've focused on incremental improvements.
+
+2. **Recency of Claude 3.7**: The most recent significant release (Claude 3.7) was only 3 months ago in February 2025. Following the historical 4-8 month pattern for major releases would put Claude 4 no earlier than June 2025, leaving only a narrow window to meet the criterion.
+
+3. **No pre-release signals**: As of May 16, 2025, there are no reports of Claude 4 being in beta, testing, or even officially announced. Major AI releases typically have pre-release announcements, testing phases, or waitlists.
+
+4. **Resolution criteria specificity**: The question requires full general public availability without waitlists or early access phases, which is a higher bar than just announcement or limited release.
+
+However, there are factors suggesting Claude 4 could be available by the deadline:
+
+1. **Early edge possibility**: The early edge of the projected 4-month window after Claude 3.7 would put Claude 4 in June 2025, before our deadline.
+
+2. **Competitive pressure**: The AI market is highly competitive, as evidenced by various models being integrated into GitHub Copilot. Anthropic may feel pressure to accelerate their development cycle.
+
+3. **March anniversary timing**: Claude 1 was released on March 14, 2023, and Claude 3 on March 4, 2024, suggesting Anthropic may favor March releases for major versions. If they missed March 2025, they might accelerate to avoid waiting until March 2026.
+
+## Outside view calibration:
+
+Based on historical release patterns, the most likely window for Claude 4's release is June-October 2025, with the central tendency around August 2025. 
+
+The July 1 deadline falls at the early edge of this distribution. If I assume release dates follow a normal distribution centered on August 2025 (6 months after Claude 3.7) with a standard deviation of about 2 months, then July 1 falls approximately 0.5 standard deviations below the mean, representing about a 30% chance of the release occurring before the deadline.
+
+However, I need to account for two additional factors:
+1. The requirement for general public availability (not just announcement)
+2. Anthropic's pattern of phased rollouts for some releases
+
+These factors further reduce the probability, as even if Claude 4 is announced in June, it might not immediately be available to the general public without waitlists.
+
+Given these considerations, I assess that there's approximately a 22% chance that Claude 4 will be generally available to the public before July 1, 2025.
+
+## Outside View Prediction:
+22%
+
+Forecaster_2 step 1 output:
+# Analysis:
+
+## Source Analysis:
+
+1. **Reddit: "Thoughts on the next release?"** 
+   - **Quality**: Low to moderate reliability; unofficial subreddit not affiliated with Anthropic
+   - **Data**: Chronology of Claude releases with specific dates
+   - **Opinion vs Fact**: The speculation about Claude 4 launching between February-April 2025 is an opinion based on pattern recognition, not official information
+
+2. **Wikipedia: "Anthropic"**
+   - **Quality**: Moderate reliability; generally fact-checked but not authoritative
+   - **Data**: Comprehensive timeline of Anthropic's history, funding, and model releases through February 2025 (Claude 3.7)
+   - **Opinion vs Fact**: Primarily factual information about past events with minimal opinion content
+
+3. **Reddit: "Anthropic's safety announcement"**
+   - **Quality**: Low reliability; unofficial source analyzing Anthropic's blog post
+   - **Data**: References an August 2024 safety bug bounty program
+   - **Opinion vs Fact**: Clearly separates Anthropic's announcements (facts) from Reddit author's inferences about Claude 3.5 Opus timing (opinions)
+
+4. **AWS Blog Post (October 2024)**
+   - **Quality**: High reliability; official AWS announcement
+   - **Data**: Details about Claude 3.5 capabilities on Amazon Bedrock
+   - **Opinion vs Fact**: Contains primarily factual information about model capabilities and benchmarks
+
+5. **Maginative: "GitHub Unveils Copilot Pro+"**
+   - **Quality**: Moderate reliability; tech reporting on GitHub announcements
+   - **Data**: Confirms Claude 3.5 and 3.7 models were available for integration as of April 2025
+   - **Opinion vs Fact**: Mostly factual reporting of GitHub's announcements
+
+6. **Maginative: "Anthropic's Claude AI Can Now Control Your Computer"**
+   - **Quality**: Moderate reliability; tech news reporting
+   - **Data**: Details about Claude's computer-use feature (October 2024)
+   - **Opinion vs Fact**: Primarily factual with minimal speculation
+
+7. **Perplexity Report**
+   - **Quality**: Incomplete; appears truncated
+   - **Data**: Partial timeline of Claude releases
+   - **Opinion vs Fact**: Focused on compiling release dates rather than offering opinions
+
+## Reference Class Analysis:
+
+1. **Previous Claude Major Version Releases**
+   - Claude 1: March 14, 2023
+   - Claude 2: July 12, 2023 (4 months after Claude 1)
+   - Claude 3: March 4, 2024 (8 months after Claude 2)
+   - This reference class is highly relevant as we're predicting a major version release
+
+2. **Claude Point Releases Within Versions**
+   - Claude 3: March 4, 2024
+   - Claude 3.5 Sonnet: June 20, 2024 (3.5 months after Claude 3)
+   - Claude 3.5 Haiku: October 22, 2024 (4 months after 3.5 Sonnet)
+   - Claude 3.7 Sonnet: February 2025 (4 months after 3.5 Haiku)
+   - Relevant as it shows Anthropic's recent release cadence
+
+The first reference class is most suitable for this prediction since we're specifically forecasting a major version release (Claude 4) rather than a point release.
+
+## Timeframe Analysis:
+
+Today is May 16, 2025, and we're forecasting whether Claude 4 will be generally available before July 1, 2025 – approximately 6 weeks from now.
+
+Historical patterns show:
+- Major version intervals: 4-8 months (Claude 1→2→3)
+- Point release intervals: 3.5-4 months (within Claude 3.x)
+
+If we apply the major version interval pattern starting from Claude 3's release (March 2024):
+- 4-month pattern would suggest July 2024 for Claude 4
+- 8-month pattern would suggest November 2024 for Claude 4
+
+However, Anthropic has released multiple point versions since Claude 3 (3.5 in June 2024, 3.5 Haiku in October 2024, 3.7 in February 2025).
+
+If we consider Claude 3.7 (February 2025) as the starting point and apply the historical 4-8 month major version interval:
+- Earliest expected Claude 4 release: June 2025 (4 months after Claude 3.7)
+- Latest expected Claude 4 release: October 2025 (8 months after Claude 3.7)
+
+## Justification:
+
+Several factors inform my outside view prediction:
+
+1. **Release Pattern Complexity**: Anthropic has established a pattern of both major versions (1, 2, 3) and point releases (3.5, 3.7), with major versions coming every 4-8 months and point releases every 3-4 months.
+
+2. **Most Recent Release**: Claude 3.7 was released in February 2025, approximately 3 months ago. Applying the 4-8 month historical interval for major versions would place Claude 4's release between June and October 2025.
+
+3. **Absence of Signals**: None of the sources mention Claude 4 in development, testing, or pre-announcement. Typically, major releases have some advance indicators (safety testing, early access programs, public announcements).
+
+4. **Release Requirements**: The question specifies general public availability without waitlists or early access phases. This typically comes after initial announcement and limited testing phases.
+
+5. **Current Focus**: Sources indicate Anthropic is still enhancing Claude 3.x capabilities (computer use feature, integration with partners), suggesting they're extending the Claude 3 family rather than imminently moving to Claude 4.
+
+6. **Safety Prioritization**: Anthropic has demonstrated a careful approach to releases, with safety testing preceding general availability. No indication exists that such testing has begun for Claude 4.
+
+## Outside view calibration:
+
+The most critical information for this forecast is the historical release cadence and the timing of the most recent release.
+
+If we apply the 4-8 month interval for major versions starting from the February 2025 release of Claude 3.7, the expected window for Claude 4 would be June-October 2025. The very earliest possibility (June 2025) comes just before the July 1 deadline, but there are several factors that make this timing unlikely:
+
+1. No public announcements, beta testing, or waitlists for Claude 4 have appeared in any sources
+2. The question requires full general availability, not just an announcement
+3. Anthropic typically conducts safety testing before releases
+4. The continued development of point releases (3.5, 3.7) suggests Anthropic isn't rushing to Claude 4
+
+The lower bound of the historical pattern (4 months after Claude 3.7) would put release in June 2025, but without any development signals visible today (mid-May), achieving general availability by July 1 appears increasingly unlikely.
+
+## Outside View Prediction:
+15%
+
+Forecaster_3 step 1 output:
+Analysis:
+
+(a) Source analysis  
+- Source A (Unofficial Reddit “Claude-information” chronology): Provides dates for Claude 1 (Mar 14 2023), Claude 2 (Jul 12 2023), Claude 3 (Mar 4 2024), 3.5 Sonnet (Jun 20 2024) and 3.5 Haiku (Oct 22 2024), plus observed major-version intervals of ~4–8 months and sub-version intervals of ~3–4 months. Reliability: medium. Unofficial but matches dates elsewhere; treat opinions (e.g. next-release forecasts) cautiously [A].  
+- Source B (Wikipedia Anthropic entry, Apr 2025): Offers a corporate history, funding, and model-release timeline largely consistent with Source A, plus adds Claude 3.7 Sonnet rollout in Feb 2025. Reliability: high for release dates, moderate for characterization of performance claims [B].  
+- Source C (Reddit summary of safety-bug bounty, Aug 2024): Documents Anthropic’s late-2024 safety testing program. Useful to understand that major 3.5 releases were preceded by a bug-bounty phase, but less directly predictive of a major Claude 4 timeline. Reliability: medium for facts, low for inferences [C].  
+- Source D (AWS News Blog, Oct 22 2024): Official announcement of upgraded 3.5 Sonnet V2, new computer-use beta, and Haiku coming. Confirms partner-channel rollouts often accompany public releases. Reliability: high [D].  
+- Source E (Maginative, Apr 4 2025): Reports GitHub Copilot Pro+ plan exposing Claude 3.5 and 3.7 to broad developer audiences, signifying Anthropic models are being integrated into major platforms shortly after release. Reliability: medium-high for partner-integration timelines [E].  
+- Source F (Maginative, Oct 22 2024): Details public beta of “computer-use” for Claude 3.5, underscoring how new capabilities are rolled out via partners before general public. Reliability: medium [F].  
+
+Overall, the dates in Sources A and B for major-version releases are corroborated; opinions on predictions are less reliable.
+
+(b) Reference-class analysis  
+1. Anthropic major-version cadence: Past intervals for Claude 1→2 (4 months) and 2→3 (8 months). Average ≈6 months; no major version has ever been released within <4 months.  
+2. Anthropic sub-version cadence: 3→3.5 (3 months), 3.5→3.5.5 (4 months), but these are minor bumps, not new “Claude 4.”  
+3. OpenAI GPT major versions: GPT-2 Feb 2019→GPT-3 Jun 2020 (~16 months), GPT-3→GPT-4 Mar 2023 (~33 months). Slower cadence, but different org.  
+
+Suitability: The most relevant reference class is Anthropic’s own major-version timeline. It best captures internal R&D pace and release practices.
+
+(c) Timeframe analysis  
+- Today: May 16 2025.  
+- Deadline: July 1 2025 → ~46 days (≈1.5 months) remaining.  
+- Historical major-version shortest interval: 4 months (Claude 1→2). Even if Anthropic accelerated R&D, 1.5 months from initial internal tests to full public rollout is far below any previous interval.  
+
+(d) Justification for outside view prediction  
+1. Major-version history: Anthropic has consistently taken ≥4 months to move from a prior major release to the next one, even with ramped-up funding and partner pipelines [A][B]. No instance where major version moved from private testing to unrestricted public availability in <2 months.  
+2. Current status: By mid-May, we have seen no announcement or early-access phase for “Claude 4.” Given Anthropic’s transparency around public beta programs (e.g. 3.5 computer-use), absence of signals suggests not in late-stage rollout.  
+3. Partnership cadence: Even when integrated into AWS Bedrock and GitHub Copilot, new model versions first appear behind waitlists or partner-channel betas for ≥1 month before opening up.  
+4. Implied roadmap from funding/safety: Massive investments in safety and interpretability (e.g. constitutional AI research) likely extend major-release timelines, not compress them.  
+
+Taken together, an outside view grounded in Anthropic’s own release cadence and observable signals points to a very low probability of Claude 4 clearing all public-access gates by July 1, 2025.
+
+Outside view calibration:
+
+- Base rate: Two prior major-version intervals: 4 months and 8 months. Probability of shipping in <2 months is effectively 0/2 = 0%, but this is too extreme—account for organizational learning and ramp-up.  
+- Adjust for accelerated peak funding and platform-partner efficiency: Uptick might shave 1 month off typical timelines, but not >2.5 months.  
+- Adjust for no public beta signal by mid-May: strong negative evidence; reduces probability sharply.  
+- Final anchored estimate: ≈2% chance of Claude 4 being fully open to the general public by July 1, 2025.
+
+Outside View Prediction:
+2%
+
+Forecaster_4 step 1 output:
+Analysis:
+
+1. Source analysis  
+- Reddit “Thoughts on the next release” (unofficial subreddit, December 2024)  
+  • Factual: chronology of Claude releases and intervals (Claude 1→2: ~4 mo; 2→3: ~8 mo; subversions ~3–4 mo) [r/ClaudeAI, Dec 2024]  
+  • Opinion: anticipated Claude 4 in Feb–Apr 2025, with March 14, 2025 as a symbolic date.  
+  • Evaluation: Poster is anonymous; release dates agree with official sources, but forecasts are informal. Use factual cadence data; treat their timing guess as weakly informative.  
+
+- Wikipedia “Anthropic” (accessed May 2025)  
+  • Factual: release dates of Claude 1 (Mar 14 2023), 2 (Jul 12 2023), 3 (Mar 4 2024), 3.5 Sonnet (Jun 20 2024), 3.5 Haiku (Oct 22 2024), and 3.7 Sonnet (Feb 2025) [Wikipedia, May 2025].  
+  • Evaluation: High reliability on release dates and corporate funding chronology. Provides clear major/sub‐version intervals.  
+
+- AWS News Blog (Oct 22 2024)  
+  • Factual: public-beta launch of computer-use feature, Sonnet V2 benchmarks, Haiku coming soon [AWS, Oct 22 2024].  
+  • Evaluation: Official channel; trustworthy on dates and rollout details.  
+
+- Maginative “Anthropic’s Claude can now control your computer” (Oct 22 2024)  
+  • Factual: description of computer-use feature, early adopters, performance metrics [Maginative, Oct 22 2024].  
+  • Evaluation: Secondary tech-news site, but reporting on public beta verifiable via AWS blog; accept factual layer.  
+
+- Maginative “GitHub Unveils Copilot Pro+…” (Apr 4 2025)  
+  • Factual: GitHub Copilot Pro+ includes premium requests for Claude 3.5 and 3.7 [Maginative, Apr 4 2025].  
+  • Evaluation: Covers third-party distribution; confirms that Claude 3.x models have general-public paid tiers but not free, no-waitlist access.  
+
+- Reddit “Model Safety Bug Bounty” thread (Aug 2024 announcement)  
+  • Factual: bug bounty for next-gen safety system; selected applicants in fall 2024 [Anthropic blog via Reddit, Aug 8 2024].  
+  • Opinion: Reddit inference that this was prelude to Claude 3.5; plausible but secondary.  
+  • Evaluation: Factual on bounty; opinions plausible but not definitive for Claude 4 schedule.  
+
+Quality summary: Official blog posts, AWS and Wikipedia entries give robust timelines for Claude 1–3.7. Reddit posts provide useful interval data but are informal. Overall, major‐version intervals average ~6 mo (range 4–8 mo), subversions ~3–4 mo. No direct announcement of Claude 4 as of May 16 2025.
+
+2. Reference-class analysis  
+Candidate classes:  
+- Anthropic major-version releases: intervals: 1→2: 4 mo; 2→3: 8 mo. Mean ≈6 mo. From Claude 3 (Mar 4 2024) to July 1 2025 would be ~16 mo, much longer than prior intervals → suggests delay or different cadence.  
+- Anthropic subversions: 3→3.5: 3 mo; 3.5→3.7: 8 mo. Avg 5.5 mo. But subversions aren’t major upgrades.  
+- OpenAI GPT major versions: GPT-1→2: 8 mo; 2→3: 16 mo; 3→4: 33 mo. Highly variable, trending longer.  
+- Industry big-model releases by Google DeepMind or Meta: public data scant, cadences vary widely.
+
+Most relevant: Anthropic’s own major releases. They’ve historically released a major version every 4–8 months. If pattern held, Claude 4 would have arrived around Nov 2024 (Mar 2024 + 6 mo). That didn’t happen. Either Anthropic shifted to subversion-focused cadence (3.x releases) or safety/regulatory requirements slowed 4. Therefore, reference class suggests major releases delayed beyond typical window, and by mid-May 2025 we’re already well past even the max previous interval.
+
+3. Timeframe analysis  
+- Time remaining to resolution: ~46 days (May 16→July 1 2025).  
+- Historical horizon for public rollout:  
+  • Claude 1: waitlist at announcement then public availability ~4 mo? (Mar 14 →Jul 12 2023) → ~4 mo [Wikipedia].  
+  • Claude 2: went from announcement (Jul 12 2023) to general public website/API immediately (no waitlist) [Thurrott, Jul 18 2023], ~0 mo.  
+  • Claude 3: announced Mar 4 2024; initial launch via API/Bedrock same day; public waitlist status unclear; subvariant Haiku public in Dec 2024 [Wikipedia]. Roughly 9 mo to public ‟open” variant.  
+  • Claude 3.5 Sonnet: June 20 2024 announcement + public API same day; Haiku variant by Oct 22 2024; public in December 2024.
+
+Typical public-open delays: 0–9 months post initial release. To hit July 1 2025, Claude 4 would need to have been announced by mid-May to allow ~1 mo of testing and rapid public rollout similar to Claude 2. No announcement is public as of May 16. That compresses timeline severely.
+
+4. Justification  
+- Base-rate: Anthropic major version cadence ~4–8 mo; 3→4 would imply a release by Nov 2024 at latest if patterns held. No such.  
+- Subversion focus: After 3, they pivoted to multiple 3.x upgrades (3.5, 3.7) over 8 mo, suggesting they are refining v3 rather than pushing v4.  
+- Resource/Safety: Large funding in late 2024 could accelerate R&D, but safety-testing bug bounty in Aug 2024 indicates thorough testing pipeline, which takes months. That pipeline is likely still active, delaying major release.  
+- Competitive context: OpenAI and Google are pushing new capabilities (GPT-4o, Gemini 2 Flash) in 2025, which could spur Anthropic to accelerate. But acceleration by 1½ mo from zero announcement seems improbable.  
+- Operational: No leaks, no public announcements, no enterprise-partner previews for Claude 4 as of mid May. Historically, leaks or partner previews precede public openings by weeks.  
+- Time constraint: Only 46 days left to resolution. Even if announced tomorrow, need ~3–6 weeks to wide public rollout, matching or exceeding available window.
+
+Combining these, the outside view is that it is unlikely Claude 4 will clear internal testing, partner rollout, and full public-open release by July 1 2025. A small tail exists—Anthropic could accelerate and do a hard launch in June—but that would break their historical cadence and require perfect execution.
+
+Outside view calibration:
+
+- Scenario if Yes: Anthropic announces Claude 4 by May 20 and immediately flips public switch or has a simultaneous open-public launch, similar to Claude 2. Historical probability of that happening two months after last subvariant (3.7 in Feb 2025) is low: perhaps <10%.  
+- Scenario if No: No announcement arrives in next six weeks, 100% confidence that public availability won’t materialize.
+
+Weighing: I assign ~15% to a surprise acceleration and simultaneous public launch, ~85% to no public availability by July 1.
+
+Outside View Prediction:
+15% — There is a 15% chance that Claude 4 will be released to the general public (no waitlist) before July 1, 2025.
+
+Forecaster_5 step 1 output:
+Analysis:
+
+1. Source analysis  
+• Reddit post on release cadence (Mar-2025 speculation).  
+  – Data: correct past release dates.  
+  – Opinion: “Claude 4 likely Feb-Apr 2025.” Anonymous hobbyist → low evidentiary weight.  
+• Anthropic Wikipedia page (updated Apr-2025).  
+  – Data: verifiable funding rounds, actual release dates for all Claude 1-3.7 models. High reliability (community-curated, heavily cited).  
+  – Opinions: none material.  
+• Reddit post on August-2024 safety bounty.  
+  – Data: existence and timetable of the bounty (from Anthropic blog). Medium reliability (primary source echoed).  
+  – Opinion: “pre-release step for 3.5 Opus” – discard for outside view.  
+• AWS News Blog (Oct-22 2024).  
+  – Data: public GA of Claude 3.5 Sonnet and beta computer-use. Authoritative corporate source, high reliability. No forward-looking claims about Claude 4.  
+• Maginative article on GitHub Copilot Pro+ (Apr-4 2025).  
+  – Data: Claude 3.5 & 3.7 are the premium Anthropic models offered as of April. Medium reliability; confirms no Claude 4 mention by early April.  
+• Maginative article on computer-control beta (Oct-22 2024).  
+  – Data: reiterates 3.5 Sonnet release; no Claude 4 content. Medium reliability.  
+• Perplexity report (May-2025).  
+  – Data: collates public sources; serves mainly as synthesis. Treat as secondary commentary.
+
+2. Reference-class analysis  
+Candidates:  
+a) Anthropic “major” version cadence (Claude 1 → 2 → 3).  
+   – Intervals: 4 mo, then 8 mo (mean = 6 mo, trend = doubling). Small n (=2) but directly on-point.  
+b) Anthropic any public model family event (includes 3.5, 3.7).  
+   – Mean interval ~3–4 mo, but those were half-steps; a major-version jump plausibly takes longer.  
+c) OpenAI major GPT versions (GPT-2 → 3 → 4).  
+   – Intervals: 16 mo, 33 mo; shows maturing labs lengthen cycles. Provides a conservative baseline.  
+Choice: combine (a) and (c) in equal weight to smooth tiny-sample noise yet stay company-specific. Resulting expected interval from Claude 3 (Mar-4 2024) to Claude 4 ≈ ( (6 mo + 24.5 mo)/2 ) ≈ 15 mo → modal date June 2025.  
+
+3. Timeframe analysis  
+Today → deadline = 46 days. Claude 3 is already 14.4 months old.  To hit the expected 15-month cadence, Anthropic would need to launch within the next ~2 weeks; after mid-June every extra day pushes the interval beyond even the mixed reference-class average.  
+
+4. Justification for baseline (outside-view) probability  
+Status quo (no release) currently holds.  Companies seldom launch brand-new frontier models without at least several weeks of pre-marketing, partner integration briefs, and regulatory dialogue. None of the high-signal channels (Anthropic blog, AWS/GCP/Bedrock partner blogs, major tech media) have hinted at Claude 4 as of mid-May.  Historically Anthropic’s public announcements have preceded GA by 0–30 days; the absence of any announcement 46 days out materially lowers odds.  
+
+Counter-pressure:  
+• Competitive race (OpenAI, Google) and $8 B Amazon stake create incentive to unveil a flagship before year end.  
+• Anthropic has shown capacity for “quiet” releases (3.5 Haiku opened same-day), so long warning lead time is not strictly required.  
+
+Balancing: reference-class base rate of hitting release by 15-month mark ≈ 50-55%.  Deduct 15 ppt for “no-announcement-yet” signal.  Add back 5 ppt for competitive/investor pressure and the very short lead times seen on some prior drops.  
+
+Outside-view (baseline) probability = 45%.  Ranging ±7 ppt for residual uncertainty → 38–52%.  Anchor at 41%.  
+
+Outside view calibration:
+• No numeric tether from sources except historical intervals; use them as qualitative anchor.  
+• Convert 41% to odds ≈ 0.7 : 1 — neither highly likely nor unlikely, reflecting that the window is still open but shrinking fast.  
+• Check extremeness: Compare with inside-view intuition (not yet applied) → seems reasonable; avoid overconfidence.
+
+Outside View Prediction:
+41 % chance that Claude 4 will be available to the general public (no waitlist) before 1 July 2025.
+
+Final predictions: [22.0, 2.0, 10.0, 10.0, 27.0]
+Result: 0.16333333333333333
+=== Forecaster 1 ===
+Output:
+# Analysis:
+
+## Source Analysis
+
+1. **Claude AI Hub article (July 11, 2024)**:
+   - Almost a year old article speculating about Claude 4
+   - Reported community expectation was Q2 2025 release (April-June 2025)
+   - Quality: Medium reliability (reporting on community expectations rather than official information)
+
+2. **Wikipedia article on Claude (data cutoff February 2025)**:
+   - Provides factual chronology of Claude releases through Claude 3.7 Sonnet (February 24, 2025)
+   - No mention of Claude 4 plans as of February 2025
+   - Quality: Medium-high reliability (factual timeline should be accurate)
+
+3. **BGR article (February 24, 2025)**:
+   - Reports on Claude 3.7 release rather than Claude 4
+   - Notes Anthropic chose incremental naming (3.7) rather than jumping to 4
+   - Quality: Medium reliability (tech news reporting on actual release)
+
+4. **Analytics India Magazine article (December 9, 2024)**:
+   - Reports on Claude 3.5 Haiku release plans
+   - Mentions Anthropic planning to release Claude 3.5 Opus "soon" (as of late 2024)
+   - Quality: Medium reliability (product roadmap information)
+
+5. **Fast Company article (October 22, 2024)**:
+   - Focused on Claude's computer control features
+   - No mention of Claude 4 timeline
+   - Quality: Medium-high reliability (reporting on feature release)
+
+6. **Amazon Bedrock announcement (June-Nov 2024)**:
+   - Official announcement of Claude 3.5 availability on AWS
+   - Details capabilities of Claude 3.5 models
+   - Quality: High reliability (official announcement)
+
+## Evidence Analysis
+
+**Strong Evidence**:
+- Historical release pattern for major versions: Claude 1 (March 2023) → Claude 2 (July 2023, +4 months) → Claude 3 (March 2024, +8 months)
+- Recent significant release: Claude 3.7 Sonnet released in February 2025 (only 3 months ago)
+- No reports of Claude 4 testing, beta phases, or announcements in any recent sources
+
+**Moderate Evidence**:
+- Intermediate release cadence: Pattern of releases (3.5, 3.7) between major versions, extending major version gaps
+- Community speculation from July 2024 pointed to Q2 2025 (current quarter) as plausible for Claude 4
+- Anthropic's naming conventions suggest specific performance benchmarks before using "Claude 4" designation
+
+**Weak Evidence**:
+- Competitive pressure in AI industry could potentially accelerate timeline
+- Historical preference for March releases for major versions (both Claude 1 and 3)
+
+## Timeframe Analysis
+
+Today is May 16, 2025, with a deadline of July 1, 2025 – approximately 45 days from now.
+
+If the timeframe were halved (~22 days), the probability would decrease significantly, as there would be almost no time for announcement, testing, and general release.
+
+If the timeframe were doubled (~90 days), the probability would increase moderately, as it would extend into August 2025, giving Anthropic more time to complete development and launch. However, even 90 days might be tight for a major version release given the February 2025 release of Claude 3.7.
+
+## Justification
+
+Factors suggesting Claude 4 will NOT be generally available by July 1, 2025:
+
+1. **Historical pattern extension**: Time between major releases has increased (4 months between 1→2, 8 months between 2→3). This pattern suggests Claude 4 would not be expected until at least November 2025.
+
+2. **Intermediate version strategy**: Anthropic has been releasing intermediary versions (3.5, 3.7) rather than rushing to Claude 4. Claude 3.7 was released just 3 months ago, making a major version release within the next 45 days unlikely.
+
+3. **Absence of pre-release signals**: No reports of Claude 4 testing, beta programs, or announcements, which would typically precede a major release by several weeks or months.
+
+4. **Resolution criteria specificity**: Even if announced soon, Claude 4 might initially launch with waitlists or early access programs, which wouldn't satisfy our criteria of general public availability.
+
+Factors suggesting Claude 4 COULD be available by the deadline:
+
+1. **Early edge possibility**: If following a 4-month minimum gap after Claude 3.7, earliest release would be June 2025, just before our deadline.
+
+2. **Competitive pressure**: Accelerating AI development landscape might pressure Anthropic to release Claude 4 earlier than their historical pattern would suggest.
+
+3. **Q2 2025 speculation**: Community expectations reported in July 2024 pointed to Q2 2025, which we're currently in.
+
+On balance, the evidence more strongly supports Claude 4 NOT being generally available by July 1, 2025, particularly considering the recent February 2025 release of Claude 3.7 and the lack of any pre-release signals.
+
+## Probability Calibration
+
+The outside view prediction was 22%. This seems reasonable given:
+
+- If Claude 4 release follows a normal distribution centered on August 2025 (6 months after Claude 3.7) with a standard deviation of 2 months, July 1 falls about 0.5 standard deviations below the mean (approximately 30-35% probability)
+- This must be adjusted downward because:
+  * Resolution requires general public availability (not just announcement)
+  * No pre-release indicators currently visible
+  * Anthropic has historically used phased rollouts for some releases
+  * The current time gap since Claude 3.7 (3 months) is shorter than any previous gap between major versions (minimum 4 months)
+
+Given these factors, I assess that 22% is an appropriate calibrated probability that Claude 4 will be generally available before July 1, 2025.
+
+## Checklist:
+1. Will Claude 4 be publicly accessible without waitlists before July 1, 2025?
+2. Base rate: 4-8 month gaps between major versions; Claude 3.7 released February 2025
+3. In 22/100 parallel universes, Claude 4 becomes publicly available before July 1, 2025
+4. Key evidence: 3-month gap since Claude 3.7 (shorter than any previous major version gap); no current pre-release signals; historical pattern of increasing gaps between major versions
+5. Blind spot: Surprise June announcement coinciding with major event/partnership
+6. Status quo favors no release by deadline given short timeframe and recent 3.7 release
+
+Probability: 22%
+Predicted Probability: 22.0%
+
+=== Forecaster 2 ===
+Output:
+# Analysis:
+
+## (a) Source Analysis
+1. **Claude AI Hub (July 2024)**: Speculative article with no confirmed release date for Claude 4. Community speculation centers on Q2 2025. **Reliability: Low-Medium** (unofficial source, mostly speculation about future releases).
+
+2. **Wikipedia (February 2025 data cutoff)**: Factual timeline showing Claude (March 2023), Claude 2 (July 2023), Claude 3 (March 2024), Claude 3.5 Sonnet (June 2024), Claude 3.7 Sonnet (February 2025). No mention of Claude 4. **Reliability: High** for factual release history.
+
+3. **BGR (February 2025)**: Reports on Claude 3.7 Sonnet release, explicitly noting Anthropic chose "3.7" rather than jumping to "4." Based on leaks from reliable sources. **Reliability: Medium-High** for reporting on existing models.
+
+4. **Analytics India Magazine (December 2024)**: Reports on Claude 3.5 Haiku releases, mentions Anthropic co-founder confirming plans for Opus 3.5. No Claude 4 mentions. **Reliability: Medium**.
+
+5. **Fast Company (October 2024)**: Details "computer use" capabilities for Claude 3.5 Sonnet. No Claude 4 mentions. **Reliability: High** for specific feature announcement.
+
+6. **Amazon News (June-November 2024)**: Official announcement about Claude 3.5 models in AWS Bedrock. **Reliability: Very High** as an official partnership announcement.
+
+## (b) Evidence Analysis
+
+**Strong Evidence:**
+- Historical release cadence shows consistent pattern: Claude 1→2 (~4 months), 2→3 (~8 months), 3→3.5 (~3-4 months), 3.5→3.7 (~8 months). Major version jumps take longer than minor updates.
+- Complete absence of Claude 4 mentions in any reliable source through February 2025, when we would expect leaks or announcements at least 1-2 months before release.
+- Explicit decision to name February 2025 release "Claude 3.7" rather than "Claude 4" indicates Anthropic wasn't ready for a major version number jump.
+
+**Moderate Evidence:**
+- Anthropic's pattern of incremental versioning (3.5, 3.7) suggests building toward a major release, but with no clear timing.
+- Prior releases typically follow a staged rollout pattern: partners first, then waitlists, before general availability.
+
+**Weak Evidence:**
+- Claude AI Hub speculation about Q2 2025 release (community-based, not official).
+- Feature speculation doesn't help predict timing.
+
+## (c) Timeframe Analysis
+Today is May 16, 2025, with resolution date July 1, 2025 – approximately 45 days (1.5 months) remaining.
+
+If the timeframe were halved (3 weeks), probability would approach zero as there's no precedent for such rapid release cycles at Anthropic.
+
+If the timeframe were doubled (3 months), probability would increase significantly, as it would better align with Anthropic's typical development-to-release timeline and allow for their usual staged rollout pattern.
+
+The critical factor is that Anthropic historically announces models, then rolls them out to partners, then through waitlists, before general availability – a process typically taking 1-3 months. With only 1.5 months remaining, we would almost certainly have seen signals by now.
+
+## (d) Justification
+
+1. **No Claude 4 Signals**: As of our latest data (February 2025), there was zero indication of Claude 4 development or imminent release. Normally, we would expect leaks, partnerships, or announcements by now if a July release were planned.
+
+2. **Versioning Strategy**: The explicit decision to name the February 2025 release "Claude 3.7" strongly suggests Anthropic wasn't planning to jump to "4" in the immediate future.
+
+3. **Established Release Pattern**: Even if announced tomorrow, Claude 4 would likely follow Anthropic's established pattern of staged rollouts (partners → waitlists → general availability), making public availability by July 1 highly improbable.
+
+4. **Historical Timelines**: The shortest period between major versions was 4 months (Claude 1→2), with later transitions taking 8 months. General availability by July 1 would require an unprecedented acceleration of Anthropic's development and release cycle.
+
+5. **Lead Time Reality**: With only 45 days remaining, we've passed the point where we would normally see pre-release signals if Claude 4 were to be generally available by July 1.
+
+## Probability Calibration
+
+The outside view prediction of 2% appears reasonable given the evidence. Let me recalibrate based on the specific factors:
+
+- (+0.5%): By July 1, approximately 5 months will have passed since Claude 3.7's release, which is within Anthropic's historical timeframe for major releases.
+- (-0.5%): The explicit naming of "Claude 3.7" in February 2025 suggests Claude 4 wasn't imminent.
+- (-0.5%): Complete absence of Claude 4 signals as of our latest information.
+- (+0.5%): Anthropic has secured substantial funding which could potentially accelerate development cycles.
+
+The calibrated inside view prediction remains at **2%**. This represents the small but non-zero possibility that Anthropic could make a surprise announcement with unusually rapid deployment to general availability.
+
+## Checklist:
+1. Will Claude 4 be available to everyone without waitlists or early access phases before July 1, 2025?
+2. Base rate: 2% from outside view based on Anthropic's release patterns
+3. 2 out of 100 times, Claude 4 becomes publicly available by July 1, 2025.
+4. Key evidence: No Claude 4 signals through February 2025; "Claude 3.7" naming decision; 45 days insufficient for typical rollout; historical release cycles typically 4-8 months.
+5. Blind spot: Anthropic could have maintained unusual secrecy around Claude 4 development with immediate release plans.
+6. Status quo strongly favors no release by July 1st given short timeframe and no signals.
+
+Probability: 2%
+Predicted Probability: 2.0%
+
+=== Forecaster 3 ===
+Output:
+Analysis:
+
+1. Paraphrase of Question  
+Will Anthropic’s next major model, Claude 4, be released for unrestricted public access (no waitlists or early-access programs) by July 1, 2025?
+
+2. Source Analysis  
+• Claude AI Hub (July 11 2024): speculative review of possible Q2 2025 launch; no official date.  
+  – Quality: moderate (tech-enthusiast site); mostly opinion based on community rumor.  
+• Wikipedia (data through Feb 2025): comprehensive timeline of Claude 1→2→3→3.5→3.7, with no mention of Claude 4.  
+  – Quality: moderate-high for factual history; no insider leak for Claude 4.  
+• BGR (Feb 24 2025): leak of “Claude 3.7 Sonnet,” not Claude 4; reinforces focus on 3.x series.  
+  – Quality: moderate; based on reputable leaker (Tibor Blaho) and AWS Bedrock listings.  
+• AWS Bedrock blog (June 2024; updated Oct 2024): roll-out of Claude 3.5 Haiku and Sonnet; no Claude 4.  
+  – Quality: high (official).  
+• Fast Company (Oct 22 2024): description of 3.5 Sonnet’s “agentic computer use”; no Claude 4.  
+  – Quality: high for feature reporting.  
+
+Factual vs. Opinion: All sources consistently show Anthropic actively extending the 3.x line. Speculation about Claude 4 comes only from community rumor (weak).
+
+3. Evidence Analysis  
+Strong Evidence  
+• Historical cadence (major versions every ~4–8 months): Claude 3 was March 2024; Claude 4 “earliest” based on pattern would be June Oct 2025, implying a June earliest.  
+• Absence of public announcement or beta program for Claude 4 as of mid-May 2025—unusual for imminent major release.
+
+Moderate Evidence  
+• Recent leak focusing on Claude 3.7 (Feb 2025) suggests Anthropic is still iterating on 3.x; a major version may be further out.  
+• Anthropic’s careful, safety-first rollout process usually involves waitlists and limited testing before general access—none visible for Claude 4.
+
+Weak Evidence  
+• Community speculation of Q2 2025 launch (unverified).  
+• Possible Amazon/AWS event timing—no public hints from Anthropic.
+
+4. Timeframe Analysis  
+Time to decision: ~6 weeks (May 16–July 1).  
+• If timeframe were half (3 weeks): even less time → negligible chance (<5%).  
+• If doubled (12 weeks, mid-August): more time to announce and open waitlist → probability might rise to ~20–25% but still uncertain without signals.
+
+5. Justification & Inside-View Adjustment  
+Outside-view base rate (from historical major-version intervals and absence of previous 4.x pre-announcements): 15%.  
+Key inside-view factors pushing downward:  
+• No public beta, blog hints, or early-access invitation for Claude 4 as of mid-May.  
+• Anthropic’s current product cadence still on 3.x features (3.5, 3.7).  
+• Safety testing and incremental releases historically precede general access; we see no sign of this for Claude 4 yet.  
+
+Given these, I trim the base-rate estimate from 15% to about 10%.
+
+Probability calibration  
+I predict roughly 10% that Claude 4 will be generally available by July 1, 2025.
+
+Checklist:  
+1. Paraphrase: Will Claude 4 be public w/o waitlist by July 1, 2025? ✔  
+2. Outside-view base rate: 15% (major versions every 4–8 months, no signals) ✔  
+3. Consistency check: “In 10 out of 100 worlds, Claude 4 arrives unrestricted before July 1, 2025.” ✔  
+4. Top evidence:  
+   a. Historical 4–8 month major-version cycle (strong)  
+   b. No announcement or beta for Claude 4 as of mid-May (strong)  
+   c. Focus on iterating Claude 3.x (moderate)  
+5. Blind spot: A sudden, unpublicized Anthropic announcement at Amazon or AWS event in June could surprise; remains low likelihood.  
+6. Status quo: No change → Claude 4 remains under wraps → likely “No.”  
+
+Probability: 10%
+Predicted Probability: 10.0%
+
+=== Forecaster 4 ===
+Output:
+Analysis:
+1. Source analysis  
+- Claude AI Hub (July 11 2024): Tech‐blog summarizing community speculation on Claude 4 in 2025. Mix of fact (no official date) and opinion. Informal; use only factual points on speculated timing (Q2 2025). (Moderate reliability)  
+- Wikipedia “Claude (language model)” (accessed May 2025): Well-sourced chronology of Claude versions 1→2→3→3.5→3.7, with dates and features. No mention of Claude 4. (High reliability)  
+- BGR (Feb 24 2025): Reports leaks of “Claude 3.7 Sonnet” in AWS Bedrock, not Claude 4. Based on a known leaker. Factual on 3.7, suggests subversion focus. (Moderate reliability)  
+- Analytics India Mag (Dec 09 2024): Notes backend references to Claude 3.5 Haiku rollout; confirms Anthropic’s pattern of incremental subversions before major jumps. (Moderate reliability)  
+- Fast Company (Oct 22 2024): Describes Claude 3.5 Sonnet’s “computer use” public beta. Supports impression of ongoing refinement of v3 rather than v4. (Moderate reliability)  
+- Amazon Bedrock blog (June 20 2024 & updates): Official launch dates & details for Claude 3.5 variants. Shows public‐API rollouts occur immediately upon announcement for subversions. (High reliability)
+
+2. Evidence analysis  
+Strong evidence (large shifts):  
+- Historical cadence: Anthropic’s major versions have come ~4–8 months apart; Claude 3 launched Mar 4 2024, so a typical 4–8 mo window for v4 would be July–Nov 2024. (Strong)  
+- Subversion focus: Since Mar 2024, Anthropic released two 3.x upgrades (3.5 in Jun 2024, 3.7 in Feb 2025) instead of v4. (Strong)  
+- No leaks/announcements: As of mid-May 2025, no credible leaks or partner previews of Claude 4 appear, despite active community tracking. (Strong)  
+- Time constraint: Only ~46 days to July 1 2025; even with an announcement, public rollout zero-waitlist would require immediate flip in days/weeks. (Strong)
+
+Moderate evidence (moderate shifts):  
+- Competitive pressure: OpenAI (GPT-4 Turbo, multimodal) and Google pushing new features could spur Anthropic to fast-track v4. (Moderate)  
+- Large funding & R&D: $4 B AWS-led round late 2024 might accelerate development. (Moderate)
+
+Weak evidence (small shifts):  
+- Speculative community dates (e.g., Reddit forecasts of March 2025). (Weak)
+
+3. Timeframe analysis  
+- Current horizon: ~46 days (May 16→July 1 2025).  
+- If timeframe halved (~23 days): Near-zero window for announcement + broad rollout → probability → ~5%.  
+- If doubled (~92 days, to early September): Slightly more time for testing and phased public access → probability might rise to ~20%.
+
+4. Justification  
+- Base-rate (outside view): ~15% chance for a surprise accelerated major release.  
+- Downward shifts: No announcement or leaks by mid-May, pattern of subversions, and tight 6-week window argue for a reduction to ~10%.  
+- Upward considerations: Competitive pressure & fresh funding provide a small tail for a rapid launch.  
+- Final inside view: 10% reflects small chance of a stealth or last-minute public flip.
+
+Probability calibration
+I estimate a 10% chance that Claude 4 will be publicly available (no waitlist) before July 1 2025.
+
+Checklist:
+1. Paraphrase: “Will Claude 4 be publicly accessible (no waitlist) by July 1 2025?”  
+2. Base rate: Major-version cadence suggests ~15% for surprise v4 launch.  
+3. Consistency: “10 out of 100 times, Claude 4 public by July 1 2025.”  
+4. Key evidence:  
+   • No official leaks or previews as of mid-May (strong)  
+   • Focus on subversions 3.5→3.7 instead of v4 (strong)  
+   • Historical cadence missed Q4 2024 window (strong)  
+   • Only ~6 weeks left for public rollout (strong)  
+5. Blind spot: Anthropic might secretly roll out v4 to key partners and flip public access overnight. If that happens, probability should have been higher—monitor for surprise announcements.  
+6. Status quo: World likely sees incremental 3.x updates; public v4 release by July 1 is a notable acceleration.
+
+Probability: 10%
+Predicted Probability: 10.0%
+
+=== Forecaster 5 ===
+Output:
+Analysis:
+
+(a) Source analysis  
+1. Claude AI Hub (11-Jul-2024). Blog summarising community chatter; no primary data, mostly speculation. Quality: low-moderate, dated.  Facts: Anthropic has not announced Claude 4.  
+2. Wikipedia Claude page (last major edit Feb-2025). Community-curated, well-sourced timeline of every Anthropic release. Quality: high for past events, neutral for forward-looking claims (none given).  Fact: no Claude 4 as of Feb 2025.  
+3. BGR leak article (24-Feb-2025). Cites AWS Bedrock code and a known model-spotter. Quality: moderate; leak itself verifiable.  Fact: Anthropic was preparing “Claude 3.7”, not “Claude 4”.  
+4. Analytics India Mag (09-Dec-2024). Reports backend references to “3.5 Haiku”. Quality: moderate; useful precedent for how leaks precede releases.  
+5. Fast Company (22-Oct-2024), Amazon Bedrock posts (Jun/Oct/Nov 2024). Primary corporate sources describing 3.5 Sonnet GA and “computer-use” beta. Quality: high; demonstrate Anthropic’s public-release workflow.  
+No recent (Mar–May 2025) item shows “Claude 4” strings in any partner backend or press material—a critical negative signal.
+
+(b) Evidence analysis  
+Strong evidence  
+• Absence‐of-leak pattern: every Anthropic release since 2023 has produced code-name traces (Bedrock, Claude.ai) 1-4 weeks pre-launch; none for “4”.  
+• Only 46 days remain; all previous major releases were trailed by a blog post or partner brief ≥4 days before GA, so the window for first signs is shrinking fast.  
+
+Moderate evidence  
+• Incremental “3.7” flagship (Feb-2025) shows R&D effort is still on the Claude 3 branch.  
+• Competitive pressure (OpenAI, Google) plus $8 B Amazon stake create incentives to ship a marquee model in 2025.  
+• Anthropic sometimes “quiet-drops” (e.g., 3.5 Haiku) with <24 h public notice—so a last-minute June surprise is possible.
+
+Weak evidence  
+• Reddit / forum speculation of Q2 2025 date—anonymous, no fresh technical footprints.  
+• Reference-class small-N cadence (1→2→3) – informs baseline but carries wide error bars.
+
+(c) Timeframe analysis  
+Time until deadline: 46 days (~1.5 months).  
+If the window were doubled to 92 days (end of Aug 2025) I would raise the probability roughly to 40-45% (more time for leaks + release).  
+If halved to 23 days (early Jun 2025) I would cut to ~15%—not enough lead time to move from total radio silence to GA.
+
+(d) Justification / inside-view update  
+Outside-view base rate (derived earlier): 41%.
+
+Adjustments (additive in probability points)  
+–15 ppt: No credible “Claude 4” strings in any partner backend, press coverage, or regulatory filings despite 3.7 leak accuracy.  
+–5 ppt: Recent focus on 3.x line (3.5, 3.7, hybrid reasoning, web-search plug-in) implies main resources still consumed there.  
++4 ppt: Anthropic is under heavy competitive & investor pressure and can execute fast surprise launches.  
++2 ppt: Very short announcement-to-GA cycles are precedented (3.5 Haiku, GPT-4 Turbo).  
+
+Net shift: –14 ppt → 41 % – 14 % = 27 %.  Rounded to nearest whole number.
+
+Probability calibration  
+“I expect that roughly 27 out of 100 worlds like ours would see Claude 4 publicly accessible (no waitlist) by 1 Jul 2025.”  
+A ±10 ppt swing would require (a) a sudden verified backend leak naming “claude-4”, or (b) an Anthropic blog post teasing imminent next-gen model; conversely, confirmed internal memo that Claude 4 is scheduled for Q4 or later would drop probability below 15 %.
+
+Checklist:  
+1. Paraphrase—Will public get unrestricted access to model named “Claude 4” by 1 Jul 2025?  
+2. Base rate 41 % (major-version cadence mix).  
+3. “27 out of 100 times, public GA before 1 Jul 2025.”  
+4. Key evidence: (i) zero “claude-4” leaks; (ii) fresh 3.7 release Feb 2025; (iii) 46-day window; (iv) historic leak-precede pattern.  
+5. Blind-spot: Anthropic internally finished Claude 4 months ago, intentionally kept behind firewalls, ready for a late-June marketing blitz tied to Amazon Prime Day—would make my forecast too low.  
+6. Status-quo outcome (No) is currently true; short horizon favours slight bias toward status quo, already reflected.
+
+Probability: 27%
+Predicted Probability: 27.0%
+-----------------------------------------------
+Question: Will Claude 4 be available to the general public before July 1, 2025?
+URL: https://www.metaculus.com/questions/37664/
+Forecast: 0.16333333333333333
+Comment:
+```
+=== Forecaster 1 ===
+Output:
+# Analysis:
+
+## Source Analysis
+
+1. **Claude AI Hub article (July 11, 2024)**:
+   - Almost a year old article speculating about Claude 4
+   - Reported community expectation was Q2 2025 release (April-June 2025)
+   - Quality: Medium reliability (reporting on community expectations rather than official information)
+
+2. **Wikipedia article on Claude (data cutoff February 2025)**:
+   - Provides factual chronology of Claude releases through Claude 3.7 Sonnet (February 24, 2025)
+   - No mention of Claude 4 plans as of February 2025
+   - Quality: Medium-high reliability (factual timeline should be accurate)
+
+3. **BGR article (February 24, 2025)**:
+   - Reports on Claude 3.7 release rather than Claude 4
+   - Notes Anthropic chose incremental naming (3.7) rather than jumping to 4
+   - Quality: Medium reliability (tech news reporting on actual release)
+
+4. **Analytics India Magazine article (December 9, 2024)**:
+   - Reports on Claude 3.5 Haiku release plans
+   - Mentions Anthropic planning to release Claude 3.5 Opus "soon" (as of late 2024)
+   - Quality: Medium reliability (product roadmap information)
+
+5. **Fast Company article (October 22, 2024)**:
+   - Focused on Claude's computer control features
+   - No mention of Claude 4 timeline
+   - Quality: Medium-high reliability (reporting on feature release)
+
+6. **Amazon Bedrock announcement (June-Nov 2024)**:
+   - Official announcement of Claude 3.5 availability on AWS
+   - Details capabilities of Claude 3.5 models
+   - Quality: High reliability (official announcement)
+
+## Evidence Analysis
+
+**Strong Evidence**:
+- Historical release pattern for major versions: Claude 1 (March 2023) → Claude 2 (July 2023, +4 months) → Claude 3 (March 2024, +8 months)
+- Recent significant release: Claude 3.7 Sonnet released in February 2025 (only 3 months ago)
+- No reports of Claude 4 testing, beta phases, or announcements in any recent sources
+
+**Moderate Evidence**:
+- Intermediate release cadence: Pattern of releases (3.5, 3.7) between major versions, extending major version gaps
+- Community speculation from July 2024 pointed to Q2 2025 (current quarter) as plausible for Claude 4
+- Anthropic's naming conventions suggest specific performance benchmarks before using "Claude 4" designation
+
+**Weak Evidence**:
+- Competitive pressure in AI industry could potentially accelerate timeline
+- Historical preference for March releases for major versions (both Claude 1 and 3)
+
+## Timeframe Analysis
+
+Today is May 16, 2025, with a deadline of July 1, 2025 – approximately 45 days from now.
+
+If the timeframe were halved (~22 days), the probability would decrease significantly, as there would be almost no time for announcement, testing, and general release.
+
+If the timeframe were doubled (~90 days), the probability would increase moderately, as it would extend into August 2025, giving Anthropic more time to complete development and launch. However, even 90 days might be tight for a major version release given the February 2025 release of Claude 3.7.
+
+## Justification
+
+Factors suggesting Claude 4 will NOT be generally available by July 1, 2025:
+
+1. **Historical pattern extension**: Time between major releases has increased (4 months between 1→2, 8 months between 2→3). This pattern suggests Claude 4 would not be expected until at least November 2025.
+
+2. **Intermediate version strategy**: Anthropic has been releasing intermediary versions (3.5, 3.7) rather than rushing to Claude 4. Claude 3.7 was released just 3 months ago, making a major version release within the next 45 days unlikely.
+
+3. **Absence of pre-release signals**: No reports of Claude 4 testing, beta programs, or announcements, which would typically precede a major release by several weeks or months.
+
+4. **Resolution criteria specificity**: Even if announced soon, Claude 4 might initially launch with waitlists or early access programs, which wouldn't satisfy our criteria of general public availability.
+
+Factors suggesting Claude 4 COULD be available by the deadline:
+
+1. **Early edge possibility**: If following a 4-month minimum gap after Claude 3.7, earliest release would be June 2025, just before our deadline.
+
+2. **Competitive pressure**: Accelerating AI development landscape might pressure Anthropic to release Claude 4 earlier than their historical pattern would suggest.
+
+3. **Q2 2025 speculation**: Community expectations reported in July 2024 pointed to Q2 2025, which we're currently in.
+
+On balance, the evidence more strongly supports Claude 4 NOT being generally available by July 1, 2025, particularly considering the recent February 2025 release of Claude 3.7 and the lack of any pre-release signals.
+
+## Probability Calibration
+
+The outside view prediction was 22%. This seems reasonable given:
+
+- If Claude 4 release follows a normal distribution centered on August 2025 (6 months after Claude 3.7) with a standard deviation of 2 months, July 1 falls about 0.5 standard deviations below the mean (approximately 30-35% probability)
+- This must be adjusted downward because:
+  * Resolution requires general public availability (not just announcement)
+  * No pre-release indicators currently visible
+  * Anthropic has historically used phased rollouts for some releases
+  * The current time gap since Claude 3.7 (3 months) is shorter than any previous gap between major versions (minimum 4 months)
+
+Given these factors, I assess that 22% is an appropriate calibrated probability that Claude 4 will be generally available before July 1, 2025.
+
+## Checklist:
+1. Will Claude 4 be publicly accessible without waitlists before July 1, 2025?
+2. Base rate: 4-8 month gaps between major versions; Claude 3.7 released February 2025
+3. In 22/100 parallel universes, Claude 4 becomes publicly available before July 1, 2025
+4. Key evidence: 3-month gap since Claude 3.7 (shorter than any previous major version gap); no current pre-release signals; historical pattern of increasing gaps between major versions
+5. Blind spot: Surprise June announcement coinciding with major event/partnership
+6. Status quo favors no release by deadline given short timeframe and recent 3.7 release
+
+Probability: 22%
+Predicted Probability: 22.0%
+
+=== Forecaster 2 ===
+Output:
+# Analysis:
+
+## (a) Source Analysis
+1. **Claude AI Hub (July 2024)**: Speculative article with no confirmed release date for Claude 4. Community speculation centers on Q2 2025. **Reliability: Low-Medium** (unofficial source, mostly speculation about future releases).
+
+2. **Wikipedia (February 2025 data cutoff)**: Factual timeline showing Claude (March 2023), Claude 2 (July 2023), Claude 3 (March 2024), Claude 3.5 Sonnet (June 2024), Claude 3.7 Sonnet (February 2025). No mention of Claude 4. **Reliability: High** for factual release history.
+
+3. **BGR (February 2025)**: Reports on Claude 3.7 Sonnet release, explicitly noting Anthropic chose "3.7" rather than jumping to "4." Based on leaks from reliable sources. **Reliability: Medium-High** for reporting on existing models.
+
+4. **Analytics India Magazine (December 2024)**: Reports on Claude 3.5 Haiku releases, mentions Anthropic co-founder confirming plans for Opus 3.5. No Claude 4 mentions. **Reliability: Medium**.
+
+5. **Fast Company (October 2024)**: Details "computer use" capabilities for Claude 3.5 Sonnet. No Claude 4 mentions. **Reliability: High** for specific feature announcement.
+
+6. **Amazon News (June-November 2024)**: Official announcement about Claude 3.5 models in AWS Bedrock. **Reliability: Very High** as an official partnership announcement.
+
+## (b) Evidence Analysis
+
+**Strong Evidence:**
+- Historical release cadence shows consistent pattern: Claude 1→2 (~4 months), 2→3 (~8 months), 3→3.5 (~3-4 months), 3.5→3.7 (~8 months). Major version jumps take longer than minor updates.
+- Complete absence of Claude 4 mentions in any reliable source through February 2025, when we would expect leaks or announcements at least 1-2 months before release.
+- Explicit decision to name February 2025 release "Claude 3.7" rather than "Claude 4" indicates Anthropic wasn't ready for a major version number jump.
+
+**Moderate Evidence:**
+- Anthropic's pattern of incremental versioning (3.5, 3.7) suggests building toward a major release, but with no clear timing.
+- Prior releases typically follow a staged rollout pattern: partners first, then waitlists, before general availability.
+
+**Weak Evidence:**
+- Claude AI Hub speculation about Q2 2025 release (community-based, not official).
+- Feature speculation doesn't help predict timing.
+
+## (c) Timeframe Analysis
+Today is May 16, 2025, with resolution date July 1, 2025 – approximately 45 days (1.5 months) remaining.
+
+If the timeframe were halved (3 weeks), probability would approach zero as there's no precedent for such rapid release cycles at Anthropic.
+
+If the timeframe were doubled (3 months), probability would increase significantly, as it would better align with Anthropic's typical development-to-release timeline and allow for their usual staged rollout pattern.
+
+The critical factor is that Anthropic historically announces models, then rolls them out to partners, then through waitlists, before general availability – a process typically taking 1-3 months. With only 1.5 months remaining, we would almost certainly have seen signals by now.
+
+## (d) Justification
+
+1. **No Claude 4 Signals**: As of our latest data (February 2025), there was zero indication of Claude 4 development or imminent release. Normally, we would expect leaks, partnerships, or announcements by now if a July release were planned.
+
+2. **Versioning Strategy**: The explicit decision to name the February 2025 release "Claude 3.7" strongly suggests Anthropic wasn't planning to jump to "4" in the immediate future.
+
+3. **Established Release Pattern**: Even if announced tomorrow, Claude 4 would likely follow Anthropic's established pattern of staged rollouts (partners → waitlists → general availability), making public availability by July 1 highly improbable.
+
+4. **Historical Timelines**: The shortest period between major versions was 4 months (Claude 1→2), with later transitions taking 8 months. General availability by July 1 would require an unprecedented acceleration of Anthropic's development and release cycle.
+
+5. **Lead Time Reality**: With only 45 days remaining, we've passed the point where we would normally see pre-release signals if Claude 4 were to be generally available by July 1.
+
+## Probability Calibration
+
+The outside view prediction of 2% appears reasonable given the evidence. Let me recalibrate based on the specific factors:
+
+- (+0.5%): By July 1, approximately 5 months will have passed since Claude 3.7's release, which is within Anthropic's historical timeframe for major releases.
+- (-0.5%): The explicit naming of "Claude 3.7" in February 2025 suggests Claude 4 wasn't imminent.
+- (-0.5%): Complete absence of Claude 4 signals as of our latest information.
+- (+0.5%): Anthropic has secured substantial funding which could potentially accelerate development cycles.
+
+The calibrated inside view prediction remains at **2%**. This represents the small but non-zero possibility that Anthropic could make a surprise announcement with unusually rapid deployment to general availability.
+
+## Checklist:
+1. Will Claude 4 be available to everyone without waitlists or early access phases before July 1, 2025?
+2. Base rate: 2% from outside view based on Anthropic's release patterns
+3. 2 out of 100 times, Claude 4 becomes publicly available by July 1, 2025.
+4. Key evidence: No Claude 4 signals through February 2025; "Claude 3.7" naming decision; 45 days insufficient for typical rollout; historical release cycles typically 4-8 months.
+5. Blind spot: Anthropic could have maintained unusual secrecy around Claude 4 development with immediate release plans.
+6. Status quo strongly favors no release by July 1st given short timeframe and no signals.
+
+Probability: 2%
+Predicted Probability: 2.0%
+
+=== Forecaster 3 ===
+Output:
+Analysis:
+
+1. Paraphrase of Question  
+Will Anthropic’s next major model, Claude 4, be released for unrestricted public access (no waitlists or early-access programs) by July 1, 2025?
+
+2. Source Analysis  
+• Claude AI Hub (July 11 2024): speculative review of possible Q2 2025 launch; no official date.  
+  – Quality: moderate (tech-enthusiast site); mostly opinion based on community rumor.  
+• Wikipedia (data through Feb 2025): comprehensive timeline of Claude 1→2→3→3.5→3.7, with no mention of Claude 4.  
+  – Quality: moderate-high for factual history; no insider leak for Claude 4.  
+• BGR (Feb 24 2025): leak of “Claude 3.7 Sonnet,” not Claude 4; reinforces focus on 3.x series.  
+  – Quality: moderate; based on reputable leaker (Tibor Blaho) and AWS Bedrock listings.  
+• AWS Bedrock blog (June 2024; updated Oct 2024): roll-out of Claude 3.5 Haiku and Sonnet; no Claude 4.  
+  – Quality: high (official).  
+• Fast Company (Oct 22 2024): description of 3.5 Sonnet’s “agentic computer use”; no Claude 4.  
+  – Quality: high for feature reporting.  
+
+Factual vs. Opinion: All sources consistently show Anthropic actively extending the 3.x line. Speculation about Claude 4 comes only from community rumor (weak).
+
+3. Evidence Analysis  
+Strong Evidence  
+• Historical cadence (major versions every ~4–8 months): Claude 3 was March 2024; Claude 4 “earliest” based on pattern would be June Oct 2025, implying a June earliest.  
+• Absence of public announcement or beta program for Claude 4 as of mid-May 2025—unusual for imminent major release.
+
+Moderate Evidence  
+• Recent leak focusing on Claude 3.7 (Feb 2025) suggests Anthropic is still iterating on 3.x; a major version may be further out.  
+• Anthropic’s careful, safety-first rollout process usually involves waitlists and limited testing before general access—none visible for Claude 4.
+
+Weak Evidence  
+• Community speculation of Q2 2025 launch (unverified).  
+• Possible Amazon/AWS event timing—no public hints from Anthropic.
+
+4. Timeframe Analysis  
+Time to decision: ~6 weeks (May 16–July 1).  
+• If timeframe were half (3 weeks): even less time → negligible chance (<5%).  
+• If doubled (12 weeks, mid-August): more time to announce and open waitlist → probability might rise to ~20–25% but still uncertain without signals.
+
+5. Justification & Inside-View Adjustment  
+Outside-view base rate (from historical major-version intervals and absence of previous 4.x pre-announcements): 15%.  
+Key inside-view factors pushing downward:  
+• No public beta, blog hints, or early-access invitation for Claude 4 as of mid-May.  
+• Anthropic’s current product cadence still on 3.x features (3.5, 3.7).  
+• Safety testing and incremental releases historically precede general access; we see no sign of this for Claude 4 yet.  
+
+Given these, I trim the base-rate estimate from 15% to about 10%.
+
+Probability calibration  
+I predict roughly 10% that Claude 4 will be generally available by July 1, 2025.
+
+Checklist:  
+1. Paraphrase: Will Claude 4 be public w/o waitlist by July 1, 2025? ✔  
+2. Outside-view base rate: 15% (major versions every 4–8 months, no signals) ✔  
+3. Consistency check: “In 10 out of 100 worlds, Claude 4 arrives unrestricted before July 1, 2025.” ✔  
+4. Top evidence:  
+   a. Historical 4–8 month major-version cycle (strong)  
+   b. No announcement or beta for Claude 4 as of mid-May (strong)  
+   c. Focus on iterating Claude 3.x (moderate)  
+5. Blind spot: A sudden, unpublicized Anthropic announcement at Amazon or AWS event in June could surprise; remains low likelihood.  
+6. Status quo: No change → Claude 4 remains under wraps → likely “No.”  
+
+Probability: 10%
+Predicted Probability: 10.0%
+
+=== Forecaster 4 ===
+Output:
+Analysis:
+1. Source analysis  
+- Claude AI Hub (July 11 2024): Tech‐blog summarizing community speculation on Claude 4 in 2025. Mix of fact (no official date) and opinion. Informal; use only factual points on speculated timing (Q2 2025). (Moderate reliability)  
+- Wikipedia “Claude (language model)” (accessed May 2025): Well-sourced chronology of Claude versions 1→2→3→3.5→3.7, with dates and features. No mention of Claude 4. (High reliability)  
+- BGR (Feb 24 2025): Reports leaks of “Claude 3.7 Sonnet” in AWS Bedrock, not Claude 4. Based on a known leaker. Factual on 3.7, suggests subversion focus. (Moderate reliability)  
+- Analytics India Mag (Dec 09 2024): Notes backend references to Claude 3.5 Haiku rollout; confirms Anthropic’s pattern of incremental subversions before major jumps. (Moderate reliability)  
+- Fast Company (Oct 22 2024): Describes Claude 3.5 Sonnet’s “computer use” public beta. Supports impression of ongoing refinement of v3 rather than v4. (Moderate reliability)  
+- Amazon Bedrock blog (June 20 2024 & updates): Official launch dates & details for Claude 3.5 variants. Shows public‐API rollouts occur immediately upon announcement for subversions. (High reliability)
+
+2. Evidence analysis  
+Strong evidence (large shifts):  
+- Historical cadence: Anthropic’s major versions have come ~4–8 months apart; Claude 3 launched Mar 4 2024, so a typical 4–8 mo window for v4 would be July–Nov 2024. (Strong)  
+- Subversion focus: Since Mar 2024, Anthropic released two 3.x upgrades (3.5 in Jun 2024, 3.7 in Feb 2025) instead of v4. (Strong)  
+- No leaks/announcements: As of mid-May 2025, no credible leaks or partner previews of Claude 4 appear, despite active community tracking. (Strong)  
+- Time constraint: Only ~46 days to July 1 2025; even with an announcement, public rollout zero-waitlist would require immediate flip in days/weeks. (Strong)
+
+Moderate evidence (moderate shifts):  
+- Competitive pressure: OpenAI (GPT-4 Turbo, multimodal) and Google pushing new features could spur Anthropic to fast-track v4. (Moderate)  
+- Large funding & R&D: $4 B AWS-led round late 2024 might accelerate development. (Moderate)
+
+Weak evidence (small shifts):  
+- Speculative community dates (e.g., Reddit forecasts of March 2025). (Weak)
+
+3. Timeframe analysis  
+- Current horizon: ~46 days (May 16→July 1 2025).  
+- If timeframe halved (~23 days): Near-zero window for announcement + broad rollout → probability → ~5%.  
+- If doubled (~92 days, to early September): Slightly more time for testing and phased public access → probability might rise to ~20%.
+
+4. Justification  
+- Base-rate (outside view): ~15% chance for a surprise accelerated major release.  
+- Downward shifts: No announcement or leaks by mid-May, pattern of subversions, and tight 6-week window argue for a reduction to ~10%.  
+- Upward considerations: Competitive pressure & fresh funding provide a small tail for a rapid launch.  
+- Final inside view: 10% reflects small chance of a stealth or last-minute public flip.
+
+Probability calibration
+I estimate a 10% chance that Claude 4 will be publicly available (no waitlist) before July 1 2025.
+
+Checklist:
+1. Paraphrase: “Will Claude 4 be publicly accessible (no waitlist) by July 1 2025?”  
+2. Base rate: Major-version cadence suggests ~15% for surprise v4 launch.  
+3. Consistency: “10 out of 100 times, Claude 4 public by July 1 2025.”  
+4. Key evidence:  
+   • No official leaks or previews as of mid-May (strong)  
+   • Focus on subversions 3.5→3.7 instead of v4 (strong)  
+   • Historical cadence missed Q4 2024 window (strong)  
+   • Only ~6 weeks left for public rollout (strong)  
+5. Blind spot: Anthropic might secretly roll out v4 to key partners and flip public access overnight. If that happens, probability should have been higher—monitor for surprise announcements.  
+6. Status quo: World likely sees incremental 3.x updates; public v4 release by July 1 is a notable acceleration.
+
+Probability: 10%
+Predicted Probability: 10.0%
+
+=== Forecaster 5 ===
+Output:
+Analysis:
+
+(a) Source analysis  
+1. Claude AI Hub (11-Jul-2024). Blog summarising community chatter; no primary data, mostly speculation. Quality: low-moderate, dated.  Facts: Anthropic has not announced Claude 4.  
+2. Wikipedia Claude page (last major edit Feb-2025). Community-curated, well-sourced timeline of every Anthropic release. Quality: high for past events, neutral for forward-looking claims (none given).  Fact: no Claude 4 as of Feb 2025.  
+3. BGR leak article (24-Feb-2025). Cites AWS Bedrock code and a known model-spotter. Quality: moderate; leak itself verifiable.  Fact: Anthropic was preparing “Claude 3.7”, not “Claude 4”.  
+4. Analytics India Mag (09-Dec-2024). Reports backend references to “3.5 Haiku”. Quality: moderate; useful precedent for how leaks precede releases.  
+5. Fast Company (22-Oct-2024), Amazon Bedrock posts (Jun/Oct/Nov 2024). Primary corporate sources describing 3.5 Sonnet GA and “computer-use” beta. Quality: high; demonstrate Anthropic’s public-release workflow.  
+No recent (Mar–May 2025) item shows “Claude 4” strings in any partner backend or press material—a critical negative signal.
+
+(b) Evidence analysis  
+Strong evidence  
+• Absence‐of-leak pattern: every Anthropic release since 2023 has produced code-name traces (Bedrock, Claude.ai) 1-4 weeks pre-launch; none for “4”.  
+• Only 46 days remain; all previous major releases were trailed by a blog post or partner brief ≥4 days before GA, so the window for first signs is shrinking fast.  
+
+Moderate evidence  
+• Incremental “3.7” flagship (Feb-2025) shows R&D effort is still on the Claude 3 branch.  
+• Competitive pressure (OpenAI, Google) plus $8 B Amazon stake create incentives to ship a marquee model in 2025.  
+• Anthropic sometimes “quiet-drops” (e.g., 3.5 Haiku) with <24 h public notice—so a last-minute June surprise is possible.
+
+Weak evidence  
+• Reddit / forum speculation of Q2 2025 date—anonymous, no fresh technical footprints.  
+• Reference-class small-N cadence (1→2→3) – informs baseline but carries wide error bars.
+
+(c) Timeframe analysis  
+Time until deadline: 46 days (~1.5 months).  
+If the window were doubled to 92 days (end of Aug 2025) I would raise the probability roughly to 40-45% (more time for leaks + release).  
+If halved to 23 days (early Jun 2025) I would cut to ~15%—not enough lead time to move from total radio silence to GA.
+
+(d) Justification / inside-view update  
+Outside-view base rate (derived earlier): 41%.
+
+Adjustments (additive in probability points)  
+–15 ppt: No credible “Claude 4” strings in any partner backend, press coverage, or regulatory filings despite 3.7 leak accuracy.  
+–5 ppt: Recent focus on 3.x line (3.5, 3.7, hybrid reasoning, web-search plug-in) implies main resources still consumed there.  
++4 ppt: Anthropic is under heavy competitive & investor pressure and can execute fast surprise launches.  
++2 ppt: Very short announcement-to-GA cycles are precedented (3.5 Haiku, GPT-4 Turbo).  
+
+Net shift: –14 ppt → 41 % – 14 % = 27 %.  Rounded to nearest whole number.
+
+Probability calibration  
+“I expect that roughly 27 out of 100 worlds like ours would see Claude 4 publicly accessible (no waitlist) by 1 Jul 2025.”  
+A ±10 ppt swing would require (a) a sudden verified backend leak naming “claude-4”, or (b) an Anthropic blog post teasing imminent next-gen model; conversely, confirmed internal memo that Claude 4 is scheduled for Q4 or later would drop probability below 15 %.
+
+Checklist:  
+1. Paraphrase—Will public get unrestricted access to model named “Claude 4” by 1 Jul 2025?  
+2. Base rate 41 % (major-version cadence mix).  
+3. “27 out of 100 times, public GA before 1 Jul 2025.”  
+4. Key evidence: (i) zero “claude-4” leaks; (ii) fresh 3.7 release Feb 2025; (iii) 46-day window; (iv) historic leak-precede pattern.  
+5. Blind-spot: Anthropic internally finished Claude 4 months ago, intentionally kept behind firewalls, ready for a late-June marketing blitz tied to Amazon Prime Day—would make my forecast too low.  
+6. Status-quo outcome (No) is currently true; short horizon favours slight bias toward status quo, already reflected.
+
+Probability: 27%
+Predicted Probability: 27.0%...
+```
+
+Posted: Forecast was posted to Metaculus.
+
