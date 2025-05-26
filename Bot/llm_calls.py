@@ -34,7 +34,7 @@ async def call_anthropic_api(prompt, max_tokens=16000, max_retries=7, cached_con
     }
     
     data = {
-        "model": "claude-3-7-sonnet-latest",
+        "model": "claude-sonnet-4-20250514",
         "max_tokens": max_tokens,
         "thinking" : {
             "type": "enabled",
