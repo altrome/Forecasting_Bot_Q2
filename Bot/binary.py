@@ -132,7 +132,7 @@ async def get_binary_forecast(question_details, write=print):
 
     valid_probs = [p for p in probabilities if p is not None]
     if len(valid_probs) >= 1:
-        weights = [1, 1, 1, 1, 2]  # forecaster 5 (o3) has double weight
+        weights = [1, 1, 1, 1, 3]  # forecaster 5 (o3) has truple weight
         weighted_probs = [p * w for p, w in zip(probabilities, weights) if p is not None]
         weight_sum = sum(w for p, w in zip(probabilities, weights) if p is not None)
         final_prob = float(np.sum(weighted_probs) / weight_sum)

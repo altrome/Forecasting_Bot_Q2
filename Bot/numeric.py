@@ -435,7 +435,7 @@ async def get_numeric_forecast(question_details: dict, write=print):
             parsed = extract_percentiles_from_response(output, verbose=True)
             parsed = enforce_strict_increasing(parsed)
             cdf = generate_continuous_cdf(parsed, open_upper, open_lower, upper, lower, zero)
-            all_cdfs.append((cdf, 2 if i == 4 else 1))
+            all_cdfs.append((cdf, 3 if i == 4 else 1))
         except Exception as e:
             write(f"❌ Forecaster {i+1} failed: {e}")
         final_outputs.append(f"=== Forecaster {i+1} ===\n{output}\n")

@@ -132,7 +132,7 @@ async def get_multiple_choice_forecast(question_details: dict, write=print) -> t
         final_outputs.append(f"=== Forecaster {i+1} ===\nOutput:\n{out}\n")
 
     probs_matrix = np.array(all_probs)
-    weights = np.array([1, 1, 1, 1, 2])[:len(probs_matrix)]
+    weights = np.array([1, 1, 1, 1, 3])[:len(probs_matrix)]
     weighted_probs = np.average(probs_matrix, axis=0, weights=weights)
     probability_yes_per_category = {opt: float(p) for opt, p in zip(options, weighted_probs)}
 
