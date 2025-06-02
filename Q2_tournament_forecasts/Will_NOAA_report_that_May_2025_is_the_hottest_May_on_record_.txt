@@ -1,0 +1,1465 @@
+
+Historical context LLM output:
+Analysis:
+To establish an out-view baseline for whether May 2025 will set a new global land-and-ocean temperature record, we need detailed historical context on past warmest Mays. That includes NOAA’s global May temperature rankings, the top anomalies and their magnitudes, and the frequency and drivers (e.g., El Niño) behind record Mays. We also want recent data (e.g., May 2024) to see the current trend and how close recent years have come to the all-time record. Finally, a comprehensive list of top May anomalies since 1880 will help us gauge how likely 2025 is to exceed them.
+
+Search queries:
+1. NOAA global May temperature rankings (Google)
+2. May 2024 global temperature record NOAA news (Google News)
+3. Provide a list of all global land-and-ocean average temperature anomalies for May from 1880 through 2024 as reported by NOAA, identify the five warmest Mays with their anomaly values relative to the 20th-century baseline, and summarize any relevant climate drivers (e.g., El Niño) for those record months. (Perplexity)
+
+Current context LLM output:
+Analysis:
+To assess whether NOAA will report May 2025 as the hottest May on record, I need the latest provisional global temperature data and expert commentary. Key information includes:
+• NOAA’s provisional May 2025 anomaly (land+ocean) versus historical record  
+• Early global temperature estimates from NASA/GISS, Copernicus, or WMO  
+• Reports of region-scale heat extremes or heatwave records suggesting unusually high anomalies  
+• Commentary on climate drivers (El Niño, background warming trend) that could push May to a new peak  
+• Any statements by NOAA scientists or press releases indicating preliminary rankings
+
+These data points and expert analyses will form the inside view adjustment to my base-rate forecast.  
+
+Search queries:
+1. May 2025 global temperature provisional NOAA (Google)  
+2. May 2025 hottest May record NOAA (Google News)  
+3. Find recent news or analysis on NOAA’s provisional report for May 2025 global temperatures, including statements on whether it was the hottest May on record. (Assistant)
+
+Historical context search results:
+
+<Summary source="https://www.ncei.noaa.gov/access/monitoring/climate-at-a-glance/global/time-series">
+Here’s a concise summary of the “Climate at a Glance | Global Time Series” article from NCEI.noaa.gov:
+
+1. Data Sources & Coverage  
+   - Temperature anomalies come from NOAA’s Global Surface Temperature Analysis (NOAAGlobalTemp), which blends:  
+     • Land data: Global Historical Climatology Network-Monthly (GHCN-M)  
+     • Ocean data: Extended Reconstructed Sea Surface Temperature (ERSST)  
+   - Records run from 1850 to present.  
+   - Precipitation data are from the Global Precipitation Climatology Project (GPCP) CDR, beginning 1979.
+
+2. Anomaly Baselines  
+   - Global and hemispheric surface-average temperature anomalies: 1901–2000 mean.  
+   - Gridded anomalies: 1991–2020 mean.  
+   - Other regional anomalies: 1910–2000 mean.  
+   - Precipitation anomalies: 1991–2020 mean.
+
+3. API Access  
+   - RESTful Climate at a Glance Data Service with HSTS.  
+   - Endpoint pattern:  
+     /access/monitoring/climate-at-a-glance/global/time-series/{region}/{parameter}/{surface}/{timescale}/{month}/{begYear}-{endYear}/data.{format}  
+   - Required path parameters:  
+     • region (e.g. globe)  
+     • parameter (e.g. tavg for average temperature anomalies)  
+     • surface (land, ocean, or land_ocean)  
+     • timescale (monthly, seasonal, annual)  
+     • month (1–12 or season code)  
+     • begYear–endYear (e.g. 1850–2025)  
+     • format (csv, json, xml)  
+   - Optional query parameters for custom base-period calculations:  
+     • basePeriod=true/false  
+     • begBaseYear, endBaseYear
+
+4. Further Information  
+   - For detailed methodology and definitions, see NOAA’s “Global Surface Temperature Anomalies” documentation.
+</Summary>
+
+<Summary source="https://www.climate.gov/news-features/understanding-climate/global-climate-summary-may-2024">
+Disclaimer: Summary is based solely on the NOAA Climate.gov “Global climate summary for May 2024” (June 17, 2024) and does not include additional interpretation.
+
+Key Facts and Statistics  
+• Global surface temperature in May 2024 was 1.18 °C (2.12 °F) above the 20th-century average of 14.8 °C (58.6 °F), making it the warmest May on record—0.18 °C (0.32 °F) above the previous May record (2020).  
+• This marked the 48th consecutive May with temperatures above the 20th-century average.  
+• Global ocean surface temperature was record-high for the 14th consecutive month.
+
+Hemisphere and Regional Highlights  
+• Northern Hemisphere: Warmest May on record at +1.44 °C (2.59 °F) above average.  
+  – Land tied the May 2020 record; ocean was 0.25 °C (0.45 °F) above its previous record.  
+  – Arctic had its 11th warmest May.  
+• Southern Hemisphere: Warmest May on record at +0.92 °C (1.66 °F).  
+  – Ocean-only temperature was highest on record; land-only was 6th warmest.  
+  – Antarctic had its 23rd warmest May (+0.55 °C/0.99 °F).
+
+Spatial Temperature Anomalies  
+• Record-warm May temperatures across much of Africa, northern China and Mongolia, North Sea region, and a band from southern Brazil to Mexico.  
+• Much-warmer-than-average in the Arctic, eastern U.S., Canada, western Europe, eastern Russia, Southeast Asia, and much of Australia.  
+• A severe, persistent heat wave hit northern/central India and Pakistan in late May.  
+• Cooler-than-average areas included western Russia and Kazakhstan, much of the western U.S. and Alaska, Greenland, and parts of Argentina and Chile (the strongest cold wave in over 70 years in Chile).  
+• Record-warm sea surface temperatures covered large portions of the tropical Atlantic, Indian Ocean, equatorial western Pacific, southwest Pacific, Southern Ocean, North Sea, and parts of the North Atlantic.  
+• Approximately 16.1% of the Earth’s surface had record-warm May temperatures (highest for May since 1951); only 0.2% had record-cold.
+
+Precipitation Anomalies  
+• Above-average precipitation over western/central Europe, central Asia, far northeastern China, Korea, Japan, southern India, central Australia, Seychelles, and Mauritius.  
+• Below-average precipitation in the southwestern U.S., Mexico, Central America, much of Brazil and Argentina, eastern Europe, the U.K., Spain and adjacent North Africa, northern India/Pakistan/Afghanistan, eastern China, southwestern/western Australia, and many South Pacific islands.
+
+Tropical Rainfall and Cyclone Activity  
+• El Niño–associated SST maximum in the central Pacific weakened; Niño 3.4 index neutral by late May, with forecasts leaning toward La Niña.  
+• Tropical Pacific and Atlantic SSTs cooling but remain above average.  
+• Rainfall anomalies: broad negatives in the central Pacific, a narrow positive just north of the ITCZ, negative eastern Pacific consistent with cooling SSTs, and positive anomalies over the Maritime Continent.  
+  – Heavy rainfall and deadly floods/landslides in Sumatra; ~200 deaths in a Papua New Guinea landslide.  
+  – Active Meiyu/Baiu front produced positive rainfall anomalies across Indochina through Japan.  
+• Tropical cyclone activity: none in the eastern Pacific; in the Indian Ocean, TC Hidaya (Kenya coast), TC Laly (north of Madagascar), and TC Remal (Bay of Bengal) contributed to strong positive rainfall anomalies.  
+• Central Africa experienced a rainfall deficit; southern India saw heavy rains; an early start to the South Asian monsoon was noted.  
+
+Source: NOAA Climate.gov, based on NOAA National Centers for Environmental Information data.
+</Summary>
+
+<Summary source="https://berkeleyearth.org/global-temperature-report-for-2024/">
+Disclaimer: Summary is based solely on the provided Berkeley Earth report and does not incorporate external data or forecasts.
+
+Key facts and statistics (Berkeley Earth, Jan. 10 2025; author Robert Rohde):  
+1. Data span: 1850–2024 (instrumental thermometer record).  
+2. 2024 global mean surface temperature anomaly:  
+   - +1.62 ± 0.06 °C above 1850–1900 baseline  
+   - First time exceeding +1.6 °C; second time above +1.5 °C (after 2023).  
+3. Ranking: 2024 is the warmest year on record; all top ten warmest years have occurred since 2015.  
+4. Spatial extent of record warmth in 2024:  
+   - 24% of Earth’s surface at locally record-warm annual average  
+   - 32% of land area; 21% of ocean area  
+   - 3.3 billion people (40% of global population) experienced record-warm local annual averages (e.g., two-thirds of China’s population; majorities in Brazil, Nigeria, Ethiopia, Mexico; ~⅓ of U.S.; much of South/Central America and Eastern Europe).  
+5. No regions of record-cold annual average in 2024.  
+6. Uncertainty: ±0.03 °C on single-year global mean for recent years.  
+
+Attribution and causes:  
+• Long-term trend: nearly linear warming over past 50 years, driven by increasing greenhouse gases.  
+• 2023–2024 “spike”: significantly exceeds 1970–2019 trend (only ~1-in-100 chance from natural variability alone).  
+• Contributing factors beyond greenhouse gases: natural variability, reduced low cloud cover, declines in anthropogenic sulfur aerosol pollution.  
+
+Comparisons with other analyses:  
+• ECMWF’s Copernicus service also reports just above +1.6 °C for 2024; other groups find slightly lower anomalies due to methodological differences.  
+
+Implications and near-term outlook:  
+• Under Paris Agreement targets, multi-year averages (not individual years) define threshold breaches; long-term average likely to cross +1.5 °C within 5–10 years.  
+• Berkeley Earth projects 2025 global mean to be “moderately cooler” than 2024, most likely ranking as roughly the 3rd warmest year since 1850, though warmer or cooler outcomes remain possible.
+</Summary>
+
+<Summary source="https://journalistsresource.org/environment/warming-2023/">
+Disclaimer: The extracted content appears to be incomplete past the discussion of shipping emissions; some details (e.g., the May 2024 paper in Communications Earth & Environment) may be missing.
+
+Key Facts and Statistics  
+• 2023 became the hottest year on record despite entering the year after three La Niña years, which typically cool global temperatures.  
+• Gavin Schmidt (NASA GISS) had placed 2023’s odds of being the warmest year at only 1 in 5.  
+• In 2023, global land+ocean surface temperatures were about 0.2 °C above what scientists had predicted.  
+• According to NOAA, the ten warmest years on record have all occurred between 2014 and 2023.  
+• Humans have increased global temperatures by roughly 1 °C above pre-industrial levels (IPCC).  
+• Hunga Tonga–Hunga Ha’apai (Jan 2022) emitted ~150 million tons of water vapor into the stratosphere, raising stratospheric water vapor by up to 5%.  
+• IMO’s January 2020 rule cut allowable sulfur in ship fuels from 3.5% to 0.5%, leading to a 70% drop in maritime SOₓ emissions by 2021.  
+
+Named, Reliable Sources  
+• Gavin Schmidt, NASA’s Goddard Institute for Space Studies: “Drawing on precedents…we put the odds of 2023 turning out to be a record warm year at just one in five.”  
+• NASA: “There is unequivocal evidence that Earth is warming at an unprecedented rate. Human activity is the principal cause.”  
+• UN IPCC: Humans are responsible for ~1 °C of warming since the industrial revolution.  
+• Andrew Dessler, Texas A&M atmospheric sciences professor: The eruption’s water vapor largely entered the mid-stratosphere, yielding a smaller warming effect than if it had reached the upper troposphere.  
+• Carbon Brief (UK climate news/data site): Estimates the IMO shipping-sulfur rule will raise global temperatures by only ~0.05 °C by 2050.  
+
+Less-Reliable or Tentative Hypotheses  
+• Potential links between social/economic shifts from the COVID-19 pandemic (e.g., reduced commuting, more remote work) and climate—but currently speculative.  
+• Other factors remain under investigation; researchers will present work on 2023’s unexpected warmth at the AGU annual meeting in December 2024.  
+
+Summary  
+Scientists remain puzzled by why 2023 far exceeded warming forecasts despite La Niña’s cooldown. Proposed explanations—volcanic water-vapor injection and reduced shipping sulfur aerosols—appear too small to fully account for the ~0.2 °C overshoot. Research continues into other drivers, including pandemic-related emissions changes. Understanding this anomaly is critical both to validate climate models and to rule out any unrecognized systemic shifts accelerating global warming.
+</Summary>
+
+<Summary source="https://www.climate.gov/news-features/understanding-climate/global-climate-summary-august-2024">
+Disclaimer: Summary is based solely on the NOAA Climate.gov “Global climate summary for August 2024” (published Sept. 16, 2024).
+
+Key facts and statistics:
+
+1. Global temperatures
+  • August 2024 global land-and-ocean surface temperature was 1.27 °C (2.29 °F) above the 20th-century average (15.6 °C/60.1 °F), making it the warmest August on record—0.01 °C above the previous record set in August 2023.  
+  • This marks the 15th consecutive month of record-high global temperatures (June 2023–August 2024), breaking the previous 13-month record from May 2015–May 2016.  
+  • Global ocean surface temperature for August 2024 was the second warmest on record.  
+
+2. Hemisphere and regional highlights
+  • Northern Hemisphere: second-warmest August on record (+1.48 °C above average), with both land and ocean temperatures ranking second.  
+  • Southern Hemisphere: warmest August on record (+1.06 °C), with land temperatures at record highs and ocean temperatures second highest.  
+  • Arctic: fourth-warmest August on record.  
+  • Antarctic region: second-warmest August (+1.85 °C) and second-lowest sea ice extent for August.  
+
+3. Seasonal (June–August 2024) record
+  • June–August 2024 was the warmest such period in the 175-year record: 1.24 °C above the 20th-century average.  
+  • It was the 11th consecutive June–August period to set a record high.  
+  • Northern Hemisphere summer 2024 was the warmest on record (46th consecutive summer above average).  
+  • Southern Hemisphere winter 2024 was the warmest on record (54th consecutive winter above average).  
+
+4. Spatial temperature anomalies
+  • Record-warm land temperatures across much of Africa; eastern Europe; southwest, central and southeast Asia; parts of southern Australia; large parts of Brazil; and portions of the Arctic and Antarctic.  
+  • Cooler-than-average areas included central U.S., western Alaska, southern South America, part of eastern Antarctica, and eastern Russian Far East.  
+  • Record-warm sea surface temperatures in large parts of the Atlantic and Caribbean, central/northern Indian Ocean, parts of the western Pacific, and parts of the Southern Ocean. Cooler sea surface anomalies in the southeastern Pacific, parts of the southern Atlantic, the North Atlantic, and a portion of the southwest Indian Ocean.  
+
+5. Precipitation anomalies
+  • August 2024 precipitation was below average across much of Europe, the Mediterranean, parts of North Africa, the U.S., Mexico, Argentina, eastern Russia, central/southern China, and much of southern/central Australia.  
+  • Above-average precipitation occurred in the southeastern U.S., northwest India and southeast Pakistan, Japan, southern Sahel, northeastern China, eastern Mongolia, central Asia, southern Bangladesh, central Argentina, and central/western Alaska.  
+
+6. ENSO and forecast
+  • August 2024 conditions were ENSO-neutral.  
+  • NOAA’s Climate Prediction Center projects a 71% chance of La Niña development in September–November 2024, likely persisting through January–March 2025.  
+  • The August precipitation anomaly pattern showed a slight La Niña signature, with enhanced rainfall across parts of South Asia and a drier mid-Pacific.  
+
+7. Notable impacts
+  • Flooding and landslides in Bangladesh and northeast India (≈100 fatalities).  
+  • Tropical cyclone activity affected Japan and Hawaii (Big Island saw up to 20″ of rain).  
+</Summary>
+
+<Summary source="https://abcnews.go.com/International/scientists-shocked-warm-2023-year-hotter/story?id=117417919">
+Disclaimer: The extracted content appears to cut off mid-article; some closing detail may be missing.
+
+Key facts and statistics  
+• By March 2024, NOAA gave a 55% chance that 2024 would be the warmest year on record; by July, 77%; by November, nearly certain.  
+• Copernicus Climate Change Service (EU) reported 2024’s global temperature at 1.60 °C above pre-industrial levels (1850–1900).  
+• NASA’s 2024 estimate: +1.47 °C; NOAA’s: +1.46 °C—differences reflect distinct methodologies.  
+• 2024 was the warmest calendar year globally since records began in 1850; each of the past 10 years ranks among the 10 warmest.  
+• It was also the warmest year for the contiguous U.S., averaging 3.5 °F above the 1901–2000 baseline, in NOAA’s 130-year record.  
+• 2024 was the first full year above the Paris Agreement’s 1.5 °C threshold; global monthly averages exceeded this mark 11 of 12 months.  
+• Short-term record breaches (e.g., Feb 2016; Feb 2023–Jan 2024) are noted but the Paris goal is assessed on multi-decadal averages.  
+
+Primary drivers  
+• A moderate El Niño in 2024 boosted temperatures, but scientists emphasize it overlays a long-term warming trend from human-caused greenhouse gases.  
+• Global greenhouse gas concentrations reached record highs in 2024, per Copernicus Atmosphere Monitoring Service.  
+• Aerosol levels—particularly sulfur dioxide from ships and industry—have fallen sharply (U.S. SO₂ down 94% since 1980), reducing their cooling effect.  
+• The Jan 2022 Hunga Tonga-Hunga Ha‘apai eruption injected unprecedented water vapor (a potent greenhouse gas) into the stratosphere; total atmospheric water vapor hit a record in 2024.  
+• The Global Carbon Project reports 2024 fossil-fuel CO₂ emissions at a new high; U.S. crude production peaked in August 2024 (U.S. EIA).  
+
+Named expert opinions (reliable sources)  
+• Carlo Buontempo (Copernicus C3S Director): “All of the internationally produced global temperature datasets show that 2024 was the hottest year since records began in 1850…swift and decisive action can still alter the trajectory of our future climate.”  
+• Laurence Rouil (Copernicus Atmosphere Monitoring Service Director): “Our data points clearly to a steady global increase of greenhouse gas emissions and these remain the main agent of climate change.”  
+• Andrew Dessler (Texas A&M atmospheric sciences professor): In an annual auto-reply to reporters, he says “Every year for the rest of your life will be one of the hottest in the record…This year will end up being among the coldest years of this century. Enjoy it while it lasts.”  
+
+Less-reliable or unnamed sources  
+• None specifically cited; all opinions are attributed to named agencies or experts.
+</Summary>
+
+<Perplexity_report>
+Query: Provide a list of all global land-and-ocean average temperature anomalies for May from 1880 through 2024 as reported by NOAA, identify the five warmest Mays with their anomaly values relative to the 20th-century baseline, and summarize any relevant climate drivers (e.g., El Niño) for those record months.
+Error: Perplexity API failed after 3 attempts. The system will continue with other available data.</Perplexity_report>
+
+
+Current context search results:
+
+<Summary source="https://wmo.int/media/news/january-2025-sees-record-global-temperatures-despite-la-nina">
+Here are the key points from the WMO’s 14 February 2025 report on January 2025 global climate:
+
+1. Record January temperatures  
+  • Copernicus Climate Change Service (C3S) and NOAA both identify January 2025 as the warmest January on record.  
+  • C3S: January 2025 was 1.75 °C above the pre-industrial (1850–1900) average.  
+  • It marked the 18th of the last 19 months with global-average surface-air temperatures exceeding 1.5 °C above pre-industrial.  
+  • All major datasets show an extended streak of record-breaking monthly temperatures, though small inter-dataset differences exist.  
+
+2. Context of longer-term warming  
+  • 2024 was the warmest year on record and likely the first to briefly exceed 1.5 °C above pre-industrial, per WMO’s consolidated analysis of six international datasets.  
+  • The last ten years are the ten warmest on record.  
+
+3. Regional temperature anomalies  
+  • Above-average January 2025 temperatures across most of the globe.  
+  • Below-average over the contiguous United States, Greenland and far-eastern Russia.  
+
+4. Sea ice and sea surface temperatures  
+  • Arctic sea-ice extent in January 2025 tied for the lowest on record (C3S) and was second-lowest (NOAA).  
+  • La Niña conditions (per NOAA’s Climate Prediction Center) emerged in December 2024 and were expected to persist through February–April 2025.  
+  • Sea-surface temperatures were above average globally, but below average in much of the central/eastern tropical Pacific (La Niña signature), parts of the southeast Pacific, western North Atlantic and northwest Indian Ocean.  
+  • Overall global sea-surface temperatures for January 2025 were the second highest on record (after January 2024).  
+
+5. Precipitation and extreme events  
+  • Drier-than-average: most of the contiguous U.S. into Mexico and Central America; southeastern Europe through southwest/central Asia; parts of Southeast Asia, the Russian Far East; much of Australia.  
+  • Wetter-than-average: western through northeastern Europe; northwestern/central Asia into eastern China and southeastern Russia.  
+  • Southern Brazil: heavy rains caused flooding, landslides and widespread damage.  
+  • Central Java (Indonesia): torrential rains, floods and landslides with over a dozen reported fatalities.  
+
+6. Tropical storms  
+  • Five named storms worldwide in January (below the 7-storm average).  
+  • Three formed in the southwest Indian Ocean; the most impactful was Intense Tropical Cyclone Dikeledi, which struck Madagascar and Mozambique with high winds and heavy rains.
+</Summary>
+
+<Summary source="https://climate.copernicus.eu/copernicus-january-2025-was-warmest-record-globally-despite-emerging-la-nina">
+Here are the key take-aways from the Copernicus report on January 2025 surface and sea temperatures, hydrology and sea ice (all based on ERA5/ERA5-Land and related datasets):
+
+1. Global surface air temperature  
+   • January 2025 average (ERA5): 13.23 °C  
+   • +0.79 °C above the 1991–2020 January average  
+   • +1.75 °C above pre-industrial (1850–1900) levels  
+   • It was the 18th of the last 19 months with >1.5 °C above pre-industrial  
+   • Feb 2024–Jan 2025 twelve-month mean: +0.73 °C (1991–2020), +1.61 °C (pre-industrial)
+
+2. Regional surface air temperature highlights  
+   – Europe (land only):  
+     • Jan 2025 avg 1.80 °C; +2.51 °C vs. 1991–2020 (2nd warmest after Jan 2020)  
+     • Warmest anomalies over southern/eastern Europe and western Russia  
+     • Below-average in Iceland, UK & Ireland, northern France, N. Fennoscandia  
+   – Other notable anomalies:  
+     • Above average: NE & NW Canada, Alaska, Siberia, southern South America, Africa, much of Australia & Antarctica  
+     • Below average: contiguous United States; Chukotka & Kamchatka (Russia); Arabian Peninsula; mainland Southeast Asia
+
+3. Sea surface temperature (SST)  
+   • Jan 2025 (60°S–60°N) SST: 20.78 °C (2nd-highest for January)  
+   • 0.19 °C below January 2024 record  
+   • Central equatorial Pacific SSTs below average; eastern equatorial near/above average—La Niña development slowing  
+   • SSTs remain unusually high in many other ocean basins
+
+4. Hydrological conditions (January 2025)  
+   • Wetter-than-average: western Europe (flooding in places), parts of Italy, Scandinavia, Baltic states; Alaska; Canada; central/eastern Russia; eastern Australia; southeastern Africa; southern Brazil  
+   • Drier-than-average: northern UK & Ireland; eastern Spain; north of Black Sea; southwestern U.S. & northern Mexico; northern Africa; Middle East; Central Asia; eastern China; much of southern Africa, southern South America, Australia
+
+5. Sea ice extent and concentration  
+   • Arctic January extent: 6% below 1991–2020 average (tied with Jan 2018 as lowest)  
+   • Lowest concentrations in eastern Canadian sector (Hudson Bay, Labrador Sea) and northern Barents Sea  
+   • Antarctic January extent: 5% below average—close to long-term mean compared to recent years; concentration above average in Amundsen Sea
+
+6. Notable expert comment  
+   Samantha Burgess (Strategic Lead for Climate, ECMWF):  
+   “January 2025 is another surprising month, continuing the record temperatures observed throughout the last two years, despite the development of La Niña conditions in the tropical Pacific and their temporary cooling effect on global temperatures. Copernicus will continue to closely monitor ocean temperatures and their influence on our evolving climate throughout 2025.”
+
+7. Data and methodology notes  
+   • Primary datasets: ERA5 (surface air, sea ice), ERA5-Land (soil moisture), ERA5 foundation SST (≈10 m depth)  
+   • Sea ice also from EUMETSAT OSI SAF Sea Ice Index v2.2  
+   • Reference climatology: 1991–2020 (per WMO recommendation)  
+   • Regional definitions: Globe (180°W–180°E, 90°S–90°N, land + ocean), Europe (25°W–40°E, 34°N–72°N, land)
+
+No additional content was injected beyond the supplied Copernicus bulletin.
+</Summary>
+
+<Summary source="https://www.climate.gov/news-features/blogs/enso/may-2025-enso-update-eye-neutral">
+Here’s a concise summary of the NOAA Climate.gov “May 2025 ENSO update: eye of neutral” (May 8, 2025):
+
+• Current conditions  
+  – Sea-surface temperatures in the Niño-3.4 region were 0.16 °C below the 1991–2020 average in April 2025, firmly within the ±0.5 °C “ENSO-neutral” range.  
+  – Subsurface tropical Pacific temperatures are also very close to long-term average.  
+
+• Atmospheric indicators  
+  – Walker circulation strength (trade winds, rainfall patterns, cloudiness) is near average after several months of La Niña-like enhancement.  
+  – Cloud cover over the central tropical Pacific is slightly reduced, easterly trade winds near the Date Line are modestly stronger, and the Equatorial Southern Oscillation Index is slightly positive—together suggesting only a weak La Niña “lean.”  
+
+• Outlook and impacts  
+  – NOAA’s Climate Prediction Center gives a 74% chance of ENSO-neutral through the Northern Hemisphere summer, with neutral still most likely into fall and winter. La Niña is the next most probable state; El Niño odds for next winter are about 15%.  
+  – Unlike El Niño or La Niña—which exert recognizable “signature” effects on global circulation, jet streams, extremes of rain, drought, heatwaves, hurricane activity, crop yields, etc.—neutral conditions have no consistent, large-scale imprint. Other shorter-lead modes (e.g., the North Atlantic Oscillation, Madden-Julian Oscillation) may then play a bigger role.  
+
+• Data and methods  
+  – SST anomalies are from NOAA’s ERSST v5 dataset (based on 1991–2020 climatology).  
+  – Atmospheric indices include cloudiness metrics, equatorial trade-wind analyses, and the Equatorial Southern Oscillation Index.  
+  – Forecast probabilities derive from the CPC’s ENSO prediction plume, noting the well-known “spring predictability barrier” that reduces confidence in springtime ENSO forecasts.
+</Summary>
+
+<Summary source="https://www.ncei.noaa.gov/news/global-climate-202504">
+Here are the key findings from the NCEI’s “Assessing the Global Climate in April 2025” report (May 12, 2025):
+
+• Temperature  
+  – April 2025 global land+ocean surface temperature: 2.20 °F (1.22 °C) above the 20th-century average  
+  – 0.13 °F (0.07 °C) cooler than April 2024, making it the second-warmest April on record (1850–2025)  
+  – NCEI’s Global Annual Temperature Outlook: only a 3% chance that 2025 will be the warmest year on record  
+
+• Precipitation  
+  – Record-setting monthly rainfall in central Asia and southern Africa; heavy rains also in northern Australia  
+  – Floods/landslides reported in Brazil, Congo, and western Somalia  
+  – Globally, April 2025 preliminarily appears to be the driest April since 1979  
+
+• Northern Hemisphere Snow Cover  
+  – Tied with April 2024 for the smallest April snow cover on record  
+  – 820,000 sq mi below the 1991–2020 average (North America/Greenland down 120,000 sq mi; Eurasia down 710,000 sq mi)  
+
+• Sea Ice Extent  
+  – Global sea ice 480,000 sq mi below the 1991–2020 average (ranked in the lowest third of the record)  
+  – Arctic down 160,000 sq mi (notably low in Barents, Okhotsk, Bering, Labrador Seas)  
+  – Antarctic down 320,000 sq mi overall, though some sectors (Weddell, Amundsen Seas) were above average  
+
+• Tropical Cyclone Activity  
+  – Four named storms worldwide (matches the long-term April average)  
+  – Most notable: Severe Tropical Cyclone Courtney in the southwest Indian Ocean; two storms in the Australian basin and one in the southwest Pacific  
+
+For further details, see the NCEI April 2025 Global Climate Report or the Climate at a Glance Global Time Series.
+</Summary>
+
+<Summary source="https://yaleclimateconnections.org/2025/05/april-2025-was-the-planets-2nd-warmest-april-on-record/">
+Summary of “April 2025 was the planet’s 2nd-warmest April on record”  
+Yale Climate Connections, May 12, 2025 (Jeff Masters)
+
+• Global temperature rankings  
+  – NOAA/NCEI: April 2025 was Earth’s second-warmest April since 1850, behind only April 2024.  
+  – NASA and the Copernicus Climate Change Service concurred. (JMA and Berkeley Earth data pending.)  
+  – January–April 2025 global surface temperature also ranked second-warmest in NOAA’s 176-year record.
+
+• Land, ocean, and regional records (NOAA)  
+  – Global land: warmest April on record  
+  – Global ocean: second-warmest April  
+  – Asia: warmest April  
+  – North America & Europe: fifth-warmest April  
+  – Africa: seventh-warmest April  
+  – Oceania: 13th-warmest April  
+  – South America: 18th-warmest April  
+  – Northern Hemisphere snow cover: tied with 2024 for lowest since 1967
+
+• U.S. climate and severe weather (NOAA/NCEI)  
+  – Contiguous U.S.: 13th-warmest April; nine states (mostly Southeast) in their top-10 warmest Aprils  
+  – Six states had top-10 wettest Aprils: Kentucky, Alaska, Oklahoma, Missouri, Arkansas, Indiana  
+  – April tornadoes: 350 total, 37 rated EF 2 or stronger  
+  – Year-to-date (Jan 1–May 6) tornadoes: 724—second-highest since 2010 (behind 2011’s 1,284)  
+  – U.S. tornado fatalities in 2025: 35 (≈ two-thirds in manufactured/mobile homes), continuing a long-term trend
+
+• Outlook for 2025’s annual temperature (NOAA/NCEI statistical analysis)  
+  – 3% chance 2025 will be the warmest year on record  
+  – 39% chance it will rank second, behind 2024  
+  – > 99% chance it will be among the five warmest years
+
+• ENSO status and forecasts  
+  – Weak La Niña conditions (Dec 2024–Mar 2025) ended in March; Eastern Pacific now ENSO-neutral (NOAA)  
+  – Australian Bureau of Meteorology notes only a few weeks met their stricter La Niña threshold  
+  – NOAA May outlook: 74% chance of ENSO-neutral through August 2025; > 50% chance through October  
+  – Columbia University IRI (April 21 forecast): 31% La Niña, 52% neutral, 17% El Niño for Aug–Oct 2025  
+  – El Niño tends to suppress—and La Niña to enhance—Atlantic hurricane activity; spring forecast skill remains low
+
+• Sea ice and polar conditions  
+  – Arctic sea ice: after record-low early April extent, ended the month ninth-lowest in 47-year satellite record; Arctic temperatures sixth-warmest April (NSIDC)  
+  – Antarctic sea ice: 10th-lowest April extent; Antarctic temperatures above average  
+  – May 6 NSIDC announcement: future data reductions may prompt a switch to Japanese or European sea ice products
+
+• Station and national temperature extremes (Maximiliano Herrera, weather records expert)  
+  – Among stations with ≥ 40-year records: Puerto Princesa (Philippines) reached 37 °C on April 23—an all-time heat record  
+  – No all-time cold records at such stations in April  
+  – So far in 2025, 26 nations/territories have set or tied monthly all-time heat records (29 records total); one territory (Qatar in January) set a monthly cold record
+</Summary>
+
+<Summary source="https://www.climate.gov/news-features/feed/assessing-global-climate-january-2025">
+Here are the key points from the NOAA Climate.gov article “Assessing the Global Climate in January 2025”:
+
+1. January 2025 global temperature  
+   - Global surface temperature: 2.39 °F (1.33 °C) above the 20th-century average of 53.6 °F (12.0 °C)  
+   - 0.05 °F (0.03 °C) above the previous record set in January 2024  
+   - Result: January 2025 was the warmest January on record
+
+2. Outlook for the full year 2025  
+   - NCEI’s Global Annual Temperature Outlook assigns a 7% chance that 2025 will be the warmest year on record  
+
+3. Context of ENSO (El Niño–Southern Oscillation)  
+   - The January record occurred during a La Niña episode (the typically cooling phase of ENSO)  
+   - NOAA Climate Prediction Center (Jan 9 ENSO Diagnostic Discussion):  
+     • La Niña conditions emerged in December 2024  
+     • 59% chance La Niña will persist through February–April 2025  
+     • 60% chance of transition to ENSO-neutral during March–May 2025
+</Summary>
+
+<Asknews_articles>
+Query: Find recent news or analysis on NOAA’s provisional report for May 2025 global temperatures, including statements on whether it was the hottest May on record.
+Here are the relevant news articles:
+
+**WMO Warns: Earth on Track to Break Temperature Records**
+The World Meteorological Organization (WMO) warns that the Earth is on track to break temperature records in the coming years, with a 80% chance that one of the years between 2025-2029 will be warmer than 2024. The report also states that it is almost certain that one of the next years will reach a temperature of 2.7°F (1.5°C) above the pre-industrial level. This means not just heatwaves, but also catastrophic events that will cost people their lives, health, and safety. 'It's quite gloomy', says Mike Flannigan from the University of Thompson Rivers, who believes that the real consequences will be even more severe than expected. The western regions of the US are already suffering from wildfires, droughts, and heatwaves. As climate scientist Pak Williams notes, 'The western US has warmed, but without increased precipitation to compensate for the effect'. The Arctic, Amazon, Africa, and Europe are becoming the poles of a new climate reality, with melting ice, excessive rainfall, and severe droughts. The warming atmosphere holds more moisture, increasing the risk of storms and floods. 'Episodes of climate 'tipping points' are becoming more intense', the report states. Seasonal fluctuations from wet to dry have become a precursor to wildfires in California. Flannigan warns: 'People think it won't affect them. But soon it will be on every backyard'. The data shows that 2024 has already become the hottest year since 1880, and this trend is only intensifying. 11 consecutive years of temperature records have been set, and there is no end in sight. The situation in the US is complicated by the political inconsistency in addressing climate change. The withdrawal from the Paris Agreement initiated by the Trump administration, along with the imposed bans on terms such as 'climate science', demonstrate a deliberate rollback of scientific efforts. The administration has fired over 400 experts who worked on the National Climate Assessment. As Ko Barrett from the WMO notes, 'The negative impact on our economy, lives, ecosystems, and planet will grow'. The NOAA budget plans to cut 25%, which will undermine the ability to predict and prevent disasters. This is a refusal to take responsibility in the face of an ecological crisis. The WMO estimates a 70% probability that the average warming in 2025-2029 will exceed 1.5°C, indicating a real risk of irreversible changes. High temperatures accelerate ecosystem degradation, reduce yields, and trigger new catastrophes. The world is entering a phase where inaction threatens the very existence of civilization. The impact of warming has already engulfed not only climate, but also politics, economy, security, and even basic living conditions. Societies must act quickly to reduce damage - or agree to a future where anomalies become the norm.
+Original language: uk
+Publish date: June 02, 2025 03:30 AM
+Source:[newsyou.info](https://newsyou.info/2025/06/vmo-poperedzhaye-zemlya-pobye-temperaturni-rekordi)
+
+**Earth on Fire: Why the Next Five Years Could Be the Hottest Ever**
+According to the World Meteorological Organization (WMO), the next five years (2025-2029) are expected to be the hottest on record, with global temperatures projected to remain at or near record levels. This forecast underscores the urgency of addressing climate change and its far-reaching impacts. The WMO's 'Global Annual to Decadal Climate Update' outlines several key projections, including a significant increase in risk, with the likelihood of the five-year average exceeding 1.5°C increasing to 47% from 32%. The Arctic region is projected to warm more than three and a half times faster than the global average over the next five extended winters. 'The next five years could be the hottest ever,' the report warns, emphasizing the need for immediate action to mitigate the effects of climate change.
+Original language: en
+Publish date: June 01, 2025 02:41 PM
+Source:[Medium.com](https://medium.com/@sambugita/earth-on-fire-why-the-next-five-years-could-be-the-hottest-ever-837fbb20c445)
+
+**A warming planet is poised to get even hotter, forecasters warn**
+A new report from the World Meteorological Organization warns that the planet is poised to get even hotter, with a high chance of the world shattering the record for the hottest year in nearly two centuries by 2029. The report found an 80% chance that at least one year in the 2025 to 2029 period will surpass 2024 as the warmest year on record, and an 86% chance that at least one of those years will exceed the 2.7 degrees warming target. Climate scientists warn that the consequences of warming will be severe, including more frequent and intense natural disasters, droughts, and failed crop seasons. 'It's pretty bleak,' said Mike Flannigan, a fire scientist at Thompson Rivers University. 'My fear is that [the coming years] will be even warmer than they suggest, and the impacts will continue to catch us by surprise and be more severe than we expect.' The report also found that the U.S. will likely head into this period of climate chaos with a drastically reduced ability to forecast disasters and head off their worst consequences due to budget cuts and a wider turn away from climate mitigation efforts.
+Original language: en
+Publish date: June 01, 2025 02:47 AM
+Source:[phys.org](https://phys.org/news/2025-05-planet-poised-hotter.html)
+
+**Record Temperatures Threaten the World Over the Next Five Years**
+According to a new report by the World Meteorological Organization (WMO), the global temperature is expected to remain at a record or near-record level over the next five years, increasing climate risks and having negative consequences for society, economy, and development. The report states that the global average annual ground temperature for each year from 2025 to 2029 will be 1.2-1.9 degrees Celsius above the pre-industrial level, which is the average temperature from 1850 to 1900. There is an 85% probability that at least one year in this period will be warmer than the hottest year on record, 2024. The report also predicts a 70% probability that the average warming over the five years will exceed 1.5 degrees Celsius, the threshold set by the Paris Agreement on Climate Change. Each additional degree of warming will lead to more intense heatwaves, extreme precipitation, severe droughts, glacier melting, ocean warming, and sea level rise. Additionally, the report forecasts that the warming in the Arctic will occur more than 3.5 times faster than the global average during the next five extended winter periods. The predicted state of sea ice for March 2025-2029 suggests a further decrease in ice concentration in the Barents, Bering, and Okhotsk seas. As WMO Director-General Petteri Taalas said, 'The next five years are critical in the fight against climate change. We must take immediate action to reduce greenhouse gas emissions and transition to renewable energy sources.' 
+Original language: ru
+Publish date: May 31, 2025 03:39 PM
+Source:[24.kg](https://24.kg/obschestvo/331092_rekordnyie_temperaturyi_grozyat_miru_vblijayshie_pyat_let/)
+
+**Half of the World's Population Faces Additional Month of Extreme Heat Due to Climate Change**
+A new study by 'France Press' agency reveals that half of the world's population faced an additional month of extreme heat last year due to climate change. The study analyzed the period from May 1, 2024 to May 1, 2025 and found that 4 billion people, or 49% of the world's population, experienced at least 30 extra days of extreme heat compared to a world without climate change. The researchers found a climate change fingerprint in every heatwave they studied. The study found that 67 heatwaves occurred last year, with the most affected area being the Caribbean island of Aruba, which recorded 187 days of extreme heat, 45 more than expected in the absence of climate change. The study comes after a record-breaking year for global temperatures, with 2024 being the hottest year on record, surpassing 2023, and January 2023 being the hottest January ever recorded. The global temperature has risen by 1.3 degrees Celsius above pre-industrial levels, with 2024 alone exceeding the 1.5 degree Celsius threshold set by the Paris Agreement. The researchers emphasize the importance of early warning systems, public awareness, and city-specific climate action plans. They also highlight the need to improve building design, including shading and ventilation, and to adjust behaviors, such as avoiding strenuous activities during peak heat.
+Original language: ar
+Publish date: May 31, 2025 10:30 AM
+Source:[صدى البلد](https://www.elbalad.news/6591072)
+
+**Summer 2025 forecast calls for 'overwhelmingly above normal' heat starting in June**
+The National Oceanic and Atmospheric Administration's (NOAA) Climate Prediction Center has forecast an 'overwhelmingly above normal' heat for the summer of 2025, starting in June. According to Johnna Infanti, a meteorologist for NOAA's Climate Prediction Center, model guidance indicates that the U.S. and most of Alaska will experience hotter-than-normal temperatures. The hottest temperatures are expected in the West, Southwest, Florida, and New England. The summer forecast also calls for an overall hotter and drier season, with below-normal precipitation in the Northwest, Northern Rockies, and Great Plains, and drought persisting or expanding in these regions. The Eastern U.S. is expected to see a wetter summer, including drought relief later in June. Additionally, parts of the nation have a greater likelihood of significant wildfires, particularly in the coastal Southeast, central Texas, the Four Corners, and parts of California and the Pacific Northwest in June, and in Hawaii, the Southern Plains, and parts of the Great Basin, California, and the Northwest in July and August.
+Original language: en
+Publish date: May 31, 2025 10:00 AM
+Source:[USA Today](https://www.usatoday.com/story/news/weather/2025/05/31/summer-2025-heat-forecast/83942266007/)
+
+**Earth Records Warmest First Quarter Since Temperature Records Began**
+According to the NOAA's historical temperature series, the first quarter of 2024 was the warmest on record, with an average temperature 1.34 degrees above the 20th century average of 12.6 degrees. There is a 61% chance that 2024 will be the warmest year on record and a 100% chance that it will be among the top five. The first quarter of 2024 was the warmest on record for both the Northern and Southern Hemispheres. The month of April was the warmest on record for the planet, with an average temperature 1.32 degrees above the 20th century average of 13.7 degrees. This was 0.18 degrees warmer than April 2020, which previously held the record. The planet has now experienced 11 consecutive months with record-breaking heat on land and 13 consecutive months with record-breaking heat in the oceans. The heat records covered 14.7% of the planet's surface in April, more than double the second-highest value in April (7.1% in 2016) and the second-largest global coverage since records began in 1951, behind only September 2023 (15.0%).
+Original language: es
+Publish date: May 14, 2024 08:21 PM
+Source:[ondacero.es](https://www.ondacero.es/noticias/medio-ambiente/tierra-registra-primer-cuatrimestre-mas-calido-que-hay-registros_202405146643aba069f85800013b8390.html)
+
+**WMO Warns: Earth on Track to Break Temperature Records**
+The World Meteorological Organization (WMO) warns that the Earth is on track to break temperature records in the coming years, with a 80% chance that one of the years between 2025-2029 will be warmer than 2024. The report also states that it is almost certain that one of the next years will reach a temperature of 2.7°F (1.5°C) above the pre-industrial level. This means not just heatwaves, but also catastrophic events that will cost people their lives, health, and safety. 'It's quite gloomy', says Mike Flannigan from the University of Thompson Rivers, who believes that the real consequences will be even more severe than expected. The western regions of the US are already suffering from wildfires, droughts, and heatwaves. As climate scientist Pak Williams notes, 'The western US has warmed, but without increased precipitation to compensate for the effect'. The Arctic, Amazon, Africa, and Europe are becoming the poles of a new climate reality, with melting ice, excessive rainfall, and severe droughts. The warming atmosphere holds more moisture, increasing the risk of storms and floods. 'Episodes of climate 'tipping points' are becoming more intense', the report states. Seasonal fluctuations from wet to dry have become a precursor to wildfires in California. Flannigan warns: 'People think it won't affect them. But soon it will be on every backyard'. The data shows that 2024 has already become the hottest year since 1880, and this trend is only intensifying. 11 consecutive years of temperature records have been set, and there is no end in sight. The situation in the US is complicated by the political inconsistency in addressing climate change. The withdrawal from the Paris Agreement initiated by the Trump administration, along with the imposed bans on terms such as 'climate science', demonstrate a deliberate rollback of scientific efforts. The administration has fired over 400 experts who worked on the National Climate Assessment. As Ko Barrett from the WMO notes, 'The negative impact on our economy, lives, ecosystems, and planet will grow'. The NOAA budget plans to cut 25%, which will undermine the ability to predict and prevent disasters. This is a refusal to take responsibility in the face of an ecological crisis. The WMO estimates a 70% probability that the average warming in 2025-2029 will exceed 1.5°C, indicating a real risk of irreversible changes. High temperatures accelerate ecosystem degradation, reduce yields, and trigger new catastrophes. The world is entering a phase where inaction threatens the very existence of civilization. The impact of warming has already engulfed not only climate, but also politics, economy, security, and even basic living conditions. Societies must act quickly to reduce damage - or agree to a future where anomalies become the norm.
+Original language: uk
+Publish date: June 02, 2025 03:30 AM
+Source:[newsyou.info](https://newsyou.info/2025/06/vmo-poperedzhaye-zemlya-pobye-temperaturni-rekordi)
+
+**Earth on Fire: Why the Next Five Years Could Be the Hottest Ever**
+According to the World Meteorological Organization (WMO), the next five years (2025-2029) are expected to be the hottest on record, with global temperatures projected to remain at or near record levels. This forecast underscores the urgency of addressing climate change and its far-reaching impacts. The WMO's 'Global Annual to Decadal Climate Update' outlines several key projections, including a significant increase in risk, with the likelihood of the five-year average exceeding 1.5°C increasing to 47% from 32%. The Arctic region is projected to warm more than three and a half times faster than the global average over the next five extended winters. 'The next five years could be the hottest ever,' the report warns, emphasizing the need for immediate action to mitigate the effects of climate change.
+Original language: en
+Publish date: June 01, 2025 02:41 PM
+Source:[Medium.com](https://medium.com/@sambugita/earth-on-fire-why-the-next-five-years-could-be-the-hottest-ever-837fbb20c445)
+
+**WMO Warns of 70% Probability of Exceeding 1.5°C Global Temperature Increase by 2029**
+The World Meteorological Organization (WMO) has warned that there is a 70% probability that the average global temperature between 2025-2029 will exceed 1.5°C above pre-industrial levels. The WMO's report states that high temperatures will increase climate risks and impacts on societies, economies, and sustainable development. The report predicts that the average annual global temperature near the surface for each year between 2025 and 2029 will be 'between 1.2°C and 1.9°C', surpassing the average temperature recorded between 1850 and 1900. The WMO also notes that there is an 80% chance that at least one year between 2025 and 2029 will be hotter than the current record holder, 2024. Additionally, there is an 86% probability that at least one year will be more than 1.5°C above pre-industrial levels. The WMO explains that each additional degree of warming leads to more severe heatwaves, extreme precipitation events, intense droughts, melting of glaciers, warming of oceans, and sea-level rise. The organization highlights that the warming of the Arctic in the next five years is expected to be more than three and a half times the global average, and that regions such as the Sahel, northern Europe, Alaska, and northern Siberia will be wetter, while the Amazon will be drier (from May to September 2025-2029). The scientific community has warned that a warming above 1.5°C could trigger more severe climate change impacts and extreme weather conditions, emphasizing that each fraction of a degree of warming is crucial. The COP30 conference in Brazil will analyze the updated national climate action plans, known as Nationally Determined Contributions (NDCs), which are essential to achieving the Paris Agreement's goals.
+Original language: es
+Publish date: June 01, 2025 02:22 PM
+Source:[recordeuropa.com](https://recordeuropa.com/noticias/mundo/aquecimento-medio-ate-2029-pode-ser-superior-a-15-graus-01-06-2025-278663)
+
+**A warming planet is poised to get even hotter, forecasters warn**
+A new report from the World Meteorological Organization warns that the planet is poised to get even hotter, with a high chance of the world shattering the record for the hottest year in nearly two centuries by 2029. The report found an 80% chance that at least one year in the 2025 to 2029 period will surpass 2024 as the warmest year on record, and an 86% chance that at least one of those years will exceed the 2.7 degrees warming target. Climate scientists warn that the consequences of warming will be severe, including more frequent and intense natural disasters, droughts, and failed crop seasons. 'It's pretty bleak,' said Mike Flannigan, a fire scientist at Thompson Rivers University. 'My fear is that [the coming years] will be even warmer than they suggest, and the impacts will continue to catch us by surprise and be more severe than we expect.' The report also found that the U.S. will likely head into this period of climate chaos with a drastically reduced ability to forecast disasters and head off their worst consequences due to budget cuts and a wider turn away from climate mitigation efforts.
+Original language: en
+Publish date: June 01, 2025 02:47 AM
+Source:[phys.org](https://phys.org/news/2025-05-planet-poised-hotter.html)
+
+**Record Temperatures Threaten the World Over the Next Five Years**
+According to a new report by the World Meteorological Organization (WMO), the global temperature is expected to remain at a record or near-record level over the next five years, increasing climate risks and having negative consequences for society, economy, and development. The report states that the global average annual ground temperature for each year from 2025 to 2029 will be 1.2-1.9 degrees Celsius above the pre-industrial level, which is the average temperature from 1850 to 1900. There is an 85% probability that at least one year in this period will be warmer than the hottest year on record, 2024. The report also predicts a 70% probability that the average warming over the five years will exceed 1.5 degrees Celsius, the threshold set by the Paris Agreement on Climate Change. Each additional degree of warming will lead to more intense heatwaves, extreme precipitation, severe droughts, glacier melting, ocean warming, and sea level rise. Additionally, the report forecasts that the warming in the Arctic will occur more than 3.5 times faster than the global average during the next five extended winter periods. The predicted state of sea ice for March 2025-2029 suggests a further decrease in ice concentration in the Barents, Bering, and Okhotsk seas. As WMO Director-General Petteri Taalas said, 'The next five years are critical in the fight against climate change. We must take immediate action to reduce greenhouse gas emissions and transition to renewable energy sources.' 
+Original language: ru
+Publish date: May 31, 2025 03:39 PM
+Source:[24.kg](https://24.kg/obschestvo/331092_rekordnyie_temperaturyi_grozyat_miru_vblijayshie_pyat_let/)
+
+**Half of the World's Population Faces Additional Month of Extreme Heat Due to Climate Change**
+A new study by 'France Press' agency reveals that half of the world's population faced an additional month of extreme heat last year due to climate change. The study analyzed the period from May 1, 2024 to May 1, 2025 and found that 4 billion people, or 49% of the world's population, experienced at least 30 extra days of extreme heat compared to a world without climate change. The researchers found a climate change fingerprint in every heatwave they studied. The study found that 67 heatwaves occurred last year, with the most affected area being the Caribbean island of Aruba, which recorded 187 days of extreme heat, 45 more than expected in the absence of climate change. The study comes after a record-breaking year for global temperatures, with 2024 being the hottest year on record, surpassing 2023, and January 2023 being the hottest January ever recorded. The global temperature has risen by 1.3 degrees Celsius above pre-industrial levels, with 2024 alone exceeding the 1.5 degree Celsius threshold set by the Paris Agreement. The researchers emphasize the importance of early warning systems, public awareness, and city-specific climate action plans. They also highlight the need to improve building design, including shading and ventilation, and to adjust behaviors, such as avoiding strenuous activities during peak heat.
+Original language: ar
+Publish date: May 31, 2025 10:30 AM
+Source:[صدى البلد](https://www.elbalad.news/6591072)
+
+**Summer 2025 forecast calls for 'overwhelmingly above normal' heat starting in June**
+The National Oceanic and Atmospheric Administration's (NOAA) Climate Prediction Center has forecast an 'overwhelmingly above normal' heat for the summer of 2025, starting in June. According to Johnna Infanti, a meteorologist for NOAA's Climate Prediction Center, model guidance indicates that the U.S. and most of Alaska will experience hotter-than-normal temperatures. The hottest temperatures are expected in the West, Southwest, Florida, and New England. The summer forecast also calls for an overall hotter and drier season, with below-normal precipitation in the Northwest, Northern Rockies, and Great Plains, and drought persisting or expanding in these regions. The Eastern U.S. is expected to see a wetter summer, including drought relief later in June. Additionally, parts of the nation have a greater likelihood of significant wildfires, particularly in the coastal Southeast, central Texas, the Four Corners, and parts of California and the Pacific Northwest in June, and in Hawaii, the Southern Plains, and parts of the Great Basin, California, and the Northwest in July and August.
+Original language: en
+Publish date: May 31, 2025 10:00 AM
+Source:[USA Today](https://www.usatoday.com/story/news/weather/2025/05/31/summer-2025-heat-forecast/83942266007/)
+
+**Climate Predictions Show Temperatures Expected to Remain at or Near Record Levels in Coming 5 Years**
+A recent report by the World Meteorological Organization (WMO) predicts that there is an 80% chance that at least one year between 2025 and 2029 will be warmer than the current warmest year on record (2024). Additionally, there is an 86% chance that at least one year will be more than 1.5°C above the pre-industrial level. The report also forecasts a 70% chance that the five-year average warming for 2025-2029 will be more than 1.5°C. WMO Deputy Secretary-General Ko Barrett stated, 'Unfortunately, this WMO report provides no sign of respite over the coming years, and this means that there will be a growing negative impact on our economies, our daily lives, our ecosystems and our planet.' The report also warns that every additional fraction of a degree of warming drives more harmful heatwaves, extreme rainfall events, intense droughts, melting of ice sheets, sea ice, and glaciers, heating of the ocean, and rising sea levels.
+Original language: en
+Publish date: May 29, 2025 08:27 AM
+Source:[human-wrongs-watch.net](https://human-wrongs-watch.net/2025/05/29/climate-predictions-show-temperatures-expected-to-remain-at-or-near-record-levels-in-coming-5-years/)
+
+**NOAA Predicts Record-Breaking Summer Heat in the US**
+The National Oceanic and Atmospheric Administration (NOAA) predicts that the summer months of 2025 will be the hottest ever recorded in the United States. However, experts are concerned that widespread cuts to personnel and reduced funding for federal science, forecasting resources, and disaster response agencies will hinder efforts to ensure public safety. According to Dr. 'It's like walking in the mud,' said Dr. 'The heat can compromise our brain's ability to think clearly, affecting executive functions such as decision-making, inhibition, and task sequencing.' Dr. 'Heat stress can impact learning for students and productivity for employees, leaving nothing untouched, really.' The burden of public awareness on extreme weather phenomena, including heat, now falls on state and local officials, university staff, and non-profit organizations, as the federal agencies, such as the NOAA, are operating at reduced capacity due to staff shortages.
+Original language: it
+Publish date: May 27, 2025 01:50 PM
+Source:[meteoweb.eu](https://www.meteoweb.eu/2025/05/meteo-usa-verso-estate-caldo-estremo-previsioni-noaa/1001795964/)
+
+**2025 may be second-warmest year on Earth, just behind 2024**
+According to the National Oceanic and Atmospheric Administration (NOAA), 2025 has a 39% chance of being the second-warmest year on record, behind 2024, and a 3% chance of being the warmest year on record. The first three months of 2025 were the second-warmest Q1 recorded, with the global average temperature for April 2025 being 1.08 degrees Fahrenheit above average. A heat dome is expected to persist, keeping temperatures 15 to 20 degrees above average, and the National Weather Service has issued heat advisories for areas in Texas. The Centers for Disease Control and Prevention advises residents to take precautions to prevent heat exhaustion or heat stroke, such as wearing light clothing, drinking lots of water, and avoiding exertion outside. As explained by William Gallus, professor of atmospheric science at Iowa State University, 'The heat dome can stretch over several states and linger for days to weeks, leaving the people, crops and animals below to suffer through stagnant, hot air that can feel like an oven.'
+Original language: en
+Publish date: May 18, 2025 10:35 AM
+Source:[USA Today](https://www.usatoday.com/story/graphics/2025/05/18/temperatures-rise-heat-dome-early-summer-2025/83668362007/)
+
+**World hit by 'spiralling weather and climate impacts' in 2024**
+The World Meteorological Organisation's (WMO) latest report confirms that 2024 was the hottest year on record in 175 years of observations, with atmospheric concentrations of CO2 at the highest levels in 800,000 years. The report also states that globally, each of the past 10 years were individually the ten warmest on record. The WMO says it's still possible to keep global average temperatures to within 1.5 degrees, but 'spiralling weather and climate impacts' are now being seen as the planet heats up. The report found that at least 152 unprecedented extreme weather events took place globally in 2024, leading to the highest number of new displacements from extreme weather seen in the last 16 years. UK Met Office chief scientist, Professor Stephen Belcher, says, 'The latest planetary health check tells us that Earth is profoundly ill. Many of the vital signs are sounding alarms.' WMO secretary-general Celeste Saulo adds, 'Without serious efforts to heed the warnings, extreme weather events - such as drought, heatwaves and flooding - will continue to worsen.' 
+Original language: en
+Publish date: March 19, 2025 09:59 AM
+Source:[Euronews English](https://www.euronews.com/green/2025/03/19/nearly-half-of-last-years-unprecedented-weather-events-were-in-europe-wmo-data-shows)
+
+**Global Warming Accelerates: January 2025 Sets Record for Hottest Month Ever**
+According to the latest data, January 2025 has become the hottest January on record, with a global average temperature 1.7°C higher than pre-industrial levels. Despite the expected cooling effect of La Niña, the global warming trend has overwhelmed natural climate variability. Scientists are concerned that extreme weather events will continue to worsen. The NOAA and ECMWF data show that the global ocean surface temperature remains above historical averages, indicating that the Earth continues to warm, with no signs of cooling. The rapid increase in ocean warming has led to changes in global climate patterns, affecting wind patterns, precipitation, and even exacerbating extreme weather events. Additionally, CO2 concentrations in the atmosphere continue to rise, with no signs of slowing down. Scientists point out that the reduction in air pollution has led to a 'climate feedback effect' change, which has contributed to the acceleration of global warming. If left unchecked, the global warming trend will continue to worsen, with more frequent and severe extreme weather events, threatening global food security and ecosystem stability. Scientists warn that if we do not take immediate action to reduce greenhouse gas emissions, the future will be marked by more frequent and severe heatwaves, droughts, and storms. 
+Original language: zh
+Publish date: February 18, 2025 02:50 AM
+Source:[三立新聞](https://www.setn.com/News.aspx?NewsID=1610320)
+
+**Scientists predict 2025 will be the hottest year on record - Khaama Press**
+Scientists predict that 2025 will be the hottest year on record, according to a report by 'New Scientist' magazine. January 2025 was the warmest January ever recorded, with temperatures 1.75°C higher than the average from 1850 to 1900. Climatic scientists had expected the trend of global warming to subside in 2025, but instead, global temperatures have continued to rise. Scientists warn that this unprecedented rise in global temperatures is alarming and emphasize the need to combat global warming. As the world faces increasingly severe environmental, social, and economic consequences, scientists and policymakers must work together to mitigate the impact of climate change and take immediate steps to reduce global warming, as stated by scientists. 'The continuing rise in global temperatures highlights the urgent need for effective climate action,' they said. 
+Original language: en
+Publish date: February 17, 2025 03:54 PM
+Source:[The Khaama Press News Agency](https://www.khaama.com/scientists-predict-2025-will-be-the-hottest-year-on-record/)
+
+**Global heat record shattered. January 2025 was the hottest ever | Today News**
+According to climate data compiled by major agencies, including NOAA, NASA, and the European Union's Copernicus Service, January 2025 was the hottest month on record. Copernicus climate expert Samantha Burgess described the findings as 'surprising,' given the cooling effect of La Niña conditions in the tropical Pacific. Despite this, temperatures continued to rise, making January 2025 another record-breaking month in a trend of accelerating global warming observed over the last two years.
+Original language: en
+Publish date: February 08, 2025 08:04 PM
+Source:[mint](https://www.livemint.com/news/world/global-heat-record-shattered-january-2025-was-the-hottest-ever-11739042345204.html)
+
+**Earth Records Warmest First Quarter Since Temperature Records Began**
+According to the NOAA's historical temperature series, the first quarter of 2024 was the warmest on record, with an average temperature 1.34 degrees above the 20th century average of 12.6 degrees. There is a 61% chance that 2024 will be the warmest year on record and a 100% chance that it will be among the top five. The first quarter of 2024 was the warmest on record for both the Northern and Southern Hemispheres. The month of April was the warmest on record for the planet, with an average temperature 1.32 degrees above the 20th century average of 13.7 degrees. This was 0.18 degrees warmer than April 2020, which previously held the record. The planet has now experienced 11 consecutive months with record-breaking heat on land and 13 consecutive months with record-breaking heat in the oceans. The heat records covered 14.7% of the planet's surface in April, more than double the second-highest value in April (7.1% in 2016) and the second-largest global coverage since records began in 1951, behind only September 2023 (15.0%).
+Original language: es
+Publish date: May 14, 2024 08:21 PM
+Source:[ondacero.es](https://www.ondacero.es/noticias/medio-ambiente/tierra-registra-primer-cuatrimestre-mas-calido-que-hay-registros_202405146643aba069f85800013b8390.html)
+
+</Asknews_articles>
+
+
+Forecaster_1 step 1 output:
+Analysis:
+
+**(a) Source Analysis:**
+
+The sources provide a mix of authoritative data and expert analysis. The NOAA Climate.gov summaries (May and August 2024) represent official government climate data with specific temperature anomalies and rankings. The Berkeley Earth 2024 report offers independent temperature analysis with a specific forecast that 2025 will be "moderately cooler" than 2024, authored by Robert Rohde, a recognized climate scientist. The NCEI technical documentation explains NOAA's methodology for the exact dataset that will determine this question's outcome.
+
+The ABC News article and Journalists Resource piece provide context on recent warming trends but mix factual data with speculation about causes. Key factual elements include: May 2024 was the warmest May on record at +1.18°C above the 20th-century average, exceeding the previous record (May 2020) by 0.18°C, and there was a 15-month streak of record global temperatures from June 2023-August 2024.
+
+Expert opinion from Berkeley Earth specifically predicts 2025 will be "moderately cooler" than 2024, which directly informs expectations for May 2025.
+
+**(b) Reference Class Analysis:**
+
+Three relevant reference classes emerge:
+1. **Historical May temperature records**: Frequency of consecutive May records or records following exceptional years
+2. **Recent unprecedented warming streak**: The 15-month record streak suggests exceptional momentum 
+3. **Year-over-year temperature transitions**: How individual months behave when annual temperatures decline
+
+The most suitable reference class combines elements 1 and 3: examining how May temperatures behave in years predicted to be cooler than record-setting previous years, while considering the historical rarity of consecutive May records.
+
+**(c) Timeframe Analysis:**
+
+May 2025 has already occurred (current date: June 2, 2025), but NOAA has not yet released the official ranking. The prediction horizon is immediate - we're awaiting data analysis rather than forecasting future weather.
+
+Historical patterns show May 2024 broke May 2020's record after a 4-year gap, suggesting consecutive May records are relatively uncommon. The 0.18°C margin by which May 2024 exceeded the previous record represents a substantial gap that would require significant warming to overcome.
+
+**(d) Justification:**
+
+The convergence of several factors suggests May 2025 is unlikely to exceed May 2024's record:
+
+1. **Expert forecast**: Berkeley Earth's "moderately cooler" 2025 prediction directly implies individual months, including May, are expected to be cooler than their 2024 counterparts.
+
+2. **Magnitude of required warming**: May 2024's +1.18°C anomaly exceeded the previous record by 0.18°C - a substantial margin requiring exceptional conditions to surpass.
+
+3. **Historical precedent**: Consecutive May records appear rare in the temperature record, with May 2024 breaking a 4-year-old record from 2020.
+
+4. **Climate transition**: While 2024 benefited from El Niño effects, volcanic water vapor, and reduced aerosols, these factors may be diminishing in 2025.
+
+However, the recent 15-month record streak demonstrates unprecedented warming momentum, and natural variability could still produce exceptional warming in individual months even during generally cooler years.
+
+**Outside View Calibration:**
+
+Berkeley Earth's expert prediction that 2025 will be "moderately cooler" than 2024 provides the strongest signal for calibration. "Moderately cooler" suggests a meaningful but not dramatic reduction in temperatures. Given that May 2024 set a substantial record (+0.18°C above previous), and considering the historical rarity of consecutive May records, the probability should be relatively low.
+
+The expert prediction is specific and from a credible source (Berkeley Earth), providing a strong anchor. While the unprecedented recent warming streak adds some upward pressure to the probability, the combination of expert forecast, required warming magnitude, and historical patterns argues for a probability well below 50%.
+
+Considering the confidence level of the expert prediction and the substantial margin May 2024 achieved, but acknowledging the possibility of exceptional natural variability, I calibrate toward the lower end of the probability spectrum.
+
+**Outside View Prediction:** 
+23%
+
+Forecaster_2 step 1 output:
+Analysis:
+
+**(a) Source Analysis:**
+
+The sources provide high-quality factual data from authoritative institutions:
+
+- **NOAA Climate at a Glance technical documentation**: Purely methodological information about temperature anomaly calculations - factual, no opinions.
+
+- **NOAA May 2024 Global Climate Summary**: Official data showing May 2024 set a new record at +1.18°C above 20th-century average, exceeding May 2020's previous record by 0.18°C. This represents 48 consecutive Mays above average. Factual, authoritative data.
+
+- **Berkeley Earth 2024 Report**: Academic source with expert analysis. Key factual data: 2024 was warmest year on record (+1.62°C above 1850-1900). Contains expert opinion from Robert Rohde projecting 2025 will be "moderately cooler" than 2024, likely ranking ~3rd warmest year - this is a credible expert forecast.
+
+- **NOAA August 2024 Summary**: Shows the 15-consecutive month record streak (June 2023-August 2024) and continued exceptional warming. Factual data from authoritative source.
+
+- **Expert opinions**: Andrew Dessler (Texas A&M) provides the perspective that record-breaking will continue, while Carlo Buontempo (Copernicus) emphasizes the steady greenhouse gas increase. Both are identifiable experts from credible institutions.
+
+**(b) Reference Class Analysis:**
+
+Possible reference classes:
+1. All May temperature records since 1880
+2. Recent unprecedented warming period (2023-2024) 
+3. Temperature patterns during El Niño to neutral/La Niña transitions
+4. Monthly records following record-breaking years
+
+The most suitable reference class is **#2 - Recent unprecedented warming period** because we're in an extraordinary climate phase with 15 consecutive monthly records through August 2024, with 2024 being the warmest year on record. This recent pattern is more relevant than long-term historical averages given the accelerating warming trend.
+
+**(c) Timeframe Analysis:**
+
+The prediction timeframe is immediate - May 2025 has already occurred (current date: June 2, 2025), with NOAA data likely available within days. Historical patterns show:
+- May 2024 broke May 2020's record by only 0.18°C
+- Unprecedented 15-month consecutive record streak through August 2024
+- 2024 set annual temperature record
+- Transition from El Niño conditions (which boosted 2024) to neutral/La Niña expected in 2025
+
+**(d) Justification:**
+
+The analysis reveals competing factors:
+
+**Supporting a new record:** Continued greenhouse gas increases, climate system momentum, and the relatively small margin (0.18°C) needed to exceed May 2024.
+
+**Against a new record:** The Berkeley Earth expert specifically forecasted 2025 being "moderately cooler" than 2024 overall. Additionally, the transition from El Niño conditions that boosted 2024 temperatures to neutral/La Niña conditions creates less favorable circumstances. The end of the 15-month record streak after August 2024 suggests the peak warming period may have passed.
+
+The expert prediction of a cooler 2025 is particularly significant, as it comes from a credible forecaster analyzing the same data systems NOAA uses. If the overall year is cooler, individual months like May would likely follow this pattern.
+
+**Outside view calibration:**
+
+The key anchoring point is the Berkeley Earth expert prediction that 2025 will be "moderately cooler" than 2024. This directly suggests May 2025 would likely not exceed May 2024's record. However, "moderately cooler" for an annual average doesn't preclude individual months from setting records, especially given continued underlying warming.
+
+The 0.18°C margin above the previous record is relatively small, meaning natural variability could potentially push May 2025 above this threshold even in a generally cooler year. However, the transition away from El Niño conditions that contributed to 2024's extreme temperatures reduces this likelihood.
+
+Considering the expert forecast, changing ENSO conditions, and the end of the record streak, while acknowledging continued greenhouse warming, I estimate approximately a 25-30% probability that May 2025 sets a new record.
+
+**Outside View Prediction:**
+28%
+
+Forecaster_3 step 1 output:
+Analysis:
+
+1. Source analysis  
+   a. NOAA Global Climate at a Glance (NCEI) – Official monthly global land-and-ocean surface temperature anomaly series since 1850. High data quality; low uncertainty on ranking of months. Factual; no opinions.  
+   b. NOAA Climate.gov monthly summaries (May 2024, Aug 2024) – Provide context on recent record months, ENSO conditions, and anomaly magnitudes. High quality; facts separated from expert commentary.  
+   c. Berkeley Earth 2024 report – Instrumental record to 2024, with an independent anomaly estimate and projection that 2025 will be cooler than 2024. Credible methodology; uncertainty ±0.06 °C on single-year value.  
+   d. Journalists’ Resource article on 2023 warmth – Explores drivers behind 2023’s unexpected warmth (volcanic water vapor, reduced aerosols) and notes model under-predictability. Good for understanding natural variability but less directly tied to monthly records.  
+   e. ABC News report on 2024 annual record – Reinforces the role of ENSO and greenhouse-gas trend; experts’ odds for annual records (e.g., NASA’s 20% for 2023) but no direct monthly forecasts.  
+
+2. Reference-class analysis  
+   Possible classes:  
+   – All months (Jan–Dec) globally. Too broad; each month has different climatology and variability.  
+   – All Mays globally (1850–2024). Clean climate-month class; incorporates seasonality and month-specific variability. Most suitable.  
+   – Peak ENSO months (e.g., El Niño Mays vs. La Niña/neutral Mays). Useful to adjust inside view but too narrow for pure base rate.  
+
+   Chosen reference class: May global land-ocean anomalies, 1850–2024.
+
+3. Timeframe analysis  
+   – Prediction is for May 2025; resolution mid-June 2025 once NOAA publishes its ranking.  
+   – Historical warming trend: ~0.11 °C per decade in May anomalies over past 50 years.  
+   – Natural variability (monthly) ±0.10 °C (1σ).  
+   – ENSO context: CPC projects La Niña likely through winter 2024–25, decaying to neutral by spring. May 2025 likely ENSO-neutral, with no El Niño boost.
+
+4. Historical pattern of May records  
+   – From 1850–1970: May record broken infrequently (∼1 per 15 years).  
+   – From 1970–2000: warming trend begins; ∼3 new records in 30 years (10%).  
+   – From 2000–2024: four new May records in 24 years (17% frequency), concentrated in 2016, 2020, 2024.  
+   – In the past 24 Mays, 4 were new records ⇒ 4/24 ≈17%.  
+
+5. Justification for outside view  
+   – Base rate from reference class (May records in 2001–2024): ~17%.  
+   – Trend effect: continued upward drift increases chance modestly (+3 points).  
+   – ENSO-neutral / near La Niña in early 2025 reduces chance (–5 points).  
+   – Berkeley Earth’s view that 2025 will cool relative to 2024 suggests record is not “inevitable,” so no upward adjustment beyond trend.  
+
+Outside view calibration:
+
+   • Pure reference-class rate (recent 24 Mays): ~17%.  
+   • Trend adjustment: +3 → 20%.  
+   • ENSO adjustment: –5 → 15%.  
+
+   Round to reflect remaining uncertainty: 15%.
+
+Outside View Prediction:
+
+   There is a 15% chance that NOAA will report May 2025 as the hottest May on record.
+
+Forecaster_4 step 1 output:
+Analysis:
+
+1. Source analysis  
+   • NOAA Climate at a Glance Global Time Series (NCEI): Describes the data sources (GHCN-M land, ERSST ocean), baselines, coverage since 1850, and API access. High‐quality primary data methodology; facts about how temperature anomalies are constructed.  
+   • NOAA Climate.gov “Global Climate Summary for May 2024”: Reports May 2024 as the warmest May on record (1.18 °C above 20th-century mean), with hemispheric and regional details, spatial anomaly maps, and ENSO context (neutral to weak La Niña). Considered highly reliable for the May 2024 anomaly and patterns; delineates factual statistics vs. general descriptions of heat waves or precipitation.  
+   • Berkeley Earth “Global Temperature Report for 2024”: An independent data set showing 2024 as the warmest year (+1.62 °C above 1850–1900), with uncertainty bounds (±0.06 °C), attribution to greenhouse gases, minor contributions from aerosols and water vapor, and a forecast that 2025 will be “moderately cooler,” likely around the 3rd warmest year. Reliable, though methodological differences vs. NOAA; uncertainty explicitly quantified.  
+   • JournalistsResource.org “Warming 2023”: Reviews why 2023 surprised scientists (0.2 °C overshoot vs. models), discusses La Niña background, volcanic water-vapor injection, aerosol reductions, and expert odds-making. Identifies opinions (e.g., Gavin Schmidt’s 1-in-5 odds for 2023 record) vs. the factual temperature overshoot. Medium reliability; good for context on model surprises but less directly about May anomalies.  
+   • NOAA Climate.gov “Global Climate Summary for August 2024”: Documents August 2024 as the warmest August on record, ENSO-neutral conditions, and a projected 71% chance of La Niña in Sep–Nov 2024 (likely into early 2025). High-quality, demonstrating how ENSO can modulate monthly anomalies.  
+   • ABC News “Scientists Shocked…Hotter 2023”: Highlights 2024 surpassing 1.5 °C monthly averages, the role of El Niño, greenhouse gas records, aerosol trends, and expert quotes. Reliable for year-scale drivers; month-by-month nuance limited.  
+   • Perplexity failure: No direct additional data; we rely on NOAA and Berkeley Earth primary sources.
+
+2. Reference-class analysis  
+   Possible reference classes:  
+   a) All global monthly land+ocean temperature anomalies since 1850 (too broad; includes low-signal early period).  
+   b) All May anomalies since 1880 (directly analogous but small sample: ~145 data points, rising trend).  
+   c) Recent May anomalies since 2000 or 2010 (focus on modern trend and ENSO variability; ~15–25 data points).  
+   d) All monthly records in recent 10 years (good for understanding record frequency, but blends months).  
+   The best reference class is “May anomalies since 2010,” because it captures the accelerated warming trend, recent ENSO variability, and direct comparators to a May 2025 forecast.
+
+3. Timeframe analysis  
+   • Resolution in roughly 1 month (NOAA publishes May global ranking in early July 2025).  
+   • Historical pattern in our reference class (2010–2024): 3 of 15 Mays were record‐breaking (2016, 2020, 2024) → raw frequency 20%.  
+   • Warming trend adds a few hundredths of a degree per year (~0.01–0.02 °C), raising the baseline; ENSO in May 2025 likely neutral or weak La Niña, which would modestly depress anomalies by ~0.05–0.10 °C versus trend alone.
+
+4. Justification  
+   • Baseline (outside view) frequency of record May in 2010–2024 ≈20%.  
+   • Long-term warming adds ~0.01 °C to May anomalies from 2024 to 2025; without ENSO effect, this would push us modestly above the 2024 record (1.18 °C).  
+   • However, CPC’s La Niña projection into early 2025 implies May anomalies may be slightly below trend. A −0.05 °C ENSO adjustment brings expected May 2025 anomaly on par with, or just below, the 2024 record.  
+   • Monthly variability (σ≈0.15 °C) means that even after trend+ENSO, there remains substantial overlap with the record threshold.  
+   • Bloomberg and Berkeley Earth forecasts that 2025 will be cooler than 2024 at the annual scale—ranking about 3rd warmest—underscore the plausibility that some months (including May) may not top 2024’s extreme value.  
+   • Taken together, the record‐breaking probability is materially above a pure “chance” level (1/145≈0.7%) but well below coin-flip odds because the bar is so high and negative ENSO is likely.  
+
+Outside view calibration:  
+   • Reference-class frequency ≈20%.  
+   • Trend boost raises probability by perhaps 5–10 points; La Niña drag reduces it by ~5 points.  
+   • Monthly noise means the event is far from certain even if the expectation sits near the record threshold.  
+   • Annual-average forecasts (3rd warmest year) bias us downward: a record May requires May to outperform not only trend but also year-long ranking.  
+   • Balancing these adjustments yields an outside-view probability of roughly 25%.
+
+Outside View Prediction:  
+There is a 25% chance that NOAA will report May 2025 as the hottest May on record.
+
+Forecaster_5 step 1 output:
+Analysis:
+
+(a) Source analysis  
+• NOAA “Climate at a Glance | Global Time Series” – Primary data set that will settle the question.  Factual, methodologically transparent, high‐quality.  
+• NOAA “Global climate summary for May 2024” – Official, peer-reviewed summary of last May’s conditions.  Facts (numbers, rankings) are reliable; the short causal remarks about El Niño etc. are informed expert opinion.  
+• Berkeley Earth 2024 annual report – Independent research group that closely tracks NOAA.  Quantitative statements are data-driven; forward look (“2025 moderately cooler”) is expert opinion but still credible.  
+• Journalist’s Resource & ABC News compilations – Mostly secondary summarising of agency data plus quotations.  Factual temperature numbers trace back to NOAA/NASA; quoted expert comments (e.g., Gavin Schmidt) are valued.  Narrative prose (“scientists puzzled…”) is journalistic opinion.  
+• August 2024 NOAA summary – Same stature as May 2024 summary; confirms rapid warming then impending La Niña.  
+• Perplexity report – Failed query, therefore offers no additional data.
+
+(b) Reference class analysis  
+Candidates  
+1. “All calendar months worldwide since 1850” – 175 years × 12 months = ≈2100 events.  Too broad; ENSO phases, seasonality differ.  
+2. “Global Mays (land+ocean) 1850-2024” – 175 events, directly matches the question.  Preferred.  
+3. “Global Mays during the satellite/SST-dense era (1979-2024)” – 46 events; matches the modern data regime but small N.  
+4. “Years immediately following a record May” – About 10–15 events; very small N but most germane to conditional probability.
+
+Selected reference class: #2 for baseline frequency; #4 for conditional adjustment.
+
+Empirical counts (using NOAA series):  
+• Out of 175 Mays, 19 became a new all-time warm record at the time they occurred ≈ 11% base rate.  
+• In the 46 modern-era Mays (1979-2024) 13 set new records ≈ 28% base rate → reflects accelerated warming.  
+• Of the 13 modern-era record Mays, only one was followed by another record the very next year → conditional P(record | previous year record) ≈ 1/13 ≈ 8%.
+
+(c) Timeframe analysis  
+Question will resolve in ≈ 10–15 days (NOAA usually publishes May global ranking around 10–15 June).  A one-year interval (May 2024 → May 2025) is the relevant gap.  Historically, ENSO shifts from El Niño to La Niña within that span usually cool the globe by ~0.05–0.10 °C for the target month.
+
+(d) Justification for outside-view probability  
+1. Long-term warming means record Mays have become common (28% in modern era).  
+2. However, breaking a record that was itself a large jump (May 2024 was +0.18 °C above prior record) is harder; conditional base rate after a record is only ~8%.  
+3. Climate drivers: 2025 is expected to be “moderately cooler” (Berkeley Earth) with La Niña probability > 70% beginning late 2024; the lagged cooling effect usually peaks in boreal winter but starts to be felt by boreal spring.  That nudges probability down relative to unconditional modern-era 28%.  
+4. There is no market or expert consensus figure available yet for May 2025 specifically, so no anchoring point.  
+5. Time until resolution is short; we have no inside data in this outside-view exercise, so stochastic uncertainty remains high but skewed toward “not a record.”
+
+Combining:  
+• Start with modern-era unconditional 28%.  
+• Apply −15 ppt penalty for the “record-after-record” situation (to approximate the 8% conditional rate but not drive probability as low as 8% because of unprecedented ocean warmth and other unmodelled forcings).  
+• Net ≈ 13%.  
+• Round to nearest 1 % to respect calibration philosophy.
+
+Outside view calibration:
+The figure is anchored to the empirical conditional rate (≈8 %) but nudged upward (to 13 %) to acknowledge accelerating long-term warming and record-high ocean heat content that could partly offset La Niña cooling.  No further adjustments are applied because no high-quality probabilistic estimate from experts or markets is available.
+
+Outside View Prediction:
+There is a 13 % chance that NOAA will report May 2025 as the warmest May on record.
+
+Final predictions: [35.0, 32.0, 20.0, 25.0, 18.0]
+Result: 0.23714285714285716
+=== Forecaster 1 ===
+Output:
+Analysis:
+
+**(a) Source Analysis:**
+
+The sources include high-quality climate data from authoritative agencies:
+
+**Authoritative sources:**
+- NOAA/NCEI climate reports (January, April 2025) - official US climate data with specific temperature anomalies
+- WMO reports (February 2025) - international climate organization data showing January 2025 as warmest January on record
+- Copernicus Climate Change Service data - European climate monitoring showing consistent warming
+- NOAA Climate.gov ENSO updates (May 2025) - official ENSO status reporting neutral conditions
+
+**Current news sources:**
+- Multiple WMO reports from late May/June 2025 forecasting continued warming
+- NOAA summer 2025 forecasts predicting "overwhelmingly above normal" heat
+- Various climate analyses, mostly focused on long-term trends rather than specific May 2025 data
+
+**Key factual information identified:**
+- January 2025: warmest January on record (+1.75°C above pre-industrial) despite La Niña
+- April 2025: second-warmest April on record, only 0.07°C cooler than April 2024
+- January-April 2025: second-warmest four-month period on record
+- ENSO transitioned from weak La Niña to neutral by April/May 2025
+
+**Notable absence:** Despite extensive news coverage of climate records, no articles specifically announce NOAA's May 2025 ranking, which is potentially significant since record announcements typically generate substantial media coverage.
+
+**(b) Evidence Analysis:**
+
+**Strong evidence:**
+- January 2025 record despite La Niña cooling influence demonstrates exceptional warming momentum
+- April 2025 tracking within 0.07°C of the April 2024 record shows 2025 maintaining near-record levels
+- Multiple independent sources (NOAA, WMO, Copernicus) confirming continued warming trend
+
+**Moderate evidence:**
+- ENSO transition from La Niña to neutral would remove cooling influence specifically beneficial for May temperatures
+- WMO's June 2025 forecasts showing 80% chance of breaking temperature records in coming years suggests continued momentum
+
+**Weak evidence pointing against:**
+- Absence of specific May 2025 record announcements in early June news coverage, despite extensive climate reporting
+- Historical rarity of consecutive monthly records
+
+**(c) Timeframe Analysis:**
+
+May 2025 has occurred (current date: June 2, 2025). This is a nowcast awaiting official NOAA data release rather than a weather forecast. If this timeframe were halved (mid-May), confidence would be lower due to weather volatility. If doubled (August), confidence would be higher as official data would be available.
+
+**(d) Justification:**
+
+The evidence suggests a significant upward revision from my 23% outside view prediction. The Berkeley Earth forecast of a "moderately cooler" 2025 appears incorrect - instead, 2025 is tracking very close to 2024's exceptional levels.
+
+**Factors supporting a record:**
+- Exceptional warming momentum: January 2025 record despite La Niña
+- Near-miss in April: Only 0.07°C behind April 2024 record
+- ENSO transition: Shift from cooling La Niña to neutral conditions beneficial for May
+- Consistent pattern: Multiple agencies confirming sustained warming
+
+**Factors against a record:**
+- Absence of record announcements: Major temperature records typically generate immediate, widespread media coverage
+- Historical patterns: Consecutive monthly records are uncommon
+- Required magnitude: May 2024 set a substantial record (+1.18°C above 20th-century average)
+
+The most compelling factor is the absence of specific May 2025 record announcements in extensive climate news coverage. Given the media attention on climate records and the timing (early June), this suggests May 2025 likely did not break the record, despite tracking very close.
+
+**Probability calibration:**
+
+The strong warming momentum through early 2025 and favorable ENSO conditions suggest a much higher probability than my 23% outside view. However, the absence of record announcements in early June climate coverage - when such news would be prominently featured - provides significant evidence against a record.
+
+Balancing the exceptional warming momentum against the telling absence of record announcements, I calibrate to 35%.
+
+**Checklist:**
+1. Question: Will NOAA report May 2025 as hottest May on record globally (land+ocean)?
+2. Outside view was 23% based on Berkeley Earth's "moderately cooler" 2025 forecast, but 2025 is tracking much closer to 2024 records than anticipated
+3. 35 out of 100 times, May 2025 breaks the May temperature record - this reflects strong warming momentum offset by absence of record announcements
+4. Key evidence: January 2025 record, April within 0.07°C of record, ENSO transition to neutral, no May record announcements in news
+5. Blind spot: NOAA may announce the record later than expected, or preliminary data might be revised upward
+6. Status quo: Climate records have been frequent recently, but consecutive monthly records remain uncommon
+
+**Probability: 35%**
+Predicted Probability: 35.0%
+
+=== Forecaster 2 ===
+Output:
+Analysis:
+
+**(a) Source analysis:**
+
+The sources include multiple high-quality, official climate reports and various news articles:
+
+**High-quality factual sources:**
+- WMO reports (Feb 2025): Official World Meteorological Organization data showing January 2025 was warmest January on record at 1.75°C above pre-industrial levels
+- Copernicus Climate Service reports (Feb 2025): Independent confirmation of January 2025 record, with detailed methodology from ERA5 dataset
+- NOAA Climate.gov and NCEI reports: Official data showing January 2025 warmest January and April 2025 second-warmest April on record
+- NOAA ENSO updates (May 2025): Official transition from La Niña to ENSO-neutral conditions
+
+**Medium-quality sources:**
+- Yale Climate Connections and other climate journalism: Factual reporting on temperature records with expert commentary
+- Various news articles: Mix of factual reporting and opinion, with expert quotes from identifiable climate scientists
+
+**Key limitation:** No sources contain specific NOAA data on May 2025 global temperatures yet, despite May having ended.
+
+**(b) Evidence analysis:**
+
+**Strong evidence (warranting large shifts):**
+- Multiple independent sources (NOAA, Copernicus, WMO) confirm January 2025 was warmest January on record
+- NOAA NCEI official data confirms April 2025 was second-warmest April on record
+- Pattern of exceptional warmth despite La Niña cooling influence early in 2025
+- ENSO transition to neutral by May 2025, removing cooling effect
+
+**Moderate evidence:**
+- Consistent expert commentary from identifiable climate scientists about continued warming trajectory
+- Historical pattern showing 2025 following similar trajectory to other record-setting years
+
+**Weak evidence:**
+- General forecasts about 2025-2029 being hottest years (too broad temporal scope)
+- Anecdotal references to regional heat patterns
+
+**(c) Timeframe analysis:**
+
+May 2025 has already occurred (current date June 2, 2025), so this is essentially asking what NOAA will report about data they likely already have. The short timeframe means natural variability is the primary uncertainty, not long-term trends.
+
+If the timeframe were doubled (predicting May 2026), confidence would decrease significantly due to increased uncertainty from ENSO variability and other climate oscillations. If halved (mid-May prediction), confidence would be much higher as partial monthly data would be available.
+
+**(d) Justification:**
+
+The evidence strongly suggests 2025 is following an exceptional warming trajectory that renders the historical 15% base rate potentially too conservative. Key factors:
+
+1. **Unprecedented start to 2025**: January setting absolute records despite La Niña cooling suggests exceptional underlying warming
+2. **Sustained exceptional warmth**: April being second-warmest maintains the pattern through spring
+3. **ENSO transition**: Move from cooling La Niña to neutral conditions by May removes a key cooling influence
+4. **Pattern consistency**: The trajectory mirrors other record-setting years like 2016 and 2023
+
+However, the fact that April was second-warmest (not warmest) suggests the bar remains extremely high, and natural monthly variability could still prevent a May record.
+
+**Probability calibration:**
+
+The outside view of 15% appears too conservative given the exceptional 2025 trajectory. The strong evidence of record January and near-record April, combined with ENSO transition to neutral, suggests significantly higher probability. However, natural variability and the high bar set by previous May records prevent extreme confidence.
+
+Adjusting from 15% base rate:
+- +15 points for exceptional 2025 pattern (strong evidence)
+- +5 points for ENSO neutral transition (moderate evidence)  
+- -3 points for April being "only" second-warmest (suggesting high bar remains)
+
+**Checklist:**
+1. Resolution criteria: NOAA reports May 2025 as hottest May on record in their global rankings
+2. Base rate: 15% from historical May record frequency, significantly adjusted upward
+3. Consistency: 32 out of 100 times, NOAA would report May 2025 as hottest May - reasonable given exceptional 2025 start
+4. Key evidence: January 2025 warmest on record; April 2025 second-warmest; ENSO neutral transition; sustained warming pattern
+5. Blind spot: May could have experienced unusual regional cooling patterns not captured in Jan/Apr data
+6. Status quo: Continued exceptional warming supports higher probability than historical base rate
+
+**Probability: 32%**
+Predicted Probability: 32.0%
+
+=== Forecaster 3 ===
+Output:
+Analysis:
+
+1. Paraphrase  
+We forecast the probability that, when NOAA publishes its Climate at a Glance Global Rankings for May 2025 (land + ocean, global), May 2025 will emerge as the single warmest May since records began (1880–present).
+
+2. Outside-view Base Rate  
+Historically, as global warming accelerates, individual monthly records have become more common—but record-breaking Mays remain rare. Only one May (2024) has held the record in the past two decades. A rough baseline probability for any given May to set a new record in the current climate regime is on the order of 20–25%.
+
+3. Source Analysis  
+a. NOAA May 2024 Global Climate Summary (May 2025): Authoritative NOAA data confirming May 2024 set a new May record by +0.18 °C. Factual.  
+b. Berkeley Earth 2024 Year-End Report (Jan 2025): Peer-reviewed academic source; projects 2025 will be “moderately cooler” than 2024, likely ranking near 3rd warmest year. Credible expert forecast.  
+c. NOAA “Assessing Jan 2025” & WMO/Copernicus Jan 2025 Reports: Both show Jan 2025 was the warmest Jan ever despite La Niña; demonstrates strong underlying warming trend. High credibility.  
+d. NOAA ENSO Update (May 8 2025): ENSO-neutral with only a weak La Niña lean; reduces likelihood of supercharged El Niño-driven warmth. Credible, directly relevant.  
+e. NCEI & Yale April 2025 Reports (May 12 2025): April 2025 was the 2nd-warmest April, slightly cooler than April 2024. Demonstrates 2025’s early months are running just below 2024’s peaks. Reliable.  
+f. Asknews collection (WMO forecasts for 2025–2029): Strong consensus that 2025–29 will rival or exceed 2024; but these are multi-year means rather than month-specific. Useful context, less direct.
+
+4. Evidence Analysis (weighing)  
+Strong evidence (+/–10–15 points):  
+• Berkeley Earth prediction of a cooler 2025 (expert, directly analogous to NOAA metrics).  
+• Structural greenhouse-gas forcing ensures continued long-term warming.  
+
+Moderate evidence (+/–5–10 points):  
+• ENSO-neutral status dampens extra boost from El Niño.  
+• April 2025 ranking (2nd warmest) shows slight pullback from 2024’s record.  
+
+Weak evidence (±<5 points):  
+• WMO multi-year forecast (broad but not month-specific).  
+• Summer 2025 U.S. heat outlook (regional rather than global May).
+
+5. Timeframe Analysis  
+– Resolution arrives in early June 2025, days away.  
+– Shorter horizon (weeks): little chance for new causal shifts; probability stable.  
+– If the timeframe extended (e.g., predicting June 2025 instead), seasonal warming momentum may rise slightly due to summer onset (+5 points).
+
+6. Justification & Inside View Adjustment  
+Outside base rate ~20–25% for “record May” under current warming.  
+Increase factors: ongoing greenhouse-gas warming streak (+5 points).  
+Decrease factors: expert forecast of cooler 2025 (−10 points), ENSO-neutral conditions (−5 points), April 2025 just 2nd-warmest (−3 points).  
+Net adjustment: −13 points from midpoint 22.5% → ~9.5%. But record months can overshoot low forecasts; to avoid over-penalizing, I center near 25% and subtract a moderate 5 points for the strong expert signal.  
+
+Final inside-view probability: ~20%.
+
+Probability calibration  
+I aim to forecast the true chance; a 20% estimate implies May 2025 will set the record in only 1 out of 5 analog years under neutral ENSO, consistent with expert-modeled cooler annual trend. A ±10% swing meaningfully shifts odds (10% → long-shot, 30% → substantial chance), so I place 20% as my best estimate.
+
+Checklist:  
+1. Paraphrase: Forecast whether NOAA’s June 2025 report will list May 2025 as the warmest May on record.  
+2. Base rate: ~20–25% for record monthly temperatures in current warming era.  
+3. Consistency: “20 out of 100 times, May 2025 sets a new record.”  
+4. Top evidence:  
+   • Berkeley Earth ‘2025 cooler’ forecast  
+   • ENSO-neutral reducing extra warming  
+   • April 2025 was only 2nd-warmest  
+   • Continued greenhouse forcing  
+5. Blind-spot: A sudden extreme warming pulse (e.g., rapid Arctic amplification in May) could push temperatures above May 2024.  
+6. Status quo: Global temperature trends change gradually; recent months below 2024’s peaks favor the status quo over another record.
+
+Probability: 20%
+Predicted Probability: 20.0%
+
+=== Forecaster 4 ===
+Output:
+Analysis:
+
+(a) Source analysis  
+• NOAA Climate at a Glance Global Rankings (NOAA‐CAG): Primary dataset (GHCN-M land + ERSST ocean), well‐documented baselines (1850–present), API accessible. Highly reliable for global monthly ranking.  
+• NCEI April 2025 Global Climate Report: Reports April 2025 as the 2nd-warmest April on record (1.22 °C above 20th century mean). Direct NOAA data, strong methodology.  
+• Copernicus January 2025 Bulletin: Confirms January 2025 as warmest January (1.75 °C pre-industrial anomaly). High‐quality reanalysis; corroborates sustained warming trend.  
+• NOAA ENSO Update (May 2025): CPC projects 74% chance of ENSO-neutral through summer. ENSO neutral typically yields no strong monthly boost. Reliable, with clear methodology.  
+• WMO “Global Annual to Decadal Climate Update”: Projects high odds (80%–86%) of record annual warmth by 2029 but not month-specific. Reinforces strong warming trend but less direct for May.  
+
+(b) Evidence analysis  
+Strong evidence (+ large shifts):  
+  - Sustained global warming: 18 of last 19 months >1.5 °C above pre-industrial (Copernicus/NOAA).  
+  - Seven of the ten warmest years on record are the last ten (WMO/NCEI).  
+Moderate evidence (+⁄− moderate shifts):  
+  - ENSO-neutral state likely in May 2025 (NOAA CPC) typically modestly suppresses global anomaly (~−0.05 °C).  
+  - April 2025 ranked 2nd-warmest April, indicating the trend remains near record levels (NCEI/Yale).  
+Weak evidence (small shifts):  
+  - News articles on future 5-year record odds (WMO) support overall trend but not month-specific.  
+  - Anecdotal reports of regional heatwaves are not directly predictive of global monthly mean.  
+
+(c) Timeframe analysis  
+Time until resolution: ~1 month (NOAA publishes May ranking in early July 2025).  
+If timeframe were half (mid-June), little additional data arrives—probability unchanged.  
+If doubled (60 days), some early satellite estimates or interim analyses might firm up expectation, slightly raising confidence by a few points.  
+
+(d) Justification  
+1. Reference-class base rate: Among Mays in 2010–2024, 3 of 15 were record-warm → 20%.  
+2. Trend adjustment: Global warming adds ~0.01–0.02 °C anomaly year-over-year → uplift record probability by ~5–10 points.  
+3. ENSO adjustment: Expected ENSO-neutral in May 2025 likely subtracts ~5 points by moderating the anomaly.  
+4. Monthly volatility: σ≈0.15 °C means considerable overlap with record threshold even if trend+ENSO align at or just below prior record.  
+5. Annual outlook (Berkeley Earth/NOAA): 2025 likely ranks 2nd–3rd warmest year, suggesting some months (including May) may not exceed 2024 peaks.  
+Balancing these yields an inside-view probability ≈25%.  
+
+Probability calibration  
+I predict May 2025 will be hottest May on record slightly more often than 1 in 5, given the strong warming trend offset by ENSO-neutral conditions. A ±10% move materially changes the odds from “unlikely but plausible” to “coin-flip,” conflicting with the moderate buffer from trend and volatility. Thus 25% reflects a balanced inside view.
+
+Checklist:  
+1. Paraphrase: “Will NOAA’s Climate at a Glance rank May 2025 as the warmest May (global land+ocean) in the 1850–2025 record?”  
+2. Outside view base rate: ~20% (2010–2024 May record frequency).  
+3. Consistency: “Out of 100 Mays, 25 are warmest → May 2025 has 25% chance of topping all previous Mays.”  
+4. Top evidence:  
+   • 18/19 months record-warm → strong trend  
+   • April 2025 = 2nd-warmest April  
+   • ENSO-neutral likely → slight drag  
+5. Blind spot: An unexpected El Niño warming surge in May would sharply raise probability.  
+6. Status quo: May anomalies typically follow the established trend; no major shocks expected.
+
+Probability: 25%
+Predicted Probability: 25.0%
+
+=== Forecaster 5 ===
+Output:
+Analysis:
+(a) Source analysis  
+• WMO bulletin (14 Feb 2025) – Primary data compiled from Copernicus/NOAA. Facts on January 2025 record are solid; brief commentary by WMO staff is expert opinion.  
+• Copernicus ERA5 note (14 Feb 2025) – High-quality re-analysis; gives precise January numbers and sea-surface conditions. Largely factual.  
+• NOAA ENSO update (8 May 2025) – Authoritative on Niño-3.4 SSTs and the seasonal forecast. Method transparent; conclusions are expert opinion but based on model consensus.  
+• NOAA/NCEI April 2025 global report (12 May 2025) – This is the same product that will settle the question for May; therefore extremely relevant, factual and methodologically open.  
+• Yale Climate Connections/YCC recap of April (12 May 2025) – Secondary source repeating NOAA/NASA/C3S numbers; good for triangulation.  
+• AskNews pull (various WMO “next five-years will be hot” articles, USA Today summer outlook, etc.) – Largely forward-looking commentary; facts that matter (e.g., “April was 2nd warmest”) come from NOAA and are reliable, the rest is opinion.  
+No credible leak or early estimate of the May 2025 NOAA anomaly is available in the material.
+
+(b) Evidence analysis (strength in brackets)  
+1. NOAA: April 2025 ran 0.07 °C below April 2024, placing second, after a record January. Shows cooling relative to 2024 from Feb–Apr. (Strong)  
+2. ENSO: Ocean-atmosphere now ENSO-neutral with a slight La Niña lean; historically this knocks 0.05–0.10 °C off monthly anomalies compared with El Niño peaks. (Moderate–strong)  
+3. Long-term warming & exceptional ocean heat content persist, pushing anomalies up relative to older years. (Strong – structural)  
+4. Base-rate: In the satellite/SST-dense era (1979-2024) a new record May occurred 28 % of the time; when the preceding May was already a record, the next year topped it only once in 13 tries (≈ 8 %). (Strong historical)  
+5. No market/expert consensus figure to anchor to (Weak).
+
+Net: factors 1, 2, 4 pull probability down; factor 3 pulls up.
+
+(c) Timeframe analysis  
+Outcome known in roughly 10–15 days (NOAA usually posts around 13 June).  
+If lead-time were doubled (≈ 30 days) we’d almost certainly have preliminary ERA5/NOAA numbers, shrinking uncertainty and moving probability toward 0 % or 80 % depending on leaks.  
+If lead-time were halved (≈ 5 days) the likelihood of last-minute intel would similarly tighten the distribution by ~25 %.
+
+(d) Justification and inside-view adjustment  
+Start from outside-view 13 % (record-after-record conditional).  
++4  ppt: extraordinary ocean warmth and still-record January show climate system running “hot.”  
+-2  ppt: April already fell short of 2024 and the Niño → neutral shift should have more effect by May.  
++1  ppt: Small chance that May’s inter-dataset spread favours NOAA (e.g., if 2025 edges 2024 by ≤ 0.01 °C).  
+Final inside-view probability ≈ 16 %. Rounded a bit upward to 18 % to reflect the asymmetric risk that unprecedented warmth surprises to the upside.
+
+Probability calibration
+My inside-view best estimate: there is an 18 % chance that NOAA will rank May 2025 as the warmest May on record.
+
+Checklist:
+1. Paraphrase: “By mid-June 2025 NOAA will declare May 2025 1st-warmest global land-ocean May.”  
+2. Base rate (record-after-record) 13 %.  
+3. “About 18 times in 100, May 2025 would top the NOAA list.”  
+4. Key evidence:  
+   • April 2025 second-warmest, 0.07 °C below 2024.  
+   • ENSO now neutral, historically cools global mean.  
+   • Ocean heat extremely high, lends upside risk.  
+   • Historical 8 % chance of beating last year’s record.  
+5. Blind-spot: Daily ERA5 already shows May 2025 > 2024 but hasn’t been publicised; would make probability too low.  
+6. Status-quo: Record remains May 2024; climatological inertia plus La Niña tilt favour “No.”
+
+Probability: 18%
+Predicted Probability: 18.0%
+-----------------------------------------------
+Question: Will NOAA report that May 2025 is the hottest May on record?
+URL: https://www.metaculus.com/questions/38298/
+Forecast: 0.23714285714285716
+Comment:
+```
+=== Forecaster 1 ===
+Output:
+Analysis:
+
+**(a) Source Analysis:**
+
+The sources include high-quality climate data from authoritative agencies:
+
+**Authoritative sources:**
+- NOAA/NCEI climate reports (January, April 2025) - official US climate data with specific temperature anomalies
+- WMO reports (February 2025) - international climate organization data showing January 2025 as warmest January on record
+- Copernicus Climate Change Service data - European climate monitoring showing consistent warming
+- NOAA Climate.gov ENSO updates (May 2025) - official ENSO status reporting neutral conditions
+
+**Current news sources:**
+- Multiple WMO reports from late May/June 2025 forecasting continued warming
+- NOAA summer 2025 forecasts predicting "overwhelmingly above normal" heat
+- Various climate analyses, mostly focused on long-term trends rather than specific May 2025 data
+
+**Key factual information identified:**
+- January 2025: warmest January on record (+1.75°C above pre-industrial) despite La Niña
+- April 2025: second-warmest April on record, only 0.07°C cooler than April 2024
+- January-April 2025: second-warmest four-month period on record
+- ENSO transitioned from weak La Niña to neutral by April/May 2025
+
+**Notable absence:** Despite extensive news coverage of climate records, no articles specifically announce NOAA's May 2025 ranking, which is potentially significant since record announcements typically generate substantial media coverage.
+
+**(b) Evidence Analysis:**
+
+**Strong evidence:**
+- January 2025 record despite La Niña cooling influence demonstrates exceptional warming momentum
+- April 2025 tracking within 0.07°C of the April 2024 record shows 2025 maintaining near-record levels
+- Multiple independent sources (NOAA, WMO, Copernicus) confirming continued warming trend
+
+**Moderate evidence:**
+- ENSO transition from La Niña to neutral would remove cooling influence specifically beneficial for May temperatures
+- WMO's June 2025 forecasts showing 80% chance of breaking temperature records in coming years suggests continued momentum
+
+**Weak evidence pointing against:**
+- Absence of specific May 2025 record announcements in early June news coverage, despite extensive climate reporting
+- Historical rarity of consecutive monthly records
+
+**(c) Timeframe Analysis:**
+
+May 2025 has occurred (current date: June 2, 2025). This is a nowcast awaiting official NOAA data release rather than a weather forecast. If this timeframe were halved (mid-May), confidence would be lower due to weather volatility. If doubled (August), confidence would be higher as official data would be available.
+
+**(d) Justification:**
+
+The evidence suggests a significant upward revision from my 23% outside view prediction. The Berkeley Earth forecast of a "moderately cooler" 2025 appears incorrect - instead, 2025 is tracking very close to 2024's exceptional levels.
+
+**Factors supporting a record:**
+- Exceptional warming momentum: January 2025 record despite La Niña
+- Near-miss in April: Only 0.07°C behind April 2024 record
+- ENSO transition: Shift from cooling La Niña to neutral conditions beneficial for May
+- Consistent pattern: Multiple agencies confirming sustained warming
+
+**Factors against a record:**
+- Absence of record announcements: Major temperature records typically generate immediate, widespread media coverage
+- Historical patterns: Consecutive monthly records are uncommon
+- Required magnitude: May 2024 set a substantial record (+1.18°C above 20th-century average)
+
+The most compelling factor is the absence of specific May 2025 record announcements in extensive climate news coverage. Given the media attention on climate records and the timing (early June), this suggests May 2025 likely did not break the record, despite tracking very close.
+
+**Probability calibration:**
+
+The strong warming momentum through early 2025 and favorable ENSO conditions suggest a much higher probability than my 23% outside view. However, the absence of record announcements in early June climate coverage - when such news would be prominently featured - provides significant evidence against a record.
+
+Balancing the exceptional warming momentum against the telling absence of record announcements, I calibrate to 35%.
+
+**Checklist:**
+1. Question: Will NOAA report May 2025 as hottest May on record globally (land+ocean)?
+2. Outside view was 23% based on Berkeley Earth's "moderately cooler" 2025 forecast, but 2025 is tracking much closer to 2024 records than anticipated
+3. 35 out of 100 times, May 2025 breaks the May temperature record - this reflects strong warming momentum offset by absence of record announcements
+4. Key evidence: January 2025 record, April within 0.07°C of record, ENSO transition to neutral, no May record announcements in news
+5. Blind spot: NOAA may announce the record later than expected, or preliminary data might be revised upward
+6. Status quo: Climate records have been frequent recently, but consecutive monthly records remain uncommon
+
+**Probability: 35%**
+Predicted Probability: 35.0%
+
+=== Forecaster 2 ===
+Output:
+Analysis:
+
+**(a) Source analysis:**
+
+The sources include multiple high-quality, official climate reports and various news articles:
+
+**High-quality factual sources:**
+- WMO reports (Feb 2025): Official World Meteorological Organization data showing January 2025 was warmest January on record at 1.75°C above pre-industrial levels
+- Copernicus Climate Service reports (Feb 2025): Independent confirmation of January 2025 record, with detailed methodology from ERA5 dataset
+- NOAA Climate.gov and NCEI reports: Official data showing January 2025 warmest January and April 2025 second-warmest April on record
+- NOAA ENSO updates (May 2025): Official transition from La Niña to ENSO-neutral conditions
+
+**Medium-quality sources:**
+- Yale Climate Connections and other climate journalism: Factual reporting on temperature records with expert commentary
+- Various news articles: Mix of factual reporting and opinion, with expert quotes from identifiable climate scientists
+
+**Key limitation:** No sources contain specific NOAA data on May 2025 global temperatures yet, despite May having ended.
+
+**(b) Evidence analysis:**
+
+**Strong evidence (warranting large shifts):**
+- Multiple independent sources (NOAA, Copernicus, WMO) confirm January 2025 was warmest January on record
+- NOAA NCEI official data confirms April 2025 was second-warmest April on record
+- Pattern of exceptional warmth despite La Niña cooling influence early in 2025
+- ENSO transition to neutral by May 2025, removing cooling effect
+
+**Moderate evidence:**
+- Consistent expert commentary from identifiable climate scientists about continued warming trajectory
+- Historical pattern showing 2025 following similar trajectory to other record-setting years
+
+**Weak evidence:**
+- General forecasts about 2025-2029 being hottest years (too broad temporal scope)
+- Anecdotal references to regional heat patterns
+
+**(c) Timeframe analysis:**
+
+May 2025 has already occurred (current date June 2, 2025), so this is essentially asking what NOAA will report about data they likely already have. The short timeframe means natural variability is the primary uncertainty, not long-term trends.
+
+If the timeframe were doubled (predicting May 2026), confidence would decrease significantly due to increased uncertainty from ENSO variability and other climate oscillations. If halved (mid-May prediction), confidence would be much higher as partial monthly data would be available.
+
+**(d) Justification:**
+
+The evidence strongly suggests 2025 is following an exceptional warming trajectory that renders the historical 15% base rate potentially too conservative. Key factors:
+
+1. **Unprecedented start to 2025**: January setting absolute records despite La Niña cooling suggests exceptional underlying warming
+2. **Sustained exceptional warmth**: April being second-warmest maintains the pattern through spring
+3. **ENSO transition**: Move from cooling La Niña to neutral conditions by May removes a key cooling influence
+4. **Pattern consistency**: The trajectory mirrors other record-setting years like 2016 and 2023
+
+However, the fact that April was second-warmest (not warmest) suggests the bar remains extremely high, and natural monthly variability could still prevent a May record.
+
+**Probability calibration:**
+
+The outside view of 15% appears too conservative given the exceptional 2025 trajectory. The strong evidence of record January and near-record April, combined with ENSO transition to neutral, suggests significantly higher probability. However, natural variability and the high bar set by previous May records prevent extreme confidence.
+
+Adjusting from 15% base rate:
+- +15 points for exceptional 2025 pattern (strong evidence)
+- +5 points for ENSO neutral transition (moderate evidence)  
+- -3 points for April being "only" second-warmest (suggesting high bar remains)
+
+**Checklist:**
+1. Resolution criteria: NOAA reports May 2025 as hottest May on record in their global rankings
+2. Base rate: 15% from historical May record frequency, significantly adjusted upward
+3. Consistency: 32 out of 100 times, NOAA would report May 2025 as hottest May - reasonable given exceptional 2025 start
+4. Key evidence: January 2025 warmest on record; April 2025 second-warmest; ENSO neutral transition; sustained warming pattern
+5. Blind spot: May could have experienced unusual regional cooling patterns not captured in Jan/Apr data
+6. Status quo: Continued exceptional warming supports higher probability than historical base rate
+
+**Probability: 32%**
+Predicted Probability: 32.0%
+
+=== Forecaster 3 ===
+Output:
+Analysis:
+
+1. Paraphrase  
+We forecast the probability that, when NOAA publishes its Climate at a Glance Global Rankings for May 2025 (land + ocean, global), May 2025 will emerge as the single warmest May since records began (1880–present).
+
+2. Outside-view Base Rate  
+Historically, as global warming accelerates, individual monthly records have become more common—but record-breaking Mays remain rare. Only one May (2024) has held the record in the past two decades. A rough baseline probability for any given May to set a new record in the current climate regime is on the order of 20–25%.
+
+3. Source Analysis  
+a. NOAA May 2024 Global Climate Summary (May 2025): Authoritative NOAA data confirming May 2024 set a new May record by +0.18 °C. Factual.  
+b. Berkeley Earth 2024 Year-End Report (Jan 2025): Peer-reviewed academic source; projects 2025 will be “moderately cooler” than 2024, likely ranking near 3rd warmest year. Credible expert forecast.  
+c. NOAA “Assessing Jan 2025” & WMO/Copernicus Jan 2025 Reports: Both show Jan 2025 was the warmest Jan ever despite La Niña; demonstrates strong underlying warming trend. High credibility.  
+d. NOAA ENSO Update (May 8 2025): ENSO-neutral with only a weak La Niña lean; reduces likelihood of supercharged El Niño-driven warmth. Credible, directly relevant.  
+e. NCEI & Yale April 2025 Reports (May 12 2025): April 2025 was the 2nd-warmest April, slightly cooler than April 2024. Demonstrates 2025’s early months are running just below 2024’s peaks. Reliable.  
+f. Asknews collection (WMO forecasts for 2025–2029): Strong consensus that 2025–29 will rival or exceed 2024; but these are multi-year means rather than month-specific. Useful context, less direct.
+
+4. Evidence Analysis (weighing)  
+Strong evidence (+/–10–15 points):  
+• Berkeley Earth prediction of a cooler 2025 (expert, directly analogous to NOAA metrics).  
+• Structural greenhouse-gas forcing ensures continued long-term warming.  
+
+Moderate evidence (+/–5–10 points):  
+• ENSO-neutral status dampens extra boost from El Niño.  
+• April 2025 ranking (2nd warmest) shows slight pullback from 2024’s record.  
+
+Weak evidence (±<5 points):  
+• WMO multi-year forecast (broad but not month-specific).  
+• Summer 2025 U.S. heat outlook (regional rather than global May).
+
+5. Timeframe Analysis  
+– Resolution arrives in early June 2025, days away.  
+– Shorter horizon (weeks): little chance for new causal shifts; probability stable.  
+– If the timeframe extended (e.g., predicting June 2025 instead), seasonal warming momentum may rise slightly due to summer onset (+5 points).
+
+6. Justification & Inside View Adjustment  
+Outside base rate ~20–25% for “record May” under current warming.  
+Increase factors: ongoing greenhouse-gas warming streak (+5 points).  
+Decrease factors: expert forecast of cooler 2025 (−10 points), ENSO-neutral conditions (−5 points), April 2025 just 2nd-warmest (−3 points).  
+Net adjustment: −13 points from midpoint 22.5% → ~9.5%. But record months can overshoot low forecasts; to avoid over-penalizing, I center near 25% and subtract a moderate 5 points for the strong expert signal.  
+
+Final inside-view probability: ~20%.
+
+Probability calibration  
+I aim to forecast the true chance; a 20% estimate implies May 2025 will set the record in only 1 out of 5 analog years under neutral ENSO, consistent with expert-modeled cooler annual trend. A ±10% swing meaningfully shifts odds (10% → long-shot, 30% → substantial chance), so I place 20% as my best estimate.
+
+Checklist:  
+1. Paraphrase: Forecast whether NOAA’s June 2025 report will list May 2025 as the warmest May on record.  
+2. Base rate: ~20–25% for record monthly temperatures in current warming era.  
+3. Consistency: “20 out of 100 times, May 2025 sets a new record.”  
+4. Top evidence:  
+   • Berkeley Earth ‘2025 cooler’ forecast  
+   • ENSO-neutral reducing extra warming  
+   • April 2025 was only 2nd-warmest  
+   • Continued greenhouse forcing  
+5. Blind-spot: A sudden extreme warming pulse (e.g., rapid Arctic amplification in May) could push temperatures above May 2024.  
+6. Status quo: Global temperature trends change gradually; recent months below 2024’s peaks favor the status quo over another record.
+
+Probability: 20%
+Predicted Probability: 20.0%
+
+=== Forecaster 4 ===
+Output:
+Analysis:
+
+(a) Source analysis  
+• NOAA Climate at a Glance Global Rankings (NOAA‐CAG): Primary dataset (GHCN-M land + ERSST ocean), well‐documented baselines (1850–present), API accessible. Highly reliable for global monthly ranking.  
+• NCEI April 2025 Global Climate Report: Reports April 2025 as the 2nd-warmest April on record (1.22 °C above 20th century mean). Direct NOAA data, strong methodology.  
+• Copernicus January 2025 Bulletin: Confirms January 2025 as warmest January (1.75 °C pre-industrial anomaly). High‐quality reanalysis; corroborates sustained warming trend.  
+• NOAA ENSO Update (May 2025): CPC projects 74% chance of ENSO-neutral through summer. ENSO neutral typically yields no strong monthly boost. Reliable, with clear methodology.  
+• WMO “Global Annual to Decadal Climate Update”: Projects high odds (80%–86%) of record annual warmth by 2029 but not month-specific. Reinforces strong warming trend but less direct for May.  
+
+(b) Evidence analysis  
+Strong evidence (+ large shifts):  
+  - Sustained global warming: 18 of last 19 months >1.5 °C above pre-industrial (Copernicus/NOAA).  
+  - Seven of the ten warmest years on record are the last ten (WMO/NCEI).  
+Moderate evidence (+⁄− moderate shifts):  
+  - ENSO-neutral state likely in May 2025 (NOAA CPC) typically modestly suppresses global anomaly (~−0.05 °C).  
+  - April 2025 ranked 2nd-warmest April, indicating the trend remains near record levels (NCEI/Yale).  
+Weak evidence (small shifts):  
+  - News articles on future 5-year record odds (WMO) support overall trend but not month-specific.  
+  - Anecdotal reports of regional heatwaves are not directly predictive of global monthly mean.  
+
+(c) Timeframe analysis  
+Time until resolution: ~1 month (NOAA publishes May ranking in early July 2025).  
+If timeframe were half (mid-June), little additional data arrives—probability unchanged.  
+If doubled (60 days), some early satellite estimates or interim analyses might firm up expectation, slightly raising confidence by a few points.  
+
+(d) Justification  
+1. Reference-class base rate: Among Mays in 2010–2024, 3 of 15 were record-warm → 20%.  
+2. Trend adjustment: Global warming adds ~0.01–0.02 °C anomaly year-over-year → uplift record probability by ~5–10 points.  
+3. ENSO adjustment: Expected ENSO-neutral in May 2025 likely subtracts ~5 points by moderating the anomaly.  
+4. Monthly volatility: σ≈0.15 °C means considerable overlap with record threshold even if trend+ENSO align at or just below prior record.  
+5. Annual outlook (Berkeley Earth/NOAA): 2025 likely ranks 2nd–3rd warmest year, suggesting some months (including May) may not exceed 2024 peaks.  
+Balancing these yields an inside-view probability ≈25%.  
+
+Probability calibration  
+I predict May 2025 will be hottest May on record slightly more often than 1 in 5, given the strong warming trend offset by ENSO-neutral conditions. A ±10% move materially changes the odds from “unlikely but plausible” to “coin-flip,” conflicting with the moderate buffer from trend and volatility. Thus 25% reflects a balanced inside view.
+
+Checklist:  
+1. Paraphrase: “Will NOAA’s Climate at a Glance rank May 2025 as the warmest May (global land+ocean) in the 1850–2025 record?”  
+2. Outside view base rate: ~20% (2010–2024 May record frequency).  
+3. Consistency: “Out of 100 Mays, 25 are warmest → May 2025 has 25% chance of topping all previous Mays.”  
+4. Top evidence:  
+   • 18/19 months record-warm → strong trend  
+   • April 2025 = 2nd-warmest April  
+   • ENSO-neutral likely → slight drag  
+5. Blind spot: An unexpected El Niño warming surge in May would sharply raise probability.  
+6. Status quo: May anomalies typically follow the established trend; no major shocks expected.
+
+Probability: 25%
+Predicted Probability: 25.0%
+
+=== Forecaster 5 ===
+Output:
+Analysis:
+(a) Source analysis  
+• WMO bulletin (14 Feb 2025) – Primary data compiled from Copernicus/NOAA. Facts on January 2025 record are solid; brief commentary by WMO staff is expert opinion.  
+• Copernicus ERA5 note (14 Feb 2025) – High-quality re-analysis; gives precise January numbers and sea-surface conditions. Largely factual.  
+• NOAA ENSO update (8 May 2025) – Authoritative on Niño-3.4 SSTs and the seasonal forecast. Method transparent; conclusions are expert opinion but based on model consensus.  
+• NOAA/NCEI April 2025 global report (12 May 2025) – This is the same product that will settle the question for May; therefore extremely relevant, factual and methodologically open.  
+• Yale Climate Connections/YCC recap of April (12 May 2025) – Secondary source repeating NOAA/NASA/C3S numbers; good for triangulation.  
+• AskNews pull (various WMO “next five-years will be hot” articles, USA Today summer outlook, etc.) – Largely forward-looking commentary; facts that matter (e.g., “April was 2nd warmest”) come from NOAA and are reliable, the rest is opinion.  
+No credible leak or early estimate of the May 2025 NOAA anomaly is available in the material.
+
+(b) Evidence analysis (strength in brackets)  
+1. NOAA: April 2025 ran 0.07 °C below April 2024, placing second, after a record January. Shows cooling relative to 2024 from Feb–Apr. (Strong)  
+2. ENSO: Ocean-atmosphere now ENSO-neutral with a slight La Niña lean; historically this knocks 0.05–0.10 °C off monthly anomalies compared with El Niño peaks. (Moderate–strong)  
+3. Long-term warming & exceptional ocean heat content persist, pushing anomalies up relative to older years. (Strong – structural)  
+4. Base-rate: In the satellite/SST-dense era (1979-2024) a new record May occurred 28 % of the time; when the preceding May was already a record, the next year topped it only once in 13 tries (≈ 8 %). (Strong historical)  
+5. No market/expert consensus figure to anchor to (Weak).
+
+Net: factors 1, 2, 4 pull probability down; factor 3 pulls up.
+
+(c) Timeframe analysis  
+Outcome known in roughly 10–15 days (NOAA usually posts around 13 June).  
+If lead-time were doubled (≈ 30 days) we’d almost certainly have preliminary ERA5/NOAA numbers, shrinking uncertainty and moving probability toward 0 % or 80 % depending on leaks.  
+If lead-time were halved (≈ 5 days) the likelihood of last-minute intel would similarly tighten the distribution by ~25 %.
+
+(d) Justification and inside-view adjustment  
+Start from outside-view 13 % (record-after-record conditional).  
++4  ppt: extraordinary ocean warmth and still-record January show climate system running “hot.”  
+-2  ppt: April already fell short of 2024 and the Niño → neutral shift should have more effect by May.  
++1  ppt: Small chance that May’s inter-dataset spread favours NOAA (e.g., if 2025 edges 2024 by ≤ 0.01 °C).  
+Final inside-view probability ≈ 16 %. Rounded a bit upward to 18 % to reflect the asymmetric risk that unprecedented warmth surprises to the upside.
+
+Probability calibration
+My inside-view best estimate: there is an 18 % chance that NOAA will rank May 2025 as the warmest May on record.
+
+Checklist:
+1. Paraphrase: “By mid-June 2025 NOAA will declare May 2025 1st-warmest global land-ocean May.”  
+2. Base rate (record-after-record) 13 %.  
+3. “About 18 times in 100, May 2025 would top the NOAA list.”  
+4. Key evidence:  
+   • April 2025 second-warmest, 0.07 °C below 2024.  
+   • ENSO now neutral, historically cools global mean.  
+   • Ocean heat extremely high, lends upside risk.  
+   • Historical 8 % chance of beating last year’s record.  
+5. Blind-spot: Daily ERA5 already shows May 2025 > 2024 but hasn’t been publicised; would make probability too low.  
+6. Status-quo: Record remains May 2024; climatological inertia plus La Niña tilt favour “No.”
+
+Probability: 18%
+Predicted Probability: 18.0%...
+```
+
+Posted: Forecast was posted to Metaculus.
+
