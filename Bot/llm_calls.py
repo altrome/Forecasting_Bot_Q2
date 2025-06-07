@@ -153,45 +153,19 @@ async def call_gpt(prompt):
     )
     return response.output_text
 
-
-async def call_gpt_o1(prompt):
-    # We are temporarily going to short gpt while my o1 credits are out
-    prompt = gpt_context + "\n" + prompt
-    try:
-        url = "https://llm-proxy.metaculus.com/proxy/openai/v1/chat/completions"
-        headers = {
-            "Content-Type": "application/json",
-            "Authorization": f"Token {METACULUS_TOKEN}"
-        }
-        
-        data = {
-            "model": "o1",
-            "messages": [{"role": "user", "content": prompt}],
-        }
-        
-        timeout = ClientTimeout(total=300)  # 5 minutes total timeout
-        
-        async with ClientSession(timeout=timeout) as session:
-            async with session.post(url, headers=headers, json=data) as response:
-                if response.status != 200:
-                    error_text = await response.text()
-                    write(f"API error (status {response.status}): {error_text}")
-                    response.raise_for_status()
-                
-                result = await response.json()
-                
-                answer = result['choices'][0]['message']['content']
-                if answer is None:
-                    raise ValueError("No answer returned from GPT")
-                return answer
-                
-    except Exception as e:
-        write(f"Error in call_gpt: {str(e)}")
-        return f"Error generating response: {str(e)}"
+async def call_gpt_o3_personal(prompt):
+    client = OpenAI(api_key=OPENAI_API_KEY)
+    response = client.responses.create(
+        model="o3",
+        input= gpt_context + "\n" + prompt
+    )
+    return response.output_text
 
 
 async def call_gpt_o3(prompt):
-    prompt = gpt_context + "\n" + prompt
+    # Temporarily short metaculus proxy using personal credits.
+    ans = await call_gpt_o3_personal(prompt)
+    return ans
     try:
         url = "https://llm-proxy.metaculus.com/proxy/openai/v1/chat/completions"
         headers = {
