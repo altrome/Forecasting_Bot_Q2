@@ -1,26 +1,37 @@
+import asyncio
+from search import agentic_search
+import numpy as np
 import os
+from aiohttp import ClientSession, ClientTimeout, ClientError
 from openai import OpenAI
-import dotenv
 
-dotenv.load_dotenv()
+from dotenv import load_dotenv
 
-# 1. Read your API key from the environment
-api_key = os.getenv("OPENAI_API_KEY")
-if not api_key:
-    raise ValueError("Please set the OPENAI_API_KEY environment variable")
 
-# 2. Initialize the Responses API client
-client = OpenAI(api_key=api_key)
+load_dotenv()
+METACULUS_TOKEN = os.getenv("METACULUS_TOKEN")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
-# 3. Build the input prompt for an event post–knowledge-cutoff
-user_query = "Tell me about the 2024 Nobel Prize in Chemistry awarded in October 2024. Do a web search to find out who won."
 
-# 4. Call the o3 model via the Responses API
-response = client.responses.create(
-    model="o3",
-    input=[{"role": "user", "content": user_query}],
-    #mtools=[{"type": "web_search_preview"}]  # uncomment to enable real-time search
-)
+async def call_gpt(prompt):
+    client = OpenAI(api_key=OPENAI_API_KEY)
+    response = client.responses.create(
+        model="gpt-4.1",
+        tools=[{"type": "web_search_preview", "search_context_size": "high",}],
+        input= prompt
+    )
+    return response.output_text
 
-# 5. Print out the model’s answer
-print(response.output_text)
+async def main():
+    query = """
+
+    Please fetch all historical Virgin Galactic News page post timestamps from launch through April 2025, count posts per month, highlight months with zero posts, and identify any gaps longer than two months to inform the expected June 2025 activity. 
+
+    """
+    ans = await agentic_search(query)
+
+    print(ans)
+
+
+if __name__ == "__main__":
+    asyncio.run(main())

@@ -999,3 +999,80 @@ Percentile 90: XX
 Percentile 95: XX
 Percentile 99: XX
 """
+
+
+# Prompts for the agentic search
+INITIAL_SEARCH_PROMPT = """You are an expert research assistant tasked with conducting thorough internet research to answer a specific query. Your goal is to understand what information is needed and generate targeted search queries to gather current, accurate information.
+
+Query to research: {query}
+
+Your task:
+1. Analyze the query to understand what information is needed
+2. Identify the key aspects that need to be researched
+3. Generate specific search queries to gather comprehensive information
+
+Important guidelines:
+- Do NOT attempt to answer the query yet - focus on understanding what needs to be researched
+- Each search query should target a different aspect of the information needed
+- Make queries specific and likely to return accurate, authoritative information
+- Choose your source as Google or Google News based on the type of information needed.
+- Please phrase the queries in a way optimal for keyword optimized search (i.e., the phrase you search is likely to appear on desired web pages). Avoid writing overly specific queries. Limit to six words.
+- You can list up to 5 search queries
+
+Important formatting instructions: You should format your answer EXACTLY as below, always formatting the source in brackets () **on the same line as and after** the query. DO NOT use any quotes in your queries. 
+
+Analysis: 
+[Brief analysis of what the query is asking for and what types of information would constitute a thorough answer. This is NOT a full response - just an understanding of what needs to be researched.]
+
+Search queries:
+1. [Query details] (Google)
+2. [Query details] (Google News)
+3. [Query details] (Google)
+(Additional queries in the same format, if needed, up to five queries)
+
+
+"""
+
+CONTINUATION_SEARCH_PROMPT = """You are continuing your research to answer a specific query. Based on the search results, provide a comprehensive analysis and identify if additional information is needed.
+
+Original query: {query}
+
+{previous_section}
+
+New search results:
+{search_results}
+
+Your task:
+1. Write a complete, comprehensive analysis based on the search results
+2. Ensure all aspects of the original query are thoroughly addressed
+3. Identify any remaining information gaps
+4. Generate new search queries if needed (different from previous queries)
+
+Important guidelines:
+- This must be a COMPLETE analysis that could serve as the final answer
+- Base your analysis primarily on the search results provided
+- Cite sources from the search results to establish credibility
+- Be thorough and answer the ENTIRE query precisely
+- Include all nuanced details available from the search results
+- Be objective: present facts without personal opinions
+- Only generate new search queries if they would materially improve your answer
+- Choose your source as Google or Google News based on the type of information needed.
+- Please phrase the queries in a way optimal for keyword optimized search (i.e., the phrase you search is likely to appear on desired web pages). Avoid writing overly specific queries. Limit to six words.
+- List a maximum of five search queries, being conservative and using only the maximum number of queries when really necessary. 
+- If your analysis is sufficiently complete, omit the "Search queries:" section entirely to signal completion. Absence of regex match for 'Search queries:' will signal that this is your final research step.
+- If you encounter difficulties retrieving the exact information being requested (paywall or information unavailable), please consider adding queries to look for alternative sources/proxies for the same data. If utilizing these sources, you must add the alternative source used as a disclaimer in your analysis.
+- Remember: Write a complete draft, not notes or an outline
+
+
+Important formatting instructions: You should format your answer EXACTLY as below, always formatting the source in brackets () **on the same line as and after** the query. DO NOT use any quotes in your queries. It is essential to follow these formatting instructions as regex will be used to parse your response.
+
+Analysis: 
+[Write your COMPLETE analysis here. This should be a full, comprehensive response that could serve as the final answer. Base your analysis on the search results provided. Cite sources using phrases like "according to [source]" or "as reported by [source]". Be objective and distinguish between facts and opinions. Include all relevant details, statistics, context, and nuances from the search results. Aim for a report length of about 1000 words, keeping the report as structured as possible.]
+
+Search queries:
+1. [Query details] (Google)
+2. [Query details] (Google News)
+3. [Query details] (Google)
+(Additional queries in the same format, if needed, up to five queries)
+
+"""

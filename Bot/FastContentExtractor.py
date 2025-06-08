@@ -6,6 +6,7 @@ from typing import List, Dict, Any, Tuple
 from HTMLContentExtractor import HTMLContentExtractor
 import dotenv
 import os
+from browser import fetch_full_html
 
 dotenv.load_dotenv()
 
@@ -64,17 +65,23 @@ class FastContentExtractor:
                     }
                 
                 raw_html = await response.text()
+                backup_html = await asyncio.to_thread(fetch_full_html, url)
+
                 if not raw_html or len(raw_html.strip()) < 1400:
                     print(f"Error: Received empty or very short HTML for {url}: " + raw_html)
-                    return {
-                        'url': url,
-                        'domain': urlparse(url).netloc,
-                        'raw_html': raw_html,
-                        'content': "Empty or very short HTML received: " + raw_html,
-                        'error': "Empty or very short HTML received",
-                        'success': False
-                    }
-                
+                    if backup_html and len(backup_html.strip() > 2000):
+                        print(f"Using backup HTML for url: {url}")
+                        raw_html = backup_html
+                    else:  
+                        return {
+                            'url': url,
+                            'domain': urlparse(url).netloc,
+                            'raw_html': raw_html,
+                            'content': "Empty or very short HTML received: " + raw_html,
+                            'error': "Empty or very short HTML received",
+                            'success': False
+                        }
+                    
                 # Extract content using HTMLContentExtractor
                 processed_content = self.html_extractor.extract(url, raw_html)
                 

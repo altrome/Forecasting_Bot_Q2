@@ -6,6 +6,7 @@ import os
 # Add the parent directory to the path for imports
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from FastContentExtractor import FastContentExtractor
+from prompts import INITIAL_SEARCH_PROMPT, CONTINUATION_SEARCH_PROMPT
 import dateparser
 from dotenv import load_dotenv
 import json
@@ -147,6 +148,162 @@ async def call_asknews(question: str) -> str:
     except Exception as e:
         write(f"[call_asknews] Error: {str(e)}")
         return f"Error retrieving news articles: {str(e)}"
+    
+
+async def agentic_search(query: str) -> str:
+    """
+    Performs agentic search using GPT to iteratively research and analyze a query.
+    
+    Args:
+        query: The search query to research
+        
+    Returns:
+        The final comprehensive analysis
+    """
+    write(f"[agentic_search] Starting research for query: {query}")
+    
+    max_steps = 5
+    current_analysis = ""
+    all_search_queries = []  # Track all queries used
+    
+    # Cost tracking variables
+    total_input_tokens = 0
+    total_output_tokens = 0
+    
+    def estimate_tokens(text: str) -> int:
+        """Estimate token count using ~4 characters per token rule for GPT models"""
+        return max(1, len(text) // 4)
+    
+    def calculate_cost(input_tokens: int, output_tokens: int) -> float:
+        """Calculate cost based on token usage"""
+        input_cost = (input_tokens / 1_000_000) * 1.100  # $1.100 per 1M input tokens
+        output_cost = (output_tokens / 1_000_000) * 4.400  # $4.400 per 1M output tokens
+        return input_cost + output_cost
+    
+    for step in range(max_steps):
+        try:
+            # Prepare the prompt
+            if step == 0:
+                prompt = INITIAL_SEARCH_PROMPT.format(query=query)
+            else:
+                # Build previous section
+                if current_analysis:
+                    previous_section = f"Your previous analysis:\n{current_analysis}\n\nPrevious search queries used: {', '.join(all_search_queries)}\n"
+                else:
+                    previous_section = f"Previous search queries used: {', '.join(all_search_queries)}\n"
+                
+                prompt = CONTINUATION_SEARCH_PROMPT.format(
+                    query=query,
+                    previous_section=previous_section,
+                    search_results=search_results
+                )
+            
+            # Track input tokens
+            prompt_tokens = estimate_tokens(prompt)
+            total_input_tokens += prompt_tokens
+            
+            # Call GPT for analysis and search queries
+            write(f"[agentic_search] Step {step + 1}: Calling GPT")
+            response = await call_gpt(prompt, step)
+            
+            # Track output tokens
+            response_tokens = estimate_tokens(response)
+            total_output_tokens += response_tokens
+            
+            # Parse the response
+            analysis_match = re.search(r'Analysis:\s*(.*?)(?=Search queries:|$)', response, re.DOTALL)
+            if not analysis_match:
+                write(f"[agentic_search] Error: Could not parse analysis from response")
+                return f"Error: Failed to parse analysis at step {step + 1}"
+            
+            # Only update current_analysis after the first search (step > 0)
+            if step > 0:
+                current_analysis = analysis_match.group(1).strip()
+                write(f"[agentic_search] Step {step + 1}: Analysis updated ({len(current_analysis)} chars)")
+            else:
+                write(f"[agentic_search] Step 1: Initial query understanding complete")
+            
+            # Check for search queries
+            search_queries_match = re.search(r'Search queries:\s*(.*)', response, re.DOTALL)
+            
+            # For the initial step, we expect search queries
+            if step == 0 and not search_queries_match:
+                write(f"[agentic_search] Error: No search queries in initial response")
+                return "Error: Failed to generate initial search queries"
+            
+            if not search_queries_match or step == max_steps - 1:
+                # No more searches needed or reached max steps
+                if step > 0:  # Only break if we have an analysis
+                    write(f"[agentic_search] Research complete at step {step + 1}")
+                    break
+            
+            # Extract search queries with sources
+            queries_text = search_queries_match.group(1).strip()
+            # Parse format: X. [Query] (Source)
+            search_queries_with_source = re.findall(r'\d+\.\s*([^(]+?)\s*\((Google|Google News)\)', queries_text)
+            
+            if not search_queries_with_source:
+                if step == 0:
+                    write(f"[agentic_search] Error: No valid search queries in initial response")
+                    return "Error: Failed to parse initial search queries"
+                else:
+                    write(f"[agentic_search] No new search queries, completing research")
+                    break
+            
+            # Limit to 5 queries and clean them up
+            search_queries_with_source = [(q.strip(), source) for q, source in search_queries_with_source[:5]]
+            
+            write(f"[agentic_search] Step {step + 1}: Found {len(search_queries_with_source)} search queries")
+            # Track just the queries for deduplication
+            all_search_queries.extend([q for q, _ in search_queries_with_source])
+            
+            # Execute searches in parallel
+            search_tasks = []
+            for sq, source in search_queries_with_source:
+                write(f"[agentic_search] Searching: {sq} (Source: {source})")
+                search_tasks.append(
+                    google_search_agentic(
+                        sq,
+                        is_news=(source == "Google News")
+                    )
+                )
+            
+            # Gather search results
+            search_results_list = await asyncio.gather(*search_tasks, return_exceptions=True)
+            
+            # Format search results
+            search_results = ""
+            for (sq, source), result in zip(search_queries_with_source, search_results_list):
+                if isinstance(result, Exception):
+                    search_results += f"\nSearch query: {sq} (Source: {source})\nError: {str(result)}\n"
+                else:
+                    search_results += f"\nSearch query: {sq} (Source: {source})\n{result}\n"
+            
+            write(f"[agentic_search] Step {step + 1}: Search complete, {len(search_results)} chars of results")
+            
+        except Exception as e:
+            write(f"[agentic_search] Error at step {step + 1}: {str(e)}")
+            if current_analysis:
+                # Return what we have so far
+                break
+            else:
+                return f"Error during agentic search: {str(e)}"
+    
+    # Print summary statistics
+    steps_used = step + 1
+    total_cost = calculate_cost(total_input_tokens, total_output_tokens)
+    
+    print(f"\n🔍 Agentic Search Summary:")
+    print(f"   Steps used: {steps_used}")
+    print(f"   Total tokens: {total_input_tokens + total_output_tokens:,} ({total_input_tokens:,} input + {total_output_tokens:,} output)")
+    print(f"   Estimated cost: ${total_cost:.4f}")
+    
+    # Ensure we have an analysis to return
+    if not current_analysis:
+        return "Error: No analysis was generated during the research process"
+    
+    return current_analysis
+
 
 async def call_perplexity(prompt: str) -> str:
     """
@@ -262,17 +419,30 @@ async def google_search(query, is_news=False, date_before=None):
         raise
 
 
-async def call_gpt(prompt):
+async def call_gpt(prompt, step):
     client = OpenAI(api_key=OPENAI_API_KEY)
-    try:
-        response = client.responses.create(
-            model="o4-mini",
-            input=prompt
-        )
-        return response.output_text
-    except Exception as e:
-        write(f"[call_gpt] Error: {str(e)}")
-        return f"Error calling OpenAI API: {str(e)}"
+
+    if step <= 2:
+        try:
+            response = client.responses.create(
+                model="o4-mini",
+                input=prompt
+            )
+            return response.output_text
+        except Exception as e:
+            write(f"[call_gpt] Error: {str(e)}")
+            return f"Error calling OpenAI API: {str(e)}"
+    else:
+        try:
+            response = client.responses.create(
+                model="o3",
+                input=prompt
+            )
+            return response.output_text
+        except Exception as e:
+            write(f"[call_gpt] Error: {str(e)}")
+            return f"Error calling OpenAI API: {str(e)}"    
+
 
 
 async def google_search_and_scrape(query, is_news, question_details, date_before=None):
@@ -329,12 +499,74 @@ async def google_search_and_scrape(query, is_news, question_details, date_before
         traceback_str = traceback.format_exc()
         write(f"Traceback: {traceback_str}")
         return f"<Summary query=\"{query}\">Error during search and scrape: {str(e)}</Summary>\n"
+    
+
+async def google_search_agentic(query, is_news=False):
+    """
+    Performs Google search and returns raw article content without summarization.
+    Used for agentic search where the agent will analyze the raw content.
+    
+    Args:
+        query: Search query string
+        is_news: Whether to search Google News (True) or regular Google (False)
+        
+    Returns:
+        Formatted string with raw article contents
+    """
+    write(f"[google_search_agentic] Called with query='{query}', is_news={is_news}")
+    try:
+        urls = await google_search(query, is_news)
+
+        if not urls:
+            write(f"[google_search_agentic] ❌ No URLs returned for query: '{query}'")
+            return f"<RawContent query=\"{query}\">No URLs returned from Google.</RawContent>\n"
+
+        async with FastContentExtractor() as extractor:
+            write(f"[google_search_agentic] 🔍 Starting content extraction for {len(urls)} URLs")
+            results = await extractor.extract_content(urls)
+            write(f"[google_search_agentic] ✅ Finished content extraction")
+
+        output = ""
+        no_results = 3
+        results_count = 0
+        
+        for url, data in results.items():
+            if results_count >= no_results:
+                break
+                
+            content = (data.get('content') or '').strip()
+            if len(content.split()) < 100:
+                write(f"[google_search_agentic] ⚠️ Skipping low-content article: {url}")
+                continue
+                
+            if content:
+                truncated = content[:8000]
+                write(f"[google_search_agentic] ✂️ Including content: {len(truncated)} chars from {url}")
+                output += f"\n<RawContent source=\"{url}\">\n{truncated}\n</RawContent>\n"
+                results_count += 1
+            else:
+                write(f"[google_search_agentic] ⚠️ No content for {url}, skipping.")
+
+        if not output:
+            write("[google_search_agentic] ⚠️ Warning: No usable content found")
+            return f"<RawContent query=\"{query}\">No usable content extracted from any URL.</RawContent>\n"
+
+        return output
+        
+    except Exception as e:
+        write(f"[google_search_agentic] Error: {str(e)}")
+        import traceback
+        traceback_str = traceback.format_exc()
+        write(f"Traceback: {traceback_str}")
+        return f"<RawContent query=\"{query}\">Error during search: {str(e)}</RawContent>\n"
+
 
 
 async def process_search_queries(response: str, forecaster_id: str, question_details: dict):
     """
     Parses out search queries from the forecaster's response, executes them
-    (AskNews, Perplexity or Google/Google News), and returns formatted summaries.
+    (AskNews, Agent or Google/Google News), and returns formatted summaries.
+    Note: Agent replaces the previous Perplexity functionality.
     """
     try:
         # 1) Extract the "Search queries:" block
@@ -346,14 +578,15 @@ async def process_search_queries(response: str, forecaster_id: str, question_det
         queries_text = search_queries_block.group(1).strip()
 
         # 2) Try to find queries of the form: 1. "text" (Source)
+        # Support both "Perplexity" (legacy) and "Agent" (new)
         search_queries = re.findall(
-            r'(?:\d+\.\s*)?(["\']?(.*?)["\']?)\s*\((Google|Google News|Assistant|Perplexity)\)',
+            r'(?:\d+\.\s*)?(["\']?(.*?)["\']?)\s*\((Google|Google News|Assistant|Agent|Perplexity)\)',
             queries_text
         )
         # 3) Fallback to unquoted queries if none found
         if not search_queries:
             search_queries = re.findall(
-                r'(?:\d+\.\s*)?([^(\n]+)\s*\((Google|Google News|Assistant|Perplexity)\)',
+                r'(?:\d+\.\s*)?([^(\n]+)\s*\((Google|Google News|Assistant|Agent|Perplexity)\)',
                 queries_text
             )
 
@@ -378,6 +611,11 @@ async def process_search_queries(response: str, forecaster_id: str, question_det
             if not query:
                 continue
 
+            # Map Perplexity to Agent for backward compatibility
+            if source == "Perplexity":
+                source = "Agent"
+                write(f"Forecaster {forecaster_id}: Mapping Perplexity → Agent for query='{query}'")
+            
             write(f"Forecaster {forecaster_id}: Query='{query}' Source={source}")
             query_sources.append((query, source))
 
@@ -393,14 +631,14 @@ async def process_search_queries(response: str, forecaster_id: str, question_det
                 )
             elif source == "Assistant":
                 tasks.append(call_asknews(query))
-            else:  # Perplexity
-                tasks.append(call_perplexity(query))  # Now directly call as async
+            elif source == "Agent":
+                tasks.append(agentic_search(query))
 
         if not tasks:
             write(f"Forecaster {forecaster_id}: No tasks generated")
             return ""
 
-        # 5) Await all tasks one by one to avoid timeout issues
+        # 5) Await all tasks
         formatted_results = ""
         
         # First gather with return_exceptions=True to prevent one failure from breaking everything
@@ -413,8 +651,8 @@ async def process_search_queries(response: str, forecaster_id: str, question_det
                 # Add a message about the error in the formatted results
                 if source == "Assistant":
                     formatted_results += f"\n<Asknews_articles>\nQuery: {query}\nError retrieving results: {str(result)}\n</Asknews_articles>\n"
-                elif source == "Perplexity":
-                    formatted_results += f"\n<Perplexity_report>\nQuery: {query}\nError retrieving results: {str(result)}\n</Perplexity_report>\n"
+                elif source == "Agent":
+                    formatted_results += f"\n<Agent_report>\nQuery: {query}\n{result}\n</Agent_report>\n"
                 else:
                     formatted_results += f"\n<Summary query=\"{query}\">\nError retrieving results: {str(result)}\n</Summary>\n"
             else:
@@ -422,8 +660,8 @@ async def process_search_queries(response: str, forecaster_id: str, question_det
                 
                 if source == "Assistant":
                     formatted_results += f"\n<Asknews_articles>\nQuery: {query}\n{result}</Asknews_articles>\n"
-                elif source == "Perplexity":
-                    formatted_results += f"\n<Perplexity_report>\nQuery: {query}\n{result}</Perplexity_report>\n"
+                elif source == "Agent":
+                    formatted_results += f"\n<Agent_report>\nQuery: {query}\n{result}</Agent_report>\n"
                 else:
                     # Google/Google News tasks already return <Summary> blocks
                     formatted_results += result
@@ -432,6 +670,7 @@ async def process_search_queries(response: str, forecaster_id: str, question_det
 
     except Exception as e:
         write(f"Forecaster {forecaster_id}: Error processing search queries: {str(e)}")
+        import traceback
         write(f"Traceback: {traceback.format_exc()}")
         # Return what we have so far instead of nothing
         return "Error processing some search queries. Partial results may be available."

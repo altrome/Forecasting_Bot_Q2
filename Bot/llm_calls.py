@@ -197,15 +197,6 @@ async def call_gpt_o3(prompt):
     except Exception as e:
         write(f"Error in call_gpt: {str(e)}")
         return f"Error generating response: {str(e)}"
-    
-
-async def call_gpt(prompt):
-    client = OpenAI(api_key=OPENAI_API_KEY)
-    response = client.responses.create(
-        model="o4-mini",
-        input= gpt_context + "\n" + prompt
-    )
-    return response.output_text
 
 
 async def call_gpt_o4_mini(prompt):
