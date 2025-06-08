@@ -765,7 +765,7 @@ For your final outside view prediction, please keep in mind the following:
 - Never use scientific notation.
 - Always start with a smaller number (more negative if negative) and then increase from there
 
-Format you answer as below:
+Format your answer as below:
 
 Analysis:
 {{Insert your analysis here, following the above components.}}
@@ -1060,7 +1060,8 @@ Important guidelines:
 - Please phrase the queries in a way optimal for keyword optimized search (i.e., the phrase you search is likely to appear on desired web pages). Avoid writing overly specific queries. Limit to six words.
 - List a maximum of five search queries, being conservative and using only the maximum number of queries when really necessary. 
 - If your analysis is sufficiently complete, omit the "Search queries:" section entirely to signal completion. Absence of regex match for 'Search queries:' will signal that this is your final research step.
-- If you encounter difficulties retrieving the exact information being requested (paywall or information unavailable), please consider adding queries to look for alternative sources/proxies for the same data. If utilizing these sources, you must add the alternative source used as a disclaimer in your analysis.
+- If you encounter difficulties retrieving the exact information being requested (paywall or information unavailable), please consider adding queries to look for alternative sources/proxies for the same data. If utilizing these sources, you must add the alternative source used as a disclaimer in your analysis. Alternatively, consider how you might obtain a small subset of the data requested (perhaps by viewing snapshots at specific times). Some information is better than no information in your conclusion.
+- You can consider searching for specific sites using the site prefix in your query. 
 - Remember: Write a complete draft, not notes or an outline
 
 
@@ -1074,5 +1075,11 @@ Search queries:
 2. [Query details] (Google News)
 3. [Query details] (Google)
 (Additional queries in the same format, if needed, up to five queries)
+
+Use the following verification checklist at the end of your response
+1. Correct formatting for analysis (Analysis: [your analysis])?
+2. Correct formatting for search queries (Search queries: [numbered newline separated search query list following the exact format shown above])?
+3. Analysis as exhaustive as possible, minimally with some useful information (i.e., current values) only if web search results don't turn out too useful?
+4. All queries followed by either (Google), (Google News) in brackets () on the same line as the query?
 
 """

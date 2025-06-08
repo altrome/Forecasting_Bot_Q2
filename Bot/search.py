@@ -162,7 +162,7 @@ async def agentic_search(query: str) -> str:
     """
     write(f"[agentic_search] Starting research for query: {query}")
     
-    max_steps = 5
+    max_steps = 7
     current_analysis = ""
     all_search_queries = []  # Track all queries used
     
@@ -422,7 +422,7 @@ async def google_search(query, is_news=False, date_before=None):
 async def call_gpt(prompt, step):
     client = OpenAI(api_key=OPENAI_API_KEY)
 
-    if step <= 2:
+    if step <= 3:
         try:
             response = client.responses.create(
                 model="o4-mini",
