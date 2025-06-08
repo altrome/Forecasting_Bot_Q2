@@ -53,7 +53,7 @@ async def get_binary_forecast(question_details, write=print):
             resolution_criteria=resolution_criteria,
             fine_print=fine_print,
         )
-        return content, await call_gpt_o4_mini(content)
+        return content, await call_gpt_o3(content)
 
     historical_task = asyncio.create_task(format_and_call_gpt(BINARY_PROMPT_historical))
     current_task = asyncio.create_task(format_and_call_gpt(BINARY_PROMPT_current))
@@ -84,7 +84,7 @@ async def get_binary_forecast(question_details, write=print):
             call_claude(prompt1),      # forecaster 1
             call_claude(prompt1),      # forecaster 2
             call_gpt_o4_mini(prompt1), # forecaster 3
-            call_gpt_o4_mini(prompt1), # forecaster 4
+            call_gpt_o3(prompt1), # forecaster 4
             call_gpt_o3(prompt1),      # forecaster 5
         )
 
@@ -115,7 +115,7 @@ async def get_binary_forecast(question_details, write=print):
             call_claude(format_prompt2("1")),
             call_claude(format_prompt2("2")),
             call_gpt_o4_mini(format_prompt2("3")),
-            call_gpt_o4_mini(format_prompt2("4")),
+            call_gpt_o3(format_prompt2("4")),
             call_gpt_o3(format_prompt2("5")),
         )
 
@@ -132,7 +132,7 @@ async def get_binary_forecast(question_details, write=print):
 
     valid_probs = [p for p in probabilities if p is not None]
     if len(valid_probs) >= 1:
-        weights = [1, 1, 1, 1, 3]  # forecaster 5 (o3) has truple weight
+        weights = [1, 1, 1, 2, 2]  # forecaster 5 (o3) has truple weight
         weighted_probs = [p * w for p, w in zip(probabilities, weights) if p is not None]
         weight_sum = sum(w for p, w in zip(probabilities, weights) if p is not None)
         final_prob = float(np.sum(weighted_probs) / weight_sum)

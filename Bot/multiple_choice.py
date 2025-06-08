@@ -48,7 +48,7 @@ async def get_multiple_choice_forecast(question_details: dict, write=print) -> t
             fine_print=fine_print,
             options=options,
         )
-        return content, await call_gpt_o4_mini(content)
+        return content, await call_gpt_o3(content)
 
     historical_task = asyncio.create_task(format_and_call_gpt(MULTIPLE_CHOICE_PROMPT_historical))
     current_task = asyncio.create_task(format_and_call_gpt(MULTIPLE_CHOICE_PROMPT_current))
@@ -78,7 +78,7 @@ async def get_multiple_choice_forecast(question_details: dict, write=print) -> t
             call_claude(prompt1),      # forecaster 1
             call_claude(prompt1),      # forecaster 2
             call_gpt_o4_mini(prompt1), # forecaster 3
-            call_gpt_o4_mini(prompt1), # forecaster 4
+            call_gpt_o3(prompt1), # forecaster 4
             call_gpt_o3(prompt1),      # forecaster 5
         )
 
@@ -110,7 +110,7 @@ async def get_multiple_choice_forecast(question_details: dict, write=print) -> t
             call_claude(format_prompt2("1")),
             call_claude(format_prompt2("2")),
             call_gpt_o4_mini(format_prompt2("3")),
-            call_gpt_o4_mini(format_prompt2("4")),
+            call_gpt_o3(format_prompt2("4")),
             call_gpt_o3(format_prompt2("5")),
         )
 
@@ -132,7 +132,7 @@ async def get_multiple_choice_forecast(question_details: dict, write=print) -> t
         final_outputs.append(f"=== Forecaster {i+1} ===\nOutput:\n{out}\n")
 
     probs_matrix = np.array(all_probs)
-    weights = np.array([1, 1, 1, 1, 3])[:len(probs_matrix)]
+    weights = np.array([1, 1, 1, 2, 2])[:len(probs_matrix)]
     weighted_probs = np.average(probs_matrix, axis=0, weights=weights)
     probability_yes_per_category = {opt: float(p) for opt, p in zip(options, weighted_probs)}
 

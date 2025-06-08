@@ -381,7 +381,7 @@ async def get_numeric_forecast(question_details: dict, write=print):
             units=unit,
             hint = f"The answer is expected to be above {lower} and below {upper}. Think carefully, and reconsider your sources, if your projections are outside this range."
         )
-        return txt, await call_gpt_o4_mini(txt)
+        return txt, await call_gpt_o3(txt)
 
     hist_prompt, hist_out = await format_call(NUMERIC_PROMPT_historical)
     curr_prompt, curr_out = await format_call(NUMERIC_PROMPT_current)
@@ -401,7 +401,7 @@ async def get_numeric_forecast(question_details: dict, write=print):
 
     base_forecasts = await asyncio.gather(
         call_claude(prompt1), call_claude(prompt1),
-        call_gpt_o4_mini(prompt1), call_gpt_o4_mini(prompt1),
+        call_gpt_o4_mini(prompt1), call_gpt_o3(prompt1),
         call_gpt_o3(prompt1)
     )
 
@@ -423,7 +423,7 @@ async def get_numeric_forecast(question_details: dict, write=print):
 
     step2_outputs = await asyncio.gather(
         call_claude(prompts2[0]), call_claude(prompts2[1]),
-        call_gpt_o4_mini(prompts2[2]), call_gpt_o4_mini(prompts2[3]),
+        call_gpt_o4_mini(prompts2[2]), call_gpt_o3(prompts2[3]),
         call_gpt_o3(prompts2[4])
     )
 
@@ -435,7 +435,7 @@ async def get_numeric_forecast(question_details: dict, write=print):
             parsed = extract_percentiles_from_response(output, verbose=True)
             parsed = enforce_strict_increasing(parsed)
             cdf = generate_continuous_cdf(parsed, open_upper, open_lower, upper, lower, zero)
-            all_cdfs.append((cdf, 3 if i == 4 else 1))
+            all_cdfs.append((cdf, 2 if (i == 4 or i == 3) else 1))
         except Exception as e:
             write(f"❌ Forecaster {i+1} failed: {e}")
         final_outputs.append(f"=== Forecaster {i+1} ===\n{output}\n")

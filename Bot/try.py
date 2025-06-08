@@ -25,7 +25,7 @@ async def call_gpt(prompt):
 async def main():
     query = """
 
-    Please fetch all historical Virgin Galactic News page post timestamps from launch through April 2025, count posts per month, highlight months with zero posts, and identify any gaps longer than two months to inform the expected June 2025 activity. 
+    Please retrieve weekly Billboard Artist 100 top 10 charts for the past 12 months and identify how many artists each week were new entrants (previous rank ≥11 or unranked), then summarize the weekly counts and overall trend. 
 
     """
     ans = await agentic_search(query)
