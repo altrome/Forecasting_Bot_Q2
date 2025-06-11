@@ -422,27 +422,15 @@ async def google_search(query, is_news=False, date_before=None):
 async def call_gpt(prompt, step):
     client = OpenAI(api_key=OPENAI_API_KEY)
 
-    if step <= 3:
-        try:
-            response = client.responses.create(
-                model="o4-mini",
-                input=prompt
-            )
-            return response.output_text
-        except Exception as e:
-            write(f"[call_gpt] Error: {str(e)}")
-            return f"Error calling OpenAI API: {str(e)}"
-    else:
-        try:
-            response = client.responses.create(
-                model="o3",
-                input=prompt
-            )
-            return response.output_text
-        except Exception as e:
-            write(f"[call_gpt] Error: {str(e)}")
-            return f"Error calling OpenAI API: {str(e)}"    
-
+    try:
+        response = client.responses.create(
+            model="o3",
+            input=prompt
+        )
+        return response.output_text
+    except Exception as e:
+        write(f"[call_gpt] Error: {str(e)}")
+        return f"Error calling OpenAI API: {str(e)}"
 
 
 async def google_search_and_scrape(query, is_news, question_details, date_before=None):
