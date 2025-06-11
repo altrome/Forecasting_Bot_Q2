@@ -419,7 +419,7 @@ async def google_search(query, is_news=False, date_before=None):
         raise
 
 
-async def call_gpt(prompt, step):
+async def call_gpt(prompt, step=1):
     client = OpenAI(api_key=OPENAI_API_KEY)
 
     try:
