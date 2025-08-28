@@ -12,8 +12,10 @@ import requests
 from asknews_sdk import AskNewsSDK
 from search import call_gpt
 
+DIR_NAME = "2025_Fall_tournament_forecasts"
 
-OUTPUT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "Q2_tournament_forecasts"))
+
+OUTPUT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", DIR_NAME))
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 ######################### CONSTANTS #########################
@@ -38,10 +40,11 @@ Q4_2024_AI_BENCHMARKING_ID = 32506
 Q1_2025_AI_BENCHMARKING_ID = 32627
 Q4_2024_QUARTERLY_CUP_ID = 3672 
 Q2_2025_AI_BENCHMARKING_ID = 32721
-Q1_2025_QUARTERLY_CUP_ID = 32630 #open
-AXC_2025_TOURNAMENT_ID = 32564 #open
-GIVEWELL_ID = 3600 #open
-RESPIRATORY_OUTLOOK_ID = 3411 #open
+Q1_2025_QUARTERLY_CUP_ID = 32630
+AXC_2025_TOURNAMENT_ID = 32564
+GIVEWELL_ID = 3600
+RESPIRATORY_OUTLOOK_ID = 3411
+FALL_2025_AI_BENCHMARKING_ID = 32813
 
 TOURNAMENT_ID = Q2_2025_AI_BENCHMARKING_ID
 
