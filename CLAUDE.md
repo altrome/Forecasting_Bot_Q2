@@ -83,7 +83,7 @@ Binary questions follow this multi-stage process:
 - Metadata and entity recognition
 
 ### Output Management
-- Forecasts saved to `Q2_tournament_forecasts/` with detailed reasoning
+- Forecasts saved to `2025_Fall_tournament_forecasts/` with detailed reasoning
 - Each question gets comprehensive log file with multi-agent outputs
 - Automatic filename sanitization for cross-platform compatibility
 
