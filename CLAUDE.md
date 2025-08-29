@@ -7,13 +7,19 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ### Running the Bot
 ```bash
 # Run the main forecasting bot on tournament questions
-python Bot/main.py
+uv run python Bot/main.py
 
 # Run benchmark tests
-python Bot/benchmark.py
+uv run python Bot/benchmark.py
 
-# Install dependencies
-pip install -r requirements.txt
+# Install dependencies (first time setup)
+uv sync
+
+# Add new dependencies
+uv add <package-name>
+
+# Install development dependencies
+uv sync --group dev
 ```
 
 ### Environment Setup
